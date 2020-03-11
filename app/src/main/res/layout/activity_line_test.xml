@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LineTestActivity">
+
+    <FrameLayout
+        android:id="@+id/canvasLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/spiral_test"
+            android:alpha="0.3"
+            android:padding="30dp"/-->
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/resetBtn1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="0dp"
+            android:src="@drawable/x_refresh"
+            android:tint="@android:color/white"
+            app:backgroundTint="@color/Primary"
+            app:fabSize="normal"
+            app:layout_anchorGravity="top"
+            app:useCompatPadding="true" />
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/nextBtn1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="0dp"
+            android:src="@drawable/x_arrow"
+            android:tint="@android:color/white"
+            app:backgroundTint="@color/Primary"
+            app:fabSize="normal"
+            app:useCompatPadding="true" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

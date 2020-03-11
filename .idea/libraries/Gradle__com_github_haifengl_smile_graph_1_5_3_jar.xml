@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.haifengl:smile-graph:1.5.3@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.haifengl/smile-graph/1.5.3/d4ff8dfa3f06326efd74416c56b4e2328723cd6f/smile-graph-1.5.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.haifengl/smile-graph/1.5.3/dd88eae2bce249212d2a6e53f1b6c03220d0fc9/smile-graph-1.5.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

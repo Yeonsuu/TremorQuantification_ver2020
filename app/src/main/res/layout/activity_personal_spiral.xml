@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context=".Personal_spiral">
+
+    <ImageView
+        android:layout_width="800dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/personal_detail_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="13dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/backback"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="41dp"
+        android:text="2019.08.15 04:11"
+        android:textSize="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="670dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="89dp"
+        android:background="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/clinicalID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="106dp"
+        android:text="Clinical_ID"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/patientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="187dp"
+        android:layout_marginTop="106dp"
+        android:text="김한동"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="646dp"
+        android:layout_marginTop="112dp"
+        android:text="공유"
+        android:textSize="15dp"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="707dp"
+        android:layout_marginTop="112dp"
+        android:text="삭제"
+        android:textSize="15dp"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="734dp"
+        android:layout_height="462dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="229dp"
+        android:background="@drawable/spiral"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="720dp"
+        android:layout_height="243dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="713dp"
+        android:background="@drawable/spiral_result2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="115dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="720.8dp"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textColor="#6C6C6C"
+        android:text="HZ"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="155dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="191dp"
+        android:layout_marginTop="718.76dp"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textColor="#6C6C6C"
+        android:text="Tremor magnitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="107dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="378dp"
+        android:layout_marginTop="718.76dp"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textColor="#6C6C6C"
+        android:text="Distance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="51dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="537dp"
+        android:layout_marginTop="718.76dp"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textColor="#6C6C6C"
+        android:text="Time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="76dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="655dp"
+        android:layout_marginTop="718.76dp"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textColor="#6C6C6C"
+        android:text="Speed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hz_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="750dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="#37BFA7"
+        android:text="4"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="759dp"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textColor="#37BFA7"
+        android:text="HZ"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/magnitude_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="750dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="#37BFA7"
+        android:text="0.5"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="759dp"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textColor="#37BFA7"
+        android:text="cm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/distance_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="410dp"
+        android:layout_marginTop="750dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="#37BFA7"
+        android:text="1"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="430dp"
+        android:layout_marginTop="759dp"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textColor="#37BFA7"
+        android:text="cm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/time_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="540dp"
+        android:layout_marginTop="750dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="#37BFA7"
+        android:text="3"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="565dp"
+        android:layout_marginTop="759dp"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textColor="#37BFA7"
+        android:text="sec"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/speed_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="660dp"
+        android:layout_marginTop="750dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="#37BFA7"
+        android:text="12"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="700dp"
+        android:layout_marginTop="759dp"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textColor="#37BFA7"
+        android:text="cm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="717dp"
+        android:layout_marginTop="810dp"
+        android:background="@drawable/more"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="816dp"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:text="상세 설명"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

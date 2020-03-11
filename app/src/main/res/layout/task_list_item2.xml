@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview1"
+    android:layout_width="335dp"
+    android:layout_height="270dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ta_listitem2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tasktype"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/main"/>
+
+        <TextView
+            android:id="@+id/taskNum"
+            android:layout_width="30dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:text="01"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/taskDate"
+            android:layout_width="80dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="5dp"
+            android:text="19.07.20"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/taskTime"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="5dp"
+            android:text="19.07.20"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/taskName"
+            android:layout_width="80dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="5dp"
+            android:text="Spiral"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="195.48dp"
+            android:layout_height="201.73dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/spiral"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.7" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

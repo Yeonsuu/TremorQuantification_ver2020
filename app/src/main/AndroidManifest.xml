@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ahnbcilab.tremorquantification.tremorquantification">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LineResultActivity" />
+        <activity android:name=".AnalysisActivity" />
+        <activity android:name=".SpiralResultActivity" />
+        <activity android:name=".PersonalPatient" />
+        <activity
+            android:name=".PatientListActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".UPDRSActivity" />
+        <activity android:name=".CRTSActivity" />
+        <activity android:name=".WritingActivity" />
+        <activity android:name=".Spiral" />
+        <activity android:name=".CRTS_Result_Activity" />
+        <activity android:name=".CRTS_detailResult" />
+        <activity android:name=".Line" />
+        <activity android:name=".UPDRS_Result_Activity" />
+        <activity android:name=".UPDRS_detailResult" />
+        <activity android:name=".Personal_UPDRS" />
+        <activity android:name=".Personal_spiral" />
+        <activity android:name=".Personal_line" />
+        <activity android:name=".Personal_writing" />
+        <activity android:name=".CRTS_SpiralResult" />
+        <activity android:name=".WritingResult" />
+        <activity android:name=".CRTS_LineResult" />
+        <activity android:name=".Personal_CRTS" />
+        <activity android:name=".Spiral_Task_Select" />
+        <activity android:name=".CRTS_LeftSpiralResult"/>
+    </application>
+
+</manifest>

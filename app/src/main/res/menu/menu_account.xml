@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/id_accountChange"
+        android:title="계정 전환"/>
+    <item android:id="@+id/id_logout"
+        android:title="로그아웃"/>
+</menu>

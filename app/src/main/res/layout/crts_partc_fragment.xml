@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="14dp"
+            android:text="CRTS C."
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/crts16_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="59dp"
+            android:text="16. 말하기"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="83dp"
+            android:text="환자에게 예제문장을 쓰게 한다. (주로 쓰는 손만 검사한다.)"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/crg16"
+            android:layout_width="730dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="119dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts16_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts16_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts16_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts16_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts16_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="137dp"
+            android:text="0. 정상"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="189dp"
+            android:text="1. 약간 억양이 감소되어 있고 말수나 목소리 크기가 감소된 정도다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="241dp"
+            android:text="2. 말이 느리고 단일 음색이나 알아들을 수 있는 정도이며  확실히 비정상이라고 생각된다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="293dp"
+            android:text="3. 심한 손상으로 알아 힘든 정도다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="345dp"
+            android:text="4. 거의 알아 들을 수 없는 정도의 심한 손상이다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="723dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="387dp"
+            android:background="@drawable/short_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/crts17_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="417dp"
+            android:text="17. 음식 먹기"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/crg17"
+            android:layout_width="730dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="456dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts17_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts17_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts17_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts17_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts17_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="472dp"
+            android:text="0. 정상"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="524dp"
+            android:text="1. 매우 드물게 음식을 흘리지만 모든 음식을 입까지 가져올 수 있다."            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="576dp"
+            android:text="2. 조그만 음식은 자주 흘리고 머리를 음식물까지 움직인다."            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="628dp"
+            android:text="3. 매우 심하게 떨려서 수저질이 잘 안된다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="680dp"
+            android:text="4. 너무 심하게 떨려서 남이 먹여줘야 한다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="723dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="722dp"
+            android:background="@drawable/short_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/crts18_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="752dp"
+            android:text="18. 물을 입에 갖다 대기"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/crg18"
+            android:layout_width="730dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="791dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts18_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts18_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts18_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts18_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts18_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="807dp"
+            android:text="0. 정상"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="859dp"
+            android:text="1. 국을 떠먹는데 숟가락을 쓸 수는 있지만 많이는 못 뜬다."            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="911dp"
+            android:text="2. 숟가락은 쓰지 못하고 컵 종류를 쓰던지 그릇을 들고 마신다."            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="963dp"
+            android:text="3. 매우 심하게 떨려서 컵이나 그릇을 들고 마시더라고 양손 모두 받치고 마신다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1015dp"
+            android:text="4. 너무 심하게 떨려서 빨대로 마실 수밖에 없다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="723dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="1057dp"
+            android:background="@drawable/short_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/crts19_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="1087dp"
+            android:text="19. 개인 위생"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/crg19"
+            android:layout_width="730dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="1127dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts19_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts19_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts19_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts19_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts19_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1141dp"
+            android:text="0. 정상"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1193dp"
+            android:text="1. 모든 것을 혼자서 수행할 수는 있지만 정상에 비해서는 더 조심스러운 편이다."            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1245dp"
+            android:text="2. 혼자서 모든 것을 수행할 수는 있지만 더 안전한 다른 방법으로 해결한다. (전기면도기)"           android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1297dp"
+            android:text="3. 두손으로 받치지 않으면 모든 일을 혼자서 할 수 없다. (립스틱 바를 수 없거나 전기면도기로도 면도를 못하는 경우)"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1349dp"
+            android:text="4. 모든 세밀한 작업을 할수 없다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="723dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="1391dp"
+            android:background="@drawable/short_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/crts20_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="1421dp"
+            android:text="20. 옷 입기"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/crg20"
+            android:layout_width="730dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="1460dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts20_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts20_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts20_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts20_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts20_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1476dp"
+            android:text="0. 정상"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1528dp"
+            android:text="1. 모든 것을 혼자서 수행할 수는 있지만 정상에 비해서는 더 조심스러운 편이다."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1580dp"
+            android:text="2. 모든 것을 혼자서 수행할 수는 있지만 실수를 범한다."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1632dp"
+            android:text="3. 매우 심하게 떨려서 옷 단추를 못채우고 신발 끈을 못 묶는다."            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1684dp"
+            android:text="4. 옷을 입는 큰 동작 조차도 혼자서 할 수 없어서 남의 도움이 필요하다."            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="723dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="1726dp"
+            android:background="@drawable/short_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/crts21_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="1756dp"
+            android:text="21. 글쓰기"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/crg21"
+            android:layout_width="730dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="1792dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts21_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts21_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts21_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts21_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts21_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1810dp"
+            android:text="0. 정상"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1862dp"
+            android:text="1. 약간 비정상 적이지만 집안 일을 하는데는 문제없다."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1914dp"
+            android:text="2. 편지 쓰기 정도는 못하지만 아직은 글씨를 알아볼 수 있다."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="1966dp"
+            android:text="3. 매우 심하게 떨려서 글씨를 알아볼 수가 없다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="2018dp"
+            android:text="4. 이름을 써야하는 경우에도 (싸인) 전혀 쓸 수가 없다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="723dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="2060dp"
+            android:background="@drawable/short_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/crts22_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="2090dp"
+            android:text="22. 일하기"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/crg22"
+            android:layout_width="730dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="2130dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts22_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts22_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts22_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts22_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts22_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="2145dp"
+            android:text="0. 떨림이 있지만 직장 혹은 집안 일을 하는데는 문제없다."            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="2197dp"
+            android:text="1. 일을 할 수는 있지만 정상인에 비해서는 조심스럽다."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="2249dp"
+            android:text="2. 떨리는 것 때문에 일도 다른 사람에 비해서 뒤쳐진다."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="2301dp"
+            android:text="3. 떨리는 것 때문에 직장도 옮겨야 하고 집안일의 경우 다림질을 할 수 있다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="2353dp"
+            android:text="4. 직장을 가질 수 없고 집안일도 극히 일부만 가능한 정도이다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="723dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="2395dp"
+            android:background="@drawable/short_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/crts23_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="2425dp"
+            android:text="23. 사회 활동"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/crg23"
+            android:layout_width="730dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="2459dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts23_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts23_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts23_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts23_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts23_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="2480dp"
+            android:text="0. 전혀 변함이 없다."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="2532dp"
+            android:text="1. 사회 생활이 약간은 변했다고 생각하지만 그래도 할 수는 있다."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="2584dp"
+            android:text="2. 낯선 사람들을 만나기를 피하며 사회 생활에 제한을 받는다."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="2636dp"
+            android:text="3. 친구들 조차 만나기를 꺼리고 사회 생활에 지장이 많다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="2688dp"
+            android:text="4. 모든 사람을 만나기를 꺼리고 사회 생활이 불가능하다."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginTop="2750dp"
+            android:background="@drawable/upline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/preButton"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/previous_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/page_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/next_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/page_text"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/page_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="3"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.479"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text=" / 3"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.514"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

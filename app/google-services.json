@@ -1,0 +1,173 @@
+{
+  "project_info": {
+    "project_number": "114522752375",
+    "firebase_url": "https://tremorquantification.firebaseio.com",
+    "project_id": "tremorquantification",
+    "storage_bucket": "tremorquantification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114522752375:android:887e3de2f590cdff",
+        "android_client_info": {
+          "package_name": "com.ahnbcilab.tremorquantification.tremorquantification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114522752375-da1le4aid0ljii1qass5e6ppimbc5c07.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "d2053e30e745dac1f6526022e40beb06508762de"
+          }
+        },
+        {
+          "client_id": "114522752375-baph0t7hf2vrhpg08lf82msc505aku8q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "a6d552891b5983b26d0b036a031e809111740676"
+          }
+        },
+        {
+          "client_id": "114522752375-n7t4neavotqsp4ter9hduc3bg1nl48r1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "64b59d05fb9e97da21487fe1382893720696c3ab"
+          }
+        },
+        {
+          "client_id": "114522752375-knjiu7taife1366v7brl6q6afc5eags0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "d214769037cb06064be066e1f6932666eee181ff"
+          }
+        },
+        {
+          "client_id": "114522752375-teq45sibhpnl6h6pgp55h3jkdmahnd6q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "df684c29ee2a0ce6a163f24d1db05cebd794e5c3"
+          }
+        },
+        {
+          "client_id": "114522752375-qdo37okvrs3tgfv3ol3p4h31cv0gsifu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "4dba4ec14bf671af279750064c993f08b4d46922"
+          }
+        },
+        {
+          "client_id": "114522752375-m6dqqvpc3mkno1af1g80repq6d2sld7t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "72cb51765708dfa3551f4b863f674848c05b67ee"
+          }
+        },
+        {
+          "client_id": "114522752375-ht0h01maikab41fs6npnhelg1fvrvnjk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "6ebeacfe6178d74f5cf886b307cf88f68c32a520"
+          }
+        },
+        {
+          "client_id": "114522752375-e67ggsb8pir97nfvuh8ot8og4nf6c5sr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "8b1d9b2248cc5fa8213a479b760bbd95a8ca3757"
+          }
+        },
+        {
+          "client_id": "114522752375-oipsl342g59bc4gtrfnl39pbucutalom.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "81d2f5ba84f4a0209d7bb7cdc3526d152afbbcdc"
+          }
+        },
+        {
+          "client_id": "114522752375-9rg8oik7noe2vrit3qbpgg63nig6eoc0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "1668c975c7eaf323b1d0de9576131ae4420d6cc1"
+          }
+        },
+        {
+          "client_id": "114522752375-l7h6v2kktq01qoilc19kb5mv37njsbkm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "c9551262d0300cf0ab3095c2369dc5b4edead989"
+          }
+        },
+        {
+          "client_id": "114522752375-jgk2qh1ufrgvrhulhbuo9fteg3daegt0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa_jSGGsLDAT23CtVHF9ktPBBxcVxA3Dc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114522752375-jgk2qh1ufrgvrhulhbuo9fteg3daegt0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114522752375:android:dad0248fb8ed4afd",
+        "android_client_info": {
+          "package_name": "com.example.hyo.tremorquantification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114522752375-k02gfv9mum7cu2im8g80khh7sc4ulomj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hyo.tremorquantification",
+            "certificate_hash": "81d2f5ba84f4a0209d7bb7cdc3526d152afbbcdc"
+          }
+        },
+        {
+          "client_id": "114522752375-jgk2qh1ufrgvrhulhbuo9fteg3daegt0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa_jSGGsLDAT23CtVHF9ktPBBxcVxA3Dc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114522752375-jgk2qh1ufrgvrhulhbuo9fteg3daegt0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

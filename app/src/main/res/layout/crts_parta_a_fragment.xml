@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="537dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="86dp"
+            android:foreground="@drawable/stable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="231dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="22dp"
+            android:text="CRTS A. 진전 (1-10)"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="150dp"
+            android:text="안정시 : 환자를 눕힌 상태에서 측정"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/survey3"
+            android:layout_width="655dp"
+            android:layout_height="144dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="186.5dp"
+            android:text="0. 없음\n1. 거의 알아보기 어려운 정도이며 간간이 나타난다.\n2. 어느 정도 간간이 관찰되며 약 2cm 미만으로 떨린다.\n3. 비교적 심하게 관찰되며 지속적으로 약 2-4cm정도 떨린다.\n4. 매우 심하게 떨리며 진폭이 4cm 이상이다."
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="224dp"
+            android:layout_marginTop="347.25dp"
+            android:text="0"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="344dp"
+            android:layout_marginTop="347.25dp"
+            android:text="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="464dp"
+            android:layout_marginTop="347.25dp"
+            android:text="2"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="584dp"
+            android:layout_marginTop="347.25dp"
+            android:gravity="center"
+            android:text="3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="704dp"
+            android:layout_marginTop="347.25dp"
+            android:text="4"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="400dp"
+            android:text="얼굴"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/crg1_1"
+            android:layout_width="680dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="383dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts1_1_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts1_1_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts1_1_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts1_1_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts1_1_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="463dp"
+            android:text="혀"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioGroup
+            android:id="@+id/crg2_1"
+            android:layout_width="680dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="448dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts2_1_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts2_1_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts2_1_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts2_1_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts2_1_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="526dp"
+            android:text="목소리"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioGroup
+            android:id="@+id/crg3_1"
+            android:layout_width="680dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="513dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <RadioButton
+                android:id="@+id/crts3_1_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts3_1_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts3_1_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts3_1_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts3_1_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="589dp"
+            android:text="머리"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/crg4_1"
+            android:layout_width="680dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="578dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts4_1_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts4_1_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts4_1_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts4_1_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts4_1_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="652dp"
+            android:text="우측 상지"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioGroup
+            android:id="@+id/crg5_1"
+            android:layout_width="680dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="643dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts5_1_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts5_1_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts5_1_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts5_1_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts5_1_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="715dp"
+            android:text="좌측 상지"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioGroup
+            android:id="@+id/crg6_1"
+            android:layout_width="680dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="708dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts6_1_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts6_1_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts6_1_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts6_1_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts6_1_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="778dp"
+            android:text="체간"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioGroup
+            android:id="@+id/crg7_1"
+            android:layout_width="680dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="773dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts7_1_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts7_1_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts7_1_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts7_1_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts7_1_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="844dp"
+            android:text="우측 하지"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioGroup
+            android:id="@+id/crg8_1"
+            android:layout_width="680dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="838dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts8_1_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts8_1_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts8_1_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts8_1_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts8_1_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="908dp"
+            android:text="좌측 하지"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioGroup
+            android:id="@+id/crg9_1"
+            android:layout_width="680dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="903dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts9_1_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts9_1_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts9_1_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts9_1_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts9_1_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="984dp"
+            android:text="기립성"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioGroup
+            android:id="@+id/crg10_1"
+            android:layout_width="680dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="968dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/crts10_1_0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts10_1_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts10_1_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts10_1_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/crts10_1_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="89dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/radio_button"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/select"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/crg10_1">
+
+            <android.support.constraint.ConstraintLayout
+
+                android:id="@+id/constraintLayout5"
+                android:layout_width="134dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/a_select_layout"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/a_select"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/select_ellipse"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/b_select_layout"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/b_select"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/no_select_ellipse"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/c_select_layout"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="0dp"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/c_select"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/no_select_ellipse"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </android.support.constraint.ConstraintLayout>
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="130dp"
+                android:layout_height="44dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/next_button"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

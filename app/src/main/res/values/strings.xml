@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">TremorQuantification</string>
+
+    <string name="menu_item_exit">Exit</string>
+    <string name="menu_item_settings">Settings</string>
+    <string name="menu_item_edit">Edit</string>
+    <string name="menu_item_delete">Delete</string>
+
+    <string name="crts_b_12">
+<b> 14. 각각의 그림을 주변 선에 닿지 않게 그리도록 한다. 팔꿈치나 손이 책상에 닿지 않게 하며 증상이 경미한 손부터 그리도록 한다.</b>\n
+\t 0 = 정상 \n
+\t 1 = 미약한 정도로 떨리며 간혹 주변 선에 닿기도 한다. \n
+        \t 2 = 어느 정도 떨리며 자주 주변 선에 닿는다. \n
+\t 3 = 매우 어렵게 그림을 그리고 심하게 실수를 범한다. \n
+        \t 4 = 그림 그리기를 끝마칠 수 없다.
+    </string>
+
+    <string name="hhh"><u>해당 환자 페이지로</u></string>
+
+    <string name="crts_first_page"><b>1</b> / 3</string>
+    <string name="crts_second_page"><b>2</b> / 3</string>
+    <string name="crts_third_page"><b>3</b> / 3</string>
+    <string name="n_n_n_n_finger_to_nose_toe_to_finger"><b>안정시</b> : 환자를 눕힌 상태에서 측정 <b>자세시</b> : 양손을 앞으로 뻗고, 손목을 약간 신전시키면서 손가락은 버리게 하며 측정,  하지는 앉은 자세에서 무릎과 발목을 굽힌 채로 약간 들게 해서 측정,  혀는 앞으로 내밀게 해서 측정, 머리와 몸통은 앉거나 선 자세에서 측정. <b>운동시</b> : 상지는 손가락-코(finger to nose)나 다른 운동을 시키고, 하지는 toe to finger를 시킨다.</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="detail"><u>자세히</u></string>
+
+</resources>

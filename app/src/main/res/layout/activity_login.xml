@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="308dp"
+        android:layout_height="287.5dp"
+        android:layout_marginStart="253dp"
+        android:layout_marginTop="238dp"
+        android:background="@drawable/login_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/loginButton"
+        android:layout_width="445dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="687dp"
+        android:foreground="@drawable/google_login_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/accountChange"
+        android:layout_width="445dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="768dp"
+        android:text="계정 선택"
+        android:textColor="#37BFA7"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:background="@drawable/logain_green_corner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

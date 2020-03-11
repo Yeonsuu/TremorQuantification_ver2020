@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp" >
+
+    <TextView
+        android:id="@+id/textviewLogo"
+        android:layout_width="221dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="16dp"
+        android:text="Add Patient"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/addClinicID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewLogo"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Clinical_ID"
+        android:inputType="textMultiLine|textNoSuggestions">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/addPatientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addClinicID"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Info"
+        android:inputType="textMultiLine|textNoSuggestions" />
+
+    <Button
+        android:id="@+id/patienAddButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addPatientName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        android:background="#00ff0000"
+        android:text="Next"
+        android:textColor="#009688" />
+
+    <Button
+        android:id="@+id/patienAddCancel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addPatientName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="20dp"
+        android:background="#00ff0000"
+        android:textColor="#009688"
+        android:text="Cancel" />
+
+</RelativeLayout>

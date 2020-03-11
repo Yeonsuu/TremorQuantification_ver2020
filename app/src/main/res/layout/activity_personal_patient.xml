@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/Background"
+    android:layout_height="wrap_content"
+    tools:context=".PersonalPatient">
+
+    <TextView
+        android:id="@+id/textView62"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:background="@drawable/non_task"
+        android:text="" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/back_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/dot"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="730dp"
+        android:layout_marginTop="57dp"
+        android:background="@drawable/dot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/patientclinicID"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="45dp"
+        android:text="Clinical_ID"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/patientClinicName"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="45dp"
+        android:text="김한동"
+        android:textSize="24dp"
+        app:layout_constraintStart_toEndOf="@+id/patientclinicID"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/diseasetype"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_p"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="207dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="80dp"
+        android:text="2019.07.20 - 2019.08.26"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:layout_width="800dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="145dp"
+        android:background="@drawable/task_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bt1"
+        android:clickable="true"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="164dp"
+        android:text="UPDRS"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bt1_under"
+        android:layout_width="95dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="195dp"
+        android:background="@drawable/under"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bt2"
+        android:clickable="true"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="164dp"
+        android:gravity="center_horizontal"
+        android:text="CRTS"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bt2_under"
+        android:layout_width="75dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="195dp"
+        android:background="@drawable/under"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bt3"
+        android:clickable="true"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="274dp"
+        android:layout_marginTop="164dp"
+        android:text="Spiral Task"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bt3_under"
+        android:layout_width="125dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="195dp"
+        android:background="@drawable/under"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bt4"
+        android:clickable="true"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="433dp"
+        android:layout_marginTop="164dp"
+        android:text="Line Task"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bt4_under"
+        android:layout_width="110dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="428dp"
+        android:layout_marginTop="195dp"
+        android:background="@drawable/under"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bt5"
+        android:clickable="true"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="668dp"
+        android:layout_marginTop="164dp"
+        android:text="Gear"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bt5_under"
+        android:layout_width="70dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="683dp"
+        android:layout_marginTop="195dp"
+        android:background="@drawable/under"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bt6"
+        android:clickable="true"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="560dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="164dp"
+        android:text="글쓰기"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bt6_under"
+        android:layout_width="85dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="567dp"
+        android:layout_marginTop="195dp"
+        android:background="@drawable/under"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="800dp"
+        android:layout_height="1020dp"
+        android:layout_marginTop="212dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:id="@+id/textviewLogo"
+        android:layout_width="221dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="16dp"
+        android:text="Edit Patient"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/editPatientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewLogo"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textMultiLine|textNoSuggestions">
+
+    </EditText>
+
+
+    <TextView
+        android:id="@+id/editPatientDiseaseType"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editPatientName"
+        android:text="Patient Type" />
+
+    <View
+        android:id="@+id/diseasedevide"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editPatientDiseaseType"
+        android:background="@drawable/short_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="220dp"
+        android:text="P"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="300dp"
+        android:text="ET"
+        android:textSize="20dp" />
+
+    <RadioGroup
+        android:id="@+id/edit_radiogroup"
+        android:layout_below="@+id/diseasedevide"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/parkinson"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/radio_button"
+            android:button="@android:color/transparent" />
+        <RadioButton
+            android:id="@+id/essential_tremor"
+            android:layout_marginStart="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:button="@android:color/transparent"
+            android:background="@drawable/radio_button"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/patientEditButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_radiogroup"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        android:background="#00ff0000"
+        android:text="Next"
+        android:textColor="#009688" />
+
+    <Button
+        android:id="@+id/patientEditCancel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_radiogroup"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="20dp"
+        android:background="#00ff0000"
+        android:textColor="#009688"
+        android:text="Cancel" />
+
+</RelativeLayout>
