@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\YunPC\\Desktop\\2020.02.05\\TremorQuantification_ver2-App-master 5\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-or\\values-or.xml",
+            "outputFile": "/Users/jaekyungha/Desktop/2020-1/project/TremorQuantification_ver2-App-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-or/values-or.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\d2e5ea997121285ea31bc67262022030\\res\\values-or\\values.xml",
+                    "source": "/Users/jaekyungha/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6ace8ac1ed7ed9876ad116fbfcf80f9d/res/values-or/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\6543b7b42b6802ad61e8e8ff80ea5ba9\\res\\values-or\\values-or.xml",
+                    "source": "/Users/jaekyungha/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/ad9053a5be0c92348e706e9397e8144a/res/values-or/values-or.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.1.0.aar\\155348ce5a0737cd0e476bc4ee2e6ec6\\res\\values-or\\values.xml",
+                    "source": "/Users/jaekyungha/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/d252cfcd374d47a81320e8c1152fd97b/res/values-or/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

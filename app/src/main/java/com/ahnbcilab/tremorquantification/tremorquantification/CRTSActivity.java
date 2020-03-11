@@ -81,7 +81,8 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
     int c15;
     int c16, c17, c18, c19;
     int c20, c21, c22, c23;
-    int left;
+    int left, right;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
