@@ -348,7 +348,6 @@ class Line : AppCompatActivity() {
                         intent.putExtra("PatientName", PatientName)
                         intent.putExtra("task", "LineTask")
                         intent.putExtra("left", left);//left : 0, right : 1
-                        Log.v("3/10_1 :", ""+left);
                         intent.putExtra("right_spiral", "null")
                         intent.putExtra("spiral_result", spiral_result)
                         intent.putExtra("left_spiral_result", left_spiral_result)

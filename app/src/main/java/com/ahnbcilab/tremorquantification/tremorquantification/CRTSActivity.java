@@ -95,10 +95,6 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
         path = intent.getExtras().getString("path");
         crts_num = intent.getExtras().getString("crts_num");
         left = intent.getExtras().getInt("left");
-        Log.v("3/10_6_1", ""+left);
-        Log.v("3/10_6_1_2", ""+Clinic_ID);
-        Log.v("3/10_6_1_3", ""+PatientName);
-        Log.v("crts_num", "CRTS_Activity is 0" + path + crts11);
         int num = 0;
         databasePatientList = firebaseDatabase.getReference("PatientList");
         databaseCRTS = databasePatientList.child(Clinic_ID).child("CRTS List");

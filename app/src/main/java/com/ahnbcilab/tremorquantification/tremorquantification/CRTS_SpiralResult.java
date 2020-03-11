@@ -422,7 +422,6 @@ public class CRTS_SpiralResult extends AppCompatActivity {
                         intent.putExtra("crts11", crts11);
                         intent.putExtra("crts12", crts12);
                         intent.putExtra("left", left) ;//left : 0, right : 1
-                        Log.v("3/10_3 :", ""+left);
                         startActivity(intent);
                     }
                 }

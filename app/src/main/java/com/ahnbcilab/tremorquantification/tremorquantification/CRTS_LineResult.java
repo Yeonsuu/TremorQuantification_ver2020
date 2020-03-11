@@ -485,7 +485,6 @@ public class CRTS_LineResult extends AppCompatActivity {
                         intent.putExtra("crts13", crts13);
                         intent.putExtra("crts14", crts14);
                         intent.putExtra("left", left); //left : 0, right : 1
-                        Log.v("3/10_5_2 ", ""+left);
                         startActivity(intent);
                         finish();
                     }

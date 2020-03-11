@@ -107,8 +107,6 @@ public class CRTS_Result_Activity extends AppCompatActivity {
         line_result = intent.getStringExtra("line_result") ;
         taskscore = intent.getStringExtra("taskscore") ;
         left = intent.getIntExtra("left", -1);
-        Log.v("3/10_7", ""+left);
-
 
         database_patient = firebaseDatabase.getReference("PatientList");
         database_crts = database_patient.child(Clinic_ID).child("CRTS List");

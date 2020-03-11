@@ -13,7 +13,16 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd1f19a3-9d5c-4c98-af37-96c922cf9eae" name="Default" comment="init commit" />
+    <list default="true" id="bd1f19a3-9d5c-4c98-af37-96c922cf9eae" name="Default" comment="init commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1254">
-              <caret line="109" column="33" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
+            <state relative-caret-position="127">
+              <caret line="109" selection-start-line="109" selection-end-line="109" />
             </state>
           </provider>
         </entry>
@@ -50,8 +59,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6783">
-              <caret line="397" column="58" selection-start-line="397" selection-start-column="58" selection-end-line="397" selection-end-column="58" />
+            <state relative-caret-position="165">
+              <caret line="417" column="76" selection-start-line="417" selection-start-column="76" selection-end-line="417" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="423" column="76" selection-start-line="423" selection-start-column="76" selection-end-line="423" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="309" column="76" selection-start-line="309" selection-start-column="76" selection-end-line="309" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="349" column="75" selection-start-line="349" selection-start-column="75" selection-end-line="349" selection-end-column="75" />
+              <folding>
+                <element signature="e#65#1892#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,17 +98,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8455">
-              <caret line="486" column="45" selection-start-line="486" selection-start-column="41" selection-end-line="486" selection-end-column="45" />
+            <state relative-caret-position="241">
+              <caret line="486" column="76" selection-start-line="486" selection-start-column="76" selection-end-line="486" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="97" column="35" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+            <state relative-caret-position="168">
+              <caret line="96" column="49" selection-start-line="96" selection-start-column="49" selection-end-line="96" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -172,17 +211,17 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_patient_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/add_patient_dialog.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/AnalysisActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line.kt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1920" />
     <option name="height" value="1040" />
   </component>
@@ -194,7 +233,35 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TremorQuantification_ver2-App-master 5" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="TremorQuantification_ver2-App-master 5" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="TremorQuantification_ver2-App-master 5" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="tremorquantification" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TremorQuantification_ver2-App-master 5" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="tremorquantification" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="tremorquantification" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -884,55 +951,55 @@
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="350" column="24" lean-forward="true" selection-start-line="350" selection-start-column="24" selection-end-line="350" selection-end-column="51" />
-          <folding>
-            <element signature="e#65#1892#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="310" column="37" selection-start-line="310" selection-start-column="37" selection-end-line="310" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="424" column="37" selection-start-line="424" selection-start-column="37" selection-end-line="424" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="109" column="33" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6783">
-          <caret line="397" column="58" selection-start-line="397" selection-start-column="58" selection-end-line="397" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8455">
-          <caret line="486" column="45" selection-start-line="486" selection-start-column="41" selection-end-line="486" selection-end-column="45" />
+        <state relative-caret-position="127">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="97" column="35" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+        <state relative-caret-position="168">
+          <caret line="96" column="49" selection-start-line="96" selection-start-column="49" selection-end-line="96" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="486" column="76" selection-start-line="486" selection-start-column="76" selection-end-line="486" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="417" column="76" selection-start-line="417" selection-start-column="76" selection-end-line="417" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="423" column="76" selection-start-line="423" selection-start-column="76" selection-end-line="423" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="309" column="76" selection-start-line="309" selection-start-column="76" selection-end-line="309" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="349" column="75" selection-start-line="349" selection-start-column="75" selection-end-line="349" selection-end-column="75" />
+          <folding>
+            <element signature="e#65#1892#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

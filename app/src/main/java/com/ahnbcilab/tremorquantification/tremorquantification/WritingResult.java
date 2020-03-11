@@ -308,7 +308,6 @@ public class WritingResult extends AppCompatActivity {
                         intent.putExtra("crts_num", crts_num);
                         intent.putExtra("crts11", crts11);
                         intent.putExtra("left", left); //left : 0, right : 1
-                        Log.v("3/10_2 :", ""+left);
                         startActivity(intent);
                     }
 
