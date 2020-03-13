@@ -328,7 +328,11 @@ public class WritingResult extends AppCompatActivity {
             bitmap.recycle();
             bitmap = null;
         }
-        d.setCallback(null);
+        if(d != null)
+        {
+            d.setCallback(null);
+        }
+
 
         super.onDestroy();
     }

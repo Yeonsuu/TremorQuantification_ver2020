@@ -61,7 +61,8 @@ public class CRTS_Result_Activity extends AppCompatActivity {
     boolean crtsa_result_bool = false ;
     boolean crtsb_result_bool = false ;
 
-    String Clinic_ID, PatientName, timestamp, spiral_result, line_result, downurl;
+    String Clinic_ID, PatientName, timestamp, downurl;
+    double[] spiral_result, line_result, left_spiral_result;
 
 
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -103,8 +104,9 @@ public class CRTS_Result_Activity extends AppCompatActivity {
         PatientName = intent.getExtras().getString("PatientName");
         timestamp = intent.getExtras().getString("timestamp");
         crts_num = intent.getExtras().getString("crts_num");
-        spiral_result = intent.getStringExtra("spiral_result") ;
-        line_result = intent.getStringExtra("line_result") ;
+        spiral_result = intent.getDoubleArrayExtra("spiral_result") ;
+        line_result = intent.getDoubleArrayExtra("line_result");
+        left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result");
         taskscore = intent.getStringExtra("taskscore") ;
         left = intent.getIntExtra("left", -1);
 
@@ -247,6 +249,26 @@ public class CRTS_Result_Activity extends AppCompatActivity {
         crtsb_14_layout.setVisibility(View.GONE);
         crtsb_15_layout.setVisibility(View.GONE);
         crtsc_result.setVisibility(View.GONE);
+
+        //결과값 text 채워넣는 부분
+        //TM[0], TF[1], Time[2], ED[3], Velocity[4]
+        right_spiral_hz.setText(String.format("%.1f", spiral_result[1]));
+        right_spiral_magnitude.setText(String.format("%.1f", spiral_result[0])) ;
+        right_spiral_distance.setText(String.format("%.1f", spiral_result[3])) ;
+        right_spiral_speed.setText(String.format("%.1f", spiral_result[4])) ;
+        right_spiral_time.setText(String.format("%.1f", spiral_result[2]));
+
+        left_spiral_hz.setText(String.format("%.1f", left_spiral_result[1])) ;
+        left_spiral_magnitude.setText(String.format("%.1f", left_spiral_result[0]));
+        left_spiral_distance.setText(String.format("%.1f", left_spiral_result[3]));
+        left_spiral_speed.setText(String.format("%.1f", left_spiral_result[4]));
+        left_spiral_time.setText(String.format("%.1f", left_spiral_result[2]));
+
+        line_hz.setText(String.format("%.1f", line_result[1])) ;
+        line_magnitude.setText(String.format("%.1f", line_result[0]));
+        line_distance.setText(String.format("%.1f", line_result[3]));
+        line_speed.setText(String.format("%.1f", line_result[4]));
+        line_time.setText(String.format("%.1f", line_result[2]));
 
         crtsa_result_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -730,23 +752,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                     String c23 = mData.child("CRTS task").child("사회활동").getValue() + "점";
                     c23score.setText(c23);
 
-                    right_spiral_hz.setText(mData.child("Right_Spiral_Result").child("hz").getValue().toString()) ;
-                    right_spiral_magnitude.setText(mData.child("Right_Spiral_Result").child("magnitude").getValue().toString()) ;
-                    right_spiral_distance.setText(mData.child("Right_Spiral_Result").child("distance").getValue().toString()) ;
-                    right_spiral_speed.setText(mData.child("Right_Spiral_Result").child("speed").getValue().toString()) ;
-                    right_spiral_time.setText(mData.child("Right_Spiral_Result").child("time").getValue().toString()) ;
 
-                    left_spiral_hz.setText(mData.child("Left_Spiral_Result").child("hz").getValue().toString()) ;
-                    left_spiral_magnitude.setText(mData.child("Left_Spiral_Result").child("magnitude").getValue().toString()) ;
-                    left_spiral_distance.setText(mData.child("Left_Spiral_Result").child("distance").getValue().toString()) ;
-                    left_spiral_speed.setText(mData.child("Left_Spiral_Result").child("speed").getValue().toString()) ;
-                    left_spiral_time.setText(mData.child("Left_Spiral_Result").child("time").getValue().toString()) ;
-
-                    line_hz.setText(mData.child("Line_Result").child("hz").getValue().toString()) ;
-                    line_magnitude.setText(mData.child("Line_Result").child("magnitude").getValue().toString()) ;
-                    line_distance.setText(mData.child("Line_Result").child("distance").getValue().toString()) ;
-                    line_speed.setText(mData.child("Line_Result").child("speed").getValue().toString()) ;
-                    line_time.setText(mData.child("Line_Result").child("time").getValue().toString()) ;
                 }
             }
 

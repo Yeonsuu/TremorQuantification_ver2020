@@ -81,7 +81,8 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
     int c15;
     int c16, c17, c18, c19;
     int c20, c21, c22, c23;
-    int left;
+    int left, right;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +96,7 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
         path = intent.getExtras().getString("path");
         crts_num = intent.getExtras().getString("crts_num");
         left = intent.getExtras().getInt("left");
+
         int num = 0;
         databasePatientList = firebaseDatabase.getReference("PatientList");
         databaseCRTS = databasePatientList.child(Clinic_ID).child("CRTS List");
@@ -604,11 +606,11 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(this, CRTS_Result_Activity.class);
             intent.putExtra("spiral_result", spiral_result);
             intent.putExtra("line_result", line_result);
+            intent.putExtra("left_spiral_result", left_spiral_result);
             intent.putExtra("ClinicID", Clinic_ID);
             intent.putExtra("PatientName", PatientName);
             intent.putExtra("timestamp", timestamp);
             intent.putExtra("left", left);
-            Log.v("3/10_6_2 :", ""+left);
             intent.putExtra("taskscore", String.valueOf(crts_partA_score + crts_partB_score + crts_partC_score));
             intent.putExtra("crts_num", String.valueOf(taskno));
             startActivity(intent);
