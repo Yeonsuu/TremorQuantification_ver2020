@@ -98,6 +98,22 @@ public class UPDRS_Fragment extends Fragment {
             PatientName = getArguments().getString("PatientName");
         }
         database_patient = firebaseDatabase.getReference("PatientList");
+        database_patient.addValueEventListener(new ValueEventListener() {
+            int temp_count = 0;
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
+                    boolean data_exists = dataSnapshot.child(Clinic_ID).child("UPDRS List").exists();
+                    if(data_exists==false) writeToFile("0", view.getContext());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
         database_updrs = database_patient.child(Clinic_ID).child("UPDRS List");
 
         database_updrs.addValueEventListener(new ValueEventListener() {

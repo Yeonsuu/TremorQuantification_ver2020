@@ -79,6 +79,22 @@ public class Writing_Fragment extends Fragment {
         file = new File(view.getContext().getFilesDir(), Clinic_ID + "WRITING_task_num.txt");
 
         database_patient = firebaseDatabase.getReference("PatientList");
+        database_patient.addValueEventListener(new ValueEventListener() {
+            int temp_count = 0;
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
+                    boolean data_exists = dataSnapshot.child(Clinic_ID).child("Writing List").exists();
+                    if(data_exists==false) writeToFile("0", view.getContext());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
         database_writing = database_patient.child(Clinic_ID).child("Writing List");
         database_writing.addValueEventListener(new ValueEventListener() {
             int temp_count = 0;

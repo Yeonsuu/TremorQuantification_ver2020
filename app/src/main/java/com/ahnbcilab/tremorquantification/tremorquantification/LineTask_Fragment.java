@@ -146,6 +146,21 @@ public class LineTask_Fragment extends Fragment {
 
         //환자 별 Spiral_task 개수 database에서 받아오기
         database_patient = firebaseDatabase.getReference("PatientList");
+        database_patient.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
+                    boolean data_exists = dataSnapshot.child(Clinic_ID).child("Line List").exists();
+                    if(data_exists==false) writeToFile("0", view.getContext());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
         database_line = database_patient.child(Clinic_ID).child("Line List");
         database_line.addValueEventListener(new ValueEventListener() {
             int temp_count = 0;

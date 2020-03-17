@@ -138,11 +138,28 @@ public class SpiralTask_Fragment extends Fragment {
 
         // 환자 별 Spiral_task 개수 file 저장
         file = new File(view.getContext().getFilesDir(), Clinic_ID + "SPIRAL_task_num.txt");
+
         //writeToFile("0", view.getContext());
 
 
         //환자 별 Spiral_task 개수 database에서 받아오기
         database_patient = firebaseDatabase.getReference("PatientList");
+        database_patient.addValueEventListener(new ValueEventListener() {
+            int temp_count = 0;
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
+                    boolean data_exists = dataSnapshot.child(Clinic_ID).child("Spiral List").exists();
+                    if(data_exists==false) writeToFile("0", view.getContext());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
         database_spiral = database_patient.child(Clinic_ID).child("Spiral List");
         database_spiral.addValueEventListener(new ValueEventListener() {
             int temp_count = 0;
@@ -150,6 +167,7 @@ public class SpiralTask_Fragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
+
                     temp_count = (int) dataSnapshot.getChildrenCount();
                     writeToFile(String.valueOf(temp_count), view.getContext());
                     //writeToFile(String.valueOf("0"), view.getContext());
@@ -168,7 +186,7 @@ public class SpiralTask_Fragment extends Fragment {
             list_int = 1;
 
             m = readFromFile(view.getContext());
-            if (Integer.parseInt(m) > 0) {
+            if (Integer.parseInt(m) > 0 ) {
                 view = inflater.inflate(R.layout.task_spiral_fragment, container, false);
 
                 clientName = (TextView) view.findViewById(R.id.client_name);
