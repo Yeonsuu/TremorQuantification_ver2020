@@ -72,6 +72,10 @@ public class LineTask_Fragment extends Fragment {
     Line_Rectangle_Fragment frag1;
     Line_List_Fragment frag2;
 
+    Line_Both_Rectangle_Fragment bothhand_frag;
+    LineRight_Fragment Right_frag;
+    LineLeft_Fragment Left_frag;
+
 
     String Clinic_ID;
     String PatientName;
@@ -79,7 +83,7 @@ public class LineTask_Fragment extends Fragment {
     View view;
     File file;
     String m;
-    String handside = "right";
+    String handside = "Right";
     String timestamp;
     String hz_score, magnitude_score, distance_score, time_score, velocity_score;
     int list_int;
@@ -192,21 +196,19 @@ public class LineTask_Fragment extends Fragment {
                     }
                 });
 
-                frag1 = new Line_Rectangle_Fragment();
-                frag2 = new Line_List_Fragment();
-
-                slf = new LineLeftFragment();
-                srf = new LineRightFragment();
+                bothhand_frag = new Line_Both_Rectangle_Fragment();
+                Right_frag = new LineRight_Fragment();
+                Left_frag = new LineLeft_Fragment();
 
                 righthand = (TextView) view.findViewById(R.id.right_hand_line);
                 lefthand = (TextView) view.findViewById(R.id.left_hand_line);
                 bothhand = (TextView) view.findViewById(R.id.both_hand_line);
-
-                final CheckBox line_box = (CheckBox) view.findViewById(R.id.check_line);
-                final CheckBox crts_box = (CheckBox) view.findViewById(R.id.check_crts_line);
-                final Button list = (Button) view.findViewById(R.id.list_line);
-                final Button rectangle_list = (Button) view.findViewById(R.id.rectangle_list_line);
-
+//
+////                final CheckBox line_box = (CheckBox) view.findViewById(R.id.check_line);
+////                final CheckBox crts_box = (CheckBox) view.findViewById(R.id.check_crts_line);
+////                final Button list = (Button) view.findViewById(R.id.list_line);
+////                final Button rectangle_list = (Button) view.findViewById(R.id.rectangle_list_line);
+//
                 database_line.addValueEventListener(new ValueEventListener() {
                     int temp_count = 0;
 
@@ -230,90 +232,91 @@ public class LineTask_Fragment extends Fragment {
 
                     }
                 });
-
-
-                setfrag(0);
-
+//
+//                Log.v("handside!!", handside);
+//
+////                setfrag(0);
                 setFrag(0);
-
-                if (line_box.isChecked()) {
-                    line_box_num = 1;
-                } else {
-                    line_box_num = 0;
-                }
-
-                if (crts_box.isChecked()) {
-                    crts_box_num = 1;
-                } else {
-                    crts_box_num = 0;
-                }
-
-
-                /*
-                database_patient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        int count = 1;
-                        GraphView graphView = (GraphView) view.findViewById(R.id.spiral_graph);
-                        LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
-                        series.appendData(new DataPoint(0, 0), true, 100);
-                        //taskListViewAdapter2.clear();
-                        for (DataSnapshot mData : dataSnapshot.getChildren()) {
-                            Long number = mData.child("Spiral List").getChildrenCount();
-                            for (int i = 0; i < number; i++) {
-                                //list(i, mData, graphView, series);
-                            }
-
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
-                */
-
-
-                list.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        listtype = "list";
-                        list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.list_button_c));
-                        rectangle_list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.draw_button_nc));
-                        setFrag(0);
-                    }
-                });
-
-                rectangle_list.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        listtype = "grid";
-                        list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.list_button_nc));
-                        rectangle_list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.draw_button_c));
-                        setFrag(1);
-                    }
-                });
-
+//
+////                if (line_box.isChecked()) {
+////                    line_box_num = 1;
+////                } else {
+////                    line_box_num = 0;
+////                }
+////
+////                if (crts_box.isChecked()) {
+////                    crts_box_num = 1;
+////                } else {
+////                    crts_box_num = 0;
+////                }
+//
+//
+//                /*
+//                database_patient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                        int count = 1;
+//                        GraphView graphView = (GraphView) view.findViewById(R.id.spiral_graph);
+//                        LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
+//                        series.appendData(new DataPoint(0, 0), true, 100);
+//                        //taskListViewAdapter2.clear();
+//                        for (DataSnapshot mData : dataSnapshot.getChildren()) {
+//                            Long number = mData.child("Spiral List").getChildrenCount();
+//                            for (int i = 0; i < number; i++) {
+//                                //list(i, mData, graphView, series);
+//                            }
+//
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                    }
+//                });
+//                */
+//
+//
+////                list.setOnClickListener(new View.OnClickListener() {
+////                    @Override
+////                    public void onClick(View v) {
+////                        listtype = "list";
+////                        list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.list_button_c));
+////                        rectangle_list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.draw_button_nc));
+////                        setFrag(0);
+////                    }
+////                });
+////
+////                rectangle_list.setOnClickListener(new View.OnClickListener() {
+////                    @Override
+////                    public void onClick(View v) {
+////                        listtype = "grid";
+////                        list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.list_button_nc));
+////                        rectangle_list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.draw_button_c));
+////                        setFrag(1);
+////                    }
+////                });
+//
                 righthand.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         handside = "Right";
-                        if (listtype.equals("list")) {
-                            frag2 = new Line_List_Fragment();
-                            setFrag(0);
-                        } else {
-                            frag1 = new Line_Rectangle_Fragment();
-                            setFrag(1);
-                        }
-                        srf = new LineRightFragment();
+//                        if (listtype.equals("list")) {
+//                            frag2 = new Line_List_Fragment();
+//                            setFrag(0);
+//                        } else {
+//                            frag1 = new Line_Rectangle_Fragment();
+//                            setFrag(1);
+//                        }
+//                        srf = new LineRightFragment();
+                        Right_frag = new LineRight_Fragment() ;
                         righthand.setBackgroundColor(Color.WHITE);
                         righthand.setTextColor(Color.rgb(84, 84, 84));
                         lefthand.setBackgroundColor(Color.rgb(209, 209, 209));
                         lefthand.setTextColor(Color.WHITE);
                         bothhand.setBackgroundColor(Color.rgb(209, 209, 209));
                         bothhand.setTextColor(Color.WHITE);
-                        setfrag(0);
+                        setFrag(0);
                     }
                 });
 
@@ -322,21 +325,22 @@ public class LineTask_Fragment extends Fragment {
                     public void onClick(View v) {
                         handside = "Left";
                         Log.v("SpiralTask", "SpiralTask : " + listtype);
-                        if (listtype.equals("list")) {
-                            frag2 = new Line_List_Fragment();
-                            setFrag(0);
-                        } else {
-                            frag1 = new Line_Rectangle_Fragment();
-                            setFrag(1);
-                        }
-                        slf = new LineLeftFragment();
+//                        if (listtype.equals("list")) {
+//                            frag2 = new Line_List_Fragment();
+//                            setFrag(0);
+//                        } else {
+//                            frag1 = new Line_Rectangle_Fragment();
+//                            setFrag(1);
+//                        }
+//                        slf = new LineLeftFragment();
                         lefthand.setBackgroundColor(Color.WHITE);
+                        Left_frag = new LineLeft_Fragment() ;
                         lefthand.setTextColor(Color.rgb(84, 84, 84));
                         righthand.setBackgroundColor(Color.rgb(209, 209, 209));
                         righthand.setTextColor(Color.WHITE);
                         bothhand.setBackgroundColor(Color.rgb(209, 209, 209));
                         bothhand.setTextColor(Color.WHITE);
-                        setfrag(1);
+                        setFrag(2);
                     }
                 });
 
@@ -344,13 +348,14 @@ public class LineTask_Fragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         handside = "both";
+                        bothhand_frag = new Line_Both_Rectangle_Fragment();
                         bothhand.setBackgroundColor(Color.WHITE);
                         bothhand.setTextColor(Color.rgb(84, 84, 84));
                         righthand.setBackgroundColor(Color.rgb(209, 209, 209));
                         righthand.setTextColor(Color.WHITE);
                         lefthand.setBackgroundColor(Color.rgb(209, 209, 209));
                         lefthand.setTextColor(Color.WHITE);
-                        setfrag(1);
+                        setFrag(1);
                     }
                 });
 
@@ -411,18 +416,32 @@ public class LineTask_Fragment extends Fragment {
                 Bundle bundle1 = new Bundle();
                 bundle1.putString("Clinic_ID", Clinic_ID);
                 bundle1.putString("PatientName", PatientName);
-                bundle1.putString("handside", handside);
-                frag2.setArguments(bundle1);
-                tran.replace(R.id.personal_line_taskList, frag2);
+                bundle1.putString("path", path);
+                bundle1.putString("handside", "Right");
+                Right_frag.setArguments(bundle1);
+                tran.replace(R.id.handside_line, Right_frag);
                 tran.commit();
                 break;
+
             case 1:
                 Bundle bundle2 = new Bundle();
                 bundle2.putString("Clinic_ID", Clinic_ID);
                 bundle2.putString("PatientName", PatientName);
+                bundle2.putString("path", path);
                 bundle2.putString("handside", handside);
-                frag1.setArguments(bundle2);
-                tran.replace(R.id.personal_line_taskList, frag1);
+                bothhand_frag.setArguments(bundle2);
+                tran.replace(R.id.handside_line, bothhand_frag);
+                tran.commit();
+                break;
+
+            case 2:
+                Bundle bundle3 = new Bundle();
+                bundle3.putString("Clinic_ID", Clinic_ID);
+                bundle3.putString("PatientName", PatientName);
+                bundle3.putString("path", path);
+                bundle3.putString("handside", "Left");
+                Left_frag.setArguments(bundle3);
+                tran.replace(R.id.handside_line, Left_frag);
                 tran.commit();
                 break;
 

@@ -32,6 +32,7 @@ public class HZFragment extends Fragment {
     private String result ;
 
     int spiral_count = 0;
+    int line_count = 0;
     String HZscore= "";
 
 
@@ -62,7 +63,17 @@ public class HZFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
-                    spiral_count = (int) dataSnapshot.child(handside).getChildrenCount();
+                    if(handside.equalsIgnoreCase("Both")) {
+                        spiral_count = (int) dataSnapshot.child("Left").getChildrenCount() ;
+                        spiral_count += (int) dataSnapshot.child("Right").getChildrenCount() ;
+                        line_count = (int) dataSnapshot.child("Left").getChildrenCount() + (int) dataSnapshot.child("Right").getChildrenCount() ;
+                        Log.v ("Spiral", "Spiral count " + spiral_count );
+
+                    }
+                    else {
+                        spiral_count = (int) dataSnapshot.child(handside).getChildrenCount();
+                        line_count = (int) dataSnapshot.child(handside).getChildrenCount();
+                    }
                 }
             }
 
@@ -80,10 +91,33 @@ public class HZFragment extends Fragment {
                 LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
                 series.appendData(new DataPoint(0,0), true, 100);
                 for (DataSnapshot mData : dataSnapshot.getChildren()){
+                    if(handside.equalsIgnoreCase("Both")){
+                        Long number = mData.child(type).child("Right").getChildrenCount() ;
+                        number += mData.child(type).child("Left").getChildrenCount() ;
+                        if(type.contains("Spiral")){
+                            for (int i = 0; i <= number; i++) {
+                                list(i, mData, graphView, series, String.valueOf(spiral_count));
 
-                    Long number = mData.child(type).child(handside).getChildrenCount() ;
-                    for(int i = 0 ; i<=number ; i++){
-                        list(i, mData, graphView, series, String.valueOf(spiral_count)) ;
+                            }
+                        }
+                        else{
+                            for (int i = 0; i <= number; i++) {
+                                list(i, mData, graphView, series, String.valueOf(line_count));
+                            }
+                        }
+                    }
+                    else {
+                        Long number = mData.child(type).child(handside).getChildrenCount();
+                        if(type.contains("Spiral")){
+                            for (int i = 0; i <= number; i++) {
+                                list(i, mData, graphView, series, String.valueOf(spiral_count));
+                            }
+                        }
+                        else{
+                            for (int i = 0; i <= number; i++) {
+                                list(i, mData, graphView, series, String.valueOf(line_count));
+                            }
+                        }
                     }
                 }
 
@@ -101,31 +135,91 @@ public class HZFragment extends Fragment {
     }
 
     private void list(final int i, final DataSnapshot mData, final GraphView graphView, final LineGraphSeries<DataPoint> series, final String spiral_num) {
-        Query query = database_patient.child(Clinic_ID).child(type).child(handside).orderByChild(handside+"_total_count").equalTo(i) ;
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
-                    String key = dataSnapshot1.getKey() ;
-                    HZscore = String.valueOf( mData.child(type).child(handside).child(key).child(result).child("hz").getValue());
-                    series.appendData(new DataPoint(i+1,Float.parseFloat(HZscore)), true, 100);
-                    //series.setDrawDataPoints(true);
-                    series.setColor(Color.parseColor("#78B5AA"));
-                    graphView.removeAllSeries();
-                    graphView.addSeries(series);
-                    graphView.getViewport().setScalableY(true);
-                    graphView.getViewport().setScrollableY(true);
-                    graphView.getViewport().setMinX(0);
-                    graphView.getViewport().setMaxX(Integer.parseInt(spiral_num));
+        if(handside.equalsIgnoreCase("Both")) {
+            Query queryLeft = database_patient.child(Clinic_ID).child(type).child("Left").orderByChild("total_count").equalTo(i);
+            Query queryRight = database_patient.child(Clinic_ID).child(type).child("Right").orderByChild("total_count").equalTo(i);
+            queryLeft.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                        String key = dataSnapshot1.getKey();
+                        Log.v("Spiral", "Spiral count" + i+" "+ key) ;
+                        HZscore = String.valueOf(mData.child(type).child("Left").child(key).child(result).child("hz").getValue());
+                        series.appendData(new DataPoint(i + 1, Double.parseDouble(HZscore)), true, 100);
+                        series.setColor(Color.parseColor("#78B5AA"));
+                        graphView.removeAllSeries();
+                        Log.v("Line~~~", "Line :: " +key) ;
+                        graphView.addSeries(series);
+                        graphView.getViewport().setScalableY(true);
+                        graphView.getViewport().setScrollableY(true);
+                        graphView.getViewport().setMinX(0);
+                        graphView.getViewport().setMaxX(Integer.parseInt(spiral_num));
+
+
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
                 }
-            }
+            });
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+            queryRight.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
 
-            }
-        });
+                        String key = dataSnapshot1.getKey();
+                        Log.v("Spiral", "Spiral count" + i+" "+ key) ;
+                        HZscore = String.valueOf(mData.child(type).child("Right").child(key).child(result).child("hz").getValue());
+                        series.appendData(new DataPoint(i + 1, Double.parseDouble(HZscore)), true, 100);
+                        series.setColor(Color.parseColor("#78B5AA"));
+                        graphView.removeAllSeries();
+                        Log.v("Line~~~", "Line :: " +key) ;
+                        graphView.addSeries(series);
+                        graphView.getViewport().setScalableY(true);
+                        graphView.getViewport().setScrollableY(true);
+                        graphView.getViewport().setMinX(0);
+                        graphView.getViewport().setMaxX(Integer.parseInt(spiral_num));
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+        else {
+            Query query = database_patient.child(Clinic_ID).child(type).child(handside).orderByChild(handside+"_total_count").equalTo(i);
+            query.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                        String key = dataSnapshot1.getKey();
+                        HZscore = String.valueOf(mData.child(type).child(handside).child(key).child(result).child("hz").getValue());
+                        series.appendData(new DataPoint(i + 1, Double.parseDouble(HZscore)), true, 100);
+                        series.setColor(Color.parseColor("#78B5AA"));
+                        graphView.removeAllSeries();
+                        Log.v("Line~~~", "Line :: " +key) ;
+                        graphView.addSeries(series);
+                        graphView.getViewport().setScalableY(true);
+                        graphView.getViewport().setScrollableY(true);
+                        graphView.getViewport().setMinX(0);
+                        graphView.getViewport().setMaxX(Integer.parseInt(spiral_num));
+
+
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
     }
+
 
 }

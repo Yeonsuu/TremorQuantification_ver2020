@@ -1878,14 +1878,14 @@ id hz_score_line
 id icon
 id icon_group
 id icon_only
-id id_1°³¿ù
-id id_3°³¿ù
-id id_6°³¿ù
+id id_1ê°œì›”
+id id_3ê°œì›”
+id id_6ê°œì›”
 id id_accountChange
 id id_logout
-id id_³»¸²Â÷¼ø
-id id_¿À¸§Â÷¼ø
-id id_ÀüÃ¼
+id id_ë‚´ë¦¼ì°¨ìˆœ
+id id_ì˜¤ë¦„ì°¨ìˆœ
+id id_ì „ì²´
 id ifRoom
 id image
 id imageView
@@ -1916,6 +1916,8 @@ id left_spiral_time
 id light
 id line1
 id line3
+id line_LeftRectangle
+id line_RightRectangle
 id line_add
 id line_distance
 id line_graph
@@ -1953,8 +1955,8 @@ id message
 id middle
 id mini
 id multiply
-id name_³»¸²Â÷¼ø
-id name_¿À¸§Â÷¼ø
+id name_ë‚´ë¦¼ì°¨ìˆœ
+id name_ì˜¤ë¦„ì°¨ìˆœ
 id navigation_header_container
 id never
 id next
@@ -2092,6 +2094,8 @@ id speed_graph
 id speed_improve
 id speed_score
 id speed_score_line
+id spiral_LeftRectangle
+id spiral_RightRectangle
 id spiral_add
 id spiral_graph
 id spiral_left_tab
@@ -2131,6 +2135,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id taskDate
+id taskHandside
 id taskName
 id taskNum
 id taskTime
@@ -2397,12 +2402,17 @@ layout fragment_distance
 layout fragment_hz
 layout fragment_line_left
 layout fragment_line_right
+layout fragment_lineleft
+layout fragment_lineright
 layout fragment_magnitude
 layout fragment_speed
 layout fragment_spiral_left
 layout fragment_spiral_right
+layout fragment_spiralleft
+layout fragment_spiralright
 layout fragment_time
 layout fragment_total
+layout line_both_rectangle_fragment
 layout line_list_fragment
 layout line_rectangle_fragment
 layout main_write_result
@@ -2428,6 +2438,7 @@ layout personalist
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout spiral_both_rectangle_fragment
 layout spiral_list_fragment
 layout spiral_rectangle_fragment
 layout support_simple_spinner_dropdown_item

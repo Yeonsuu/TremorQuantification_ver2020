@@ -158,107 +158,12 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="208dp"
             app:layout_constraintStart_toStartOf="parent"
-            android:foreground = "@color/list_item_normal_state"
+            android:background = "@color/list_item_normal_state"
             app:layout_constraintTop_toTopOf="parent" />
 
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="54dp"
-            android:layout_marginTop="245dp"
-            android:text="이전 결과 내역"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-
-        <FrameLayout
-            android:id="@+id/spiral_graph"
-            android:layout_width="734dp"
-            android:layout_height="430dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="288dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="54dp"
-            android:layout_marginTop="738dp"
-            android:text="Task List"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <Button
-            android:id="@+id/list"
-            android:layout_width="30dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="661dp"
-            android:layout_marginTop="739dp"
-            android:background="@drawable/list_button_c"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/rectangle_list"
-            android:layout_width="30dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="712dp"
-            android:layout_marginTop="739dp"
-            android:background="@drawable/draw_button_nc"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <View
-            android:layout_width="700dp"
-            android:layout_height="1dp"
-            android:layout_marginStart="49dp"
-            android:layout_marginTop="778dp"
-            android:background="#9E9E9E"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
-
-        <CheckBox
-            android:id="@+id/check_spiral"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="568.5dp"
-            android:layout_marginTop="803.5dp"
-            android:checked="true"
-            android:text="Spiral"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <CheckBox
-            android:id="@+id/check_crts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="665dp"
-            android:layout_marginTop="803.5dp"
-            android:checked="true"
-            android:text="CRTS"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <FrameLayout
-            android:id="@+id/personal_spiral_taskList"
-            android:layout_width="727dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="845dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 

@@ -47,10 +47,10 @@ public final class R {
         public static final int fill_vertical = 0x7f0802fb;
         public static final int horizontal = 0x7f080308;
         public static final int left = 0x7f08032b;
-        public static final int right = 0x7f0803b8;
-        public static final int start = 0x7f0803fb;
-        public static final int top = 0x7f080445;
-        public static final int vertical = 0x7f080499;
+        public static final int right = 0x7f0803ba;
+        public static final int start = 0x7f0803ff;
+        public static final int top = 0x7f08044a;
+        public static final int vertical = 0x7f08049e;
     }
     public static final class styleable {
         private styleable() {}

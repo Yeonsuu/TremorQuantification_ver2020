@@ -286,19 +286,19 @@ public class Line_Rectangle_Fragment extends Fragment {
                             taskName = "Line";
                         }
                         if(line_box.isChecked() && crts_box.isChecked()){
-                            tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName));
+                            tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName,""));
                             taskListViewAdapter2.notifyDataSetChanged();
                         }
                         else if(line_box.isChecked() && (crts_box.isChecked() == false)){
                             if(taskName.equals("Line")){
-                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName));
+                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName,""));
                                 taskListViewAdapter2.notifyDataSetChanged();
 
                             }
                         }
                         else if((line_box.isChecked() == false) && crts_box.isChecked()){
                             if(taskName.equals("CRTS")){
-                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName));
+                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName,""));
                                 taskListViewAdapter2.notifyDataSetChanged();
 
                             }
@@ -334,19 +334,19 @@ public class Line_Rectangle_Fragment extends Fragment {
                             taskName = "Line";
                         }
                         if(line_box.isChecked() && crts_box.isChecked()){
-                            tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName));
+                            tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName, ""));
                             taskListViewAdapter2.notifyDataSetChanged();
                         }
                         else if(line_box.isChecked() && (crts_box.isChecked() == false)){
                             if(taskName.equals("Line")){
-                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName));
+                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName,""));
                                 taskListViewAdapter2.notifyDataSetChanged();
 
                             }
                         }
                         else if((line_box.isChecked() == false) && crts_box.isChecked()){
                             if(taskName.equals("CRTS")){
-                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName));
+                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName,""));
                                 taskListViewAdapter2.notifyDataSetChanged();
 
                             }

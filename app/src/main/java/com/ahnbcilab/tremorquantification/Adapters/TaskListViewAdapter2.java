@@ -57,6 +57,7 @@ public class TaskListViewAdapter2 extends RecyclerView.Adapter<TaskListViewAdapt
         TextView taskName;
         TextView taskTime ;
         ImageView imageView;
+        TextView taskHandside;
         ConstraintLayout ta_listitem;
 
         public MyViewHolder(View itemView) {
@@ -66,6 +67,7 @@ public class TaskListViewAdapter2 extends RecyclerView.Adapter<TaskListViewAdapt
             taskTime = (TextView)itemView.findViewById(R.id.taskTime) ;
             taskType = (TextView) itemView.findViewById(R.id.tasktype);
             taskName = (TextView) itemView.findViewById(R.id.taskName);
+            taskHandside = (TextView) itemView.findViewById(R.id.taskHandside);
             imageView = (ImageView) itemView.findViewById(R.id.imageView2);
             ta_listitem = (ConstraintLayout) itemView.findViewById(R.id.ta_listitem2);
         }
@@ -86,6 +88,7 @@ public class TaskListViewAdapter2 extends RecyclerView.Adapter<TaskListViewAdapt
         holder.taskDate.setText(data.getTaskDate());
         holder.taskTime.setText(data.getTaskTime());
         holder.taskType.setText(data.getTaskType());
+        holder.taskHandside.setText(data.getTaskHandside());
         holder.taskName.setText(data.getTaskName());
 
         if(data.getTaskName().equals("")){

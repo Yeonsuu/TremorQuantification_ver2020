@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\YunPC\\Desktop\\2020.02.05\\TremorQuantification_ver2-App-master 5\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+            "outputFile": "/Users/jaekyungha/Desktop/2020-1/project3/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\5a11bd91d1678446cee0ee4aec7b4d73\\res\\values-v18\\values-v18.xml",
+                    "source": "/Users/jaekyungha/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1dcce6ce2b2b14d25148fce82ad92549/res/values-v18/values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

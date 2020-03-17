@@ -136,7 +136,7 @@ public class Writing_Rectangle_Fragment extends Fragment {
                     tasktime = timestamp.substring(timestamp.indexOf(" ") + 1, timestamp.lastIndexOf(":"));
                     taskName = "";
 
-                    tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), taskName, taskName));
+                    tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), taskName, taskName,""));
                     taskListViewAdapter2.notifyDataSetChanged();
 
                 }

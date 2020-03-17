@@ -6,33 +6,24 @@ import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.ActionMode;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ahnbcilab.tremorquantification.Adapters.AlertDialogHelper;
 import com.ahnbcilab.tremorquantification.Adapters.ContentsPagerAdapter;
-import com.ahnbcilab.tremorquantification.Adapters.RecyclerItemClickListener;
 import com.ahnbcilab.tremorquantification.Adapters.TaskListViewAdapter;
 import com.ahnbcilab.tremorquantification.data.TaskItem;
 import com.google.firebase.database.DataSnapshot;
@@ -45,7 +36,7 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
-import org.w3c.dom.Text;
+import org.hsqldb.rights.Right;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -72,9 +63,15 @@ public class SpiralTask_Fragment extends Fragment {
 
     SpiralLeftFragment slf;
     SpiralRightFragment srf;
+    SpiralBothFragment sbf;
 
-    Spiral_Rectangle_Fragment frag1 ;
-    Spiral_List_Fragment frag2 ;
+    Spiral_Rectangle_Fragment frag1;
+    Spiral_List_Fragment frag2;
+
+    Spiral_Both_Rectangle_Fragment bothhand_frag;
+    SpiralRight_Fragment Right_frag;
+    SpiralLeft_Fragment Left_frag;
+
 
     String listtype = "list";
 
@@ -84,7 +81,7 @@ public class SpiralTask_Fragment extends Fragment {
     View view;
     File file;
     String m;
-    int list_int ;
+    int list_int;
     String timestamp;
     String hz_score, magnitude_score, distance_score, time_score, velocity_score;
     String handside = "Right";
@@ -94,21 +91,19 @@ public class SpiralTask_Fragment extends Fragment {
 
     RecyclerView recyclerView;
     RecyclerView.LayoutManager recyclerViewLayoutManager;
-    TaskListViewAdapter taskListViewAdapter ;
+    TaskListViewAdapter taskListViewAdapter;
     TaskListViewAdapter taskListViewAdapter2;
     ArrayList<TaskItem> tasks = new ArrayList<TaskItem>();
     ArrayList<TaskItem> selected_tasks = new ArrayList<>();
 
     TextView clientName;
     TextView spiralCount;
-    TextView righthand ;
-    TextView lefthand ;
+
 
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private ContentsPagerAdapter mContentPagerAdapter;
     private FragmentActivity myContext;
-
 
 
     @Nullable
@@ -136,9 +131,7 @@ public class SpiralTask_Fragment extends Fragment {
                 intent.putExtra("Clinic_ID", Clinic_ID);
                 intent.putExtra("PatientName", PatientName);
                 intent.putExtra("path", "main");
-                intent.putExtra("task", "spiral") ;
-                intent.putExtra("left_count", 0) ;
-                intent.putExtra("right_count", 0) ;
+                intent.putExtra("task", "spiral");
                 startActivity(intent);
             }
         });
@@ -172,18 +165,16 @@ public class SpiralTask_Fragment extends Fragment {
 
         // 환자별 Spiral_task의 개수가 1개 이상이면 view 바꾸기
         if (file.exists()) {
-            list_int = 1 ;
-
+            list_int = 1;
 
             m = readFromFile(view.getContext());
             if (Integer.parseInt(m) > 0) {
                 view = inflater.inflate(R.layout.task_spiral_fragment, container, false);
 
-                clientName = (TextView)view.findViewById(R.id.client_name);
-                spiralCount = (TextView)view.findViewById(R.id.client_spiral_count);
+                clientName = (TextView) view.findViewById(R.id.client_name);
+                spiralCount = (TextView) view.findViewById(R.id.client_spiral_count);
                 clientName.setText(PatientName);
-                righthand = (TextView) view.findViewById(R.id.right_hand);
-                lefthand = (TextView)view.findViewById(R.id.left_hand);
+
 
                 Button add_spiral = (Button) view.findViewById(R.id.spiral_add);
 
@@ -197,25 +188,31 @@ public class SpiralTask_Fragment extends Fragment {
                         intent.putExtra("PatientName", PatientName);
                         intent.putExtra("path", "main");
                         intent.putExtra("task", "spiral");
-                        intent.putExtra("right_count", Integer.parseInt(righthand.getText().toString().substring(4,righthand.getText().toString().length()-1)));
-                        intent.putExtra("left_count", Integer.parseInt(lefthand.getText().toString().substring(3,lefthand.getText().toString().length()-1)));
                         startActivity(intent);
                     }
                 });
 
-                frag1 = new Spiral_Rectangle_Fragment() ;
-                frag2 = new Spiral_List_Fragment() ;
-
-                slf = new SpiralLeftFragment();
-                srf = new SpiralRightFragment();
-
-                final TextView bothhand = (TextView)view.findViewById(R.id.both_hand);
-
-                final CheckBox spiral_box = (CheckBox)view.findViewById(R.id.check_spiral);
-                final CheckBox crts_box = (CheckBox)view.findViewById(R.id.check_crts);
-                final Button list = (Button) view.findViewById(R.id.list);
-                final Button rectangle_list = (Button) view.findViewById(R.id.rectangle_list);
-
+                bothhand_frag = new Spiral_Both_Rectangle_Fragment();
+                Right_frag = new SpiralRight_Fragment();
+                Left_frag = new SpiralLeft_Fragment();
+//
+//                frag1 = new Spiral_Rectangle_Fragment() ;
+//                frag2 = new Spiral_List_Fragment() ;
+//                frag3 = new Spiral_Both_Rectangle_Fragment() ;
+//
+//                slf = new SpiralLeftFragment() ;
+//                srf = new SpiralRightFragment() ;
+//                sbf = new SpiralBothFragment() ;
+//
+                final TextView righthand = (TextView) view.findViewById(R.id.right_hand);
+                final TextView lefthand = (TextView) view.findViewById(R.id.left_hand);
+                final TextView bothhand = (TextView) view.findViewById(R.id.both_hand);
+//
+//                final CheckBox spiral_box = (CheckBox)view.findViewById(R.id.check_spiral);
+//                final CheckBox crts_box = (CheckBox)view.findViewById(R.id.check_crts);
+//                final Button list = (Button) view.findViewById(R.id.list);
+//                final Button rectangle_list = (Button) view.findViewById(R.id.rectangle_list);
+//
                 database_spiral.addValueEventListener(new ValueEventListener() {
                     int temp_count = 0;
 
@@ -225,7 +222,7 @@ public class SpiralTask_Fragment extends Fragment {
                             int left_count = (int) dataSnapshot.child("Left").getChildrenCount();
                             int right_count = (int) dataSnapshot.child("Right").getChildrenCount();
                             int total_count = left_count + right_count;
-                            spiralCount.setText("총 " +total_count+"번");
+                            spiralCount.setText("총 " + total_count + "번");
 
                             righthand.setText("오른손(" + right_count + ")");
                             lefthand.setText("왼손(" + left_count + ")");
@@ -239,112 +236,118 @@ public class SpiralTask_Fragment extends Fragment {
 
                     }
                 });
-
-                setfrag(0);
-
+//
+//                setfrag(0);
+//
                 setFrag(0);
-
-                if(spiral_box.isChecked()){
-                    spiral_box_num = 1;
-                }
-                else{
-                    spiral_box_num = 0;
-                }
-
-                if(crts_box.isChecked()){
-                    crts_box_num = 1;
-                }
-                else{
-                    crts_box_num = 0;
-                }
-
-
-
-                list.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        listtype = "list";
-                        list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.list_button_c));
-                        rectangle_list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.draw_button_nc));
-                        setFrag(0);
-                    }
-                });
-
-
-                rectangle_list.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        listtype = "grid";
-                        list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.list_button_nc));
-                        rectangle_list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.draw_button_c));
-                        setFrag(1);
-                    }
-                });
-
+//
+//                if(spiral_box.isChecked()){
+//                    spiral_box_num = 1;
+//                }
+//                else{
+//                    spiral_box_num = 0;
+//                }
+//
+//                if(crts_box.isChecked()){
+//                    crts_box_num = 1;
+//                }
+//                else{
+//                    crts_box_num = 0;
+//                }
+//
+//
+//
+//                list.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        listtype = "list";
+//                        list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.list_button_c));
+//                        rectangle_list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.draw_button_nc));
+//                        setFrag(0);
+//                    }
+//                });
+//
+//
+//                rectangle_list.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        listtype = "grid";
+//                        list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.list_button_nc));
+//                        rectangle_list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.draw_button_c));
+//                        if(handside.equalsIgnoreCase("Both")) {
+//                            setFrag(2);
+//                        }
+//                        else {
+//                            setFrag(1);
+//                        }
+//                    }
+//                });
+//
                 righthand.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         handside = "Right";
-                        Log.v("SpiralTask", "SpiralTask : " + listtype) ;
-                        if(listtype.equals("list")){
-                            frag2 = new Spiral_List_Fragment();
-                            setFrag(0);
-                        }
-                        else{
-                            frag1 = new Spiral_Rectangle_Fragment();
-                            setFrag(1);
-                        }
-                        srf = new SpiralRightFragment() ;
+                        Log.v("SpiralTask", "SpiralTask : " + listtype);
+//                        if(listtype.equals("list")){
+//                            frag2 = new Spiral_List_Fragment();
+//                            setFrag(0);
+//                        }
+//                        else{
+//                            frag1 = new Spiral_Rectangle_Fragment();
+//                            setFrag(1);
+//                        }
+                        Right_frag = new SpiralRight_Fragment();
+//                        srf = new SpiralRightFragment() ;
                         righthand.setBackgroundColor(Color.WHITE);
                         righthand.setTextColor(Color.rgb(84, 84, 84));
                         lefthand.setBackgroundColor(Color.rgb(209, 209, 209));
                         lefthand.setTextColor(Color.WHITE);
                         bothhand.setBackgroundColor(Color.rgb(209, 209, 209));
                         bothhand.setTextColor(Color.WHITE);
-                        setfrag(0);
+                        setFrag(0);
 
                     }
                 });
-
+//
                 lefthand.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         handside = "Left";
-                        Log.v("SpiralTask", "SpiralTask : " + listtype) ;
-                        if(listtype.equals("list")){
-                            frag2 = new Spiral_List_Fragment() ;
-                            setFrag(0);
-                        }
-                        else{
-                            frag1 = new Spiral_Rectangle_Fragment() ;
-                            setFrag(1);
-                        }
-                        slf = new SpiralLeftFragment() ;
+                        Log.v("SpiralTask", "SpiralTask : " + listtype);
+                        Left_frag = new SpiralLeft_Fragment();
                         lefthand.setBackgroundColor(Color.WHITE);
                         lefthand.setTextColor(Color.rgb(84, 84, 84));
                         righthand.setBackgroundColor(Color.rgb(209, 209, 209));
                         righthand.setTextColor(Color.WHITE);
                         bothhand.setBackgroundColor(Color.rgb(209, 209, 209));
                         bothhand.setTextColor(Color.WHITE);
-                        setfrag(1);
+                        setFrag(2);
 
                     }
                 });
-
                 bothhand.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        handside = "both";
+                        handside = "Both";
+//                        if(listtype.equals("list")){
+//                            frag2 = new Spiral_List_Fragment() ;
+//                            setFrag(0);
+//                        }
+//                        else{
+//                            frag3 = new Spiral_Both_Rectangle_Fragment() ;
+//                            setFrag(2);
+//                        }
+//                        slf = new SpiralLeftFragment() ;
+                        bothhand_frag = new Spiral_Both_Rectangle_Fragment();
                         bothhand.setBackgroundColor(Color.WHITE);
                         bothhand.setTextColor(Color.rgb(84, 84, 84));
                         righthand.setBackgroundColor(Color.rgb(209, 209, 209));
                         righthand.setTextColor(Color.WHITE);
                         lefthand.setBackgroundColor(Color.rgb(209, 209, 209));
                         lefthand.setTextColor(Color.WHITE);
-                        setfrag(1);
+                        setFrag(1);
                     }
                 });
-
 
 
             }
@@ -355,7 +358,6 @@ public class SpiralTask_Fragment extends Fragment {
         return view;
 
     }
-
 
 
     // write File
@@ -421,57 +423,69 @@ public class SpiralTask_Fragment extends Fragment {
     public void setFrag(int n) {
         fm = getFragmentManager();
         tran = fm.beginTransaction();
-
+        Left_frag = new SpiralLeft_Fragment();
         switch (n) {
             case 0:
                 Bundle bundle1 = new Bundle();
                 bundle1.putString("Clinic_ID", Clinic_ID);
                 bundle1.putString("PatientName", PatientName);
-                bundle1.putString("handside", handside);
-                frag2.setArguments(bundle1);
-                tran.replace(R.id.personal_spiral_taskList, frag2);
+                bundle1.putString("path", path);
+                bundle1.putString("handside", "Right");
+                Right_frag.setArguments(bundle1);
+                tran.replace(R.id.handside, Right_frag);
                 tran.commit();
                 break;
+
             case 1:
                 Bundle bundle2 = new Bundle();
                 bundle2.putString("Clinic_ID", Clinic_ID);
                 bundle2.putString("PatientName", PatientName);
+                bundle2.putString("path", path);
                 bundle2.putString("handside", handside);
-                frag1.setArguments(bundle2);
-                tran.replace(R.id.personal_spiral_taskList, frag1);
+                bothhand_frag.setArguments(bundle2);
+                tran.replace(R.id.handside, bothhand_frag);
+                tran.commit();
+                break;
+
+            case 2:
+                Bundle bundle3 = new Bundle();
+                bundle3.putString("Clinic_ID", Clinic_ID);
+                bundle3.putString("PatientName", PatientName);
+                bundle3.putString("path", path);
+                bundle3.putString("handside", "Left");
+                Left_frag.setArguments(bundle3);
+                tran.replace(R.id.handside, Left_frag);
                 tran.commit();
                 break;
 
         }
     }
-
-    public void setfrag(int n) {
-        fm = getFragmentManager();
-        tran = fm.beginTransaction();
-
-        switch (n) {
-            case 0:
-                Bundle bundle1 = new Bundle();
-                bundle1.putString("Clinic_ID", Clinic_ID);
-                bundle1.putString("PatientName", PatientName);
-                bundle1.putString("handside", handside);
-                srf.setArguments(bundle1);
-                tran.replace(R.id.spiral_graph, srf);
-                tran.commit();
-                break;
-            case 1:
-                Bundle bundle2 = new Bundle();
-                bundle2.putString("Clinic_ID", Clinic_ID);
-                bundle2.putString("PatientName", PatientName);
-                bundle2.putString("handside", handside);
-                slf.setArguments(bundle2);
-                tran.replace(R.id.spiral_graph, slf);
-                tran.commit();
-                break;
-
-        }
-    }
-
-
+//    public void setFrag(int n) {
+//        fm = getFragmentManager();
+//        tran = fm.beginTransaction();
+//
+//        switch (n) {
+//            case 0:
+//                Bundle bundle1 = new Bundle();
+//                bundle1.putString("Clinic_ID", Clinic_ID);
+//                bundle1.putString("PatientName", PatientName);
+//                bundle1.putString("handside", handside);
+//                frag2.setArguments(bundle1);
+//                tran.replace(R.id.personal_spiral_taskList, frag2);
+//                tran.commit();
+//                break;
+//            case 1:
+//                Bundle bundle2 = new Bundle();
+//                bundle2.putString("Clinic_ID", Clinic_ID);
+//                bundle2.putString("PatientName", PatientName);
+//                bundle2.putString("handside", handside);
+//                frag1.setArguments(bundle2);
+//                tran.replace(R.id.personal_spiral_taskList, frag1);
+//                tran.commit();
+//                break;
+//
+//
+//        }
+//    }
 
 }
