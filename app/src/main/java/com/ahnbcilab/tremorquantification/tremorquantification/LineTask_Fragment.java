@@ -121,12 +121,19 @@ public class LineTask_Fragment extends Fragment {
             path = getArguments().getString("path");
         }
 
+        view = inflater.inflate(R.layout.task_line_fragment, container, false);
 
-        // 초기 화면
-        view = inflater.inflate(R.layout.non_task_fragment, container, false);
-        Button add_task = (Button) view.findViewById(R.id.add_task);
+        database_patient = firebaseDatabase.getReference("PatientList");
+        database_line = database_patient.child(Clinic_ID).child("Line List");
+        clientName = (TextView) view.findViewById(R.id.client_name);
+        lineCount = (TextView) view.findViewById(R.id.client_line_count);
+        clientName.setText(PatientName);
+        lineCount.setText("총 " + m + "번");
 
-        add_task.setOnClickListener(new View.OnClickListener() {
+        Button add_line = (Button) view.findViewById(R.id.line_add);
+
+        // Spiral task 추가
+        add_line.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -139,37 +146,33 @@ public class LineTask_Fragment extends Fragment {
             }
         });
 
-        // 환자 별 Spiral_task 개수 file 저장
-        file = new File(view.getContext().getFilesDir(), Clinic_ID + "LINE_task_num.txt");
-        //writeToFile("0", view.getContext());
+        bothhand_frag = new Line_Both_Rectangle_Fragment();
+        Right_frag = new LineRight_Fragment();
+        Left_frag = new LineLeft_Fragment();
 
-
-        //환자 별 Spiral_task 개수 database에서 받아오기
-        database_patient = firebaseDatabase.getReference("PatientList");
-        database_patient.addValueEventListener(new ValueEventListener() {
-
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
-                    boolean data_exists = dataSnapshot.child(Clinic_ID).child("Line List").exists();
-                    if(data_exists==false) writeToFile("0", view.getContext());
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-        database_line = database_patient.child(Clinic_ID).child("Line List");
+        righthand = (TextView) view.findViewById(R.id.right_hand_line);
+        lefthand = (TextView) view.findViewById(R.id.left_hand_line);
+        bothhand = (TextView) view.findViewById(R.id.both_hand_line);
+//
+////                final CheckBox line_box = (CheckBox) view.findViewById(R.id.check_line);
+////                final CheckBox crts_box = (CheckBox) view.findViewById(R.id.check_crts_line);
+////                final Button list = (Button) view.findViewById(R.id.list_line);
+////                final Button rectangle_list = (Button) view.findViewById(R.id.rectangle_list_line);
+//
         database_line.addValueEventListener(new ValueEventListener() {
             int temp_count = 0;
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
-                    temp_count = (int) dataSnapshot.getChildrenCount();
-                    writeToFile(String.valueOf(temp_count), view.getContext());
+                    int left_count = (int) dataSnapshot.child("Left").getChildrenCount();
+                    int right_count = (int) dataSnapshot.child("Right").getChildrenCount();
+                    int total_count = left_count + right_count;
+                    lineCount.setText("총 " + total_count + "번");
+
+                    righthand.setText("오른손(" + right_count + ")");
+                    lefthand.setText("왼손(" + left_count + ")");
+
                     //writeToFile(String.valueOf("0"), view.getContext());
                 }
             }
@@ -179,79 +182,11 @@ public class LineTask_Fragment extends Fragment {
 
             }
         });
-
-
-        // 환자별 Spiral_task의 개수가 1개 이상이면 view 바꾸기
-        if (file.exists()) {
-            list_int = 1;
-
-
-            m = readFromFile(view.getContext());
-            if (Integer.parseInt(m) > 0) {
-                view = inflater.inflate(R.layout.task_line_fragment, container, false);
-
-                clientName = (TextView) view.findViewById(R.id.client_name);
-                lineCount = (TextView) view.findViewById(R.id.client_line_count);
-                clientName.setText(PatientName);
-                lineCount.setText("총 " + m + "번");
-
-                Button add_line = (Button) view.findViewById(R.id.line_add);
-
-                // Spiral task 추가
-                add_line.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(view.getContext(), Spiral_Task_Select.class);
-                        intent.putExtra("Clinic_ID", Clinic_ID);
-                        intent.putExtra("PatientName", PatientName);
-                        intent.putExtra("path", "main");
-                        intent.putExtra("task", "line");
-                        startActivity(intent);
-                    }
-                });
-
-                bothhand_frag = new Line_Both_Rectangle_Fragment();
-                Right_frag = new LineRight_Fragment();
-                Left_frag = new LineLeft_Fragment();
-
-                righthand = (TextView) view.findViewById(R.id.right_hand_line);
-                lefthand = (TextView) view.findViewById(R.id.left_hand_line);
-                bothhand = (TextView) view.findViewById(R.id.both_hand_line);
-//
-////                final CheckBox line_box = (CheckBox) view.findViewById(R.id.check_line);
-////                final CheckBox crts_box = (CheckBox) view.findViewById(R.id.check_crts_line);
-////                final Button list = (Button) view.findViewById(R.id.list_line);
-////                final Button rectangle_list = (Button) view.findViewById(R.id.rectangle_list_line);
-//
-                database_line.addValueEventListener(new ValueEventListener() {
-                    int temp_count = 0;
-
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
-                            int left_count = (int) dataSnapshot.child("Left").getChildrenCount();
-                            int right_count = (int) dataSnapshot.child("Right").getChildrenCount();
-                            int total_count = left_count + right_count;
-                            lineCount.setText("총 " + total_count + "번");
-
-                            righthand.setText("오른손(" + right_count + ")");
-                            lefthand.setText("왼손(" + left_count + ")");
-
-                            //writeToFile(String.valueOf("0"), view.getContext());
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
 //
 //                Log.v("handside!!", handside);
 //
 ////                setfrag(0);
-                setFrag(0);
+        setFrag(0);
 //
 ////                if (line_box.isChecked()) {
 ////                    line_box_num = 1;
@@ -312,10 +247,10 @@ public class LineTask_Fragment extends Fragment {
 ////                    }
 ////                });
 //
-                righthand.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        handside = "Right";
+        righthand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handside = "Right";
 //                        if (listtype.equals("list")) {
 //                            frag2 = new Line_List_Fragment();
 //                            setFrag(0);
@@ -324,22 +259,22 @@ public class LineTask_Fragment extends Fragment {
 //                            setFrag(1);
 //                        }
 //                        srf = new LineRightFragment();
-                        Right_frag = new LineRight_Fragment() ;
-                        righthand.setBackgroundColor(Color.WHITE);
-                        righthand.setTextColor(Color.rgb(84, 84, 84));
-                        lefthand.setBackgroundColor(Color.rgb(209, 209, 209));
-                        lefthand.setTextColor(Color.WHITE);
-                        bothhand.setBackgroundColor(Color.rgb(209, 209, 209));
-                        bothhand.setTextColor(Color.WHITE);
-                        setFrag(0);
-                    }
-                });
+                Right_frag = new LineRight_Fragment() ;
+                righthand.setBackgroundColor(Color.WHITE);
+                righthand.setTextColor(Color.rgb(84, 84, 84));
+                lefthand.setBackgroundColor(Color.rgb(209, 209, 209));
+                lefthand.setTextColor(Color.WHITE);
+                bothhand.setBackgroundColor(Color.rgb(209, 209, 209));
+                bothhand.setTextColor(Color.WHITE);
+                setFrag(0);
+            }
+        });
 
-                lefthand.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        handside = "Left";
-                        Log.v("SpiralTask", "SpiralTask : " + listtype);
+        lefthand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handside = "Left";
+                Log.v("SpiralTask", "SpiralTask : " + listtype);
 //                        if (listtype.equals("list")) {
 //                            frag2 = new Line_List_Fragment();
 //                            setFrag(0);
@@ -348,36 +283,31 @@ public class LineTask_Fragment extends Fragment {
 //                            setFrag(1);
 //                        }
 //                        slf = new LineLeftFragment();
-                        lefthand.setBackgroundColor(Color.WHITE);
-                        Left_frag = new LineLeft_Fragment() ;
-                        lefthand.setTextColor(Color.rgb(84, 84, 84));
-                        righthand.setBackgroundColor(Color.rgb(209, 209, 209));
-                        righthand.setTextColor(Color.WHITE);
-                        bothhand.setBackgroundColor(Color.rgb(209, 209, 209));
-                        bothhand.setTextColor(Color.WHITE);
-                        setFrag(2);
-                    }
-                });
-
-                bothhand.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        handside = "both";
-                        bothhand_frag = new Line_Both_Rectangle_Fragment();
-                        bothhand.setBackgroundColor(Color.WHITE);
-                        bothhand.setTextColor(Color.rgb(84, 84, 84));
-                        righthand.setBackgroundColor(Color.rgb(209, 209, 209));
-                        righthand.setTextColor(Color.WHITE);
-                        lefthand.setBackgroundColor(Color.rgb(209, 209, 209));
-                        lefthand.setTextColor(Color.WHITE);
-                        setFrag(1);
-                    }
-                });
-
-
+                lefthand.setBackgroundColor(Color.WHITE);
+                Left_frag = new LineLeft_Fragment() ;
+                lefthand.setTextColor(Color.rgb(84, 84, 84));
+                righthand.setBackgroundColor(Color.rgb(209, 209, 209));
+                righthand.setTextColor(Color.WHITE);
+                bothhand.setBackgroundColor(Color.rgb(209, 209, 209));
+                bothhand.setTextColor(Color.WHITE);
+                setFrag(2);
             }
+        });
 
-        }
+        bothhand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handside = "both";
+                bothhand_frag = new Line_Both_Rectangle_Fragment();
+                bothhand.setBackgroundColor(Color.WHITE);
+                bothhand.setTextColor(Color.rgb(84, 84, 84));
+                righthand.setBackgroundColor(Color.rgb(209, 209, 209));
+                righthand.setTextColor(Color.WHITE);
+                lefthand.setBackgroundColor(Color.rgb(209, 209, 209));
+                lefthand.setTextColor(Color.WHITE);
+                setFrag(1);
+            }
+        });
 
         return view;
 

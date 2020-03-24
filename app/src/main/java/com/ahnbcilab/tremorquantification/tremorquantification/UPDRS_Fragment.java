@@ -86,6 +86,8 @@ public class UPDRS_Fragment extends Fragment {
     TextView clientName;
     TextView updrsCount;
 
+    boolean data_exists ;
+    String taskType;
     String exits = "null";
 
     @Nullable
@@ -96,40 +98,35 @@ public class UPDRS_Fragment extends Fragment {
         if (getArguments() != null) {
             Clinic_ID = getArguments().getString("Clinic_ID");
             PatientName = getArguments().getString("PatientName");
+            taskType = getArguments().getString("taskType");
+            m = getArguments().getString("taskNum");
         }
+        view = inflater.inflate(R.layout.task_updrs_fragment, container, false);
         database_patient = firebaseDatabase.getReference("PatientList");
-        database_patient.addValueEventListener(new ValueEventListener() {
-            int temp_count = 0;
-
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
-                    boolean data_exists = dataSnapshot.child(Clinic_ID).child("UPDRS List").exists();
-                    if(data_exists==false) writeToFile("0", view.getContext());
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
         database_updrs = database_patient.child(Clinic_ID).child("UPDRS List");
-
-        database_updrs.addValueEventListener(new ValueEventListener() {
-            int temp_count = 0;
-
+        recyclerView = (RecyclerView) view.findViewById(R.id.personal_updrs_taskList);
+        recentdate = (TextView) view.findViewById(R.id.recent_date);
+        clientName = (TextView) view.findViewById(R.id.client_name);
+        updrsCount = (TextView) view.findViewById(R.id.client_updrs_count);
+        taskListViewAdapter = new TaskListViewAdapter(getActivity(), tasks, selected_tasks);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(taskListViewAdapter);
+        taskListViewAdapter.clear();
+        database_patient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
-                    temp_count = (int) dataSnapshot.getChildrenCount();
-                    writeToFile(String.valueOf(temp_count), view.getContext());
-                    //writeToFile(String.valueOf("0"), view.getContext());
-                    exits = String.valueOf(fileSnapshot.getChildren());
-                    if (!exits.equals("null")) {
-
+                //int count = 1;
+                GraphView graphView = (GraphView) view.findViewById(R.id.updrs_graph);
+                LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
+                series.appendData(new DataPoint(0, 0), true, 100);
+                taskListViewAdapter.clear();
+                for (DataSnapshot mData : dataSnapshot.getChildren()) {
+                    Long number = mData.child("UPDRS List").getChildrenCount();
+                    for (int i = 0; i < number; i++) {
+                        list(i, mData, graphView, series, m);
                     }
                 }
+
             }
 
             @Override
@@ -137,12 +134,11 @@ public class UPDRS_Fragment extends Fragment {
 
             }
         });
-        // 초기 화면
-        view = inflater.inflate(R.layout.non_task_fragment, container, false);
-        Button add_task = (Button) view.findViewById(R.id.add_task);
+
+        Button updrs_task = (Button) view.findViewById(R.id.updrs_add);
 
         // UPDRS task 추가
-        add_task.setOnClickListener(new View.OnClickListener() {
+        updrs_task.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -154,96 +150,28 @@ public class UPDRS_Fragment extends Fragment {
             }
         });
 
-        // 환자 별 UPDRS_task 개수 file 저장
-        file = new File(view.getContext().getFilesDir(), Clinic_ID + "UPDRS_task_num.txt");
-        //writeToFile("0", view.getContext());
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(view.getContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view1, int position) {
+                TextView taskDate = view1.findViewById(R.id.taskDate);
+                TextView taskTime = view1.findViewById(R.id.taskTime);
+                TextView taskscore = view1.findViewById(R.id.taskscore);
+                Intent intent = new Intent(getActivity(), UPDRS_Result_Activity.class);
+                intent.putExtra("ClinicID", Clinic_ID);
+                intent.putExtra("PatientName", PatientName);
+                intent.putExtra("taskscore", taskscore.getText());
+                String time = taskDate.getText().toString() + " " + taskTime.getText().toString();
+                Log.v("UPDRS_Fragment", "UPDRS : timestamp " + time);
+                intent.putExtra("timestamp", time);
+                intent.putExtra("updrs_num", m);
+                startActivity(intent);
+            }
 
-
-        //환자 별 UPDRS_task 개수 database에서 받아오기
-
-        //Query query = database_patient.orderByChild("ClinicID").equalTo(Clinic_ID) ;
-
-        //DatabaseReference ref = firebaseDatabase.getReference("PatientList") ;
-
-
-        // 환자별 UPDRS_task의 개수가 1개 이상이면 view 바꾸기
-        if (file.exists()) {
-            m = readFromFile(view.getContext());
-            if (Integer.parseInt(m) > 0) {
-                view = inflater.inflate(R.layout.task_updrs_fragment, container, false);
-                recyclerView = (RecyclerView) view.findViewById(R.id.personal_updrs_taskList);
-                recentdate = (TextView) view.findViewById(R.id.recent_date);
-                clientName = (TextView) view.findViewById(R.id.client_name);
-                updrsCount = (TextView) view.findViewById(R.id.client_updrs_count);
-                taskListViewAdapter = new TaskListViewAdapter(getActivity(), tasks, selected_tasks);
-                recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-                recyclerView.setAdapter(taskListViewAdapter);
-                taskListViewAdapter.clear();
-                database_patient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        //int count = 1;
-                        GraphView graphView = (GraphView) view.findViewById(R.id.updrs_graph);
-                        LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
-                        series.appendData(new DataPoint(0, 0), true, 100);
-                        taskListViewAdapter.clear();
-                        for (DataSnapshot mData : dataSnapshot.getChildren()) {
-                            Long number = mData.child("UPDRS List").getChildrenCount();
-                            for (int i = 0; i < number; i++) {
-                                list(i, mData, graphView, series, m);
-                            }
-                        }
-
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
-
-                Button updrs_task = (Button) view.findViewById(R.id.updrs_add);
-
-                // UPDRS task 추가
-                updrs_task.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(view.getContext(), UPDRSActivity.class);
-                        intent.putExtra("Clinic_ID", Clinic_ID);
-                        intent.putExtra("PatientName", PatientName);
-                        intent.putExtra("updrs_num", m);
-                        startActivity(intent);
-                    }
-                });
-
-                recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(view.getContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(View view1, int position) {
-                        TextView taskDate = view1.findViewById(R.id.taskDate);
-                        TextView taskTime = view1.findViewById(R.id.taskTime);
-                        TextView taskscore = view1.findViewById(R.id.taskscore);
-                        Intent intent = new Intent(getActivity(), UPDRS_Result_Activity.class);
-                        intent.putExtra("ClinicID", Clinic_ID);
-                        intent.putExtra("PatientName", PatientName);
-                        intent.putExtra("taskscore", taskscore.getText());
-                        String time = taskDate.getText().toString() + " " + taskTime.getText().toString();
-                        Log.v("UPDRS_Fragment", "UPDRS : timestamp " + time);
-                        intent.putExtra("timestamp", time);
-                        intent.putExtra("updrs_num", m);
-                        startActivity(intent);
-                    }
-
-                    @Override
-                    public void onItemLongClick(View view1, int position) {
-
-                    }
-                }));
-
+            @Override
+            public void onItemLongClick(View view1, int position) {
 
             }
-        }
-
+        }));
         return view;
 
     }

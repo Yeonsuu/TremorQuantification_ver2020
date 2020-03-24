@@ -73,29 +73,16 @@ public class Writing_Fragment extends Fragment {
             //path = getArguments().getString("path");
         }
 
-        // 초기 화면
-        view = inflater.inflate(R.layout.non_task_fragment, container, false);
-
-        file = new File(view.getContext().getFilesDir(), Clinic_ID + "WRITING_task_num.txt");
 
         database_patient = firebaseDatabase.getReference("PatientList");
-        database_patient.addValueEventListener(new ValueEventListener() {
-            int temp_count = 0;
-
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
-                    boolean data_exists = dataSnapshot.child(Clinic_ID).child("Writing List").exists();
-                    if(data_exists==false) writeToFile("0", view.getContext());
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
         database_writing = database_patient.child(Clinic_ID).child("Writing List");
+
+        view = inflater.inflate(R.layout.task_writing_fragment, container, false);
+
+        clientName = (TextView) view.findViewById(R.id.client_name);
+        writingCount = (TextView) view.findViewById(R.id.client_writing_count);
+        clientName.setText(PatientName);
+
         database_writing.addValueEventListener(new ValueEventListener() {
             int temp_count = 0;
 
@@ -103,8 +90,7 @@ public class Writing_Fragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
                     temp_count = (int) dataSnapshot.getChildrenCount();
-                    writeToFile(String.valueOf(temp_count), view.getContext());
-                    //writeToFile(String.valueOf("0"), view.getContext());
+                    writingCount.setText("총 " + String.valueOf(temp_count) + "번");
                 }
             }
 
@@ -114,63 +100,32 @@ public class Writing_Fragment extends Fragment {
             }
         });
 
-        if (file.exists()) {
+        frag1 = new Writing_Rectangle_Fragment();
+        frag2 = new Writing_List_Fragment();
 
-            m = readFromFile(view.getContext());
-            if (Integer.parseInt(m) > 0) {
-                view = inflater.inflate(R.layout.task_writing_fragment, container, false);
+        final Button list = (Button) view.findViewById(R.id.list);
+        final Button rectangle_list = (Button) view.findViewById(R.id.rectangle_list);
+        setFrag(0);
 
-                clientName = (TextView) view.findViewById(R.id.client_name);
-                writingCount = (TextView) view.findViewById(R.id.client_writing_count);
-                clientName.setText(PatientName);
 
-                database_writing.addValueEventListener(new ValueEventListener() {
-                    int temp_count = 0;
-
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
-                            temp_count = (int) dataSnapshot.getChildrenCount();
-                            writingCount.setText("총 " + String.valueOf(temp_count) + "번");
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
-
-                frag1 = new Writing_Rectangle_Fragment();
-                frag2 = new Writing_List_Fragment();
-
-                final Button list = (Button) view.findViewById(R.id.list);
-                final Button rectangle_list = (Button) view.findViewById(R.id.rectangle_list);
+        list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.list_button_c));
+                rectangle_list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.draw_button_nc));
                 setFrag(0);
-
-
-                list.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.list_button_c));
-                        rectangle_list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.draw_button_nc));
-                        setFrag(0);
-                    }
-                });
-
-
-                rectangle_list.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.list_button_nc));
-                        rectangle_list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.draw_button_c));
-                        setFrag(1);
-                    }
-                });
-
             }
+        });
 
-        }
+
+        rectangle_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.list_button_nc));
+                rectangle_list.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.draw_button_c));
+                setFrag(1);
+            }
+        });
 
         return view;
 

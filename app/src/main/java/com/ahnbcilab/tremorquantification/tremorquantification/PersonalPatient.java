@@ -74,12 +74,15 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
     LineTask_Fragment frag4;
     Gear_Fragment frag5;
     Writing_Fragment frag6;
+    NonTaskFragment frag7 ;
     public static String Clinic_ID;
     public static String taskType;
     String PatientName;
     String task;
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     DatabaseReference databasePatientList;
+    boolean data_exists;
+    String taskNum ;
     Button dot;
     ImageView bt1_under, bt2_under, bt3_under, bt4_under, bt5_under, bt6_under;
 
@@ -102,6 +105,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
         c.setText(Clinic_ID);
         TextView p = (TextView) findViewById(R.id.patientClinicName);
         p.setText(PatientName);
+
         fb1 = (TextView) findViewById(R.id.bt1);
         fb2 = (TextView) findViewById(R.id.bt2);
         fb3 = (TextView) findViewById(R.id.bt3);
@@ -218,6 +222,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
         frag4 = new LineTask_Fragment();
         frag5 = new Gear_Fragment();
         frag6 = new Writing_Fragment();
+        frag7 = new NonTaskFragment();
         setFrag(0);
 
 
@@ -353,44 +358,152 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
     public void setFrag(int n) {
         fm = getSupportFragmentManager();
         tran = fm.beginTransaction();
+
         switch (n) {
             case 0:
-                Bundle bundle1 = new Bundle();
-                bundle1.putString("Clinic_ID", Clinic_ID);
-                bundle1.putString("PatientName", PatientName);
-                frag1.setArguments(bundle1);
-                tran.replace(R.id.main_frame, frag1);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
-                tran.commit();
-                taskType = "UPDRS List";
+                databasePatientList.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
+                            data_exists = dataSnapshot.child(Clinic_ID).child("UPDRS List").exists();
+                            taskNum = String.valueOf(dataSnapshot.child(Clinic_ID).child("UPDRS List").getChildrenCount());
+                            tran = fm.beginTransaction();
+                            Bundle bundle1 = new Bundle();
+                            taskType = "UPDRS List";
+                            bundle1.putString("Clinic_ID", Clinic_ID);
+                            bundle1.putString("PatientName", PatientName);
+                            bundle1.putString("taskType", taskType);
+                            bundle1.putString("taskNum", taskNum);
+
+                            Log.v("ppersonal", "pperssonal"+taskNum);
+                            if(data_exists==false){
+                                frag7.setArguments(bundle1);
+                                tran.replace(R.id.main_frame, frag7);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
+
+                            }
+                            else {
+                                frag1.setArguments(bundle1);
+                                tran.replace(R.id.main_frame, frag1);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
+                            }
+                            tran.commit();
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
                 break;
             case 1:
-                Bundle bundle2 = new Bundle();
-                bundle2.putString("Clinic_ID", Clinic_ID);
-                bundle2.putString("PatientName", PatientName);
-                frag2.setArguments(bundle2);
-                tran.replace(R.id.main_frame, frag2);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
-                tran.commit();
-                taskType = "CRTS List";
+                databasePatientList.addListenerForSingleValueEvent(new ValueEventListener() {
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
+                            tran = fm.beginTransaction();
+                            data_exists = dataSnapshot.child(Clinic_ID).child("CRTS List").exists();
+                            taskNum = String.valueOf(dataSnapshot.child(Clinic_ID).child("CRTS List").getChildrenCount());
+                            Bundle bundle2 = new Bundle();
+                            taskType = "CRTS List";
+                            bundle2.putString("Clinic_ID", Clinic_ID);
+                            bundle2.putString("PatientName", PatientName);
+                            bundle2.putString("taskType", taskType);
+                            bundle2.putString("taskNum", taskNum);
+
+                            if(data_exists==false){
+                                frag7.setArguments(bundle2);
+                                tran.replace(R.id.main_frame, frag7);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
+
+                            }
+                            else {
+                                frag2.setArguments(bundle2);
+                                tran.replace(R.id.main_frame, frag2);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
+                            }
+                            tran.commit();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
                 break;
             case 2:
-                Bundle bundle3 = new Bundle();
-                bundle3.putString("Clinic_ID", Clinic_ID);
-                bundle3.putString("PatientName", PatientName);
-                bundle3.putString("path", "main");
-                frag3.setArguments(bundle3);
-                tran.replace(R.id.main_frame, frag3);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
-                tran.commit();
-                taskType = "Spiral List";
+                databasePatientList.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
+                            data_exists = dataSnapshot.child(Clinic_ID).child("Spiral List").exists();
+                            taskNum = String.valueOf(dataSnapshot.child(Clinic_ID).child("Spiral List").getChildrenCount());
+                            tran = fm.beginTransaction();
+                            Bundle bundle3 = new Bundle();
+                            taskType = "Spiral List";
+                            bundle3.putString("Clinic_ID", Clinic_ID);
+                            bundle3.putString("PatientName", PatientName);
+
+
+                            if(data_exists==false){
+                                bundle3.putString("taskType", taskType);
+                                bundle3.putString("taskNum", taskNum);
+                                frag7.setArguments(bundle3);
+                                tran.replace(R.id.main_frame, frag7);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
+
+                            }
+                            else {
+                                bundle3.putString("path", "main");
+                                frag3.setArguments(bundle3);
+                                tran.replace(R.id.main_frame, frag3);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
+                            }
+                            tran.commit();
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
                 break;
             case 3:
-                Bundle bundle4 = new Bundle();
-                bundle4.putString("Clinic_ID", Clinic_ID);
-                bundle4.putString("PatientName", PatientName);
-                bundle4.putString("path", "main");
-                frag4.setArguments(bundle4);
-                tran.replace(R.id.main_frame, frag4);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
-                tran.commit();
-                taskType = "Line List";
+                databasePatientList.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
+                            data_exists = dataSnapshot.child(Clinic_ID).child("Line List").exists();
+                            taskNum = String.valueOf(dataSnapshot.child(Clinic_ID).child("Line List").getChildrenCount());
+                            tran = fm.beginTransaction();
+                            Bundle bundle4 = new Bundle();
+                            taskType = "Line List";
+                            bundle4.putString("Clinic_ID", Clinic_ID);
+                            bundle4.putString("PatientName", PatientName);
+
+
+                            if(data_exists==false){
+                                bundle4.putString("taskType", taskType);
+                                bundle4.putString("taskNum", taskNum);
+                                frag7.setArguments(bundle4);
+                                tran.replace(R.id.main_frame, frag7);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
+
+                            }
+                            else {
+                                bundle4.putString("path", "main");
+                                frag4.setArguments(bundle4);
+                                tran.replace(R.id.main_frame, frag4);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
+                            }
+                            tran.commit();
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
                 break;
             case 4:
                 tran.replace(R.id.main_frame, frag5);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
@@ -398,14 +511,39 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                 taskType = "Gear";
                 break;
             case 5:
-                Bundle bundle6 = new Bundle();
-                bundle6.putString("Clinic_ID", Clinic_ID);
-                bundle6.putString("PatientName", PatientName);
-                //bundle6.putString("path", "main");
-                frag6.setArguments(bundle6);
-                tran.replace(R.id.main_frame, frag6);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
-                tran.commit();
-                taskType = "Writing List";
+                databasePatientList.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
+                            data_exists = dataSnapshot.child(Clinic_ID).child("Writing List").exists();
+                            taskNum = String.valueOf(dataSnapshot.child(Clinic_ID).child("Writing List").getChildrenCount());
+                            tran = fm.beginTransaction();
+                            Bundle bundle6 = new Bundle();
+                            taskType = "Writing List";
+                            bundle6.putString("Clinic_ID", Clinic_ID);
+                            bundle6.putString("PatientName", PatientName);
+
+                            if(data_exists==false){
+                                bundle6.putString("taskType", taskType);
+                                bundle6.putString("taskNum", taskNum);
+                                frag7.setArguments(bundle6);
+                                tran.replace(R.id.main_frame, frag7);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
+
+                            }
+                            else {
+                                frag6.setArguments(bundle6);
+                                tran.replace(R.id.main_frame, frag6);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
+                            }
+                            tran.commit();
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
                 break;
 
         }

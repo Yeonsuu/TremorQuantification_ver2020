@@ -69,6 +69,7 @@ public class CRTS_Fragment extends Fragment {
     TextView recentdate;
     TextView clientName;
     TextView crtsCount;
+    String taskType ;
 
     @Nullable
     @Override
@@ -78,15 +79,47 @@ public class CRTS_Fragment extends Fragment {
         if (getArguments() != null) {
             Clinic_ID = getArguments().getString("Clinic_ID");
             PatientName = getArguments().getString("PatientName");
+            taskType = getArguments().getString("taskType");
+            m = getArguments().getString("taskNum");
         }
+        view = inflater.inflate(R.layout.task_crts_fragment, container, false);
+        database_patient = firebaseDatabase.getReference("PatientList");
+        database_crts = database_patient.child(Clinic_ID).child("CRTS List");
+        recyclerView = (RecyclerView) view.findViewById(R.id.personal_crts_taskList);
+        recentdate = (TextView) view.findViewById(R.id.recent_date);
+        clientName = (TextView) view.findViewById(R.id.client_name);
+        crtsCount = (TextView) view.findViewById(R.id.client_crts_count);
+        taskListViewAdapter = new TaskListViewAdapter(getActivity(), tasks, selected_tasks);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(taskListViewAdapter);
 
 
-        // 초기 화면
-        view = inflater.inflate(R.layout.non_task_fragment, container, false);
-        Button add_task = (Button) view.findViewById(R.id.add_task);
+        database_patient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //int count = 1;
+                GraphView graphView = (GraphView) view.findViewById(R.id.crts_graph);
+                LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
+                series.appendData(new DataPoint(0, 0), true, 100);
+                taskListViewAdapter.clear();
+                for (DataSnapshot mData : dataSnapshot.getChildren()) {
+                    Long number = mData.child("CRTS List").getChildrenCount();
+                    //Toast.makeText(view.getContext(), number+"", Toast.LENGTH_SHORT).show();
+                    for (int i = 0; i < number; i++) {
+                        list(i, mData, graphView, series, m);
+                    }
+                }
+            }
 
-        // CRTS task 추가
-        add_task.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        Button add_crts = (Button) view.findViewById(R.id.crts_add);
+
+        add_crts.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -96,129 +129,28 @@ public class CRTS_Fragment extends Fragment {
                 intent.putExtra("path", "main");
                 intent.putExtra("crts_num", m);
                 startActivity(intent);
-//                Intent intent = new Intent(view.getContext(), example1.class) ;
-//                startActivity(intent);
             }
         });
-
-
-        // 환자 별 CRTS_task 개수 file 저장
-        file = new File(view.getContext().getFilesDir(), Clinic_ID + "CRTS_task_num.txt");
-        //writeToFile("0", view.getContext());
-
-
-        //환자 별 CRTS_task 개수 database에서 받아오기
-        database_patient = firebaseDatabase.getReference("PatientList");
-        database_patient.addValueEventListener(new ValueEventListener() {
-            int temp_count = 0;
-
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(view.getContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
-                    boolean data_exists = dataSnapshot.child(Clinic_ID).child("CRTS List").exists();
-                    if(data_exists==false) writeToFile("0", view.getContext());
-                }
+            public void onItemClick(View view1, int position) {
+                TextView taskDate = view1.findViewById(R.id.taskDate);
+                TextView taskTime = view1.findViewById(R.id.taskTime);
+                TextView taskscore = view1.findViewById(R.id.taskscore);
+                Intent intent = new Intent(getActivity(), CRTS_Result_Activity.class);
+                intent.putExtra("ClinicID", Clinic_ID);
+                intent.putExtra("PatientName", PatientName);
+                intent.putExtra("taskscore", taskscore.getText());
+                intent.putExtra("timestamp", taskDate.getText() + " " + taskTime.getText());
+                intent.putExtra("crts_num", m);
+                startActivity(intent);
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+            public void onItemLongClick(View view1, int position) {
 
             }
-        });
-        database_crts = database_patient.child(Clinic_ID).child("CRTS List");
-        database_crts.addValueEventListener(new ValueEventListener() {
-            int temp_count = 0;
-
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
-                    temp_count = (int) dataSnapshot.getChildrenCount();
-                    writeToFile(String.valueOf(temp_count), view.getContext());
-                    //writeToFile(String.valueOf("0"), view.getContext());
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-        // 환자별 CRTS_task의 개수가 1개 이상이면 view 바꾸기
-        if (file.exists()) {
-            m = readFromFile(view.getContext());
-            Log.v("aaaaa", m);
-            if (Integer.parseInt(m) > 0) {
-                view = inflater.inflate(R.layout.task_crts_fragment, container, false);
-                recyclerView = (RecyclerView) view.findViewById(R.id.personal_crts_taskList);
-                recentdate = (TextView) view.findViewById(R.id.recent_date);
-                clientName = (TextView) view.findViewById(R.id.client_name);
-                crtsCount = (TextView) view.findViewById(R.id.client_crts_count);
-                taskListViewAdapter = new TaskListViewAdapter(getActivity(), tasks, selected_tasks);
-                recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-                recyclerView.setAdapter(taskListViewAdapter);
-
-
-                database_patient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        //int count = 1;
-                        GraphView graphView = (GraphView) view.findViewById(R.id.crts_graph);
-                        LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
-                        series.appendData(new DataPoint(0, 0), true, 100);
-                        taskListViewAdapter.clear();
-                        for (DataSnapshot mData : dataSnapshot.getChildren()) {
-                            Long number = mData.child("CRTS List").getChildrenCount();
-                            //Toast.makeText(view.getContext(), number+"", Toast.LENGTH_SHORT).show();
-                            for (int i = 0; i < number; i++) {
-                                list(i, mData, graphView, series, m);
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
-
-                Button add_crts = (Button) view.findViewById(R.id.crts_add);
-
-                add_crts.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(view.getContext(), CRTSActivity.class);
-                        intent.putExtra("Clinic_ID", Clinic_ID);
-                        intent.putExtra("PatientName", PatientName);
-                        intent.putExtra("path", "main");
-                        intent.putExtra("crts_num", m);
-                        startActivity(intent);
-                    }
-                });
-                recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(view.getContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(View view1, int position) {
-                        TextView taskDate = view1.findViewById(R.id.taskDate);
-                        TextView taskTime = view1.findViewById(R.id.taskTime);
-                        TextView taskscore = view1.findViewById(R.id.taskscore);
-                        Intent intent = new Intent(getActivity(), CRTS_Result_Activity.class);
-                        intent.putExtra("ClinicID", Clinic_ID);
-                        intent.putExtra("PatientName", PatientName);
-                        intent.putExtra("taskscore", taskscore.getText());
-                        intent.putExtra("timestamp", taskDate.getText() + " " + taskTime.getText());
-                        intent.putExtra("crts_num", m);
-                        startActivity(intent);
-                    }
-
-                    @Override
-                    public void onItemLongClick(View view1, int position) {
-
-                    }
-                }));
-
-            }
-        }
+        }));
 
 
         return view;
