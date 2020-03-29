@@ -15,6 +15,30 @@
       },
       "oauth_client": [
         {
+          "client_id": "114522752375-5i5t23sd4vfemlotse1jkms4p6aov7mr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "67f0eb07231ad07889745e33ac1cf85db0d43bac"
+          }
+        },
+        {
+          "client_id": "114522752375-oaqh521vf4a8fpkm6915mnbt99l491mt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "04875523eadb85ef0aa283c894079ac1d4442155"
+          }
+        },
+        {
+          "client_id": "114522752375-iu6456cf0ld44lab8vkrj3k5kpevjvaq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahnbcilab.tremorquantification.tremorquantification",
+            "certificate_hash": "bbe9a1d6efedc0ab0788dcfb5accfc0e6dc58374"
+          }
+        },
+        {
           "client_id": "114522752375-da1le4aid0ljii1qass5e6ppimbc5c07.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

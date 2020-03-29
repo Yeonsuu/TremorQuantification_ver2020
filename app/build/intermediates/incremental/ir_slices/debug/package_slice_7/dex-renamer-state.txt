@@ -1,4 +1,0 @@
-#Wed Mar 25 04:42:42 KST 2020
-base.0=/Users/jaekyungha/Desktop/2020-1/project3/app/build/intermediates/transforms/dexMerger/debug/7
-path.0=classes.dex
-renamed.0=classes.dex

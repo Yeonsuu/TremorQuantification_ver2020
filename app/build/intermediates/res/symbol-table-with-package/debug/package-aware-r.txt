@@ -1878,14 +1878,14 @@ id hz_score_line
 id icon
 id icon_group
 id icon_only
-id id_1ê°œì›”
-id id_3ê°œì›”
-id id_6ê°œì›”
+id id_1°³¿ù
+id id_3°³¿ù
+id id_6°³¿ù
 id id_accountChange
 id id_logout
-id id_ë‚´ë¦¼ì°¨ìˆœ
-id id_ì˜¤ë¦„ì°¨ìˆœ
-id id_ì „ì²´
+id id_³»¸²Â÷¼ø
+id id_¿À¸§Â÷¼ø
+id id_ÀüÃ¼
 id ifRoom
 id image
 id imageView
@@ -1955,8 +1955,8 @@ id message
 id middle
 id mini
 id multiply
-id name_ë‚´ë¦¼ì°¨ìˆœ
-id name_ì˜¤ë¦„ì°¨ìˆœ
+id name_³»¸²Â÷¼ø
+id name_¿À¸§Â÷¼ø
 id navigation_header_container
 id never
 id next

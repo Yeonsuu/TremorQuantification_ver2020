@@ -250,26 +250,6 @@ public class CRTS_Result_Activity extends AppCompatActivity {
         crtsb_15_layout.setVisibility(View.GONE);
         crtsc_result.setVisibility(View.GONE);
 
-        //결과값 text 채워넣는 부분
-        //TM[0], TF[1], Time[2], ED[3], Velocity[4]
-        right_spiral_hz.setText(String.format("%.1f", spiral_result[1]));
-        right_spiral_magnitude.setText(String.format("%.1f", spiral_result[0])) ;
-        right_spiral_distance.setText(String.format("%.1f", spiral_result[3])) ;
-        right_spiral_speed.setText(String.format("%.1f", spiral_result[4])) ;
-        right_spiral_time.setText(String.format("%.1f", spiral_result[2]));
-
-        left_spiral_hz.setText(String.format("%.1f", left_spiral_result[1])) ;
-        left_spiral_magnitude.setText(String.format("%.1f", left_spiral_result[0]));
-        left_spiral_distance.setText(String.format("%.1f", left_spiral_result[3]));
-        left_spiral_speed.setText(String.format("%.1f", left_spiral_result[4]));
-        left_spiral_time.setText(String.format("%.1f", left_spiral_result[2]));
-
-        line_hz.setText(String.format("%.1f", line_result[1])) ;
-        line_magnitude.setText(String.format("%.1f", line_result[0]));
-        line_distance.setText(String.format("%.1f", line_result[3]));
-        line_speed.setText(String.format("%.1f", line_result[4]));
-        line_time.setText(String.format("%.1f", line_result[2]));
-
         crtsa_result_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -752,6 +732,25 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                     String c23 = mData.child("CRTS task").child("사회활동").getValue() + "점";
                     c23score.setText(c23);
 
+                    //결과값 text 채워넣는 부분
+                    //TM[0], TF[1], Time[2], ED[3], Velocity[4]
+                    right_spiral_hz.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Right_Spiral_Result").child("hz").getValue()))));
+                    right_spiral_magnitude.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Right_Spiral_Result").child("magnitude").getValue())))) ;
+                    right_spiral_distance.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Right_Spiral_Result").child("distance").getValue())))) ;
+                    right_spiral_speed.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Right_Spiral_Result").child("speed").getValue())))) ;
+                    right_spiral_time.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Right_Spiral_Result").child("time").getValue()))));
+
+                    left_spiral_hz.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Left_Spiral_Result").child("hz").getValue())))) ;
+                    left_spiral_magnitude.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Left_Spiral_Result").child("magnitude").getValue()))));
+                    left_spiral_distance.setText(String.format("%.1f", Double.parseDouble(String.valueOf( mData.child("Left_Spiral_Result").child("distance").getValue()))));
+                    left_spiral_speed.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Left_Spiral_Result").child("speed").getValue()))));
+                    left_spiral_time.setText(String.format("%.1f", Double.parseDouble(String.valueOf( mData.child("Left_Spiral_Result").child("time").getValue()))));
+
+                    line_hz.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Line_Result").child("hz").getValue())))) ;
+                    line_magnitude.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Line_Result").child("magnitude").getValue()))));
+                    line_distance.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Line_Result").child("distance").getValue()))));
+                    line_speed.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Line_Result").child("speed").getValue()))));
+                    line_time.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Line_Result").child("time").getValue()))));
 
                 }
             }

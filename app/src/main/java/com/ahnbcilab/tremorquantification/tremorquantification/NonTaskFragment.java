@@ -92,12 +92,12 @@ public class NonTaskFragment extends Fragment {
         view = inflater.inflate(R.layout.non_task_fragment, container, false);
 
         final Button add_task = (Button) view.findViewById(R.id.add_task);
-        if(taskType.equals("Writing List")){
+        /*if(taskType.equals("Writing List")){
             add_task.setVisibility(View.GONE);
         }
         else{
             add_task.setVisibility(View.VISIBLE);
-        }
+        }*/
         // UPDRS task 추가
         add_task.setOnClickListener(new View.OnClickListener() {
 

@@ -550,9 +550,9 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
 
             CRTS_Score crts_score = new CRTS_Score(crts_partA_score, crts_partB_score, crts_partC_score);
             CRTS m_crts = new CRTS(timestamp, taskno);
-            SpiralData spiraldata = new SpiralData(1.0, line_result[1], line_result[0], line_result[3], line_result[2], line_result[4]);
+            SpiralData spiraldata = new SpiralData(1.0, spiral_result[1], spiral_result[0], spiral_result[3], spiral_result[2], spiral_result[4]);
             //SpiralData left_spiraldata = new SpiralData(left_spiral_result[2], left_spiral_result[3],left_spiral_result[4], "CRTS");
-            SpiralData left_spiraldata = new SpiralData(1.0,line_result[1], line_result[0], line_result[3], line_result[2], line_result[4]);
+            SpiralData left_spiraldata = new SpiralData(1.0,left_spiral_result[1], left_spiral_result[0], left_spiral_result[3], left_spiral_result[2], left_spiral_result[4]);
             LineData linedata = new LineData(1.0,line_result[1], line_result[0], line_result[3], line_result[2], line_result[4]);
             final String key = databaseCRTS.push().getKey();
 
