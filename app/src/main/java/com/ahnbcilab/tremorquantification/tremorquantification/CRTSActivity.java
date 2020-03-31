@@ -204,6 +204,9 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
                 bundle2.putInt("crts12", crts12);
                 bundle2.putInt("crts13", crts13);
                 bundle2.putInt("crts14", crts14);
+                bundle2.putDoubleArray("spiral_result",spiral_result);
+                bundle2.putDoubleArray("left_spiral_result",left_spiral_result);
+                bundle2.putDoubleArray("line_result", line_result);
                 bundle2.putInt("left", left);
                 frag2.setArguments(bundle2);
                 tran.replace(R.id.crts_test, frag2);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.

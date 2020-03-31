@@ -791,11 +791,11 @@ public class CRTS_Result_Activity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                     String key = dataSnapshot1.getKey() ;
-
                     partA_score = String.valueOf(mData.child("CRTS List").child(key).child("CRTS score").child("partA_score").getValue()) ;
                     partB_score = String.valueOf(mData.child("CRTS List").child(key).child("CRTS score").child("partB_score").getValue()) ;
                     partC_score = String.valueOf(mData.child("CRTS List").child(key).child("CRTS score").child("partC_score").getValue()) ;
-                    crts_score = String.valueOf(Integer.parseInt(partA_score) + Integer.parseInt(partB_score) + Integer.parseInt(partC_score));
+                    Log.v("CRTSResultActivity", "partA"+partA_score+"partB"+partB_score+"partC"+partC_score);
+                    crts_score = String.valueOf(Integer.parseInt(partA_score) + Integer.parseInt(partB_score) + Integer.parseInt(partC_score));//오류
                     series.appendData(new DataPoint(i+1, Integer.parseInt(crts_score)), true, 172);
                     //series.setDrawDataPoints(true);
                     series.setColor(Color.parseColor("#78B5AA"));

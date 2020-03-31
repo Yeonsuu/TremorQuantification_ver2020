@@ -60,8 +60,8 @@ public class CRTS_partb_Fragment extends Fragment {
 
     boolean bool = true;
 
-    String Clinic_ID, PatientName, path, left_spiral_result, spiral_result, line_result;
-
+    String Clinic_ID, PatientName, path;
+    double[] spiral_result, line_result, left_spiral_result;
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable final ViewGroup container, final Bundle savedInstanceState) {
@@ -72,9 +72,10 @@ public class CRTS_partb_Fragment extends Fragment {
             Clinic_ID = getArguments().getString("Clinic_ID");
             PatientName = getArguments().getString("PatientName");
             path = getArguments().getString("path");
-            spiral_result = getArguments().getString("spiral_result");
-            line_result = getArguments().getString("line_result");
-            left_spiral_result = getArguments().getString("left_spiral_result");
+            spiral_result = getArguments().getDoubleArray("spiral_result") ;
+            line_result = getArguments().getDoubleArray("line_result");
+            Log.v("Crts12_edit", "Crts12_edit"+ spiral_result) ;
+            left_spiral_result = getArguments().getDoubleArray("left_spiral_result");
             crts11 = getArguments().getInt("crts11", -1);
             crts12 = getArguments().getInt("crts12", -1);
             crts13= getArguments().getInt("crts13", -1) ;
@@ -251,6 +252,7 @@ public class CRTS_partb_Fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(v.getContext(), CRTS_SpiralResult.class) ;
+                Log.v("Crts12_edit", "Crts12_edit"+ spiral_result) ;
                 intent1.putExtra("line_result", line_result) ;
                 intent1.putExtra("left_spiral_result", left_spiral_result) ;
                 intent1.putExtra("path1","CRTS") ;
