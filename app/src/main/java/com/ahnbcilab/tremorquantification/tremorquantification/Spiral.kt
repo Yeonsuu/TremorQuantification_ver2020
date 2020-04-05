@@ -68,6 +68,7 @@ class Spiral : AppCompatActivity() {
     private var firebase_spiral_url = firebaseDatabase.getReference("URLList")
     private var firebase_path = firebaseDatabase.getReference("URLList")
     private var uid : String =""
+    private var crts_right_spiral_downurl : String =""
     private var lorr : Boolean = true
     private var image_path : String = ""
     private lateinit var progressDialog : ProgressDialog
@@ -98,6 +99,9 @@ class Spiral : AppCompatActivity() {
         left = intent.getIntExtra("left", -1)
         lorr = intent.getBooleanExtra("lorr", true)
 
+        if(intent.hasExtra("crts_right_spiral_downurl"))
+            crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl")
+
         if (path1.equals("main")) {
             test_title_spiral.visibility = View.INVISIBLE
         }
@@ -109,15 +113,14 @@ class Spiral : AppCompatActivity() {
         //의사 ID 얻어오기
         val user = FirebaseAuth.getInstance().currentUser
         uid = user!!.getUid()
-        //TODO: firebase_spiral_url 수정
         //왼손/오른손에 따라 파이어베이스 레퍼런스를 다르게 설정
         if(lorr)
         {
-            firebase_spiral_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Spiral").child("Right")
+            firebase_spiral_url = firebaseDatabase.getReference("PatientList").child(Clinic_ID).child("Spiral List").child("Right")
         }
         else
         {
-            firebase_spiral_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Spiral").child("Left")
+            firebase_spiral_url = firebaseDatabase.getReference("PatientList").child(Clinic_ID).child("Spiral List").child("Left")
         }
 
         //원래 URL이 들어있는 개수를 구함 스토리지의 저장명으로 활용될 예정
@@ -277,27 +280,24 @@ class Spiral : AppCompatActivity() {
 
                 downurl = downloadUrl.toString()
 
-                //0번 1번 2번... 순으로 진행
-                firebase_spiral_url.child(count.toString()).setValue(downurl)
-
                 //이미지 경로를 활용하여 데이터 경로를 만든다
                 val data_path = image_path.replace("Image", "Data").replace("jpg", "csv")
                 //left hand
-                //TODO: intnet로 downurl보내기 (왼손 &&crts인 경우 양손 모두를 보내야함), writing도 보내자
-                if (right_spiral.equals("no")) {
+                //TODO: writing도 보내자
+                if (right_spiral.equals("no")) { //left
                     val intent = Intent(this, AnalysisActivity::class.java)
                     intent.putExtra("filename", "${Clinic_ID}_$filename.csv")
                     intent.putExtra("path1", path1)
                     intent.putExtra("path", path)
-                    //intent.putExtra("left", left)
                     intent.putExtra("Clinic_ID", Clinic_ID)
                     intent.putExtra("PatientName", PatientName)
                     intent.putExtra("task", "SpiralTask")
                     intent.putExtra("spiral_result", spiral_result)
+                    intent.putExtra("left_spiral_downurl", String())
+                    intent.putExtra("crts_right_spiral_downurl", downurl)
                     intent.putExtra("right_spiral", "no")
                     intent.putExtra("crts_num", crts_num)
                     intent.putExtra("data_path", data_path)
-                    Log.v("데이터 경로 확인", data_path)
                     startActivity(intent)
                     Toast.makeText(this, "Wait...", Toast.LENGTH_LONG).show()
                     loadingEnd()
@@ -314,9 +314,10 @@ class Spiral : AppCompatActivity() {
                     intent.putExtra("task", "SpiralTask")
                     intent.putExtra("right_spiral", "yes")
                     intent.putExtra("spiral_result", spiral_result)
+                    intent.putExtra("right_spiral_downurl", downurl)
+                    intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl)
                     intent.putExtra("left_spiral_result", left_spiral_result)
                     intent.putExtra("data_path", data_path)
-                    Log.v("데이터 경로 확인", data_path)
                     intent.putExtra("crts_num", crts_num)
                     startActivity(intent)
                     Toast.makeText(this, "Wait...", Toast.LENGTH_LONG).show()

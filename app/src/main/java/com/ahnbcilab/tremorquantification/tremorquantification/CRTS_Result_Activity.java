@@ -73,6 +73,10 @@ public class CRTS_Result_Activity extends AppCompatActivity {
     String partA_score, partB_score, partC_score;
     String crts_num;
     String taskscore;
+    String line_downurl;
+    String crts_right_spiral_downurl;
+    String crts_left_spiral_downurl;
+
 
     TextView c1_1score, c1_2score, c1_3score;
     TextView c2_1score, c2_2score, c2_3score;
@@ -89,6 +93,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
 
     ImageView crtsb_11_image, crtsb_12_image, crtsb_13_image, crtsb_14_image;
     public RequestManager mGlideRequestManager;
+    //TODO: firebase_image_url 삭제
     private DatabaseReference firebase_image_url = firebaseDatabase.getReference("URL List");
     static int count = 0, left;
 
@@ -109,7 +114,10 @@ public class CRTS_Result_Activity extends AppCompatActivity {
         left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result");
         taskscore = intent.getStringExtra("taskscore") ;
         left = intent.getIntExtra("left", -1);
-
+        line_downurl = intent.getStringExtra("line_downurl");
+        crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl");
+        crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl");
+        Log.v("04/05 CRTS_Result_Activity.java ", line_downurl + ":" + crts_left_spiral_downurl + ":" +crts_left_spiral_downurl);
         database_patient = firebaseDatabase.getReference("PatientList");
         database_crts = database_patient.child(Clinic_ID).child("CRTS List");
 
@@ -383,71 +391,29 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                     crtsb_12_detail_bool =true ;
                     crtsb_12_detail.setVisibility(View.VISIBLE);
                     //put the image
-                    firebase_image_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Spiral").child("Right");
-                    firebase_image_url.addListenerForSingleValueEvent(new ValueEventListener() {
+                    crtsb_12_image.post(new Runnable() {
                         @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            if(dataSnapshot.exists())
-                            {
-                                count = (int) dataSnapshot.getChildrenCount();
-                                int count_now = count - 1;
-                                firebase_image_url.child(String.valueOf(count_now)).addListenerForSingleValueEvent(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                        if(dataSnapshot.exists())
-                                        {
-                                            downurl = Objects.requireNonNull(dataSnapshot.getValue()).toString();
+                        public void run() {
+                            mGlideRequestManager
+                                    .asBitmap()
+                                    .load(crts_right_spiral_downurl)
+                                    .placeholder(R.drawable.image_loading)
+                                    .apply(new RequestOptions().centerCrop().timeout(40000))
+                                    .into(new SimpleTarget<Bitmap>() {
+                                        @Override
+                                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                            Matrix matrix = new Matrix();
+                                            matrix.postRotate(90);
+                                            int width = resource.getWidth();
+                                            int height = resource.getHeight();
 
-                                            crtsb_12_image.post(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    mGlideRequestManager
-                                                            .asBitmap()
-                                                            .load(downurl)
-                                                            .placeholder(R.drawable.image_loading)
-                                                            .apply(new RequestOptions().centerCrop().timeout(40000))
-                                                            .into(new SimpleTarget<Bitmap>() {
-                                                                @Override
-                                                                public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                                                                    Matrix matrix = new Matrix();
-                                                                    matrix.postRotate(90);
-                                                                    int width = resource.getWidth();
-                                                                    int height = resource.getHeight();
-
-                                                                    resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
-                                                                    crtsb_12_image.setImageBitmap(resource);
-                                                                }
-                                                            });
-                                                }
-                                            });
+                                            resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
+                                            crtsb_12_image.setImageBitmap(resource);
                                         }
-                                        else
-                                        {
-                                            crtsb_12_image.post(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    mGlideRequestManager
-                                                            .load(R.drawable.image_err)//인터넷 너무 느릴 시 실행
-                                                            .into(crtsb_12_image);
-
-                                                }
-                                            });
-                                        }
-                                    }
-
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                                    }
-                                });
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                                    });
                         }
                     });
+
                 }
                 else{
                     crtsb_12_detail_bool =false;
@@ -463,69 +429,26 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                     crtsb_13_detail_bool =true ;
                     crtsb_13_detail.setVisibility(View.VISIBLE);
                     //put the image
-                    firebase_image_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Spiral").child("Left");
-                    firebase_image_url.addListenerForSingleValueEvent(new ValueEventListener() {
+                    crtsb_13_image.post(new Runnable() {
                         @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            if(dataSnapshot.exists())
-                            {
-                                count = (int) dataSnapshot.getChildrenCount();
-                                int count_now = count - 1;
-                                firebase_image_url.child(String.valueOf(count_now)).addListenerForSingleValueEvent(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                        if(dataSnapshot.exists())
-                                        {
-                                            downurl = Objects.requireNonNull(dataSnapshot.getValue()).toString();
+                        public void run() {
+                            mGlideRequestManager
+                                    .asBitmap()
+                                    .load(crts_left_spiral_downurl)
+                                    .placeholder(R.drawable.image_loading)
+                                    .apply(new RequestOptions().centerCrop().timeout(40000))
+                                    .into(new SimpleTarget<Bitmap>() {
+                                        @Override
+                                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                            Matrix matrix = new Matrix();
+                                            matrix.postRotate(90);
+                                            int width = resource.getWidth();
+                                            int height = resource.getHeight();
 
-                                            crtsb_13_image.post(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    mGlideRequestManager
-                                                            .asBitmap()
-                                                            .load(downurl)
-                                                            .placeholder(R.drawable.image_loading)
-                                                            .apply(new RequestOptions().centerCrop().timeout(40000))
-                                                            .into(new SimpleTarget<Bitmap>() {
-                                                                @Override
-                                                                public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                                                                    Matrix matrix = new Matrix();
-                                                                    matrix.postRotate(90);
-                                                                    int width = resource.getWidth();
-                                                                    int height = resource.getHeight();
-
-                                                                    resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
-                                                                    crtsb_13_image.setImageBitmap(resource);
-                                                                }
-                                                            });
-                                                }
-                                            });
+                                            resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
+                                            crtsb_13_image.setImageBitmap(resource);
                                         }
-                                        else
-                                        {
-                                            crtsb_13_image.post(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    mGlideRequestManager
-                                                            .load(R.drawable.image_err)//인터넷 너무 느릴 시 실행
-                                                            .into(crtsb_13_image);
-
-                                                }
-                                            });
-                                        }
-                                    }
-
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                                    }
-                                });
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                                    });
                         }
                     });
                 }
@@ -543,78 +466,26 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                     crtsb_14_detail_bool =true ;
                     crtsb_14_detail.setVisibility(View.VISIBLE);
                     //put the image
-                    if(left == is_true)
-                        firebase_image_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Left");
-                    else if(left == is_false)
-                        firebase_image_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Right");
-                    else
-                    {
-                        firebase_image_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Right");
-                        Toast.makeText(getApplicationContext(),"경로 설정이 제대로 되어있지 않습니다", Toast.LENGTH_LONG);
-                    }
-                    Log.v("3/10_7 left값 확인", ""+left);
-                    firebase_image_url.addListenerForSingleValueEvent(new ValueEventListener() {
+                    crtsb_14_image.post(new Runnable() {
                         @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            if(dataSnapshot.exists())
-                            {
-                                count = (int) dataSnapshot.getChildrenCount();
-                                int count_now = count - 1;
-                                firebase_image_url.child(String.valueOf(count_now)).addListenerForSingleValueEvent(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                        if(dataSnapshot.exists())
-                                        {
-                                            downurl = Objects.requireNonNull(dataSnapshot.getValue()).toString();
+                        public void run() {
+                            mGlideRequestManager
+                                    .asBitmap()
+                                    .load(line_downurl)
+                                    .placeholder(R.drawable.image_loading)
+                                    .apply(new RequestOptions().centerCrop().timeout(40000))
+                                    .into(new SimpleTarget<Bitmap>() {
+                                        @Override
+                                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                            Matrix matrix = new Matrix();
+                                            matrix.postRotate(90);
+                                            int width = resource.getWidth();
+                                            int height = resource.getHeight();
 
-                                            crtsb_14_image.post(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    mGlideRequestManager
-                                                            .asBitmap()
-                                                            .load(downurl)
-                                                            .placeholder(R.drawable.image_loading)
-                                                            .apply(new RequestOptions().centerCrop().timeout(40000))
-                                                            .into(new SimpleTarget<Bitmap>() {
-                                                                @Override
-                                                                public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                                                                    Matrix matrix = new Matrix();
-                                                                    matrix.postRotate(90);
-                                                                    int width = resource.getWidth();
-                                                                    int height = resource.getHeight();
-
-                                                                    resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
-                                                                    crtsb_14_image.setImageBitmap(resource);
-                                                                }
-                                                            });
-                                                }
-                                            });
+                                            resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
+                                            crtsb_14_image.setImageBitmap(resource);
                                         }
-                                        else
-                                        {
-                                            crtsb_14_image.post(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    mGlideRequestManager
-                                                            .load(R.drawable.image_err)//인터넷 너무 느릴 시 실행
-                                                            .into(crtsb_14_image);
-
-                                                }
-                                            });
-                                        }
-                                    }
-
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                                    }
-                                });
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                                    });
                         }
                     });
                 }

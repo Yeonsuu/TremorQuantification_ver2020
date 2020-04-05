@@ -48,6 +48,9 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
     String PatientName;
     String path;
     String crts_num;
+    String line_downurl;
+    String crts_right_spiral_downurl;
+    String crts_left_spiral_downurl;
     double[] spiral_result;
     double[] left_spiral_result;
     double[] line_result;
@@ -90,13 +93,13 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_crts);
 
         // intent 값 받아오기
+        //TODO:  write downurl 받아오기
         Intent intent = getIntent();
         Clinic_ID = intent.getExtras().getString("Clinic_ID");
         PatientName = intent.getExtras().getString("PatientName");
         path = intent.getExtras().getString("path");
         crts_num = intent.getExtras().getString("crts_num");
         left = intent.getExtras().getInt("left");
-
         int num = 0;
         databasePatientList = firebaseDatabase.getReference("PatientList");
         databaseCRTS = databasePatientList.child(Clinic_ID).child("CRTS List");
@@ -141,6 +144,9 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
             spiral_result = intent.getDoubleArrayExtra("spiral_result");
             line_result =  intent.getDoubleArrayExtra("line_result");
             left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result") ;
+            line_downurl = intent.getStringExtra("line_downurl");
+            crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl");
+            crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl");
             Log.v("llloooggg crts", "crts11 = " + crts11 + "crts12 = " + crts12 + "crts14 = " + crts14);
             setFrag(1);
 
@@ -167,6 +173,9 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
             spiral_result = intent.getDoubleArrayExtra("spiral_result");
             line_result =  intent.getDoubleArrayExtra("line_result");
             left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result") ;
+            line_downurl = intent.getStringExtra("line_downurl");
+            crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl");
+            crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl");
             setFrag(1);
             Log.v("crts_num", "CRTS_Activity_CRTS" + path + crts11);
         }
@@ -207,6 +216,9 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
                 bundle2.putDoubleArray("spiral_result",spiral_result);
                 bundle2.putDoubleArray("left_spiral_result",left_spiral_result);
                 bundle2.putDoubleArray("line_result", line_result);
+                bundle2.putString("line_downurl", line_downurl);
+                bundle2.putString("crts_right_spiral_downurl", crts_right_spiral_downurl);
+                bundle2.putString("crts_left_spiral_downurl", crts_left_spiral_downurl);
                 bundle2.putInt("left", left);
                 frag2.setArguments(bundle2);
                 tran.replace(R.id.crts_test, frag2);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
@@ -527,16 +539,7 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
 
 
         if (bool == false) {
-            /*
-            int rg1_index = updrs_test_fragment1.rg1.getCheckedRadioButtonId();
-            if(rg1_index == -1){
-                updrs_test_fragment1.updrs_1_title.setTextColor(Color.RED);
-                updrs_test_fragment1.rg1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.l_radiogroup_nonselect));
-            }
-            else{
-                updrs_test_fragment1.updrs_1_title.setTextColor(Color.BLACK);
-                updrs_test_fragment1.rg1.setBackgroundResource(0);
-            }*/
+
             bool = true;
 
         } else {
@@ -594,7 +597,6 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
                             databasePatientList.child(Clinic_ID).child("FinalDate").setValue(FinalDate1);
 
                         }
-                        //databasePatientList.child(Clinic_ID).child("CRTS List").child("CRTS_Final_num").setValue(crts_num-1) ;
 
                     }
 
@@ -613,6 +615,9 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
             intent.putExtra("ClinicID", Clinic_ID);
             intent.putExtra("PatientName", PatientName);
             intent.putExtra("timestamp", timestamp);
+            intent.putExtra("line_downurl", line_downurl);
+            intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
+            intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
             intent.putExtra("left", left);
             intent.putExtra("taskscore", String.valueOf(crts_partA_score + crts_partB_score + crts_partC_score));
             intent.putExtra("crts_num", String.valueOf(taskno));

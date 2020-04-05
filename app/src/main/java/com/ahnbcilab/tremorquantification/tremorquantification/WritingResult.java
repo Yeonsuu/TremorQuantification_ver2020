@@ -73,6 +73,9 @@ public class WritingResult extends AppCompatActivity {
         final double[] line_result = intent.getDoubleArrayExtra("line_result");
         final String path = intent.getStringExtra("path1");
         final String edit = intent.getStringExtra("edit");
+        final String line_downurl = intent.getStringExtra("line_downurl");
+        final String crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl");
+        final String crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl");
         final String PatientName = intent.getStringExtra("PatientName");
         final String Clinic_ID = intent.getStringExtra("Clinic_ID");
         final String crts_num = intent.getStringExtra("crts_num");
@@ -286,8 +289,11 @@ public class WritingResult extends AppCompatActivity {
                         intent.putExtra("crts12", crts12);
                         intent.putExtra("crts13", crts13);
                         intent.putExtra("crts14", crts14);
+                        intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
+                        intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
                         intent.putExtra("line_result", line_result);
                         intent.putExtra("left_spiral_result", left_spiral_result);
+                        intent.putExtra("line_downurl", line_downurl);
                         intent.putExtra("spiral_result", spiral_result);
                         startActivity(intent);
                         finish();
@@ -295,13 +301,15 @@ public class WritingResult extends AppCompatActivity {
                         final String key = databasewriting.push().getKey().toString();
                         databasewriting.child(key).child("timestamp").setValue(timestamp);
                         databasewriting.child(key).child("writing_count").setValue(total_writing_count);
-                        //TODO: line, spiral downurl 보내기
                         Intent intent = new Intent(getApplicationContext(), CRTS_SpiralResult.class);
                         intent.putExtra("spiral_result", spiral_result);
                         intent.putExtra("left_spiral_result", left_spiral_result);
+                        intent.putExtra("line_downurl", line_downurl);
                         intent.putExtra("line_result", line_result);
                         intent.putExtra("path", path);
                         intent.putExtra("path1", path);
+                        intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
+                        intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
                         intent.putExtra("edit", edit);
                         intent.putExtra("PatientName", PatientName);
                         intent.putExtra("Clinic_ID", Clinic_ID);

@@ -118,9 +118,9 @@ public class SpiralResultActivity extends AppCompatActivity {
 
         //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         Intent intent = getIntent();
-        //TODO: Spiral downurl 받기
         final double[] spiral_result = intent.getDoubleArrayExtra("spiral_result");
         String path1 = intent.getStringExtra("path1");
+        downurl = intent.getStringExtra("spiral_downurl");
         PatientName = intent.getStringExtra("PatientName");
         Clinic_ID = intent.getStringExtra("Clinic_ID");
         final int left = intent.getIntExtra("left", -1);
@@ -166,6 +166,10 @@ public class SpiralResultActivity extends AppCompatActivity {
         //의사 ID 얻어오기
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
+
+        mGlideRequestManager = Glide.with(SpiralResultActivity.this);
+        mGlideRequestManager_pre = Glide.with(SpiralResultActivity.this);
+
         if(spiral_result[4] >= 100)
             spiral_result[4] = 10;
         //[0]: TM , [1]: TF , [2]:time , [3]: ED , [4]:velocity
@@ -177,7 +181,6 @@ public class SpiralResultActivity extends AppCompatActivity {
 
         if (left == 0) {
             handside = "Right";
-            firebase_spiral_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Spiral").child("Right");
             final int[] left_total_spiral_count = new int[1];
             testTitle.setText("Spiral Result 오른손");
             databasepatient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -313,7 +316,16 @@ public class SpiralResultActivity extends AppCompatActivity {
                                     }
 
                                 }
-
+                                final ImageView pre_spiral = findViewById(R.id.pre_spiral);
+                                downurl_pre = String.valueOf(mData.child("URL").getValue());
+                                pre_spiral.post(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        mGlideRequestManager_pre.load(downurl_pre)
+                                                .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(30000))
+                                                .into(pre_spiral);
+                                    }
+                                });
 
                             }
                         }
@@ -331,7 +343,6 @@ public class SpiralResultActivity extends AppCompatActivity {
             });
         } else {
             handside = "Left";
-            firebase_spiral_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Spiral").child("Left");
             final int[] right_total_spiral_count = new int[1];
             testTitle.setText("Spiral Result 왼손");
             databasepatient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -465,7 +476,16 @@ public class SpiralResultActivity extends AppCompatActivity {
                                     }
 
                                 }
-
+                                final ImageView pre_spiral = findViewById(R.id.pre_spiral);
+                                downurl_pre = String.valueOf(mData.child("URL").getValue());
+                                pre_spiral.post(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        mGlideRequestManager_pre.load(downurl_pre)
+                                                .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(30000))
+                                                .into(pre_spiral);
+                                    }
+                                });
 
                             }
                         }
@@ -482,89 +502,17 @@ public class SpiralResultActivity extends AppCompatActivity {
                 }
             });
         }
-        mGlideRequestManager = Glide.with(SpiralResultActivity.this);
-        mGlideRequestManager_pre = Glide.with(SpiralResultActivity.this);
-        //TODO: intent로 가져온 sprial url과 DB쿼리로 가져온 이전 나선이미지도 띄워줌
-        //URL 리스트에서 child의 수가 몇 개 있는 지 확인한다
+        //present image
         final ImageView present_spiral = findViewById(R.id.present_spiral);
-        firebase_spiral_url.addValueEventListener(new ValueEventListener() {
+        present_spiral.post(new Runnable() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists())
-                {
-                    count = (int)dataSnapshot.getChildrenCount();
-                    /* ******************************** download image from firebase *************************************/
-                    int count_now = count -1;
-                    firebase_spiral_url.child(String.valueOf(count_now)).addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            downurl = Objects.requireNonNull(dataSnapshot.getValue()).toString();
-
-                            present_spiral.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    mGlideRequestManager.load(downurl)
-                                            .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(40000))
-                                            .into(present_spiral);
-                                }
-                            });
-
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                        }
-                    });
-                    /* ******************************** end of download image from firebase *************************************/
-                    //이전 이미지가 존재할 경우 이전 이미지도 띄워줘야함
-                    if(count > 1)
-                    {
-                        final ImageView pre_spiral = findViewById(R.id.pre_spiral);
-                        int pre_count = count -2;
-                        Log.v("이전 나선 count", ""+pre_count);
-                        firebase_spiral_url.child(String.valueOf(pre_count)).addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                downurl_pre = Objects.requireNonNull(dataSnapshot.getValue()).toString();
-
-                                pre_spiral.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        mGlideRequestManager_pre.load(downurl_pre)
-                                                .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(30000))
-                                                .into(pre_spiral);
-                                    }
-                                });
-
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                            }
-                        });
-                    }
-                }
-                else
-                {
-                    present_spiral.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mGlideRequestManager
-                                    .load(R.drawable.image_err_rotate)//인터넷 너무 느릴 시 실행
-                                    .into(present_spiral);
-
-                        }
-                    });
-                }
-
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
+            public void run() {
+                mGlideRequestManager_pre.load(downurl)
+                        .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(30000))
+                        .into(present_spiral);
             }
         });
+
 
         Query left_query = databaseclinicID.child("Left").orderByChild("path").equalTo("Spiral_Test");
         Query right_query = databaseclinicID.child("Right").orderByChild("path").equalTo("Spiral_Test");
@@ -620,14 +568,13 @@ public class SpiralResultActivity extends AppCompatActivity {
         });
 
         if (left == 0) {
-            Log.v("SpiralResult", "LeftSpiralResult " + leftSpiralCount + " crtsCount " + crts_count);
-            Log.v("SpiralResult", "RightSpiralResult " + rightSpiralCount + " crtsCount " + crts_count);
             Spiral spiral = new Spiral(timestamp, finalrightSpiralCount + finalleftSpiralCount);
             spiraldata = new SpiralData(1.0, spiral_result[1], spiral_result[0], spiral_result[3], spiral_result[2], spiral_result[4]);
             finalkey = databaseclinicID.child("Right").push().getKey().toString();
             databaseclinicID.child("Right").child(finalkey).setValue(spiral);
             databaseclinicID.child("Right").child(finalkey).child("path").setValue(finalPath);
             databaseclinicID.child("Right").child(finalkey).child("Spiral_Result").setValue(spiraldata);
+            databaseclinicID.child("Right").child(finalkey).child("URL").setValue(downurl);
             databasepatient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -672,6 +619,7 @@ public class SpiralResultActivity extends AppCompatActivity {
             databaseclinicID.child("Left").child(finalkey).setValue(spiral);
             databaseclinicID.child("Left").child(finalkey).child("path").setValue(finalPath);
             databaseclinicID.child("Left").child(finalkey).child("Spiral_Result").setValue(spiraldata);
+            databaseclinicID.child("Left").child(finalkey).child("URL").setValue(downurl);
             databasepatient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

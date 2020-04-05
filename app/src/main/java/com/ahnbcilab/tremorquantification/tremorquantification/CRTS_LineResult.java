@@ -48,7 +48,6 @@ public class CRTS_LineResult extends AppCompatActivity {
     private boolean bool = true;
     private int check;
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-    private DatabaseReference firebase_line_url = firebaseDatabase.getReference("URL List");
     public RequestManager mGlideRequestManager;
     static int count = 0;
     String downurl = null;
@@ -76,6 +75,9 @@ public class CRTS_LineResult extends AppCompatActivity {
         final double[] spiral_result = intent.getDoubleArrayExtra("spiral_result");
         final double[] left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result");
         final double[] line_result = intent.getDoubleArrayExtra("line_result");
+        final String line_downurl = intent.getStringExtra("line_downurl");
+        final String crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl");
+        final String crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl");
         final String path = intent.getStringExtra("path1");
         final String edit = intent.getStringExtra("edit");
         final String PatientName = intent.getStringExtra("PatientName");
@@ -103,76 +105,33 @@ public class CRTS_LineResult extends AppCompatActivity {
         //TODO: firebase_line_url 삭제
         if (left == 0) {
             task = "Right";
-            firebase_line_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Right");
 
         } else {
             task = "Left";
-            firebase_line_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Left");
         }
+        //image part
         present_line = findViewById(R.id.present_line);
         mGlideRequestManager = Glide.with(CRTS_LineResult.this);
-        //TODO: Intent에서 받아온 값으로 결과 이미지 대체
-        firebase_line_url.addValueEventListener(new ValueEventListener() {
+        present_line.post(new Runnable() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists())
-                {
-                    count = (int) dataSnapshot.getChildrenCount();
-                    /* ******************************** download image from firebase *************************************/
-                    int count_now = count - 1;
-                    firebase_line_url.child(String.valueOf(count_now)).addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            downurl = Objects.requireNonNull(dataSnapshot.getValue()).toString();
+            public void run() {
+                mGlideRequestManager
+                        .asBitmap()
+                        .load(line_downurl)
+                        .placeholder(R.drawable.image_loading)
+                        .apply(new RequestOptions().centerCrop())
+                        .into(new SimpleTarget<Bitmap>() {
+                            @Override
+                            public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                Matrix matrix = new Matrix();
+                                matrix.postRotate(90);
+                                int width = resource.getWidth();
+                                int height = resource.getHeight();
 
-                            present_line.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    mGlideRequestManager
-                                            .asBitmap()
-                                            .load(downurl)
-                                            .placeholder(R.drawable.image_loading)
-                                            .apply(new RequestOptions().centerCrop())
-                                            .into(new SimpleTarget<Bitmap>() {
-                                                @Override
-                                                public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                                                    Matrix matrix = new Matrix();
-                                                    matrix.postRotate(90);
-                                                    int width = resource.getWidth();
-                                                    int height = resource.getHeight();
-
-                                                    resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
-                                                    present_line.setImageBitmap(resource);
-                                                }
-                                            });
-                                }
-                            });
-
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                        }
-                    });
-                }
-                else
-                {
-                    present_line.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mGlideRequestManager
-                                    .load(R.drawable.image_err)//인터넷 너무 느릴 시 실행
-                                    .into(present_line);
-
-                        }
-                    });
-                }
-
-            }
-            @Override
-            public void onCancelled (@NonNull DatabaseError databaseError){
-
+                                resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
+                                present_line.setImageBitmap(resource);
+                            }
+                        });
             }
         });
 
@@ -336,7 +295,6 @@ public class CRTS_LineResult extends AppCompatActivity {
 
             }
         });
-        //TODO: line_downurl 저장
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -352,6 +310,7 @@ public class CRTS_LineResult extends AppCompatActivity {
                         databaseclinicID.child("Right").child(key).child("path").setValue(path);
                         databaseclinicID.child("Right").child(key).child("Line_Result").setValue(linedata);
                         databaseclinicID.child("Right").child(key).child("Right_total_count").setValue(total_line_count);
+                        databaseclinicID.child("Right").child(key).child("URL").setValue(line_downurl);
 
                         databasepatient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
@@ -395,6 +354,7 @@ public class CRTS_LineResult extends AppCompatActivity {
                         databaseclinicID.child("Left").child(key).child("path").setValue(path);
                         databaseclinicID.child("Left").child(key).child("Line_Result").setValue(linedata);
                         databaseclinicID.child("Left").child(key).child("Left_total_count").setValue(total_line_count);
+                        databaseclinicID.child("Left").child(key).child("URL").setValue(line_downurl);
 
                         databasepatient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
@@ -467,6 +427,10 @@ public class CRTS_LineResult extends AppCompatActivity {
                         intent.putExtra("crts14", crts14);
                         intent.putExtra("line_result", line_result);
                         intent.putExtra("left_spiral_result", left_spiral_result);
+                        intent.putExtra("line_downurl", line_downurl);
+                        intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
+                        intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
+                        Log.v("04/05 LineResult.java ", line_downurl + ":" + crts_left_spiral_downurl + ":" +crts_left_spiral_downurl);
                         intent.putExtra("spiral_result", spiral_result);
                         intent.putExtra("left", left); //left : 0, right : 1
                         Log.v("3/10_5_1 ", ""+left);
@@ -481,6 +445,7 @@ public class CRTS_LineResult extends AppCompatActivity {
                         intent.putExtra("path", "CRTS");
                         intent.putExtra("path1", "CRTS");
                         intent.putExtra("PatientName", PatientName);
+                        intent.putExtra("line_downurl", line_downurl);
                         intent.putExtra("Clinic_ID", Clinic_ID);
                         intent.putExtra("crts_num", crts_num);
                         intent.putExtra("crts11", crts11);
@@ -488,6 +453,10 @@ public class CRTS_LineResult extends AppCompatActivity {
                         intent.putExtra("crts13", crts13);
                         intent.putExtra("crts14", crts14);
                         intent.putExtra("left", left); //left : 0, right : 1
+                        intent.putExtra("line_downurl", line_downurl);
+                        intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
+                        intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
+                        Log.v("04/05 LineResult.java ", line_downurl + ":" + crts_left_spiral_downurl + ":" +crts_left_spiral_downurl);
                         startActivity(intent);
                         finish();
                     }

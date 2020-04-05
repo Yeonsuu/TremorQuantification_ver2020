@@ -75,10 +75,12 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
         TextView result_title = (TextView) findViewById(R.id.result_title);
         result_title.setText("13. 왼손 그리기");
         Intent intent = getIntent();
-        //TODO: line, spiral downurl 받기
         final double[] spiral_result = intent.getDoubleArrayExtra("spiral_result");
         final double[] left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result");
         final double[] line_result = intent.getDoubleArrayExtra("line_result");
+        final String line_downurl = intent.getStringExtra("line_downurl");
+        final String crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl");
+        final String crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl");
         final String path = intent.getStringExtra("path1");
         final String edit = intent.getStringExtra("edit");
         final String PatientName = intent.getStringExtra("PatientName");
@@ -102,76 +104,29 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
 
-        firebase_spiral_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Spiral").child("Left");
-
         //나선 이미지 불러오기
-        //TODO : intent 받아온 값을도 이미지 불러오기
         mGlideRequestManager = Glide.with(CRTS_LeftSpiralResult.this);
         present_spiral = findViewById(R.id.present_spiral);
-        firebase_spiral_url.addValueEventListener(new ValueEventListener() {
+        present_spiral.post(new Runnable() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists())
-                {
-                    count = (int) dataSnapshot.getChildrenCount();
-                    /* ******************************** download image from firebase *************************************/
-                    int count_now = count - 1;
-                    Log.v("나선 이미지 결과 카운트 왼손", ""+count_now);
-                    firebase_spiral_url.child(String.valueOf(count_now)).addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            if(dataSnapshot.exists())
-                            {
-                                downurl = Objects.requireNonNull(dataSnapshot.getValue()).toString();
+            public void run() {
+                mGlideRequestManager
+                        .asBitmap()
+                        .load(crts_left_spiral_downurl)
+                        .placeholder(R.drawable.image_loading)
+                        .apply(new RequestOptions().centerCrop().timeout(40000))
+                        .into(new SimpleTarget<Bitmap>() {
+                            @Override
+                            public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                Matrix matrix = new Matrix();
+                                matrix.postRotate(90);
+                                int width = resource.getWidth();
+                                int height = resource.getHeight();
 
-                                present_spiral.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        mGlideRequestManager
-                                                .asBitmap()
-                                                .load(downurl)
-                                                .placeholder(R.drawable.image_loading)
-                                                .apply(new RequestOptions().centerCrop().timeout(40000))
-                                                .into(new SimpleTarget<Bitmap>() {
-                                                    @Override
-                                                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                                                        Matrix matrix = new Matrix();
-                                                        matrix.postRotate(90);
-                                                        int width = resource.getWidth();
-                                                        int height = resource.getHeight();
-
-                                                        resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
-                                                        present_spiral.setImageBitmap(resource);
-                                                    }
-                                                });
-                                    }
-                                });
+                                resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
+                                present_spiral.setImageBitmap(resource);
                             }
-                            else
-                            {
-                                present_spiral.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        mGlideRequestManager
-                                                .load(R.drawable.image_err)//인터넷 너무 느릴 시 실행
-                                                .into(present_spiral);
-
-                                    }
-                                });
-                            }
-
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                        }
-                    });
-                }
-            }
-            @Override
-            public void onCancelled (@NonNull DatabaseError databaseError){
-
+                        });
             }
         });
 
@@ -339,6 +294,7 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
                     databaseclinicID.child(key).child("Spiral_Result").setValue(spiraldata);
                     databaseclinicID.child(key).child("path").setValue(path1);
                     databaseclinicID.child(key).child("Left_total_count").setValue(total_spiral_count);
+                    databaseclinicID.child(key).child("URL").setValue(crts_left_spiral_downurl);
                     databasepatient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -387,7 +343,6 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
                     bool = false;
                 }
                 if (bool) {
-                    //TODO : line downurl 보내기
                     if (edit.equals("yes")) {
                         Intent intent = new Intent(getApplicationContext(), CRTSActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -402,11 +357,13 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
                         intent.putExtra("crts14", crts14);
                         intent.putExtra("line_result", line_result);
                         intent.putExtra("left_spiral_result", left_spiral_result);
+                        intent.putExtra("line_downurl", line_downurl);
+                        intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
+                        intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
                         intent.putExtra("spiral_result", spiral_result);
                         startActivity(intent);
                         finish();
                     }
-                    //TODO: line_downurl 보내기
                     else if (edit.equals("no")) {
                         Intent intent = new Intent(getApplicationContext(), CRTS_LineResult.class);
                         intent.putExtra("spiral_result", spiral_result);
@@ -418,6 +375,9 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
                         intent.putExtra("PatientName", PatientName);
                         intent.putExtra("Clinic_ID", Clinic_ID);
                         intent.putExtra("crts_num", crts_num);
+                        intent.putExtra("line_downurl", line_downurl);
+                        intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
+                        intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
                         intent.putExtra("crts11", crts11);
                         intent.putExtra("crts12", crts12);
                         intent.putExtra("crts13", crts13);

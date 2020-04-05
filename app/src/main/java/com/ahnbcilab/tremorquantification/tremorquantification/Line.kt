@@ -64,6 +64,8 @@ class Line : AppCompatActivity() {
     private var firebase_path = firebaseDatabase.getReference("URLList")
     private var uid: String = ""
     private var image_path: String = ""
+    private var crts_right_spiral_downurl: String = ""
+    private var crts_left_spiral_downurl: String = ""
     private var lorr: Boolean = false
     private lateinit var progressDialog : ProgressDialog
 
@@ -93,6 +95,10 @@ class Line : AppCompatActivity() {
         //의사 ID 얻어오기
         val user = FirebaseAuth.getInstance().currentUser
         uid = user!!.getUid()
+        if(intent.hasExtra("crts_right_spiral_downurl"))
+            crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl")
+        if(intent.hasExtra("crts_left_spiral_downurl"))
+            crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl")
         //왼손/오른손에 따라 파이어베이스 레퍼런스를 다르게 설정
         if (path1.equals("main")) {
             test_title_line.visibility = View.INVISIBLE
@@ -314,7 +320,6 @@ class Line : AppCompatActivity() {
                 val urlTask = it.getStorage().getDownloadUrl()
                 while (!urlTask.isSuccessful);
                 val downloadUrl = urlTask.result
-                //TODO: url_task 지우기
                 val downurl = downloadUrl.toString()
 
                 val metaData = "${CurrentUserData.user?.uid},$Clinic_ID,$filename"
@@ -344,6 +349,8 @@ class Line : AppCompatActivity() {
                         intent.putExtra("right_spiral", "null")
                         intent.putExtra("spiral_result", spiral_result)
                         intent.putExtra("left_spiral_result", left_spiral_result)
+                        intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl)
+                        intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl)
                         intent.putExtra("crts_num", crts_num)
                         intent.putExtra("data_path", data_path)
                         intent.putExtra("line_downurl", downurl)

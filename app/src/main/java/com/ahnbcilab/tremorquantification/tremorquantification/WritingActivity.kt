@@ -183,6 +183,7 @@ class WritingActivity : AppCompatActivity() {
                 intent.putExtra("path1", "CRTS");
                 intent.putExtra("right_spiral", "no")
                 intent.putExtra("spiral_result", doubleArrayOf())
+                intent.putExtra("crts_right_spiral_downurl", String())
                 intent.putExtra("lorr", true)
                 intent.putExtra("crts_num", crts_num)
 
