@@ -24,6 +24,7 @@ class AnalysisActivity : AppCompatActivity() {
     var spiral_downurl : String = ""
     var crts_right_spiral_downurl : String = ""
     var crts_left_spiral_downurl : String = ""
+    var writing_downurl : String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_analysis)
@@ -49,6 +50,8 @@ class AnalysisActivity : AppCompatActivity() {
             crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl")
         if (intent.hasExtra("crts_left_spiral_downurl"))
             crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl")
+        if (intent.hasExtra("writing_downurl"))
+            writing_downurl = intent.getStringExtra("writing_downurl")
 
         val dialog = ProgressDialog(this)
         dialog.setMessage("Analysing...")
@@ -84,6 +87,7 @@ class AnalysisActivity : AppCompatActivity() {
             intent1.putExtra("Clinic_ID", Clinic_ID)
             intent1.putExtra("PatientName", PatientName)
             intent1.putExtra("right_spiral", "yes")
+            intent1.putExtra("writing_downurl", writing_downurl)
             intent1.putExtra("crts_num", crts_num)
             intent1.putExtra("lorr", false) //왼손이라는 표시를 해주어야 함
             startActivity(intent1)
@@ -107,6 +111,7 @@ class AnalysisActivity : AppCompatActivity() {
             intent1.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl)
             intent1.putExtra("crts_left_spiral_downurl", spiral_downurl)
             intent1.putExtra("left_spiral_result", left_spiral_result)
+            intent1.putExtra("writing_downurl", writing_downurl)
             intent1.putExtra("path", path1)
             intent1.putExtra("Clinic_ID", Clinic_ID)
             intent1.putExtra("PatientName", PatientName)
@@ -137,11 +142,9 @@ class AnalysisActivity : AppCompatActivity() {
             intent1.putExtra("PatientName", PatientName)
             intent1.putExtra("spiral_result", spiral_result)
             intent1.putExtra("crts_num", crts_num)
-            intent1.putExtra("edit", "no") ;
-            intent1.putExtra("line_downurl", line_downurl);
-            Log.v("04/05 crts_r_spiral_url", crts_right_spiral_downurl)
-            Log.v("04/05 crts_l_spiral_url", crts_left_spiral_downurl)
-            Log.v("04/05 crts_line_url", line_downurl)
+            intent1.putExtra("edit", "no")
+            intent1.putExtra("writing_downurl", writing_downurl)
+            intent1.putExtra("line_downurl", line_downurl)
             intent1.putExtra("left", left) ; //left : 0, right : 1
             startActivity(intent1)
             finish()

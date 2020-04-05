@@ -444,7 +444,6 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                             bundle3.putString("Clinic_ID", Clinic_ID);
                             bundle3.putString("PatientName", PatientName);
 
-
                             if(data_exists==false){
                                 bundle3.putString("taskType", taskType);
                                 bundle3.putString("taskNum", taskNum);

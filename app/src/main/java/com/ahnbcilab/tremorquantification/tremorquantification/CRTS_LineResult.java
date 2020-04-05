@@ -78,6 +78,7 @@ public class CRTS_LineResult extends AppCompatActivity {
         final String line_downurl = intent.getStringExtra("line_downurl");
         final String crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl");
         final String crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl");
+        final String writing_downurl = intent.getStringExtra("writing_downurl");
         final String path = intent.getStringExtra("path1");
         final String edit = intent.getStringExtra("edit");
         final String PatientName = intent.getStringExtra("PatientName");
@@ -430,10 +431,9 @@ public class CRTS_LineResult extends AppCompatActivity {
                         intent.putExtra("line_downurl", line_downurl);
                         intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
                         intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
-                        Log.v("04/05 LineResult.java ", line_downurl + ":" + crts_left_spiral_downurl + ":" +crts_left_spiral_downurl);
+                        intent.putExtra("writing_downurl", writing_downurl);
                         intent.putExtra("spiral_result", spiral_result);
                         intent.putExtra("left", left); //left : 0, right : 1
-                        Log.v("3/10_5_1 ", ""+left);
                         startActivity(intent);
                         finish();
                     } else if (edit.equals("no")) {
@@ -456,7 +456,7 @@ public class CRTS_LineResult extends AppCompatActivity {
                         intent.putExtra("line_downurl", line_downurl);
                         intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
                         intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
-                        Log.v("04/05 LineResult.java ", line_downurl + ":" + crts_left_spiral_downurl + ":" +crts_left_spiral_downurl);
+                        intent.putExtra("writing_downurl", writing_downurl);
                         startActivity(intent);
                         finish();
                     }

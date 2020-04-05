@@ -69,6 +69,7 @@ class Spiral : AppCompatActivity() {
     private var firebase_path = firebaseDatabase.getReference("URLList")
     private var uid : String =""
     private var crts_right_spiral_downurl : String =""
+    private var writing_downurl : String =""
     private var lorr : Boolean = true
     private var image_path : String = ""
     private lateinit var progressDialog : ProgressDialog
@@ -101,7 +102,8 @@ class Spiral : AppCompatActivity() {
 
         if(intent.hasExtra("crts_right_spiral_downurl"))
             crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl")
-
+        if(intent.hasExtra("writing_downurl"))
+            writing_downurl = intent.getStringExtra("writing_downurl")
         if (path1.equals("main")) {
             test_title_spiral.visibility = View.INVISIBLE
         }
@@ -295,6 +297,7 @@ class Spiral : AppCompatActivity() {
                     intent.putExtra("spiral_result", spiral_result)
                     intent.putExtra("left_spiral_downurl", String())
                     intent.putExtra("crts_right_spiral_downurl", downurl)
+                    intent.putExtra("writing_downurl", writing_downurl)
                     intent.putExtra("right_spiral", "no")
                     intent.putExtra("crts_num", crts_num)
                     intent.putExtra("data_path", data_path)
@@ -314,6 +317,7 @@ class Spiral : AppCompatActivity() {
                     intent.putExtra("task", "SpiralTask")
                     intent.putExtra("right_spiral", "yes")
                     intent.putExtra("spiral_result", spiral_result)
+                    intent.putExtra("writing_downurl", writing_downurl)
                     intent.putExtra("right_spiral_downurl", downurl)
                     intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl)
                     intent.putExtra("left_spiral_result", left_spiral_result)

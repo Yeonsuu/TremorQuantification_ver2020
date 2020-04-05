@@ -76,6 +76,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
     String line_downurl;
     String crts_right_spiral_downurl;
     String crts_left_spiral_downurl;
+    String writing_downurl;
 
 
     TextView c1_1score, c1_2score, c1_3score;
@@ -117,7 +118,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
         line_downurl = intent.getStringExtra("line_downurl");
         crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl");
         crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl");
-        Log.v("04/05 CRTS_Result_Activity.java ", line_downurl + ":" + crts_left_spiral_downurl + ":" +crts_left_spiral_downurl);
+        writing_downurl = intent.getStringExtra("writing_downurl");
         database_patient = firebaseDatabase.getReference("PatientList");
         database_crts = database_patient.child(Clinic_ID).child("CRTS List");
 
@@ -310,69 +311,26 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                     crtsb_11_detail_bool =true ;
                     crtsb_11_detail.setVisibility(View.VISIBLE);
                     //put the image
-                    firebase_image_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Writing");
-                    firebase_image_url.addListenerForSingleValueEvent(new ValueEventListener() {
+                    crtsb_11_image.post(new Runnable() {
                         @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            if(dataSnapshot.exists())
-                            {
-                                count = (int) dataSnapshot.getChildrenCount();
-                                int count_now = count - 1;
-                                firebase_image_url.child(String.valueOf(count_now)).addListenerForSingleValueEvent(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                        if(dataSnapshot.exists())
-                                        {
-                                            downurl = Objects.requireNonNull(dataSnapshot.getValue()).toString();
+                        public void run() {
+                            mGlideRequestManager
+                                    .asBitmap()
+                                    .load(writing_downurl)
+                                    .placeholder(R.drawable.image_loading)
+                                    .apply(new RequestOptions().centerCrop().timeout(40000))
+                                    .into(new SimpleTarget<Bitmap>() {
+                                        @Override
+                                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                            Matrix matrix = new Matrix();
+                                            matrix.postRotate(90);
+                                            int width = resource.getWidth();
+                                            int height = resource.getHeight();
 
-                                            crtsb_11_image.post(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    mGlideRequestManager
-                                                            .asBitmap()
-                                                            .load(downurl)
-                                                            .placeholder(R.drawable.image_loading)
-                                                            .apply(new RequestOptions().centerCrop().timeout(40000))
-                                                            .into(new SimpleTarget<Bitmap>() {
-                                                                @Override
-                                                                public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                                                                    Matrix matrix = new Matrix();
-                                                                    matrix.postRotate(90);
-                                                                    int width = resource.getWidth();
-                                                                    int height = resource.getHeight();
-
-                                                                    resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
-                                                                    crtsb_11_image.setImageBitmap(resource);
-                                                                }
-                                                            });
-                                                }
-                                            });
+                                            resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
+                                            crtsb_11_image.setImageBitmap(resource);
                                         }
-                                        else
-                                        {
-                                            crtsb_11_image.post(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    mGlideRequestManager
-                                                            .load(R.drawable.image_err)//인터넷 너무 느릴 시 실행
-                                                            .into(crtsb_11_image);
-
-                                                }
-                                            });
-                                        }
-                                    }
-
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                                    }
-                                });
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                                    });
                         }
                     });
 

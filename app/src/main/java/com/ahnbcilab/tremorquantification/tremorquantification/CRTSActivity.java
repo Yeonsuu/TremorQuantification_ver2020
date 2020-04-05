@@ -51,6 +51,7 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
     String line_downurl;
     String crts_right_spiral_downurl;
     String crts_left_spiral_downurl;
+    String writing_downurl;
     double[] spiral_result;
     double[] left_spiral_result;
     double[] line_result;
@@ -93,7 +94,6 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_crts);
 
         // intent 값 받아오기
-        //TODO:  write downurl 받아오기
         Intent intent = getIntent();
         Clinic_ID = intent.getExtras().getString("Clinic_ID");
         PatientName = intent.getExtras().getString("PatientName");
@@ -147,6 +147,8 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
             line_downurl = intent.getStringExtra("line_downurl");
             crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl");
             crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl");
+            writing_downurl = intent.getStringExtra("writing_downurl");
+
             Log.v("llloooggg crts", "crts11 = " + crts11 + "crts12 = " + crts12 + "crts14 = " + crts14);
             setFrag(1);
 
@@ -176,6 +178,7 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
             line_downurl = intent.getStringExtra("line_downurl");
             crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl");
             crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl");
+            writing_downurl = intent.getStringExtra("writing_downurl");
             setFrag(1);
             Log.v("crts_num", "CRTS_Activity_CRTS" + path + crts11);
         }
@@ -219,6 +222,7 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
                 bundle2.putString("line_downurl", line_downurl);
                 bundle2.putString("crts_right_spiral_downurl", crts_right_spiral_downurl);
                 bundle2.putString("crts_left_spiral_downurl", crts_left_spiral_downurl);
+                bundle2.putString("writing_downurl", writing_downurl);
                 bundle2.putInt("left", left);
                 frag2.setArguments(bundle2);
                 tran.replace(R.id.crts_test, frag2);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
@@ -618,6 +622,7 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
             intent.putExtra("line_downurl", line_downurl);
             intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
             intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
+            intent.putExtra("writing_downurl", writing_downurl);
             intent.putExtra("left", left);
             intent.putExtra("taskscore", String.valueOf(crts_partA_score + crts_partB_score + crts_partC_score));
             intent.putExtra("crts_num", String.valueOf(taskno));

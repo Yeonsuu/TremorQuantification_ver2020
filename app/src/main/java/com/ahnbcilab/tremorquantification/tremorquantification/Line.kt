@@ -66,6 +66,7 @@ class Line : AppCompatActivity() {
     private var image_path: String = ""
     private var crts_right_spiral_downurl: String = ""
     private var crts_left_spiral_downurl: String = ""
+    private var writing_downurl : String = ""
     private var lorr: Boolean = false
     private lateinit var progressDialog : ProgressDialog
 
@@ -99,6 +100,8 @@ class Line : AppCompatActivity() {
             crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl")
         if(intent.hasExtra("crts_left_spiral_downurl"))
             crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl")
+        if(intent.hasExtra("writing_downurl"))
+            writing_downurl = intent.getStringExtra("writing_downurl")
         //왼손/오른손에 따라 파이어베이스 레퍼런스를 다르게 설정
         if (path1.equals("main")) {
             test_title_line.visibility = View.INVISIBLE
@@ -349,6 +352,7 @@ class Line : AppCompatActivity() {
                         intent.putExtra("right_spiral", "null")
                         intent.putExtra("spiral_result", spiral_result)
                         intent.putExtra("left_spiral_result", left_spiral_result)
+                        intent.putExtra("writing_downurl", writing_downurl)
                         intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl)
                         intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl)
                         intent.putExtra("crts_num", crts_num)

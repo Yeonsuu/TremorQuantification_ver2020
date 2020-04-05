@@ -76,6 +76,7 @@ public class WritingResult extends AppCompatActivity {
         final String line_downurl = intent.getStringExtra("line_downurl");
         final String crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl");
         final String crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl");
+        final String writing_downurl = intent.getStringExtra("writing_downurl");
         final String PatientName = intent.getStringExtra("PatientName");
         final String Clinic_ID = intent.getStringExtra("Clinic_ID");
         final String crts_num = intent.getStringExtra("crts_num");
@@ -123,72 +124,26 @@ public class WritingResult extends AppCompatActivity {
         firebase_write_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Writing");
         mGlideRequestManager = Glide.with(WritingResult.this);
         present_write = findViewById(R.id.writing_image);
-        firebase_write_url.addValueEventListener(new ValueEventListener() {
+        present_write.post(new Runnable() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists())
-                {
-                    count = (int) dataSnapshot.getChildrenCount();
-                    /* ******************************** download image from firebase *************************************/
-                    int count_now = count - 1;
-                    firebase_write_url.child(String.valueOf(count_now)).addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            if(dataSnapshot.exists())
-                            {
-                                downurl = Objects.requireNonNull(dataSnapshot.getValue()).toString();
+            public void run() {
+                mGlideRequestManager
+                        .asBitmap()
+                        .load(writing_downurl)
+                        .placeholder(R.drawable.spiral_underline)
+                        .into(new SimpleTarget<Bitmap>() {
+                            @Override
+                            public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                Matrix matrix = new Matrix();
+                                matrix.postRotate(90);
+                                int width = resource.getWidth();
+                                int height = resource.getHeight();
 
-                                present_write.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        mGlideRequestManager
-                                                .asBitmap()
-                                                .load(downurl)
-                                                .placeholder(R.drawable.spiral_underline)
-                                                .into(new SimpleTarget<Bitmap>() {
-                                                    @Override
-                                                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                                                        Matrix matrix = new Matrix();
-                                                        matrix.postRotate(90);
-                                                        int width = resource.getWidth();
-                                                        int height = resource.getHeight();
+                                resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
+                                present_write.setImageBitmap(resource);
 
-                                                        resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
-                                                        present_write.setImageBitmap(resource);
-
-                                                    }
-                                                });
-
-                                    }
-                                });
                             }
-                            else
-                            {
-                                present_write.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        mGlideRequestManager
-                                                .load(R.drawable.image_err)//인터넷 사용 느릴 시 사용자에게 알려줘야 함
-                                                .into(present_write);
-
-                                    }
-                                });
-                            }
-
-
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                        }
-                    });
-                }
-
-
-            }
-            @Override
-            public void onCancelled (@NonNull DatabaseError databaseError){
+                        });
 
             }
         });
@@ -294,6 +249,7 @@ public class WritingResult extends AppCompatActivity {
                         intent.putExtra("line_result", line_result);
                         intent.putExtra("left_spiral_result", left_spiral_result);
                         intent.putExtra("line_downurl", line_downurl);
+                        intent.putExtra("writing_downurl", writing_downurl);
                         intent.putExtra("spiral_result", spiral_result);
                         startActivity(intent);
                         finish();
@@ -301,6 +257,7 @@ public class WritingResult extends AppCompatActivity {
                         final String key = databasewriting.push().getKey().toString();
                         databasewriting.child(key).child("timestamp").setValue(timestamp);
                         databasewriting.child(key).child("writing_count").setValue(total_writing_count);
+                        databasewriting.child(key).child("URL").setValue(writing_downurl);
                         Intent intent = new Intent(getApplicationContext(), CRTS_SpiralResult.class);
                         intent.putExtra("spiral_result", spiral_result);
                         intent.putExtra("left_spiral_result", left_spiral_result);
@@ -310,6 +267,7 @@ public class WritingResult extends AppCompatActivity {
                         intent.putExtra("path1", path);
                         intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
                         intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
+                        intent.putExtra("writing_downurl", writing_downurl);
                         intent.putExtra("edit", edit);
                         intent.putExtra("PatientName", PatientName);
                         intent.putExtra("Clinic_ID", Clinic_ID);

@@ -8,7 +8,6 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="04/05" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
@@ -18,7 +17,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="913be5b0-8d5d-4007-b9b5-df6e74d0937e" name="Default" comment="Line task 단독으로 시행할 시 저장하고 불러오는 URL 구조 수정">
+    <list default="true" id="913be5b0-8d5d-4007-b9b5-df6e74d0937e" name="Default" comment="spiral task 단독, CRTS(line, spiral)를 시행할 시 저장하고 불러오는 URL 구조 수정">
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -29,45 +28,136 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$1$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$1$1$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$1$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$1$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$5$1$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$5$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$5$1$1$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$6$1$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$6$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$6$1$1$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$7$1$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$7$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$7$1$1$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$1$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$1$1$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$3$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$3$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$3$2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$3$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$3$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$7$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$7$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$8$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$8$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$8$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$8$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$4$1$1$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$4$1$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$4$1$1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$4$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$4$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$4$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$4$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$5$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$5$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$5$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$6$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$6$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$6$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$6$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$7$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$7$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$7$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$7$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$7$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$7$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$2$1$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$2$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$2$1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/__content__.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/__content__.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/1/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/1/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/build-history.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/counters.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/counters.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.s" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/last-build.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/AnalysisActivity$onCreate$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/AnalysisActivity$onCreate$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/AnalysisActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/AnalysisActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Line$DrawView.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Line$DrawView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Line$baseView.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Line$baseView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Line$loading$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Line$loading$1.class" afterDir="false" />
@@ -97,6 +187,28 @@
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Line$setSafeOnClickListener$safeClickListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Line$setSafeOnClickListener$safeClickListener$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Line$timer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Line$timer$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Line.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Line.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$DrawView.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$DrawView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$baseView.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$baseView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$loading$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$loading$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$loadingEnd$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$loadingEnd$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$3$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$3$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$4$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$4$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$4$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$4$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$5$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$5$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$5$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$5$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$onCreate$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$setSafeOnClickListener$safeClickListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$setSafeOnClickListener$safeClickListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$timer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral$timer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/Spiral.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/WritingActivity$DrawView.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/WritingActivity$DrawView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/WritingActivity$onCreate$3$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/WritingActivity$onCreate$3$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/WritingActivity$onCreate$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/WritingActivity$onCreate$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/WritingActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/ahnbcilab/tremorquantification/tremorquantification/WritingActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/AnalysisActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/AnalysisActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java" afterDir="false" />
@@ -104,8 +216,8 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/PersonalPatient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/PersonalPatient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Spiral.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Spiral.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java" afterDir="false" />
     </list>
@@ -134,86 +246,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Spiral.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="299" column="59" selection-start-line="299" selection-start-column="59" selection-end-line="299" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="352" column="94" selection-start-line="352" selection-start-column="69" selection-end-line="352" selection-end-column="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/AnalysisActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="150" column="44" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="76" column="97" selection-start-line="76" selection-start-column="72" selection-end-line="76" selection-end-column="97" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="185" column="67" selection-start-line="185" selection-start-column="61" selection-end-line="185" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="366" column="94" selection-start-line="365" selection-start-column="24" selection-end-line="366" selection-end-column="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="410" selection-start-line="410" selection-end-line="410" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="457" column="65" selection-start-line="457" selection-start-column="41" selection-end-line="457" selection-end-column="65" />
-              <folding>
-                <element signature="e#4948#5633#0" expanded="true" />
-                <element signature="e#5632#5633#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="626" column="9" lean-forward="true" selection-start-line="626" selection-start-column="9" selection-end-line="626" selection-end-column="9" />
+            <state relative-caret-position="323">
+              <caret line="624" column="44" selection-start-line="624" selection-start-column="29" selection-end-line="624" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -221,14 +257,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="141" column="83" selection-start-line="141" selection-start-column="83" selection-end-line="141" selection-end-column="83" />
-              <folding>
-                <element signature="e#12673#13389#0" expanded="true" />
-                <element signature="e#13388#13389#0" expanded="true" />
-                <element signature="e#19728#21606#0" expanded="true" />
-                <element signature="e#21605#21606#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="501">
+              <caret line="334" column="23" selection-start-line="334" selection-start-column="23" selection-end-line="334" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="51" column="68" selection-start-line="51" selection-start-column="68" selection-end-line="51" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/PatientListActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-684">
+              <caret line="617" column="97" selection-start-line="617" selection-start-column="97" selection-end-line="617" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/PersonalPatient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="444" column="74" selection-start-line="444" selection-start-column="74" selection-end-line="444" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -287,28 +344,27 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/UPDRS_Fragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/SpiralTask_Fragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/LineTask_Fragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/PersonalPatient.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Writing_Fragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/NonTaskFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/LineResultActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/SpiralResultActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Spiral.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/AnalysisActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/PersonalPatient.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -356,7 +412,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="device.picker.selection" value="R54M702FS8R" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2020.04.01" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
@@ -494,11 +550,18 @@
       <option name="project" value="LOCAL" />
       <updated>1586084511770</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="spiral task 단독, CRTS(line, spiral)를 시행할 시 저장하고 불러오는 URL 구조 수정">
+      <created>1586103348113</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586103348113</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17447917" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -540,34 +603,10 @@
     <MESSAGE value="양손 탭 구현 및 Line 탭 결과 바로 띄우기." />
     <MESSAGE value="환자를 삭제 하고 동일 id 입력 했을 시, test 수행했다는 페이지로 화면이 뜨는 사항 수정." />
     <MESSAGE value="Line task 단독으로 시행할 시 저장하고 불러오는 URL 구조 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="Line task 단독으로 시행할 시 저장하고 불러오는 URL 구조 수정" />
+    <MESSAGE value="spiral task 단독, CRTS(line, spiral)를 시행할 시 저장하고 불러오는 URL 구조 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="spiral task 단독, CRTS(line, spiral)를 시행할 시 저장하고 불러오는 URL 구조 수정" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/LineRight_Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-745">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_lineright.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line_Both_Rectangle_Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="348" column="105" selection-start-line="348" selection-start-column="105" selection-end-line="348" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/data/TaskItem2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/Adapters/TaskListViewAdapter2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -601,13 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2370">
           <caret line="225" selection-start-line="225" selection-end-line="225" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/DistanceFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="226" selection-start-line="226" selection-end-line="226" />
         </state>
       </provider>
     </entry>
@@ -768,13 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/PersonalPatient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8512">
-          <caret line="511" column="22" selection-start-line="511" selection-start-column="22" selection-end-line="511" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Gear_Fragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -826,83 +851,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="366" column="94" selection-start-line="365" selection-start-column="24" selection-end-line="366" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="410" selection-start-line="410" selection-end-line="410" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="185" column="67" selection-start-line="185" selection-start-column="61" selection-end-line="185" selection-end-column="67" />
+        <state relative-caret-position="266">
+          <caret line="181" column="48" selection-start-line="181" selection-start-column="33" selection-end-line="181" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Spiral.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="76" column="97" selection-start-line="76" selection-start-column="72" selection-end-line="76" selection-end-column="97" />
+          <caret line="319" column="71" lean-forward="true" selection-start-line="319" selection-start-column="71" selection-end-line="319" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Line.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="352" column="94" selection-start-line="352" selection-start-column="69" selection-end-line="352" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Spiral.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="299" column="59" selection-start-line="299" selection-start-column="59" selection-end-line="299" selection-end-column="59" />
+          <caret line="354" column="74" selection-start-line="354" selection-start-column="59" selection-end-line="354" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/AnalysisActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="150" column="44" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
+        <state relative-caret-position="271">
+          <caret line="145" column="63" selection-start-line="145" selection-start-column="48" selection-end-line="145" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_SpiralResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="141" column="83" selection-start-line="141" selection-start-column="83" selection-end-line="141" selection-end-column="83" />
-          <folding>
-            <element signature="e#12673#13389#0" expanded="true" />
-            <element signature="e#13388#13389#0" expanded="true" />
-            <element signature="e#19728#21606#0" expanded="true" />
-            <element signature="e#21605#21606#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="5738">
+          <caret line="387" column="76" selection-start-line="387" selection-start-column="76" selection-end-line="387" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LeftSpiralResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="378" column="70" lean-forward="true" selection-start-line="378" selection-start-column="70" selection-end-line="378" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_LineResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="457" column="65" selection-start-line="457" selection-start-column="41" selection-end-line="457" selection-end-column="65" />
-          <folding>
-            <element signature="e#4948#5633#0" expanded="true" />
-            <element signature="e#5632#5633#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="418">
+          <caret line="453" column="58" lean-forward="true" selection-start-line="453" selection-start-column="58" selection-end-line="453" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/DistanceFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTSActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="626" column="9" lean-forward="true" selection-start-line="626" selection-start-column="9" selection-end-line="626" selection-end-column="9" />
+        <state relative-caret-position="323">
+          <caret line="624" column="44" selection-start-line="624" selection-start-column="29" selection-end-line="624" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/CRTS_Result_Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="334" column="23" selection-start-line="334" selection-start-column="23" selection-end-line="334" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Personal_spiral.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-665">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/Patient.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/PatientItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/WritingResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="51" column="68" selection-start-line="51" selection-start-column="68" selection-end-line="51" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/PatientListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684">
+          <caret line="617" column="97" selection-start-line="617" selection-start-column="97" selection-end-line="617" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahnbcilab/tremorquantification/tremorquantification/PersonalPatient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="444" column="74" selection-start-line="444" selection-start-column="74" selection-end-line="444" selection-end-column="74" />
         </state>
       </provider>
     </entry>
