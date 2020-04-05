@@ -71,6 +71,7 @@ public class CRTS_SpiralResult extends AppCompatActivity {
         setContentView(R.layout.activity_crts__spiral_result);
 
         Intent intent = getIntent();
+        //TODO: line, spiral url 받아오기
         final double[] spiral_result = intent.getDoubleArrayExtra("spiral_result");
         final double[] left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result");
         final double[] line_result = intent.getDoubleArrayExtra("line_result");
@@ -97,6 +98,7 @@ public class CRTS_SpiralResult extends AppCompatActivity {
         firebase_spiral_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Spiral").child("Right");
 
         //나선 이미지 불러오기
+        //TODO: intent 넘어온 값으로 이미지 값 불러오기
         mGlideRequestManager = Glide.with(CRTS_SpiralResult.this);
         present_spiral = findViewById(R.id.present_spiral);
         firebase_spiral_url.addValueEventListener(new ValueEventListener() {
@@ -325,6 +327,7 @@ public class CRTS_SpiralResult extends AppCompatActivity {
 
                 }
                 else{
+                    //TODO: 오른손 downurl 저장
                     //TM[0], TF[1], Time[2], ED[3], Velocity[4]
                     Spiral spiral = new Spiral(timestamp,finalrightSpiralCount+finalleftSpiralCount);
                     SpiralData spiraldata = new SpiralData(1.0, spiral_result[1], spiral_result[0], spiral_result[3], spiral_result[2], spiral_result[4]);
@@ -390,6 +393,7 @@ public class CRTS_SpiralResult extends AppCompatActivity {
                     bool = false;
                 }
                 if(bool){
+                    //TODO : Line, spiral_left downurl 보내기
                     if(edit.equals("yes")) {
                         Intent intent = new Intent(getApplicationContext(), CRTSActivity.class) ;
                         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zu\\values-zu.xml",
+            "outputFile": "C:\\Users\\YunPC\\Desktop\\2020.04.05\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zu\\values-zu.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jjaekkaemi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d082bbd222e6f5a8b598612f0fcf44db\\res\\values-zu\\values-zu.xml",
+                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\5a11bd91d1678446cee0ee4aec7b4d73\\res\\values-zu\\values-zu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jjaekkaemi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.1.0.aar\\932c14037daca5188f61bc3c6851c073\\res\\values-zu\\values.xml",
+                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\6543b7b42b6802ad61e8e8ff80ea5ba9\\res\\values-zu\\values-zu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "38",
+                        "startColumns": "4",
+                        "startOffsets": "4733",
+                        "endColumns": "100",
+                        "endOffsets": "4829"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.1.0.aar\\155348ce5a0737cd0e476bc4ee2e6ec6\\res\\values-zu\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jjaekkaemi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\f32092d0a6ae20edc40e98405619b0b6\\res\\values-zu\\values.xml",
+                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\d2e5ea997121285ea31bc67262022030\\res\\values-zu\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,23 +69,6 @@
                         "startOffsets": "1878,1991,2199,2336,2442,2669,2800,2954,3284,3503,3615,3811,3944,4161,4348,4439,4538",
                         "endColumns": "112,207,136,105,226,130,153,138,218,111,195,132,216,186,90,98,113",
                         "endOffsets": "1986,2194,2331,2437,2664,2795,2949,3088,3498,3610,3806,3939,4156,4343,4434,4533,4647"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jjaekkaemi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\01965a7a73d0edcfa3eadb65711de7aa\\res\\values-zu\\values-zu.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "38",
-                        "startColumns": "4",
-                        "startOffsets": "4733",
-                        "endColumns": "100",
-                        "endOffsets": "4829"
                     }
                 }
             ]

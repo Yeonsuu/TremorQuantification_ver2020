@@ -66,7 +66,7 @@ public class WritingResult extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writing_result);
 
-
+        //TODO : line, spiral downurl 받아오기
         final Intent intent = getIntent();
         final double[] spiral_result = intent.getDoubleArrayExtra("spiral_result");
         final double[] left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result");
@@ -295,7 +295,7 @@ public class WritingResult extends AppCompatActivity {
                         final String key = databasewriting.push().getKey().toString();
                         databasewriting.child(key).child("timestamp").setValue(timestamp);
                         databasewriting.child(key).child("writing_count").setValue(total_writing_count);
-
+                        //TODO: line, spiral downurl 보내기
                         Intent intent = new Intent(getApplicationContext(), CRTS_SpiralResult.class);
                         intent.putExtra("spiral_result", spiral_result);
                         intent.putExtra("left_spiral_result", left_spiral_result);

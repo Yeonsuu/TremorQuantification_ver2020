@@ -118,6 +118,7 @@ public class SpiralResultActivity extends AppCompatActivity {
 
         //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         Intent intent = getIntent();
+        //TODO: Spiral downurl 받기
         final double[] spiral_result = intent.getDoubleArrayExtra("spiral_result");
         String path1 = intent.getStringExtra("path1");
         PatientName = intent.getStringExtra("PatientName");
@@ -483,6 +484,7 @@ public class SpiralResultActivity extends AppCompatActivity {
         }
         mGlideRequestManager = Glide.with(SpiralResultActivity.this);
         mGlideRequestManager_pre = Glide.with(SpiralResultActivity.this);
+        //TODO: intent로 가져온 sprial url과 DB쿼리로 가져온 이전 나선이미지도 띄워줌
         //URL 리스트에서 child의 수가 몇 개 있는 지 확인한다
         final ImageView present_spiral = findViewById(R.id.present_spiral);
         firebase_spiral_url.addValueEventListener(new ValueEventListener() {

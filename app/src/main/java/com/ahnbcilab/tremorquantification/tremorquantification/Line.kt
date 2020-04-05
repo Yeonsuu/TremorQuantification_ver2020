@@ -81,7 +81,7 @@ class Line : AppCompatActivity() {
         //requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         setContentView(R.layout.activity_line)
         val intent = intent
-
+        //TODO: spiral downurl, writing downurl 받기
         path1 = intent.getStringExtra("path")
         Clinic_ID = intent.getStringExtra("Clinic_ID")
         PatientName = intent.getStringExtra("PatientName")
@@ -103,13 +103,11 @@ class Line : AppCompatActivity() {
         } else {
             left = 1;
         }
-
         //crts에서 온 것이 아니라면 여기서 카운트 설정
-        Log.v("직선 로그 1", ""+count)
         if (lorr) {
-            firebase_line_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Right")
+            firebase_line_url = firebaseDatabase.getReference("PatientList").child(Clinic_ID).child("Line List").child("Right")
         } else {
-            firebase_line_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Left")
+            firebase_line_url = firebaseDatabase.getReference("PatientList").child(Clinic_ID).child("Line List").child("Left")
         }
         //원래 URL이 들어있는 개수를 구함 스토리지의 저장명으로 활용될 예정
         firebase_line_url.addValueEventListener(object : ValueEventListener {
@@ -134,12 +132,11 @@ class Line : AppCompatActivity() {
             }
         })
 
-
         //만약 crts에서 온 것 이라면 여기서 cnt 다시 초기화
         line_right_button.setOnClickListener {
             line_right_button.setBackground(ContextCompat.getDrawable(applicationContext, R.drawable.right_select_button))
             line_left_button.setBackground(ContextCompat.getDrawable(applicationContext, R.drawable.left_nonselect_button))
-            firebase_line_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Right")
+            firebase_line_url = firebaseDatabase.getReference("PatientList").child(Clinic_ID).child("Line List").child("Right")
             readData(object : FirebaseCallback {
                 override fun onCallBack(cnt: Int) {
                     count = cnt
@@ -152,7 +149,7 @@ class Line : AppCompatActivity() {
         line_left_button.setOnClickListener {
             line_right_button.setBackground(ContextCompat.getDrawable(applicationContext, R.drawable.right_nonselect_button))
             line_left_button.setBackground(ContextCompat.getDrawable(applicationContext, R.drawable.left_select_button))
-            firebase_line_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Left")
+            firebase_line_url = firebaseDatabase.getReference("PatientList").child(Clinic_ID).child("Line List").child("Left")
             readData(object : FirebaseCallback {
                 override fun onCallBack(cnt: Int) {
                     count = cnt
@@ -267,7 +264,6 @@ class Line : AppCompatActivity() {
 
         // 그림 그리고 나서, 다음으로 넘어가는 버튼
         writingfinish2.setSafeOnClickListener {
-            Log.v("직선 로그 4", ""+count)
             timer.cancel()
             loading()
             //view.saveAsJPG(view, this.filesDir.path + "/spiralTest", "${patientId}_$filename.jpg")
@@ -318,10 +314,9 @@ class Line : AppCompatActivity() {
                 val urlTask = it.getStorage().getDownloadUrl()
                 while (!urlTask.isSuccessful);
                 val downloadUrl = urlTask.result
-
+                //TODO: url_task 지우기
                 val downurl = downloadUrl.toString()
 
-                val url_task = firebase_line_url.child(count.toString()).setValue(downurl)
                 val metaData = "${CurrentUserData.user?.uid},$Clinic_ID,$filename"
                 val path = File("${this.filesDir.path}/testData") // raw save to file dir(data/com.bcilab....)
                 if (!path.exists()) path.mkdirs()
@@ -337,9 +332,7 @@ class Line : AppCompatActivity() {
                     println(e.message)
                 }
                 val data_path = image_path.replace("Image", "Data").replace("jpg", "csv")
-                url_task.addOnCompleteListener() {
-                    if(url_task.isSuccessful)
-                    {
+                 //TODO: spiral(양쪽) downurl intent로 보내기
                         val intent = Intent(this, AnalysisActivity::class.java)
                         intent.putExtra("filename", "${Clinic_ID}_$filename.csv")
                         intent.putExtra("path1", path1)
@@ -353,17 +346,12 @@ class Line : AppCompatActivity() {
                         intent.putExtra("left_spiral_result", left_spiral_result)
                         intent.putExtra("crts_num", crts_num)
                         intent.putExtra("data_path", data_path)
+                        intent.putExtra("line_downurl", downurl)
                         startActivity(intent)
                         Toast.makeText(this, "Wait...", Toast.LENGTH_LONG).show()
                         loadingEnd()
                         finish()
-                    }
-                    else
-                    {
-                        Toast.makeText(this, "이미지 저장에 실패하였습니다.", Toast.LENGTH_LONG).show()
-                    }
 
-                }
 
 
             }

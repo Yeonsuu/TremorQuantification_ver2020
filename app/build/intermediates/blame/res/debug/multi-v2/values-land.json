@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "C:\\Users\\YunPC\\Desktop\\2020.04.05\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jjaekkaemi\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\150c2efe2a05c6223cac98f7bb834f52\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\4b9fedf363759135ca960987973b1a3b\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jjaekkaemi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d082bbd222e6f5a8b598612f0fcf44db\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\5a11bd91d1678446cee0ee4aec7b4d73\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

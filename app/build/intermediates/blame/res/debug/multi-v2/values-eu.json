@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-eu\\values-eu.xml",
+            "outputFile": "C:\\Users\\YunPC\\Desktop\\2020.04.05\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-eu\\values-eu.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jjaekkaemi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d082bbd222e6f5a8b598612f0fcf44db\\res\\values-eu\\values-eu.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,214,312,422,508,614,738,825,909,991,1100,1210,1309,1418,1524,1635,1806,1905",
-                        "endColumns": "108,97,109,85,105,123,86,83,81,108,109,98,108,105,110,170,98,81",
-                        "endOffsets": "209,307,417,503,609,733,820,904,986,1095,1205,1304,1413,1519,1630,1801,1900,1982"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,37",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,214,312,422,508,614,738,825,909,991,1100,1210,1309,1418,1524,1635,1806,4691",
-                        "endColumns": "108,97,109,85,105,123,86,83,81,108,109,98,108,105,110,170,98,81",
-                        "endOffsets": "209,307,417,503,609,733,820,904,986,1095,1205,1304,1413,1519,1630,1801,1900,4768"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jjaekkaemi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\f32092d0a6ae20edc40e98405619b0b6\\res\\values-eu\\values.xml",
+                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\d2e5ea997121285ea31bc67262022030\\res\\values-eu\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jjaekkaemi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\01965a7a73d0edcfa3eadb65711de7aa\\res\\values-eu\\values-eu.xml",
+                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\5a11bd91d1678446cee0ee4aec7b4d73\\res\\values-eu\\values-eu.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,214,312,422,508,614,738,825,909,991,1100,1210,1309,1418,1524,1635,1806,1905",
+                        "endColumns": "108,97,109,85,105,123,86,83,81,108,109,98,108,105,110,170,98,81",
+                        "endOffsets": "209,307,417,503,609,733,820,904,986,1095,1205,1304,1413,1519,1630,1801,1900,1982"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,37",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,214,312,422,508,614,738,825,909,991,1100,1210,1309,1418,1524,1635,1806,4691",
+                        "endColumns": "108,97,109,85,105,123,86,83,81,108,109,98,108,105,110,170,98,81",
+                        "endOffsets": "209,307,417,503,609,733,820,904,986,1095,1205,1304,1413,1519,1630,1801,1900,4768"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\6543b7b42b6802ad61e8e8ff80ea5ba9\\res\\values-eu\\values-eu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -55,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jjaekkaemi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.1.0.aar\\932c14037daca5188f61bc3c6851c073\\res\\values-eu\\values.xml",
+                    "source": "C:\\Users\\YunPC\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.1.0.aar\\155348ce5a0737cd0e476bc4ee2e6ec6\\res\\values-eu\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

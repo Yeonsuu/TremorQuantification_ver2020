@@ -88,6 +88,7 @@ class Spiral : AppCompatActivity() {
 
 
         val intent = intent
+        //TODO: writing url 받아오기
         path1 = intent.getStringExtra("path")
         Clinic_ID = intent.getStringExtra("Clinic_ID")
         PatientName = intent.getStringExtra("PatientName")
@@ -108,7 +109,7 @@ class Spiral : AppCompatActivity() {
         //의사 ID 얻어오기
         val user = FirebaseAuth.getInstance().currentUser
         uid = user!!.getUid()
-
+        //TODO: firebase_spiral_url 수정
         //왼손/오른손에 따라 파이어베이스 레퍼런스를 다르게 설정
         if(lorr)
         {
@@ -282,6 +283,7 @@ class Spiral : AppCompatActivity() {
                 //이미지 경로를 활용하여 데이터 경로를 만든다
                 val data_path = image_path.replace("Image", "Data").replace("jpg", "csv")
                 //left hand
+                //TODO: intnet로 downurl보내기 (왼손 &&crts인 경우 양손 모두를 보내야함), writing도 보내자
                 if (right_spiral.equals("no")) {
                     val intent = Intent(this, AnalysisActivity::class.java)
                     intent.putExtra("filename", "${Clinic_ID}_$filename.csv")

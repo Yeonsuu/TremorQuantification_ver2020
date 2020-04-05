@@ -75,6 +75,7 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
         TextView result_title = (TextView) findViewById(R.id.result_title);
         result_title.setText("13. 왼손 그리기");
         Intent intent = getIntent();
+        //TODO: line, spiral downurl 받기
         final double[] spiral_result = intent.getDoubleArrayExtra("spiral_result");
         final double[] left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result");
         final double[] line_result = intent.getDoubleArrayExtra("line_result");
@@ -104,6 +105,7 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
         firebase_spiral_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Spiral").child("Left");
 
         //나선 이미지 불러오기
+        //TODO : intent 받아온 값을도 이미지 불러오기
         mGlideRequestManager = Glide.with(CRTS_LeftSpiralResult.this);
         present_spiral = findViewById(R.id.present_spiral);
         firebase_spiral_url.addValueEventListener(new ValueEventListener() {
@@ -327,6 +329,7 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
                 if (edit.equals("yes")) {
 
                 } else {
+                    //TODO: 왼손 sprial downurl 저장
                     com.ahnbcilab.tremorquantification.data.Spiral spiral = new Spiral(timestamp, finalrightSpiralCount + finalleftSpiralCount);
                     //TM[0], TF[1], Time[2], ED[3], Velocity[4]
                     SpiralData spiraldata = new SpiralData(1.0, left_spiral_result[1], left_spiral_result[0], left_spiral_result[3], left_spiral_result[2], left_spiral_result[4]);
@@ -384,6 +387,7 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
                     bool = false;
                 }
                 if (bool) {
+                    //TODO : line downurl 보내기
                     if (edit.equals("yes")) {
                         Intent intent = new Intent(getApplicationContext(), CRTSActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -401,7 +405,9 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
                         intent.putExtra("spiral_result", spiral_result);
                         startActivity(intent);
                         finish();
-                    } else if (edit.equals("no")) {
+                    }
+                    //TODO: line_downurl 보내기
+                    else if (edit.equals("no")) {
                         Intent intent = new Intent(getApplicationContext(), CRTS_LineResult.class);
                         intent.putExtra("spiral_result", spiral_result);
                         intent.putExtra("left_spiral_result", left_spiral_result);

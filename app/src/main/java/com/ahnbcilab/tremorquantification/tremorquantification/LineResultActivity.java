@@ -68,8 +68,6 @@ public class LineResultActivity extends AppCompatActivity {
 
     double preamp;
     String path1;
-    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-    private DatabaseReference firebase_line_url = firebaseDatabase.getReference("URL List");
     DatabaseReference databasepatient;
     DatabaseReference databaseclinicID;
 
@@ -110,6 +108,7 @@ public class LineResultActivity extends AppCompatActivity {
         Intent intent = getIntent();
         final double[] line_result = intent.getDoubleArrayExtra("line_result");
         //String path1 = intent.getStringExtra("path1");
+        downurl = intent.getStringExtra("line_downurl");
         PatientName = intent.getStringExtra("PatientName");
         Clinic_ID = intent.getStringExtra("Clinic_ID");
         final int left = intent.getIntExtra("left", -1);
@@ -153,7 +152,7 @@ public class LineResultActivity extends AppCompatActivity {
         patientName.setText(PatientName);
         today_date.setText(timestamp.substring(0,16));
         result_date.setText("("+today[0].substring(2)+")") ;
-
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         databasepatient = firebaseDatabase.getReference("PatientList");
         databaseclinicID = databasepatient.child(Clinic_ID).child("Line List");
         //의사 ID 얻어오기
@@ -168,9 +167,11 @@ public class LineResultActivity extends AppCompatActivity {
         distance_score.setText(String.format("%.2f",line_result[3]));
         speed_score.setText(String.format("%.2f",line_result[4]));
 
+        mGlideRequestManager = Glide.with(LineResultActivity.this);
+        mGlideRequestManager_pre = Glide.with(LineResultActivity.this);
+
         if (left == 0) {
             handside = "Right" ;
-            firebase_line_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Right");
             final int[] left_total_line_count = new int[1];
             testTitle.setText("Line Result 오른손");
             databasepatient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -290,7 +291,18 @@ public class LineResultActivity extends AppCompatActivity {
                                     }
 
                                 }
-
+                                //load pre image
+                                final ImageView pre_line = findViewById(R.id.pre_line);
+                                pre_speed_score.setText((String.valueOf(mData.child("Line_Result").child("speed").getValue())));
+                                downurl_pre = String.valueOf(mData.child("URL").getValue());
+                                pre_line.post(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        mGlideRequestManager_pre.load(downurl_pre)
+                                                .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(30000))
+                                                .into(pre_line);
+                                    }
+                                });
 
                             }
                         }
@@ -308,7 +320,6 @@ public class LineResultActivity extends AppCompatActivity {
             });
         } else {
             handside = "Left";
-            firebase_line_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Left");
             final int[] right_total_line_count = new int[1];
             testTitle.setText("Line Result 왼손");
             databasepatient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -331,16 +342,6 @@ public class LineResultActivity extends AppCompatActivity {
                                 pre_speed_score.setText((String.valueOf(mData.child("Line_Result").child("speed").getValue())));
                                 pre_result_date.setText("("+mData.child("timestamp").getValue().toString().substring(2,10)+")");
 
-
-//                                double hz_improvement = Math.round((Double.valueOf(linedata.getHz()) - Double.valueOf(String.valueOf(mData.child("Line_Result").child("hz").getValue()))) / Double.valueOf(String.valueOf(mData.child("Line_Result").child("hz").getValue()))*100*100)/100.0;
-//                                if(hz_improvement >= 0){
-//                                    hz_improve.setText("+" + String.valueOf(hz_improvement)+"%");
-//                                    hz_improve.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.red));
-//                                }
-//                                else{
-//                                    hz_improve.setText(String.valueOf(hz_improvement)+"%");
-//                                    hz_improve.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.main));
-//                                }
 
                                 hz_temp[0] = Double.valueOf(linedata.getHz());
                                 hz_temp[1] = Double.valueOf(String.valueOf(mData.child("Line_Result").child("hz").getValue()));
@@ -442,6 +443,18 @@ public class LineResultActivity extends AppCompatActivity {
                                     }
 
                                 }
+                                //load pre image
+                                final ImageView pre_line = findViewById(R.id.pre_line);
+                                pre_speed_score.setText((String.valueOf(mData.child("Line_Result").child("speed").getValue())));
+                                downurl_pre = String.valueOf(mData.child("URL").getValue());
+                                pre_line.post(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        mGlideRequestManager_pre.load(downurl_pre)
+                                                .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(30000))
+                                                .into(pre_line);
+                                    }
+                                });
 
                             }
                         }
@@ -511,7 +524,6 @@ public class LineResultActivity extends AppCompatActivity {
 
             }
         });
-
         if (left == 0) {
             Line line = new Line(timestamp, finalrightLineCount + finalleftLineCount);
             linedata = new LineData(1.0, line_result[1], line_result[0], line_result[3], line_result[2], line_result[4]);
@@ -519,6 +531,7 @@ public class LineResultActivity extends AppCompatActivity {
             databaseclinicID.child("Right").child(finalkey).setValue(line);
             databaseclinicID.child("Right").child(finalkey).child("path").setValue(finalPath);
             databaseclinicID.child("Right").child(finalkey).child("Line_Result").setValue(linedata);
+            databaseclinicID.child("Right").child(finalkey).child("URL").setValue(downurl);
             databasepatient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -560,6 +573,7 @@ public class LineResultActivity extends AppCompatActivity {
             databaseclinicID.child("Left").child(finalkey).setValue(line);
             databaseclinicID.child("Left").child(finalkey).child("path").setValue(finalPath);
             databaseclinicID.child("Left").child(finalkey).child("Line_Result").setValue(linedata);
+            databaseclinicID.child("Left").child(finalkey).child("URL").setValue(downurl);
             databasepatient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -596,103 +610,18 @@ public class LineResultActivity extends AppCompatActivity {
 
         }
 
-        mGlideRequestManager = Glide.with(LineResultActivity.this);
-        mGlideRequestManager_pre = Glide.with(LineResultActivity.this);
+
         //URL 리스트에서 child의 수가 몇 개 있는 지 확인한다
         final ImageView present_line = findViewById(R.id.present_line);
-        firebase_line_url.addValueEventListener(new ValueEventListener() {
+        present_line.post(new Runnable() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists())
-                {
-                    count = (int)dataSnapshot.getChildrenCount();
-                    /* ******************************** download image from firebase *************************************/
-                    int count_now = count -1;
-                    firebase_line_url.child(String.valueOf(count_now)).addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            if(dataSnapshot.exists())
-                            {
-                                downurl = Objects.requireNonNull(dataSnapshot.getValue()).toString();
-
-                                present_line.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        mGlideRequestManager.load(downurl)
-                                                .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(40000))
-                                                .into(present_line);
-                                    }
-                                });
-                            }
-                            else
-                            {
-                                present_line.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        mGlideRequestManager
-                                                .load(R.drawable.image_err_rotate)//인터넷 사용 느릴 시 사용자에게 알려줘야 함
-                                                .into(present_line);
-
-                                    }
-                                });
-                            }
-
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                        }
-                    });
-                    /* ******************************** end of download image from firebase *************************************/
-                    //이전 이미지가 존재할 경우 이전 이미지도 띄워줘야함
-                    if(count > 1)
-                    {
-                        final ImageView pre_line = findViewById(R.id.pre_line);
-                        int pre_count = count -2;
-                        Log.v("이전 나선 count", ""+pre_count);
-                        firebase_line_url.child(String.valueOf(pre_count)).addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                downurl_pre = Objects.requireNonNull(dataSnapshot.getValue()).toString();
-
-                                pre_line.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        mGlideRequestManager_pre.load(downurl_pre)
-                                                .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(30000))
-                                                .into(pre_line);
-                                    }
-                                });
-
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                            }
-                        });
-                    }
-                }
-                else
-                {
-                    present_line.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mGlideRequestManager
-                                    .load(R.drawable.image_err_rotate)//인터넷 사용 느릴 시 사용자에게 알려줘야 함
-                                    .into(present_line);
-
-                        }
-                    });
-                }
-
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
+            public void run() {
+                mGlideRequestManager.load(downurl)
+                        .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(40000))
+                        .into(present_line);
             }
         });
+
 
 
 

@@ -21,6 +21,7 @@ class AnalysisActivity : AppCompatActivity() {
     var left : Int = 0  ;
     var downurl : String = ""
     var data_path : String = ""
+    var line_downurl : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +34,7 @@ class AnalysisActivity : AppCompatActivity() {
         PatientName = intent.getStringExtra("PatientName")
         task = intent.getStringExtra("task")
         data_path = intent.getStringExtra("data_path")
-        Log.v("editPatient", "PatientName : " +task)
+        line_downurl = intent.getStringExtra("line_downurl")
         var spiral_result = intent.getDoubleArrayExtra("spiral_result")
         var left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result")
         var crts_num = intent.getStringExtra("crts_num")
@@ -134,6 +135,7 @@ class AnalysisActivity : AppCompatActivity() {
             intent1.putExtra("Clinic_ID", Clinic_ID)
             intent1.putExtra("PatientName", PatientName)
             intent1.putExtra("left", left) ;
+            intent1.putExtra("line_downurl", line_downurl);
             startActivity(intent1)
             finish()
         }

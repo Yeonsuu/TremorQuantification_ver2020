@@ -1,4 +1,4 @@
-#Wed Apr 01 06:33:59 KST 2020
+#Sun Apr 05 18:59:41 KST 2020
 path.1=classes.dex
 path.0=classes.dex
 renamed.7=classes8.dex
@@ -9,14 +9,14 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.7=D\:\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.6=D\:\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.5=D\:\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.4=D\:\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.3=D\:\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.2=D\:\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-base.1=D\:\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.0=D\:\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+base.7=C\:\\Users\\YunPC\\Desktop\\2020.04.05\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.6=C\:\\Users\\YunPC\\Desktop\\2020.04.05\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.5=C\:\\Users\\YunPC\\Desktop\\2020.04.05\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.4=C\:\\Users\\YunPC\\Desktop\\2020.04.05\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.3=C\:\\Users\\YunPC\\Desktop\\2020.04.05\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.2=C\:\\Users\\YunPC\\Desktop\\2020.04.05\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+base.1=C\:\\Users\\YunPC\\Desktop\\2020.04.05\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.0=C\:\\Users\\YunPC\\Desktop\\2020.04.05\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 path.7=classes6.dex
 path.6=classes5.dex
 path.5=classes4.dex

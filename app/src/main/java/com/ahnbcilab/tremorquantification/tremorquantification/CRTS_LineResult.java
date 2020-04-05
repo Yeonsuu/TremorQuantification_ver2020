@@ -72,6 +72,7 @@ public class CRTS_LineResult extends AppCompatActivity {
         setContentView(R.layout.activity_crts__line_result);
 
         Intent intent = getIntent();
+        //TODO: line_downurl 받기
         final double[] spiral_result = intent.getDoubleArrayExtra("spiral_result");
         final double[] left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result");
         final double[] line_result = intent.getDoubleArrayExtra("line_result");
@@ -99,6 +100,7 @@ public class CRTS_LineResult extends AppCompatActivity {
         String uid = user.getUid();
 
         String task;
+        //TODO: firebase_line_url 삭제
         if (left == 0) {
             task = "Right";
             firebase_line_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Right");
@@ -109,7 +111,7 @@ public class CRTS_LineResult extends AppCompatActivity {
         }
         present_line = findViewById(R.id.present_line);
         mGlideRequestManager = Glide.with(CRTS_LineResult.this);
-
+        //TODO: Intent에서 받아온 값으로 결과 이미지 대체
         firebase_line_url.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -334,6 +336,7 @@ public class CRTS_LineResult extends AppCompatActivity {
 
             }
         });
+        //TODO: line_downurl 저장
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
