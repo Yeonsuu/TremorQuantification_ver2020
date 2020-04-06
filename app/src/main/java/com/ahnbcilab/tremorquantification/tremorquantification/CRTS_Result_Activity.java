@@ -615,7 +615,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
 
     private void list(final int i, final DataSnapshot mData, final GraphView graphView, final LineGraphSeries<DataPoint> series, final String crts_num) {
         Query query = database_patient.child(Clinic_ID).child("CRTS List").orderByChild("CRTS_count").equalTo(i) ;
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
+        query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
@@ -624,16 +624,37 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                     partB_score = String.valueOf(mData.child("CRTS List").child(key).child("CRTS score").child("partB_score").getValue()) ;
                     partC_score = String.valueOf(mData.child("CRTS List").child(key).child("CRTS score").child("partC_score").getValue()) ;
                     Log.v("CRTSResultActivity", "partA"+partA_score+"partB"+partB_score+"partC"+partC_score);
-                    crts_score = String.valueOf(Integer.parseInt(partA_score) + Integer.parseInt(partB_score) + Integer.parseInt(partC_score));//오류
-                    series.appendData(new DataPoint(i+1, Integer.parseInt(crts_score)), true, 172);
-                    //series.setDrawDataPoints(true);
-                    series.setColor(Color.parseColor("#78B5AA"));
-                    graphView.removeAllSeries();
-                    graphView.addSeries(series);
-                    graphView.getViewport().setScalableY(true);
-                    graphView.getViewport().setScrollableY(true);
-                    graphView.getViewport().setMinX(0.0);
-                    graphView.getViewport().setMaxX(Integer.parseInt(crts_num)+1);
+//                    while(partA_score.equals("null")&&partB_score.equals("null")&&partC_score.equals("null")){
+//                        Log.v("CRTSResultActivitylllllllll", "partA"+partA_score+"partB"+partB_score+"partC"+partC_score + " Key " + key);
+//                        partA_score = String.valueOf(mData.child("CRTS List").child(key).child("CRTS score").child("partA_score").getValue()) ;
+//                        partB_score = String.valueOf(mData.child("CRTS List").child(key).child("CRTS score").child("partB_score").getValue()) ;
+//                        partC_score = String.valueOf(mData.child("CRTS List").child(key).child("CRTS score").child("partC_score").getValue()) ;
+//                    }
+                    if(partA_score.equals("null")){
+                        series.appendData(new DataPoint(i+1, Integer.parseInt(taskscore)), true, 172);
+                        //series.setDrawDataPoints(true);
+                        series.setColor(Color.parseColor("#78B5AA"));
+                        graphView.removeAllSeries();
+                        graphView.addSeries(series);
+                        graphView.getViewport().setScalableY(true);
+                        graphView.getViewport().setScrollableY(true);
+                        graphView.getViewport().setMinX(0.0);
+                        graphView.getViewport().setMaxX(Integer.parseInt(crts_num)+1);
+                    }
+                    else{
+                        crts_score = String.valueOf(Integer.parseInt(partA_score) + Integer.parseInt(partB_score) + Integer.parseInt(partC_score));//오류
+                        series.appendData(new DataPoint(i+1, Integer.parseInt(crts_score)), true, 172);
+                        //series.setDrawDataPoints(true);
+                        series.setColor(Color.parseColor("#78B5AA"));
+                        graphView.removeAllSeries();
+                        graphView.addSeries(series);
+                        graphView.getViewport().setScalableY(true);
+                        graphView.getViewport().setScrollableY(true);
+                        graphView.getViewport().setMinX(0.0);
+                        graphView.getViewport().setMaxX(Integer.parseInt(crts_num)+1);
+                    }
+                    //crts_score = String.valueOf(Integer.parseInt(partA_score) + Integer.parseInt(partB_score) + Integer.parseInt(partC_score));//오류
+
 
                     PieChartView pieChartView = (PieChartView)findViewById(R.id.crts_result_chart);
                     List<SliceValue> pieData = new ArrayList<>();

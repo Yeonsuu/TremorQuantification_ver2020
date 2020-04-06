@@ -218,7 +218,9 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
         next = (Button) findViewById(R.id.spiral_next);
         Button pre_button = (Button) findViewById(R.id.writing_pre);
 
-        next.setVisibility(View.GONE);
+        if (!edit.equals("yes")) {
+            next.setVisibility(View.GONE);
+        }
         r_group_crts = (RadioGroup) findViewById(R.id.crg11_1);
         r_crt_arr[0] = crts13_1_0;
         r_crt_arr[1] = crts13_1_1;
@@ -232,6 +234,7 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
             r_crt_arr[index].setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view){
+
                     next.setVisibility(View.VISIBLE);
                 }
             });
@@ -240,7 +243,9 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
 
 
         if (path.equals("CRTS_detail")) {
-            next.setVisibility(View.GONE);
+            if (!edit.equals("yes")) {
+                next.setVisibility(View.GONE);
+            }
             quit.setText("돌아가기");
             if (check.contains("0")) {
                 crts13_1_0.setChecked(true);

@@ -163,7 +163,9 @@ public class CRTS_LineResult extends AppCompatActivity {
 
         final Button quit = (Button) findViewById(R.id.line_result_quit_button);
         next = (Button) findViewById(R.id.line_next);
-        next.setVisibility(View.GONE);
+        if (!edit.equals("yes")) {
+            next.setVisibility(View.GONE);
+        }
         r_group_crts = (RadioGroup) findViewById(R.id.crg11_1);
         r_crt_arr[0] = crts14_1_0;
         r_crt_arr[1] = crts14_1_1;
@@ -184,7 +186,9 @@ public class CRTS_LineResult extends AppCompatActivity {
         }
         Button pre_button = (Button) findViewById(R.id.writing_pre);
         if (path.equals("CRTS_detail")) {
-            next.setVisibility(View.GONE);
+            if (!edit.equals("yes")) {
+                next.setVisibility(View.GONE);
+            }
             quit.setText("돌아가기");
             if (check == 0) {
                 crts14_1_0.setChecked(true);

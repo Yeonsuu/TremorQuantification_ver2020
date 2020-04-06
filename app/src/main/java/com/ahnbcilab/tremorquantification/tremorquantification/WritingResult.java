@@ -156,7 +156,9 @@ public class WritingResult extends AppCompatActivity {
         crts11_1_3 = (RadioButton) findViewById(R.id.crts11_1_3);
         crts11_1_4 = (RadioButton) findViewById(R.id.crts11_1_4);
 
-        next.setVisibility(View.GONE);
+        if (!edit.equals("yes")) {
+            next.setVisibility(View.GONE);
+        }
         r_group_crts = (RadioGroup) findViewById(R.id.crg11_1);
         r_crt_arr[0] = crts11_1_0;
         r_crt_arr[1] = crts11_1_1;

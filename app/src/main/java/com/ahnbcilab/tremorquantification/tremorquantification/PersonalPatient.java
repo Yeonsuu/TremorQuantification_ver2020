@@ -368,6 +368,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                             data_exists = dataSnapshot.child(Clinic_ID).child("UPDRS List").exists();
                             taskNum = String.valueOf(dataSnapshot.child(Clinic_ID).child("UPDRS List").getChildrenCount());
                             tran = fm.beginTransaction();
+                            frag7 = new NonTaskFragment();
                             Bundle bundle1 = new Bundle();
                             taskType = "UPDRS List";
                             bundle1.putString("Clinic_ID", Clinic_ID);
@@ -375,7 +376,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                             bundle1.putString("taskType", taskType);
                             bundle1.putString("taskNum", taskNum);
 
-                            Log.v("ppersonal", "pperssonal"+taskNum);
+                            Log.v("ppersonal", "pperssonal"+taskType);
                             if(data_exists==false){
                                 frag7.setArguments(bundle1);
                                 tran.replace(R.id.main_frame, frag7);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
@@ -403,6 +404,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
                             tran = fm.beginTransaction();
+                            frag7 = new NonTaskFragment();
                             data_exists = dataSnapshot.child(Clinic_ID).child("CRTS List").exists();
                             taskNum = String.valueOf(dataSnapshot.child(Clinic_ID).child("CRTS List").getChildrenCount());
                             Bundle bundle2 = new Bundle();
@@ -413,6 +415,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                             bundle2.putString("taskNum", taskNum);
 
                             if(data_exists==false){
+                                Log.v("ppersonal", "pperssonal"+taskType);
                                 frag7.setArguments(bundle2);
                                 tran.replace(R.id.main_frame, frag7);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
 
@@ -439,12 +442,14 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                             data_exists = dataSnapshot.child(Clinic_ID).child("Spiral List").exists();
                             taskNum = String.valueOf(dataSnapshot.child(Clinic_ID).child("Spiral List").getChildrenCount());
                             tran = fm.beginTransaction();
+                            frag7 = new NonTaskFragment();
                             Bundle bundle3 = new Bundle();
                             taskType = "Spiral List";
                             bundle3.putString("Clinic_ID", Clinic_ID);
                             bundle3.putString("PatientName", PatientName);
 
                             if(data_exists==false){
+                                Log.v("ppersonal", "pperssonal"+taskType);
                                 bundle3.putString("taskType", taskType);
                                 bundle3.putString("taskNum", taskNum);
                                 frag7.setArguments(bundle3);
@@ -475,13 +480,14 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                             data_exists = dataSnapshot.child(Clinic_ID).child("Line List").exists();
                             taskNum = String.valueOf(dataSnapshot.child(Clinic_ID).child("Line List").getChildrenCount());
                             tran = fm.beginTransaction();
+                            frag7 = new NonTaskFragment();
                             Bundle bundle4 = new Bundle();
                             taskType = "Line List";
                             bundle4.putString("Clinic_ID", Clinic_ID);
                             bundle4.putString("PatientName", PatientName);
 
-
                             if(data_exists==false){
+                                Log.v("ppersonal", "pperssonal"+taskType);
                                 bundle4.putString("taskType", taskType);
                                 bundle4.putString("taskNum", taskNum);
                                 frag7.setArguments(bundle4);
@@ -517,11 +523,12 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                             data_exists = dataSnapshot.child(Clinic_ID).child("Writing List").exists();
                             taskNum = String.valueOf(dataSnapshot.child(Clinic_ID).child("Writing List").getChildrenCount());
                             tran = fm.beginTransaction();
+                            frag7 = new NonTaskFragment();
                             Bundle bundle6 = new Bundle();
                             taskType = "Writing List";
                             bundle6.putString("Clinic_ID", Clinic_ID);
                             bundle6.putString("PatientName", PatientName);
-
+                            Log.v("ppersonal", "pperssonal"+taskType);
                             if(data_exists==false){
                                 bundle6.putString("taskType", taskType);
                                 bundle6.putString("taskNum", taskNum);
