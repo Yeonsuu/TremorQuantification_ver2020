@@ -51,6 +51,7 @@ public class Line_Both_Rectangle_Fragment extends Fragment {
     String taskName;
     String tasktime;
     String handside;
+    String image_url;
     String hz_score, magnitude_score, distance_score, time_score, velocity_score;
 
     RecyclerView recyclerViewLeft;
@@ -312,11 +313,12 @@ public class Line_Both_Rectangle_Fragment extends Fragment {
                         String taskDate = timestamp.substring(0, timestamp.indexOf(" "));
                         taskDate = taskDate.substring(2, 10);
                         tasktime = timestamp.substring(timestamp.indexOf(" ") + 1, timestamp.lastIndexOf(":"));
+                        image_url = String.valueOf(mData.child("Line List").child("Left").child(key).child("URL").getValue());
                         taskName = String.valueOf(mData.child("Line List").child("Left").child(key).child("path").getValue());
                         if (taskName.equals("Line_Test")) {
                             taskName = "Line";
                         }
-                        tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), taskName, taskName,"L"));
+                        tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), image_url, taskName,"L"));
                         taskListViewAdapter2.notifyDataSetChanged();
 
 
@@ -342,11 +344,12 @@ public class Line_Both_Rectangle_Fragment extends Fragment {
                     String taskDate = timestamp.substring(0, timestamp.indexOf(" "));
                     taskDate = taskDate.substring(2, 10);
                     tasktime = timestamp.substring(timestamp.indexOf(" ") + 1, timestamp.lastIndexOf(":"));
+                    image_url = String.valueOf(mData.child("Line List").child("Right").child(key).child("URL").getValue());
                     taskName = String.valueOf(mData.child("Line List").child("Right").child(key).child("path").getValue());
                     if (taskName.equals("Line_Test")) {
                         taskName = "Line";
                     }
-                    tasks2.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), taskName, taskName,"R"));
+                    tasks2.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), image_url, taskName,"R"));
                     taskListViewAdapter3.notifyDataSetChanged();
 
 

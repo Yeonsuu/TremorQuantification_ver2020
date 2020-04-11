@@ -71,7 +71,7 @@ public class CRTS_LineResult extends AppCompatActivity {
         setContentView(R.layout.activity_crts__line_result);
 
         Intent intent = getIntent();
-        //TODO: line_downurl 받기
+
         final double[] spiral_result = intent.getDoubleArrayExtra("spiral_result");
         final double[] left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result");
         final double[] line_result = intent.getDoubleArrayExtra("line_result");
@@ -103,7 +103,7 @@ public class CRTS_LineResult extends AppCompatActivity {
         String uid = user.getUid();
 
         String task;
-        //TODO: firebase_line_url 삭제
+
         if (left == 0) {
             task = "Right";
 

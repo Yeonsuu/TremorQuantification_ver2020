@@ -50,6 +50,7 @@ public class Writing_Rectangle_Fragment extends Fragment {
 
     String timestamp;
     String taskName;
+    String image_url;
     String hz_score, magnitude_score, distance_score, time_score, velocity_score;
 
     RecyclerView recyclerView;
@@ -132,11 +133,12 @@ public class Writing_Rectangle_Fragment extends Fragment {
                     String key = dataSnapshot1.getKey();
                     timestamp = String.valueOf(mData.child("Writing List").child(key).child("timestamp").getValue());
                     String taskDate = timestamp.substring(0, timestamp.indexOf(" "));
+                    image_url = String.valueOf(mData.child("Writing List").child(key).child("URL").getValue());
                     taskDate = taskDate.substring(2, 10);
                     tasktime = timestamp.substring(timestamp.indexOf(" ") + 1, timestamp.lastIndexOf(":"));
                     taskName = "";
 
-                    tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), taskName, taskName,""));
+                    tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), image_url, taskName,""));
                     taskListViewAdapter2.notifyDataSetChanged();
 
                 }

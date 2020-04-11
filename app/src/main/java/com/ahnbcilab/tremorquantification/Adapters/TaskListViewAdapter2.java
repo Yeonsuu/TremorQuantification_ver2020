@@ -23,6 +23,9 @@ import com.ahnbcilab.tremorquantification.data.TaskItem2;
 import com.ahnbcilab.tremorquantification.data.TaskItem3;
 import com.ahnbcilab.tremorquantification.tremorquantification.PersonalPatient;
 import com.ahnbcilab.tremorquantification.tremorquantification.R;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestManager;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -42,7 +45,6 @@ public class TaskListViewAdapter2 extends RecyclerView.Adapter<TaskListViewAdapt
     public PersonalPatient personalPatient = new PersonalPatient() ;
     Menu context_menu;
     Context mContext;
-
     public TaskListViewAdapter2(Context context, ArrayList<TaskItem2> taskList, ArrayList<TaskItem2> selected_taskList){
         this.mContext = context;
         this.taskList = taskList;
@@ -90,10 +92,12 @@ public class TaskListViewAdapter2 extends RecyclerView.Adapter<TaskListViewAdapt
         holder.taskType.setText(data.getTaskType());
         holder.taskHandside.setText(data.getTaskHandside());
         holder.taskName.setText(data.getTaskName());
+        //TODO : 여기에 이미지 연결하기
+        Glide.with(mContext).load(data.getTaskImage()).thumbnail(0.5f).placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).apply(new RequestOptions().centerCrop()).into(holder.imageView);
 
-        if(data.getTaskName().equals("")){
+        /*if(data.getTaskName().equals("")){
             holder.imageView.setBackgroundResource(R.drawable.writing_result);
-        }
+        }*/
 
 
         if(data.getTaskType().equals("CRTS")){

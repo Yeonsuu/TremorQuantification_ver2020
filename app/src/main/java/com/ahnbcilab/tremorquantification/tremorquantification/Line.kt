@@ -84,7 +84,6 @@ class Line : AppCompatActivity() {
         //requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         setContentView(R.layout.activity_line)
         val intent = intent
-        //TODO: spiral downurl, writing downurl 받기
         path1 = intent.getStringExtra("path")
         Clinic_ID = intent.getStringExtra("Clinic_ID")
         PatientName = intent.getStringExtra("PatientName")
@@ -340,7 +339,6 @@ class Line : AppCompatActivity() {
                     println(e.message)
                 }
                 val data_path = image_path.replace("Image", "Data").replace("jpg", "csv")
-                 //TODO: spiral(양쪽) downurl intent로 보내기
                         val intent = Intent(this, AnalysisActivity::class.java)
                         intent.putExtra("filename", "${Clinic_ID}_$filename.csv")
                         intent.putExtra("path1", path1)

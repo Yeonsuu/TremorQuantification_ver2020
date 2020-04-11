@@ -58,6 +58,7 @@ public class Line_Rectangle_Fragment extends Fragment {
     String timestamp;
     String handside;
     String taskName;
+    String image_url;
     String hz_score, magnitude_score, distance_score, time_score, velocity_score;
 
     RecyclerView recyclerView;
@@ -281,24 +282,25 @@ public class Line_Rectangle_Fragment extends Fragment {
                         String taskDate = timestamp.substring(0, timestamp.indexOf(" "));
                         taskDate = taskDate.substring(2, 10);
                         String taskTime = timestamp.substring(timestamp.indexOf(" ") + 1);
+                        image_url = String.valueOf(mData.child("Line List").child(handside).child(key).child("URL").getValue());
                         taskName = String.valueOf(mData.child("Line List").child(handside).child(key).child("path").getValue());
                         if(taskName.equals("Line_Test")){
                             taskName = "Line";
                         }
                         if(line_box.isChecked() && crts_box.isChecked()){
-                            tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName,""));
+                            tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), image_url, taskName,""));
                             taskListViewAdapter2.notifyDataSetChanged();
                         }
                         else if(line_box.isChecked() && (crts_box.isChecked() == false)){
                             if(taskName.equals("Line")){
-                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName,""));
+                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), image_url, taskName,""));
                                 taskListViewAdapter2.notifyDataSetChanged();
 
                             }
                         }
                         else if((line_box.isChecked() == false) && crts_box.isChecked()){
                             if(taskName.equals("CRTS")){
-                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName,""));
+                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), image_url, taskName,""));
                                 taskListViewAdapter2.notifyDataSetChanged();
 
                             }
@@ -329,24 +331,25 @@ public class Line_Rectangle_Fragment extends Fragment {
                         String taskDate = timestamp.substring(0, timestamp.indexOf(" "));
                         taskDate = taskDate.substring(2, 10);
                         String taskTime = timestamp.substring(timestamp.indexOf(" ") + 1);
+                        image_url = String.valueOf(mData.child("Line List").child(handside).child(key).child("URL").getValue());
                         taskName = String.valueOf(mData.child("Line List").child(handside).child(key).child("path").getValue());
                         if(taskName.equals("Line_Test")){
                             taskName = "Line";
                         }
                         if(line_box.isChecked() && crts_box.isChecked()){
-                            tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName, ""));
+                            tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), image_url, taskName, ""));
                             taskListViewAdapter2.notifyDataSetChanged();
                         }
                         else if(line_box.isChecked() && (crts_box.isChecked() == false)){
                             if(taskName.equals("Line")){
-                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName,""));
+                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), image_url, taskName,""));
                                 taskListViewAdapter2.notifyDataSetChanged();
 
                             }
                         }
                         else if((line_box.isChecked() == false) && crts_box.isChecked()){
                             if(taskName.equals("CRTS")){
-                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), taskName, taskName,""));
+                                tasks.add(new TaskItem2(taskDate, taskTime,taskName, String.valueOf(i + 1), image_url, taskName,""));
                                 taskListViewAdapter2.notifyDataSetChanged();
 
                             }

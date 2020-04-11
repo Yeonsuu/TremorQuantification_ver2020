@@ -51,6 +51,7 @@ public class Spiral_Both_Rectangle_Fragment extends Fragment {
     String taskName;
     String tasktime;
     String handside;
+    String image_url;
     String hz_score, magnitude_score, distance_score, time_score, velocity_score;
 
     RecyclerView recyclerViewLeft;
@@ -311,12 +312,13 @@ public class Spiral_Both_Rectangle_Fragment extends Fragment {
                         timestamp = String.valueOf(mData.child("Spiral List").child("Left").child(key).child("timestamp").getValue());
                         String taskDate = timestamp.substring(0, timestamp.indexOf(" "));
                         taskDate = taskDate.substring(2, 10);
+                        image_url = String.valueOf(mData.child("Spiral List").child("Left").child(key).child("URL").getValue());
                         tasktime = timestamp.substring(timestamp.indexOf(" ") + 1, timestamp.lastIndexOf(":"));
                         taskName = String.valueOf(mData.child("Spiral List").child("Left").child(key).child("path").getValue());
                         if (taskName.equals("Spiral_Test")) {
                             taskName = "Spiral";
                         }
-                        tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), taskName, taskName,"L"));
+                        tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), image_url, taskName,"L"));
                         taskListViewAdapter2.notifyDataSetChanged();
 
 
@@ -341,12 +343,13 @@ public class Spiral_Both_Rectangle_Fragment extends Fragment {
                     timestamp = String.valueOf(mData.child("Spiral List").child("Right").child(key).child("timestamp").getValue());
                     String taskDate = timestamp.substring(0, timestamp.indexOf(" "));
                     taskDate = taskDate.substring(2, 10);
+                    image_url = String.valueOf(mData.child("Spiral List").child("Right").child(key).child("URL").getValue());
                     tasktime = timestamp.substring(timestamp.indexOf(" ") + 1, timestamp.lastIndexOf(":"));
                     taskName = String.valueOf(mData.child("Spiral List").child("Right").child(key).child("path").getValue());
                     if (taskName.equals("Spiral_Test")) {
                         taskName = "Spiral";
                     }
-                    tasks2.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), taskName, taskName,"R"));
+                    tasks2.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), image_url, taskName,"R"));
                     taskListViewAdapter3.notifyDataSetChanged();
 
 

@@ -94,8 +94,6 @@ public class CRTS_Result_Activity extends AppCompatActivity {
 
     ImageView crtsb_11_image, crtsb_12_image, crtsb_13_image, crtsb_14_image;
     public RequestManager mGlideRequestManager;
-    //TODO: firebase_image_url 삭제
-    private DatabaseReference firebase_image_url = firebaseDatabase.getReference("URL List");
     static int count = 0, left;
 
     Button pre_button ;

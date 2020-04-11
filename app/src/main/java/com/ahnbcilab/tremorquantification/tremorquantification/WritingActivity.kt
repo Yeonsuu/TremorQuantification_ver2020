@@ -83,7 +83,6 @@ class WritingActivity : AppCompatActivity() {
         //의사 ID 얻어오기
         val user = FirebaseAuth.getInstance().currentUser
         uid = user!!.getUid()
-        //TODO: firebase_write_url 수정
         firebase_write_url = firebaseDatabase.getReference("PatientList").child(Clinic_ID).child("Writing List")
 
         //원래 URL이 들어있는 개수를 구함 스토리지의 저장명으로 활용될 예정
@@ -171,7 +170,6 @@ class WritingActivity : AppCompatActivity() {
 
                 downurl = downloadUrl.toString()
 
-                //TODO: intent로 downurl 값 보내기
                 val intent = Intent(this, Spiral::class.java)
                 intent.putExtra("Clinic_ID", Clinic_ID);
                 intent.putExtra("PatientName", PatientName);

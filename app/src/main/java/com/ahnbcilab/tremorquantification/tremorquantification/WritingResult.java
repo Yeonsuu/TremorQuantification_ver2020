@@ -66,7 +66,6 @@ public class WritingResult extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writing_result);
 
-        //TODO : line, spiral downurl 받아오기
         final Intent intent = getIntent();
         final double[] spiral_result = intent.getDoubleArrayExtra("spiral_result");
         final double[] left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result");

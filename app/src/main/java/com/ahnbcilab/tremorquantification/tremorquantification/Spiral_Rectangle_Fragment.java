@@ -68,6 +68,7 @@ public class Spiral_Rectangle_Fragment extends Fragment {
     String taskName;
     String tasktime;
     String handside;
+    String image_url;
     String hz_score, magnitude_score, distance_score, time_score, velocity_score;
 
     RecyclerView recyclerView;
@@ -283,22 +284,23 @@ public class Spiral_Rectangle_Fragment extends Fragment {
                         String taskDate = timestamp.substring(0, timestamp.indexOf(" "));
                         taskDate = taskDate.substring(2, 10);
                         tasktime = timestamp.substring(timestamp.indexOf(" ") + 1, timestamp.lastIndexOf(":"));
+                        image_url = String.valueOf(mData.child("Spiral List").child(handside).child(key).child("URL").getValue());
                         taskName = String.valueOf(mData.child("Spiral List").child(handside).child(key).child("path").getValue());
                         if (taskName.equals("Spiral_Test")) {
                             taskName = "Spiral";
                         }
                         if (spiral_box.isChecked() && crts_box.isChecked()) {
-                            tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), taskName, taskName,""));
+                            tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), image_url, taskName,""));
                             taskListViewAdapter2.notifyDataSetChanged();
                         } else if (spiral_box.isChecked() && (crts_box.isChecked() == false)) {
                             if (taskName.equals("Spiral")) {
-                                tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), taskName, taskName,""));
+                                tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), image_url, taskName,""));
                                 taskListViewAdapter2.notifyDataSetChanged();
 
                             }
                         } else if ((spiral_box.isChecked() == false) && crts_box.isChecked()) {
                             if (taskName.equals("CRTS")) {
-                                tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), taskName, taskName,""));
+                                tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), image_url, taskName,""));
                                 taskListViewAdapter2.notifyDataSetChanged();
 
                             }
@@ -327,22 +329,23 @@ public class Spiral_Rectangle_Fragment extends Fragment {
                         String taskDate = timestamp.substring(0, timestamp.indexOf(" "));
                         taskDate = taskDate.substring(2, 10);
                         tasktime = timestamp.substring(timestamp.indexOf(" ") + 1, timestamp.lastIndexOf(":"));
+                        image_url = String.valueOf(mData.child("Spiral List").child(handside).child(key).child("URL").getValue());
                         taskName = String.valueOf(mData.child("Spiral List").child(handside).child(key).child("path").getValue());
                         if (taskName.equals("Spiral_Test")) {
                             taskName = "Spiral";
                         }
                         if (spiral_box.isChecked() && crts_box.isChecked()) {
-                            tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), taskName, taskName,""));
+                            tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), image_url, taskName,""));
                             taskListViewAdapter2.notifyDataSetChanged();
                         } else if (spiral_box.isChecked() && (crts_box.isChecked() == false)) {
                             if (taskName.equals("Spiral")) {
-                                tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), taskName, taskName,""));
+                                tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), image_url, taskName,""));
                                 taskListViewAdapter2.notifyDataSetChanged();
 
                             }
                         } else if ((spiral_box.isChecked() == false) && crts_box.isChecked()) {
                             if (taskName.equals("CRTS")) {
-                                tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), taskName, taskName,""));
+                                tasks.add(new TaskItem2(taskDate, tasktime,taskName, String.valueOf(i + 1), image_url, taskName,""));
                                 taskListViewAdapter2.notifyDataSetChanged();
 
                             }

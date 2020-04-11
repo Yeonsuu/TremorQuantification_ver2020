@@ -71,7 +71,6 @@ public class CRTS_SpiralResult extends AppCompatActivity {
         setContentView(R.layout.activity_crts__spiral_result);
 
         Intent intent = getIntent();
-        //TODO: spiral url 받아오기
         final double[] spiral_result = intent.getDoubleArrayExtra("spiral_result");
         final double[] left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result");
         final double[] line_result = intent.getDoubleArrayExtra("line_result");
@@ -353,7 +352,6 @@ public class CRTS_SpiralResult extends AppCompatActivity {
                     bool = false;
                 }
                 if(bool){
-                    //TODO : spiral_left downurl 보내기
                     if(edit.equals("yes")) {
                         Intent intent = new Intent(getApplicationContext(), CRTSActivity.class) ;
                         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);

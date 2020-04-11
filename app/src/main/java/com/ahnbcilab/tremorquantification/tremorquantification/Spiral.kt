@@ -90,7 +90,6 @@ class Spiral : AppCompatActivity() {
 
 
         val intent = intent
-        //TODO: writing url 받아오기
         path1 = intent.getStringExtra("path")
         Clinic_ID = intent.getStringExtra("Clinic_ID")
         PatientName = intent.getStringExtra("PatientName")
@@ -285,7 +284,6 @@ class Spiral : AppCompatActivity() {
                 //이미지 경로를 활용하여 데이터 경로를 만든다
                 val data_path = image_path.replace("Image", "Data").replace("jpg", "csv")
                 //left hand
-                //TODO: writing도 보내자
                 if (right_spiral.equals("no")) { //left
                     val intent = Intent(this, AnalysisActivity::class.java)
                     intent.putExtra("filename", "${Clinic_ID}_$filename.csv")

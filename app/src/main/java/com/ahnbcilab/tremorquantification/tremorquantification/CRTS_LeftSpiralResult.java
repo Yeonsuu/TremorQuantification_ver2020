@@ -290,7 +290,7 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
                 if (edit.equals("yes")) {
 
                 } else {
-                    //TODO: 왼손 sprial downurl 저장
+
                     com.ahnbcilab.tremorquantification.data.Spiral spiral = new Spiral(timestamp, finalrightSpiralCount + finalleftSpiralCount);
                     //TM[0], TF[1], Time[2], ED[3], Velocity[4]
                     SpiralData spiraldata = new SpiralData(1.0, left_spiral_result[1], left_spiral_result[0], left_spiral_result[3], left_spiral_result[2], left_spiral_result[4]);
