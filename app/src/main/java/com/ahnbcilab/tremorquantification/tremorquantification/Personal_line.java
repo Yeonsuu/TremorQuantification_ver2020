@@ -38,7 +38,6 @@ public class Personal_line extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     DatabaseReference database_line;
     DatabaseReference database_patient;
-    DatabaseReference database_line_url;
 
     android.support.v4.app.FragmentManager fm;
     android.support.v4.app.FragmentTransaction tran;
@@ -93,52 +92,14 @@ public class Personal_line extends AppCompatActivity {
         if (handside.equalsIgnoreCase("right"))
         {
             t_t.setText("Line Test 오른손");
-            database_line_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Right").child(String.valueOf(taskNum));
 
         }
         else
         {
             t_t.setText("Line Test 왼손");
-            database_line_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Line").child("Left").child(String.valueOf(taskNum));
         }
-        mGlideRequestManager = Glide.with(Personal_line.this);
-        final ImageView present_line = findViewById(R.id.present_spiral);
 
-        database_line_url.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists())
-                {
-                    downurl = Objects.requireNonNull(dataSnapshot.getValue()).toString();
 
-                    present_line.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mGlideRequestManager.load(downurl)
-                                    .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(40000))
-                                    .into(present_line);
-                        }
-                    });
-                }
-                else
-                {
-                    present_line.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mGlideRequestManager
-                                    .load(R.drawable.image_err_rotate)
-                                    .into(present_line);
-
-                        }
-                    });
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
 
         t_s.setText(timestamp);
         c_id.setText(Clinic_ID);
@@ -164,6 +125,17 @@ public class Personal_line extends AppCompatActivity {
                     time_score.setText(String.valueOf(mData.child("Line_Result").child("time").getValue())) ;
                     speed_score.setText(String.valueOf(mData.child("Line_Result").child("speed").getValue())) ;
                     distance_score.setText(String.valueOf(mData.child("Line_Result").child("distance").getValue())) ;
+                    downurl = String.valueOf(mData.child("URL").getValue());
+                    mGlideRequestManager = Glide.with(Personal_line.this);
+                    final ImageView present_line = findViewById(R.id.present_spiral);
+                    present_line.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mGlideRequestManager.load(downurl)
+                                    .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(40000))
+                                    .into(present_line);
+                        }
+                    });
                 }
             }
 

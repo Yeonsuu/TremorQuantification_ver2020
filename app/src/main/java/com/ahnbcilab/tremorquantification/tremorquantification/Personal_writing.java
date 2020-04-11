@@ -42,7 +42,8 @@ public class Personal_writing extends AppCompatActivity {
     String downurl;
 
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-    DatabaseReference database_write_url;
+    DatabaseReference database_patient;
+    DatabaseReference database_write;
 
     public RequestManager mGlideRequestManager;
 
@@ -73,19 +74,17 @@ public class Personal_writing extends AppCompatActivity {
         //의사 ID 얻어오기
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
-
-        database_write_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Writing").child(taskNum.toString());
-
-        //이미지 가져오기
-        mGlideRequestManager = Glide.with(Personal_writing.this);
-        final ImageView present_write = findViewById(R.id.writing_image_result);
-        database_write_url.addValueEventListener(new ValueEventListener() {
+        database_patient = firebaseDatabase.getReference("PatientList");
+        database_write = database_patient.child(Clinic_ID).child("Writing List");
+        database_write.orderByChild("writing_count").equalTo(taskNum).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists())
+                for(DataSnapshot mData : dataSnapshot.getChildren())
                 {
-                    downurl = Objects.requireNonNull(dataSnapshot.getValue()).toString();
-
+                    downurl = String.valueOf(mData.child("URL").getValue());
+                    //이미지 가져오기
+                    mGlideRequestManager = Glide.with(Personal_writing.this);
+                    final ImageView present_write = findViewById(R.id.writing_image_result);
                     present_write.post(new Runnable() {
                         @Override
                         public void run() {
@@ -110,18 +109,6 @@ public class Personal_writing extends AppCompatActivity {
                         }
                     });
                 }
-                else
-                {
-                    present_write.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mGlideRequestManager
-                                    .load(R.drawable.image_err_rotate)//인터넷 너무 느릴 시 실행
-                                    .into(present_write);
-
-                        }
-                    });
-                }
             }
 
             @Override
@@ -129,6 +116,7 @@ public class Personal_writing extends AppCompatActivity {
 
             }
         });
+
 
         Button backButton = (Button) findViewById(R.id.gotohome);
         backButton.setOnClickListener(new View.OnClickListener() {

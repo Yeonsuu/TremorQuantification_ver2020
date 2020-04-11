@@ -142,7 +142,8 @@ public class Spiral_Rectangle_Fragment extends Fragment {
                 intent.putExtra("handside", handside);
                 intent.putExtra("taskTime", taskTime.getText().toString());
                 intent.putExtra("taskDate", taskDate.getText().toString());
-                intent.putExtra("taskNum", Integer.parseInt(taskNum.getText().toString())-1);
+                intent.putExtra("taskNum", position);
+                Log.v("테스크 넘버 확인3", taskNum.getText().toString());
                 startActivity(intent);
 
             }

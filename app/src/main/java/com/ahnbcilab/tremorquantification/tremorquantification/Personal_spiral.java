@@ -43,7 +43,6 @@ public class Personal_spiral extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     DatabaseReference database_spiral;
     DatabaseReference database_patient;
-    DatabaseReference database_spiral_url;
 
     android.support.v4.app.FragmentManager fm;
     android.support.v4.app.FragmentTransaction tran;
@@ -100,52 +99,13 @@ public class Personal_spiral extends AppCompatActivity {
         if (handside.equalsIgnoreCase("right"))
         {
             t_t.setText("Spiral Result 오른손");
-            database_spiral_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Spiral").child("Right").child(String.valueOf(taskNum));
         }
         else
         {
             t_t.setText("Spiral Result 왼손");
-            database_spiral_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Spiral").child("Left").child(String.valueOf(taskNum));
         }
 
-        //이미지 가져오기
-        mGlideRequestManager = Glide.with(Personal_spiral.this);
-        final ImageView present_spiral = findViewById(R.id.present_spiral);
-        database_spiral_url.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists())
-                {
-                    downurl = Objects.requireNonNull(dataSnapshot.getValue()).toString();
 
-                    present_spiral.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mGlideRequestManager.load(downurl)
-                                    .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(40000))
-                                    .into(present_spiral);
-                        }
-                    });
-                }
-                else
-                {
-                    present_spiral.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mGlideRequestManager
-                                    .load(R.drawable.image_err_rotate)
-                                    .into(present_spiral);
-
-                        }
-                    });
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
 
         t_s.setText(timestamp);
         c_id.setText(Clinic_ID);
@@ -171,6 +131,17 @@ public class Personal_spiral extends AppCompatActivity {
                     time_score.setText(String.valueOf(mData.child("Spiral_Result").child("time").getValue())) ;
                     speed_score.setText(String.valueOf(mData.child("Spiral_Result").child("speed").getValue())) ;
                     distance_score.setText(String.valueOf(mData.child("Spiral_Result").child("distance").getValue())) ;
+                    downurl = String.valueOf(mData.child("URL").getValue());
+                    mGlideRequestManager = Glide.with(Personal_spiral.this);
+                    final ImageView present_spiral = findViewById(R.id.present_spiral);
+                    present_spiral.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mGlideRequestManager.load(downurl)
+                                    .apply(new RequestOptions().centerCrop().placeholder(R.drawable.image_loading_rotate).error(R.drawable.image_null_rotate).timeout(40000))
+                                    .into(present_spiral);
+                        }
+                    });
                 }
             }
 

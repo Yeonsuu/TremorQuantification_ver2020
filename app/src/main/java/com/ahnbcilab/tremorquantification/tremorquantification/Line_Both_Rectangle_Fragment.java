@@ -136,7 +136,7 @@ public class Line_Both_Rectangle_Fragment extends Fragment {
                 intent.putExtra("handside", "Left");
                 intent.putExtra("taskTime", taskTime.getText().toString());
                 intent.putExtra("taskDate", taskDate.getText().toString());
-                intent.putExtra("taskNum", Integer.parseInt(taskNum.getText().toString())-1);
+                intent.putExtra("taskNum", position);
                 startActivity(intent);
 
             }
@@ -160,7 +160,7 @@ public class Line_Both_Rectangle_Fragment extends Fragment {
                 intent.putExtra("handside", "Right");
                 intent.putExtra("taskTime", taskTime.getText().toString());
                 intent.putExtra("taskDate", taskDate.getText().toString());
-                intent.putExtra("taskNum", Integer.parseInt(taskNum.getText().toString())-1);
+                intent.putExtra("taskNum", position);
                 startActivity(intent);
 
             }

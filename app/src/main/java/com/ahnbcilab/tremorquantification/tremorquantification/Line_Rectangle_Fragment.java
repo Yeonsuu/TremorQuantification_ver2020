@@ -137,7 +137,7 @@ public class Line_Rectangle_Fragment extends Fragment {
                 intent.putExtra("PatientName", PatientName);
                 intent.putExtra("taskDate", taskDate.getText());
                 intent.putExtra("taskTime", taskTime.getText());
-                intent.putExtra("taskNum", Integer.parseInt(taskNum.getText().toString())-1);
+                intent.putExtra("taskNum", position);
                 intent.putExtra("handside", handside);
 //              intent.putExtra("taskScore", taskscore.getText());
                 startActivity(intent);
