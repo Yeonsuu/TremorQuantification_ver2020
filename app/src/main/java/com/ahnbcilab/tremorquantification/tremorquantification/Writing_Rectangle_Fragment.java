@@ -109,6 +109,7 @@ public class Writing_Rectangle_Fragment extends Fragment {
                 intent.putExtra("PatientName", PatientName);
                 intent.putExtra("taskDate", taskDate.getText());
                 intent.putExtra("taskTime", tasktime);
+                intent.putExtra("taskNum", position);
                 startActivity(intent);
 
             }
