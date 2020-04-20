@@ -52,7 +52,6 @@ public class WritingResult extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     DatabaseReference databasepatient;
     DatabaseReference databasewriting;
-    private DatabaseReference firebase_write_url = firebaseDatabase.getReference("URL List");
     String downurl = null;
     int total_writing_count;
     RadioButton r_crt_arr[] = new RadioButton[5];
@@ -85,7 +84,6 @@ public class WritingResult extends AppCompatActivity {
             crts12 = intent.getIntExtra("crts12", -1);
             crts13 = intent.getIntExtra("crts13", -1);
             crts14 = intent.getIntExtra("crts14", -1);
-            Log.v("WritingResult", "CRTS_Activity_intent " + crts11);
         }
         check = intent.getIntExtra("crts11", -1);
 
@@ -120,7 +118,6 @@ public class WritingResult extends AppCompatActivity {
         String uid = user.getUid();
 
         //글쓰기 이미지 불러오기
-        firebase_write_url = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Writing");
         mGlideRequestManager = Glide.with(WritingResult.this);
         present_write = findViewById(R.id.writing_image);
         present_write.post(new Runnable() {

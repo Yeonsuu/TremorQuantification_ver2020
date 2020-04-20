@@ -573,7 +573,11 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
                 databaseCRTS.child(key).child("CRTS task").setValue(my_crts);
                 databaseCRTS.child(key).child("Right_Spiral_Result").setValue(spiraldata) ;
                 databaseCRTS.child(key).child("Left_Spiral_Result").setValue(left_spiraldata) ;
-                databaseCRTS.child(key).child("Line_Result").setValue(linedata) ;
+                databaseCRTS.child(key).child("Line_Result").setValue(linedata);
+                databaseCRTS.child(key).child("Right_Spiral_URL").setValue(crts_right_spiral_downurl);
+                databaseCRTS.child(key).child("Left_Spiral_URL").setValue(crts_left_spiral_downurl);
+                databaseCRTS.child(key).child("Writing_URL").setValue(writing_downurl);
+                databaseCRTS.child(key).child("Line_URL").setValue(line_downurl);
 
             }
             databasePatientList.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {

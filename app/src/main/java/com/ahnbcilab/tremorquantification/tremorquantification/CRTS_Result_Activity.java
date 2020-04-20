@@ -308,29 +308,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                 if(crtsb_11_detail_bool ==false) {
                     crtsb_11_detail_bool =true ;
                     crtsb_11_detail.setVisibility(View.VISIBLE);
-                    //put the image
-                    crtsb_11_image.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mGlideRequestManager
-                                    .asBitmap()
-                                    .load(writing_downurl)
-                                    .placeholder(R.drawable.image_loading)
-                                    .apply(new RequestOptions().centerCrop().timeout(40000))
-                                    .into(new SimpleTarget<Bitmap>() {
-                                        @Override
-                                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                                            Matrix matrix = new Matrix();
-                                            matrix.postRotate(90);
-                                            int width = resource.getWidth();
-                                            int height = resource.getHeight();
 
-                                            resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
-                                            crtsb_11_image.setImageBitmap(resource);
-                                        }
-                                    });
-                        }
-                    });
 
                 }
                 else{
@@ -346,29 +324,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                 if(crtsb_12_detail_bool ==false) {
                     crtsb_12_detail_bool =true ;
                     crtsb_12_detail.setVisibility(View.VISIBLE);
-                    //put the image
-                    crtsb_12_image.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mGlideRequestManager
-                                    .asBitmap()
-                                    .load(crts_right_spiral_downurl)
-                                    .placeholder(R.drawable.image_loading)
-                                    .apply(new RequestOptions().centerCrop().timeout(40000))
-                                    .into(new SimpleTarget<Bitmap>() {
-                                        @Override
-                                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                                            Matrix matrix = new Matrix();
-                                            matrix.postRotate(90);
-                                            int width = resource.getWidth();
-                                            int height = resource.getHeight();
 
-                                            resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
-                                            crtsb_12_image.setImageBitmap(resource);
-                                        }
-                                    });
-                        }
-                    });
 
                 }
                 else{
@@ -384,29 +340,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                 if(crtsb_13_detail_bool ==false) {
                     crtsb_13_detail_bool =true ;
                     crtsb_13_detail.setVisibility(View.VISIBLE);
-                    //put the image
-                    crtsb_13_image.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mGlideRequestManager
-                                    .asBitmap()
-                                    .load(crts_left_spiral_downurl)
-                                    .placeholder(R.drawable.image_loading)
-                                    .apply(new RequestOptions().centerCrop().timeout(40000))
-                                    .into(new SimpleTarget<Bitmap>() {
-                                        @Override
-                                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                                            Matrix matrix = new Matrix();
-                                            matrix.postRotate(90);
-                                            int width = resource.getWidth();
-                                            int height = resource.getHeight();
 
-                                            resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
-                                            crtsb_13_image.setImageBitmap(resource);
-                                        }
-                                    });
-                        }
-                    });
                 }
                 else{
                     crtsb_13_detail_bool =false;
@@ -421,29 +355,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                 if(crtsb_14_detail_bool ==false) {
                     crtsb_14_detail_bool =true ;
                     crtsb_14_detail.setVisibility(View.VISIBLE);
-                    //put the image
-                    crtsb_14_image.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mGlideRequestManager
-                                    .asBitmap()
-                                    .load(line_downurl)
-                                    .placeholder(R.drawable.image_loading)
-                                    .apply(new RequestOptions().centerCrop().timeout(40000))
-                                    .into(new SimpleTarget<Bitmap>() {
-                                        @Override
-                                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                                            Matrix matrix = new Matrix();
-                                            matrix.postRotate(90);
-                                            int width = resource.getWidth();
-                                            int height = resource.getHeight();
 
-                                            resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
-                                            crtsb_14_image.setImageBitmap(resource);
-                                        }
-                                    });
-                        }
-                    });
                 }
                 else{
                     crtsb_14_detail_bool =false;
@@ -579,6 +491,106 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                     line_speed.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Line_Result").child("speed").getValue()))));
                     line_time.setText(String.format("%.1f", Double.parseDouble(String.valueOf(mData.child("Line_Result").child("time").getValue()))));
 
+                    //downurl
+                    writing_downurl = String.valueOf(mData.child("Writing_URL").getValue());
+                    crts_right_spiral_downurl = String.valueOf(mData.child("Right_Spiral_URL").getValue());
+                    crts_left_spiral_downurl = String.valueOf(mData.child("Left_Spiral_URL").getValue());
+                    line_downurl = String.valueOf(mData.child("Line_URL").getValue());
+                    //put the image(writing)
+                    crtsb_11_image.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mGlideRequestManager
+                                    .asBitmap()
+                                    .load(writing_downurl)
+                                    .placeholder(R.drawable.image_loading)
+                                    .apply(new RequestOptions().centerCrop().timeout(40000))
+                                    .into(new SimpleTarget<Bitmap>() {
+                                        @Override
+                                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                            Matrix matrix = new Matrix();
+                                            matrix.postRotate(90);
+                                            int width = resource.getWidth();
+                                            int height = resource.getHeight();
+
+                                            resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
+                                            crtsb_11_image.setImageBitmap(resource);
+                                        }
+                                    });
+                        }
+                    });
+
+                    //put the image(right side)
+                    crtsb_12_image.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mGlideRequestManager
+                                    .asBitmap()
+                                    .load(crts_right_spiral_downurl)
+                                    .placeholder(R.drawable.image_loading)
+                                    .apply(new RequestOptions().centerCrop().timeout(40000))
+                                    .into(new SimpleTarget<Bitmap>() {
+                                        @Override
+                                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                            Matrix matrix = new Matrix();
+                                            matrix.postRotate(90);
+                                            int width = resource.getWidth();
+                                            int height = resource.getHeight();
+
+                                            resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
+                                            crtsb_12_image.setImageBitmap(resource);
+                                        }
+                                    });
+                        }
+                    });
+
+                    //put the image(left spiral)
+                    crtsb_13_image.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mGlideRequestManager
+                                    .asBitmap()
+                                    .load(crts_left_spiral_downurl)
+                                    .placeholder(R.drawable.image_loading)
+                                    .apply(new RequestOptions().centerCrop().timeout(40000))
+                                    .into(new SimpleTarget<Bitmap>() {
+                                        @Override
+                                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                            Matrix matrix = new Matrix();
+                                            matrix.postRotate(90);
+                                            int width = resource.getWidth();
+                                            int height = resource.getHeight();
+
+                                            resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
+                                            crtsb_13_image.setImageBitmap(resource);
+                                        }
+                                    });
+                        }
+                    });
+
+                    //put the image(line)
+                    crtsb_14_image.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mGlideRequestManager
+                                    .asBitmap()
+                                    .load(line_downurl)
+                                    .placeholder(R.drawable.image_loading)
+                                    .apply(new RequestOptions().centerCrop().timeout(40000))
+                                    .into(new SimpleTarget<Bitmap>() {
+                                        @Override
+                                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                                            Matrix matrix = new Matrix();
+                                            matrix.postRotate(90);
+                                            int width = resource.getWidth();
+                                            int height = resource.getHeight();
+
+                                            resource = Bitmap.createBitmap(resource, 0, 0, width, height, matrix, true);
+                                            crtsb_14_image.setImageBitmap(resource);
+                                        }
+                                    });
+                        }
+                    });
                 }
             }
 
