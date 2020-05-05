@@ -7,6 +7,7 @@ import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,10 +27,12 @@ import org.hsqldb.Database;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -73,7 +76,7 @@ public class fitting {
 		return new baseline(x , y, t);}
 
 	//obj = base, org = subject
-	public double[] fitting(double[] orgX, double[] orgY,double[] time, int m, boolean SorL, String data_path, String id){
+	public double[] fitting(double[] orgX, double[] orgY,double[] time, int m, boolean SorL, String data_path, String id) throws FileNotFoundException {
 		int n = m;
 		double[] objX = new double[n] ;      double[] objY = new double[n];       double[] t = new double[n]  ;
 		baseline base = bring(objX, objY, t);
@@ -165,9 +168,16 @@ public class fitting {
 		filepath.putFile(datafile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
 			@Override
 			public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+			}
+
+		})
+		.addOnFailureListener(new OnFailureListener() {
+			@Override
+			public void onFailure(@NonNull Exception e) {
 
 			}
 		});
+
 		double[] re_bpf_x = new double[orgX.length];
 		double[] re_bpf_y = new double[orgY.length];
 		double[] re_pca = new double[orgX.length];

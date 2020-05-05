@@ -35,7 +35,6 @@ class AnalysisActivity : AppCompatActivity() {
         Clinic_ID = intent.getStringExtra("Clinic_ID")
         PatientName = intent.getStringExtra("PatientName")
         task = intent.getStringExtra("task")
-        data_path = intent.getStringExtra("data_path")
         var spiral_result = intent.getDoubleArrayExtra("spiral_result")
         var left_spiral_result = intent.getDoubleArrayExtra("left_spiral_result")
         var crts_num = intent.getStringExtra("crts_num")
@@ -52,6 +51,12 @@ class AnalysisActivity : AppCompatActivity() {
             crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl")
         if (intent.hasExtra("writing_downurl"))
             writing_downurl = intent.getStringExtra("writing_downurl")
+        if (intent.hasExtra("data_path"))
+        {
+            data_path = intent.getStringExtra("data_path")
+            Log.v("05/05 data_path", data_path)
+        }
+
 
         val dialog = ProgressDialog(this)
         dialog.setMessage("Analysing...")

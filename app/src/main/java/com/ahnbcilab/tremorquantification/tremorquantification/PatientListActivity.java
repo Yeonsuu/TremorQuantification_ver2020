@@ -1,12 +1,18 @@
 package com.ahnbcilab.tremorquantification.tremorquantification;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Rect;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -81,6 +87,7 @@ import lecho.lib.hellocharts.model.ComboLineColumnChartData;
 public class PatientListActivity extends AppCompatActivity implements Observer, GoogleApiClient.OnConnectionFailedListener {
     //
     private static final int RC_SIGN_IN = 10;
+    private static final int PERMISSION_REQUEST_CODE=1232;
     private GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mAuth;
     String name, email, uid, r_uid;
@@ -127,6 +134,13 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_list);
+
+        //permission check
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+        {
+            checkVerify();
+        }
+
 
         //
         databaseDoctor = firebaseDatabase.getReference("UserList");
@@ -1134,5 +1148,54 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
         Log.i("StatusBarTest", "StatusBar Height= " + StatusBarHeight +
                 " TitleBar Height = " + TitleBarHeight);
     }
+
+    public void checkVerify() {
+        if (
+                checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ||
+                        checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
+        ) {
+            // Should we show an explanation?
+            if (shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                // ...
+            }
+            requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                            Manifest.permission.READ_EXTERNAL_STORAGE},
+                    1);
+        }
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == 1) {
+            if (grantResults.length > 0) {
+                for (int i = 0; i < grantResults.length; ++i) {
+                    if (grantResults[i] == PackageManager.PERMISSION_DENIED) {
+                        // 하나라도 거부한다면.
+                        new AlertDialog.Builder(this).setTitle("알림").setMessage("권한을 허용해주셔야 앱을 이용할 수 있습니다.")
+                                .setPositiveButton("종료", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                        ActivityCompat.finishAffinity(PatientListActivity.this);
+                                    }
+                                }).setNegativeButton("권한 설정", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+                                        .setData(Uri.parse("package:" + getApplicationContext().getPackageName()));
+                                getApplicationContext().startActivity(intent);
+                            }
+                        }).setCancelable(false).show();
+
+                        return;
+                    }
+
+                }
+            }
+        }
+    }
+
 
 }

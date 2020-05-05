@@ -140,6 +140,7 @@ class Spiral : AppCompatActivity() {
                 //정해진 이미지 레퍼런스를 설정한다
                 spiral_ref= storageRef.child(image_path)
 
+
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
