@@ -84,13 +84,6 @@ public class CRTS_partb_1_Fragment extends Fragment {
         Button gotowrite = (Button) view.findViewById(R.id.gotowrite);
 
         pre_button = (Button) view.findViewById(R.id.preButton);
-        next_button = (Button) view.findViewById(R.id.nextButton);
-        next_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((CRTSActivity) getActivity()).frgment2();
-            }
-        });
         pre_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
