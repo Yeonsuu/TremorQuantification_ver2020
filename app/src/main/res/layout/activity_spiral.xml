@@ -29,6 +29,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
+            android:id="@+id/backButton_image"
             android:layout_width="30dp"
             android:layout_height="137dp"
             android:layout_marginStart="8dp"

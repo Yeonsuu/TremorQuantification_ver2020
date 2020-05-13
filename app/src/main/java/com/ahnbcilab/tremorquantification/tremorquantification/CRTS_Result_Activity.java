@@ -609,7 +609,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                     Long number = mData.child("CRTS List").getChildrenCount() ;
                     //Toast.makeText(view.getContext(), number+"", Toast.LENGTH_SHORT).show();
                     for(int i = 0 ; i<number; i++) {
-                        list(i, mData, graphView, series, crts_num) ;
+                        list(i, mData, graphView, series, number) ;
                     }
                 }
             }
@@ -623,7 +623,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
 
     }
 
-    private void list(final int i, final DataSnapshot mData, final GraphView graphView, final LineGraphSeries<DataPoint> series, final String crts_num) {
+    private void list(final int i, final DataSnapshot mData, final GraphView graphView, final LineGraphSeries<DataPoint> series, final long crts_num) {
         Query query = database_patient.child(Clinic_ID).child("CRTS List").orderByChild("CRTS_count").equalTo(i) ;
         query.addValueEventListener(new ValueEventListener() {
             @Override
@@ -649,7 +649,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                         graphView.getViewport().setScalableY(true);
                         graphView.getViewport().setScrollableY(true);
                         graphView.getViewport().setMinX(0.0);
-                        graphView.getViewport().setMaxX(Integer.parseInt(crts_num)+1);
+                        graphView.getViewport().setMaxX(crts_num);
                     }
                     else{
                         crts_score = String.valueOf(Integer.parseInt(partA_score) + Integer.parseInt(partB_score) + Integer.parseInt(partC_score));//오류
@@ -661,7 +661,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                         graphView.getViewport().setScalableY(true);
                         graphView.getViewport().setScrollableY(true);
                         graphView.getViewport().setMinX(0.0);
-                        graphView.getViewport().setMaxX(Integer.parseInt(crts_num)+1);
+                        graphView.getViewport().setMaxX(crts_num);
                     }
                     //crts_score = String.valueOf(Integer.parseInt(partA_score) + Integer.parseInt(partB_score) + Integer.parseInt(partC_score));//오류
 

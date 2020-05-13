@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -1050,5 +1051,10 @@ public class UPDRSActivity extends AppCompatActivity implements View.OnClickList
                     }
                 })
                 .show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "검사 종료를 원하신다면 '종료' 버튼을 눌러 종료시켜주세요.", Toast.LENGTH_SHORT).show();
     }
 }

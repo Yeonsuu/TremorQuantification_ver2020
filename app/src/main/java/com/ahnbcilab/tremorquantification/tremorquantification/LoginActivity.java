@@ -1,13 +1,19 @@
 package com.ahnbcilab.tremorquantification.tremorquantification;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -59,6 +65,8 @@ import com.jjoe64.graphview.series.PointsGraphSeries;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
@@ -75,7 +83,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private FirebaseAuth firebaseAuth;
     FirebaseAuth.AuthStateListener mAuthListener;
     private long lastTimeBackPressed;
-
+    public static final int TYPE_WIFI = 1;
+    public static final int TYPE_MOBILE = 2;
+    public static final int TYPE_NOT_CONNECTED = 3;
 
     @Override
 
@@ -83,7 +93,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         firebaseAuth.addAuthStateListener(mAuthListener);
-
     }
 
     @Override
@@ -109,6 +118,47 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         }
         firebaseAuth = FirebaseAuth.getInstance();
 
+        final Timer timer = new Timer();
+        final Handler mHandler = new Handler(Looper.getMainLooper());
+
+        int status = getConnectivityStatus(getApplicationContext());
+        if(status == TYPE_MOBILE) {
+
+
+        }else if (status == TYPE_WIFI) {
+
+        }else {
+
+            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(LoginActivity.this);
+            alertDialog.setTitle("Wi-Fi가 꺼져 있습니다.");
+            alertDialog.setMessage("wifi 설정 창으로 이동하시겠습니까?");
+            alertDialog.setPositiveButton("네", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intentConfirm = new Intent();
+                    intentConfirm.setAction("android.settings.WIFI_SETTINGS");
+                    startActivity(intentConfirm);
+                }
+            });
+            alertDialog.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(final DialogInterface dialog, int which) {
+                    Toast.makeText(getApplicationContext(), "wifi를 켜야 앱을 이용하실 수 있습니다. wifi를 켜주세요.", Toast.LENGTH_SHORT).show();
+                    dialog.cancel();
+
+                }
+
+            });
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    AlertDialog dialog = alertDialog.create();
+                    dialog.show();
+                }
+            },0);
+
+
+        }
 
 // 자동로그인
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -330,6 +380,21 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         uid = user.getUid();
     }
 
+    public int getConnectivityStatus(Context context){ //해당 context의 서비스를 사용하기위해서 context객체를 받는다.
+        ConnectivityManager manager = (ConnectivityManager) context.getSystemService(context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = manager.getActiveNetworkInfo();
+        WifiManager wifiManager = (WifiManager)getSystemService(WIFI_SERVICE);
+        if(networkInfo != null) {
+            int type = networkInfo.getType();
+            if (type == ConnectivityManager.TYPE_MOBILE) {//쓰리지나 LTE로 연결된것(모바일을 뜻한다.)
+                return TYPE_MOBILE;
+            } else if (type == ConnectivityManager.TYPE_WIFI) {//와이파이 연결된것
+                return TYPE_WIFI;
+            }
+        }
+
+        return TYPE_NOT_CONNECTED; //연결이 되지않은 상태
+    }
 
     // Backbutton 클릭
     @Override

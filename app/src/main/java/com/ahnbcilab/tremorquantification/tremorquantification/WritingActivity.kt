@@ -12,6 +12,7 @@ import android.graphics.Path
 import android.net.Uri
 import android.os.CountDownTimer
 import android.os.Environment
+import android.support.v7.app.AlertDialog
 import android.util.Log
 import android.view.Gravity
 import android.view.MotionEvent
@@ -31,6 +32,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
+import kotlinx.android.synthetic.main.activity_line.*
 import kotlinx.android.synthetic.main.activity_line_test.*
 import kotlinx.android.synthetic.main.activity_writing.*
 import java.io.ByteArrayOutputStream
@@ -57,6 +59,7 @@ class WritingActivity : AppCompatActivity() {
     var count : Int = 0
     private var image_path : String = ""
     var downurl : String = ""
+    private var lastTimeBackPressed:Long = 0
 
     private var currentX: Float = 0.toFloat()
     private var currentY: Float = 0.toFloat()
@@ -162,7 +165,35 @@ class WritingActivity : AppCompatActivity() {
             uploadTask.addOnFailureListener(){
                 Toast.makeText(this, "image uploading failed", Toast.LENGTH_SHORT).show()
             }
-
+            backButton_write2.setOnClickListener {
+                Log.v("dddddddddd", "ddddddddddd")
+                val dlg = AlertDialog.Builder(this@WritingActivity)
+                dlg.setTitle("종료")
+                        .setMessage("이전 화면으로 되돌아가시겠습니까?")
+                        .setPositiveButton("돌아가기") { dialogInterface, i ->
+                            if (path1.equals("main")) {
+                                onBackPressed()
+                                finish()
+                            } else {
+                                onBackPressed();
+                                finish()
+                            }
+                        }
+                        .setNegativeButton("취소") { dialogInterface, i -> }
+                        .show()
+            }
+            backButton2_write2.setOnClickListener {
+                Log.v("dddddddddd", "ddddddddddd")
+                val dlg = AlertDialog.Builder(this@WritingActivity)
+                dlg.setTitle("돌아가기")
+                        .setMessage("이전 화면으로 되돌아가시겠습니까?")
+                        .setPositiveButton("돌아가기") { dialogInterface, i ->
+                            onBackPressed();
+                            finish()
+                        }
+                        .setNegativeButton("취소") { dialogInterface, i -> }
+                        .show()
+            }
             uploadTask.addOnSuccessListener() {
                 val urlTask = it.getStorage().getDownloadUrl()
                 while (!urlTask.isSuccessful);
@@ -269,6 +300,10 @@ class WritingActivity : AppCompatActivity() {
                 System.out.close()
             // saveFile = null
         }
+    }
+
+    override fun onBackPressed() {
+        Toast.makeText(this, "이전 화면으로 돌아가고 싶으시다면 ' < ' 버튼을 눌러주세요.", Toast.LENGTH_SHORT).show();
     }
 
 }

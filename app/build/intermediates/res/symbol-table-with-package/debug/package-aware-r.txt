@@ -1281,10 +1281,12 @@ id b_select_layout
 id backButton
 id backButton2_line
 id backButton2_spiral
-id backButton2_write
+id backButton2_write2
+id backButton_image
+id backButton_image_line
 id backButton_line
 id backButton_spiral
-id backButton_write
+id backButton_write2
 id backbutton
 id barrier
 id beginning

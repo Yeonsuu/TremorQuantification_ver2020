@@ -1,5 +1,6 @@
 package com.ahnbcilab.tremorquantification.tremorquantification;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -7,6 +8,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ahnbcilab.tremorquantification.data.Line;
 import com.ahnbcilab.tremorquantification.data.LineData;
@@ -216,15 +219,6 @@ public class CRTS_LineResult extends AppCompatActivity {
             }
             pre_button.setVisibility(View.GONE);
         }
-        quit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (quit.getText().toString().equals("돌아가기")) {
-                    onBackPressed();
-                    finish();
-                }
-            }
-        });
         databasepatient = firebaseDatabase.getReference("PatientList");
         databaseclinicID = databasepatient.child(Clinic_ID).child("Line List");
         if (left == 0) {
@@ -468,7 +462,12 @@ public class CRTS_LineResult extends AppCompatActivity {
                 }
             }
         });
-
+        quit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                alertDisplay(Clinic_ID,PatientName);
+            }
+        });
         pre_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -478,6 +477,33 @@ public class CRTS_LineResult extends AppCompatActivity {
         });
 
 
+    }
+    public void alertDisplay(final String Clinic_ID, final String PatientName) {
+        AlertDialog.Builder dlg = new AlertDialog.Builder(this);
+        dlg.setTitle("종료")
+                .setMessage("지금 종료하면 데이터를 모두 잃게됩니다. 종료하시겠습니까?")
+                .setPositiveButton("종료", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(getApplicationContext(), PersonalPatient.class);
+                        intent.putExtra("ClinicID", Clinic_ID);
+                        intent.putExtra("PatientName", PatientName);
+                        intent.putExtra("task", "CRTS");
+                        startActivity(intent);
+                        finish();
+                    }
+                })
+                .setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                })
+                .show();
+    }
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "완료 버튼을 선택해주세요", Toast.LENGTH_SHORT).show();
     }
     @Override
     protected  void onDestroy() {

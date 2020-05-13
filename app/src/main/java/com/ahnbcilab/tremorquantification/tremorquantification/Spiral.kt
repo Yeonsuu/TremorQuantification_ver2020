@@ -73,6 +73,7 @@ class Spiral : AppCompatActivity() {
     private var lorr : Boolean = true
     private var image_path : String = ""
     private lateinit var progressDialog : ProgressDialog
+    private var lastTimeBackPressed:Long = 0
 
     private val pathTrace: MutableList<PathTraceData> = mutableListOf()
     private val timer = object : CountDownTimer(Long.MAX_VALUE, 1000 / 60) {
@@ -105,6 +106,7 @@ class Spiral : AppCompatActivity() {
             writing_downurl = intent.getStringExtra("writing_downurl")
         if (path1.equals("main")) {
             test_title_spiral.visibility = View.INVISIBLE
+            backButton_image.visibility = View.INVISIBLE
         }
         if (right_spiral.equals("yes")) {
             test_title_spiral.setImageResource(R.drawable.crtsb_13_text)
@@ -176,11 +178,10 @@ class Spiral : AppCompatActivity() {
         }
 
         backButton_spiral.setOnClickListener {
-            loadingEnd()
             val dlg = AlertDialog.Builder(this@Spiral)
             dlg.setTitle("종료")
-                    .setMessage("지금 종료하면 데이터를 모두 잃게됩니다. 종료하시겠습니까?")
-                    .setPositiveButton("종료") { dialogInterface, i ->
+                    .setMessage("이전 화면으로 되돌아가시겠습니까?")
+                    .setPositiveButton("돌아가기") { dialogInterface, i ->
                         if (path1.equals("main")) {
                             val intent = Intent(this@Spiral, Spiral_Task_Select::class.java)
                             intent.putExtra("Clinic_ID", Clinic_ID)
@@ -200,8 +201,8 @@ class Spiral : AppCompatActivity() {
         backButton2_spiral.setOnClickListener {
             val dlg = AlertDialog.Builder(this@Spiral)
             dlg.setTitle("종료")
-                    .setMessage("지금 종료하면 데이터를 모두 잃게됩니다. 종료하시겠습니까?")
-                    .setPositiveButton("종료") { dialogInterface, i ->
+                    .setMessage("이전 화면으로 되돌아가시겠습니까?")
+                    .setPositiveButton("돌아가기") { dialogInterface, i ->
                         if (path1.equals("main")) {
                             val intent = Intent(this@Spiral, Spiral_Task_Select::class.java)
                             intent.putExtra("Clinic_ID", Clinic_ID)
@@ -437,5 +438,24 @@ class Spiral : AppCompatActivity() {
             onSafeClick(it)
         }
         setOnClickListener(safeClickListener)
+    }
+
+    override fun onBackPressed() {
+        /*if (System.currentTimeMillis() - lastTimeBackPressed < 1500) {
+            if (path1.equals("main")) {
+                val intent = Intent(this@Spiral, Spiral_Task_Select::class.java)
+                intent.putExtra("Clinic_ID", Clinic_ID)
+                intent.putExtra("PatientName", PatientName)
+                intent.putExtra("path", path1)
+                intent.putExtra("task", "spiral")
+                startActivity(intent)
+                finish()
+            } else {
+                onBackPressed()
+                finish()
+            }
+        }*/
+        Toast.makeText(this, "이전 화면으로 돌아가고 싶으시다면 ' < ' 버튼을 눌러주세요.", Toast.LENGTH_SHORT).show();
+
     }
 }

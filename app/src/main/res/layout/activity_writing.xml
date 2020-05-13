@@ -7,7 +7,7 @@
     tools:context=".WritingActivity">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/backButton2_write"
+        android:id="@+id/backButton2_write2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/backButton_write"
+            android:id="@+id/backButton_write2"
             android:layout_width="25dp"
             android:layout_height="13dp"
             android:layout_marginStart="8dp"

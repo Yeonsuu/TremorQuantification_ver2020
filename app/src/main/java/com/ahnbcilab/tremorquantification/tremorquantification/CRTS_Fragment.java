@@ -100,7 +100,7 @@ public class CRTS_Fragment extends Fragment {
                 //int count = 1;
                 GraphView graphView = (GraphView) view.findViewById(R.id.crts_graph);
                 LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
-                series.appendData(new DataPoint(0, 0), true, 100);
+                series.appendData(new DataPoint(0, 0), true, 172);
                 taskListViewAdapter.clear();
                 for (DataSnapshot mData : dataSnapshot.getChildren()) {
                     Long number = mData.child("CRTS List").getChildrenCount();
@@ -210,7 +210,7 @@ public class CRTS_Fragment extends Fragment {
                     crts_score = String.valueOf(Integer.parseInt(partA_score) + Integer.parseInt(partB_score) + Integer.parseInt(partC_score));
                     String crts_date = String.valueOf(mData.child("CRTS List").child(key).child("timestamp").getValue());
                     crts_date = crts_date.substring(2, 10);
-                    series.appendData(new DataPoint(i + 1, Integer.parseInt(crts_score)), true, 100);
+                    series.appendData(new DataPoint(i + 1, Integer.parseInt(crts_score)), true, 172);
                     //series.setDrawDataPoints(true);
                     series.setColor(Color.parseColor("#78B5AA"));
                     graphView.removeAllSeries();
@@ -233,7 +233,7 @@ public class CRTS_Fragment extends Fragment {
                     recentdate.setText("(" + crts_date + ")");
                     PieChartView pieChartView = (PieChartView) view.findViewById(R.id.crts_chart);
                     List<SliceValue> pieData = new ArrayList<>();
-                    pieData.add(new SliceValue(100 - Integer.parseInt(crts_final_score), Color.parseColor("#E5E5E5")));
+                    pieData.add(new SliceValue(172 - Integer.parseInt(crts_final_score), Color.parseColor("#E5E5E5")));
                     pieData.add(new SliceValue(Integer.parseInt(crts_final_score), Color.parseColor("#78B5AA")));
                     PieChartData pieChartData = new PieChartData(pieData);
                     pieChartData.setHasCenterCircle(true).setCenterText1(crts_final_score);

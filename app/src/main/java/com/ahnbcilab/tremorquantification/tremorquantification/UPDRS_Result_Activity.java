@@ -221,11 +221,12 @@ public class UPDRS_Result_Activity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 GraphView graphView = (GraphView)findViewById(R.id.updrs_result_graph);
                 LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
-                series.appendData(new DataPoint(0,0), true, 100);
+                series.appendData(new DataPoint(0,0), true, 108);
                 for (DataSnapshot mData : dataSnapshot.getChildren()){
                     Long number = mData.child("UPDRS List").getChildrenCount() ;
+                    Log.v("이거 updrs num", "이거 updrs num"+number);
                     for(int i = 0 ; i<number ; i++){
-                        list(i, mData, graphView, series, updrs_num) ;
+                        list(i, mData, graphView, series, number) ;
 
                     }
                 }
@@ -238,7 +239,7 @@ public class UPDRS_Result_Activity extends AppCompatActivity {
         });
     }
 
-    private void list(final int i, final DataSnapshot mData, final GraphView graphView, final LineGraphSeries<DataPoint> series, final String updrs_num) {
+    private void list(final int i, final DataSnapshot mData, final GraphView graphView, final LineGraphSeries<DataPoint> series, final long updrs_num) {
         Query query = database_patient.child(Clinic_ID).child("UPDRS List").orderByChild("UPDRS_count").equalTo(i) ;
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -246,7 +247,7 @@ public class UPDRS_Result_Activity extends AppCompatActivity {
                 for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
                     String key = dataSnapshot1.getKey() ;
                     updrs_score = String.valueOf(mData.child("UPDRS List").child(key).child("UPDRS_score").getValue()) ;
-                    series.appendData(new DataPoint(i+1,Integer.parseInt(updrs_score)), true, 100);
+                    series.appendData(new DataPoint(i+1,Integer.parseInt(updrs_score)), true, 108);
                     //series.setDrawDataPoints(true);
                     series.setColor(Color.parseColor("#78B5AA"));
                     graphView.removeAllSeries();
@@ -254,11 +255,11 @@ public class UPDRS_Result_Activity extends AppCompatActivity {
                     graphView.getViewport().setScalableY(true);
                     graphView.getViewport().setScrollableY(true);
                     graphView.getViewport().setMinX(0.0);
-                    //graphView.getViewport().setMaxX(Integer.parseInt(updrs_num));
+                    graphView.getViewport().setMaxX(updrs_num);
 
                     PieChartView pieChartView = (PieChartView)findViewById(R.id.updrs_result_chart);
                     List<SliceValue> pieData = new ArrayList<>();
-                    pieData.add(new SliceValue(100-Integer.parseInt(taskscore), Color.parseColor("#E5E5E5")));
+                    pieData.add(new SliceValue(108-Integer.parseInt(taskscore), Color.parseColor("#E5E5E5")));
                     pieData.add(new SliceValue(Integer.parseInt(taskscore), Color.parseColor("#78B5AA")));
                     PieChartData pieChartData = new PieChartData(pieData);
                     pieChartData.setHasCenterCircle(true).setCenterText1(taskscore);

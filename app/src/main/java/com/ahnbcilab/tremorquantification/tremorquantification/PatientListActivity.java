@@ -5,9 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Rect;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
+import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Handler;
+import android.os.Looper;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
@@ -80,6 +84,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import lecho.lib.hellocharts.model.ComboLineColumnChartData;
 
@@ -89,6 +95,10 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
     private static final int RC_SIGN_IN = 10;
     private static final int PERMISSION_REQUEST_CODE=1232;
     private GoogleApiClient mGoogleApiClient;
+    public static final int TYPE_WIFI = 1;
+    public static final int TYPE_MOBILE = 2;
+    public static final int TYPE_NOT_CONNECTED = 3;
+
     private FirebaseAuth mAuth;
     String name, email, uid, r_uid;
     DatabaseReference databaseDoctor;
@@ -141,8 +151,98 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
             checkVerify();
         }
 
+        final Timer timer = new Timer();
+        final Handler mHandler = new Handler(Looper.getMainLooper());
 
-        //
+        int status = getConnectivityStatus(getApplicationContext());
+        if(status == TYPE_MOBILE) {
+
+
+        }else if (status == TYPE_WIFI) {
+
+        }else {
+
+            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(PatientListActivity.this);
+            alertDialog.setTitle("Wi-Fi가 꺼져 있습니다.");
+            alertDialog.setMessage("wifi 설정 창으로 이동하시겠습니까?");
+            alertDialog.setPositiveButton("네", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intentConfirm = new Intent();
+                    intentConfirm.setAction("android.settings.WIFI_SETTINGS");
+                    startActivity(intentConfirm);
+                }
+            });
+            alertDialog.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(final DialogInterface dialog, int which) {
+                    Toast.makeText(getApplicationContext(), "wifi를 켜야 앱을 이용하실 수 있습니다. wifi를 켜주세요.", Toast.LENGTH_SHORT).show();
+                    dialog.cancel();
+
+                }
+
+            });
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    AlertDialog dialog = alertDialog.create();
+                    dialog.show();
+                }
+            },0);
+
+
+        }
+
+        /*mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                TimerTask TT = new TimerTask() {
+                    @Override
+                    public void run() {
+                        int status = getConnectivityStatus(getApplicationContext());
+                        if(status == TYPE_MOBILE) {
+                            timer.cancel();
+
+                        }else if (status == TYPE_WIFI) {
+                            timer.cancel();
+                        }else {
+
+                            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(PatientListActivity.this);
+                            alertDialog.setTitle("Wi-Fi가 꺼져 있습니다.");
+                            alertDialog.setMessage("wifi 설정 창으로 이동하시겠습니까?");
+                            alertDialog.setPositiveButton("네", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent intentConfirm = new Intent();
+                                    intentConfirm.setAction("android.settings.WIFI_SETTINGS");
+                                    startActivity(intentConfirm);
+                                }
+                            });
+                            alertDialog.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(final DialogInterface dialog, int which) {
+                                    Toast.makeText(getApplicationContext(), "wifi를 켜야 앱을 이용하실 수 있습니다.", Toast.LENGTH_SHORT).show();
+                                    dialog.cancel();
+                                    timer.cancel();
+                                }
+
+                            });
+                            mHandler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    AlertDialog dialog = alertDialog.create();
+                                    dialog.show();
+                                }
+                            },0);
+
+
+                        }
+                    }
+
+                };
+                timer.schedule(TT, 0, 10000); //Timer 실행.
+            }
+        }, 0);*/
         databaseDoctor = firebaseDatabase.getReference("UserList");
         databaseDoctor.addValueEventListener(new ValueEventListener() {
             @Override
@@ -913,8 +1013,10 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
         if (deleteMode == true) {
             delete_exit();
         }
-        lastTimeBackPressed = System.currentTimeMillis();
-        Toast.makeText(this, "'뒤로' 버튼을 한 번 더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show();
+        else {
+            lastTimeBackPressed = System.currentTimeMillis();
+            Toast.makeText(this, "'뒤로' 버튼을 한 번 더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
@@ -1163,6 +1265,21 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
                     1);
         }
 
+    }
+    public int getConnectivityStatus(Context context){ //해당 context의 서비스를 사용하기위해서 context객체를 받는다.
+        ConnectivityManager manager = (ConnectivityManager) context.getSystemService(context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = manager.getActiveNetworkInfo();
+        WifiManager wifiManager = (WifiManager)getSystemService(WIFI_SERVICE);
+        if(networkInfo != null) {
+            int type = networkInfo.getType();
+            if (type == ConnectivityManager.TYPE_MOBILE) {//쓰리지나 LTE로 연결된것(모바일을 뜻한다.)
+                return TYPE_MOBILE;
+            } else if (type == ConnectivityManager.TYPE_WIFI) {//와이파이 연결된것
+                return TYPE_WIFI;
+            }
+        }
+
+        return TYPE_NOT_CONNECTED; //연결이 되지않은 상태
     }
 
     @Override

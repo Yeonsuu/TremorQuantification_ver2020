@@ -1,6 +1,7 @@
 package com.ahnbcilab.tremorquantification.tremorquantification;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -10,6 +11,7 @@ import android.media.ExifInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -206,10 +208,7 @@ public class WritingResult extends AppCompatActivity {
         quit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (quit.getText().toString().equals("돌아가기")) {
-                    onBackPressed();
-                    finish();
-                }
+                alertDisplay(Clinic_ID,PatientName);
             }
         });
 
@@ -281,6 +280,30 @@ public class WritingResult extends AppCompatActivity {
             }
         });
 
+    }
+    public void alertDisplay(final String Clinic_ID, final String PatientName) {
+
+        AlertDialog.Builder dlg = new AlertDialog.Builder(this);
+        dlg.setTitle("종료")
+                .setMessage("지금 종료하면 데이터를 모두 잃게됩니다. 종료하시겠습니까?")
+                .setPositiveButton("종료", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(getApplicationContext(), PersonalPatient.class);
+                        intent.putExtra("ClinicID", Clinic_ID);
+                        intent.putExtra("PatientName", PatientName);
+                        intent.putExtra("task", "CRTS");
+                        startActivity(intent);
+                        finish();
+                    }
+                })
+                .setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                })
+                .show();
     }
     @Override
     protected  void onDestroy()

@@ -585,5 +585,6 @@ public class CRTS_parta_a_Fragment extends Fragment {
 
     }
 
+
 }
 

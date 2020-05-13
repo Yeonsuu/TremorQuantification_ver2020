@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ahnbcilab.tremorquantification.data.CRTS;
 import com.ahnbcilab.tremorquantification.data.CRTS_Data;
@@ -420,7 +421,8 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
                 updrs_test_fragment1.rg1.setBackgroundResource(0);
             }*/
             bool = true;
-
+            Toast myToast = Toast.makeText(this.getApplicationContext(),"모든 문항을 확인 해주세요.", Toast.LENGTH_LONG);
+            myToast.show();
         } else {
             setFrag(2);
         }
@@ -545,6 +547,8 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
         if (bool == false) {
 
             bool = true;
+            Toast myToast = Toast.makeText(this.getApplicationContext(),"모든 문항을 확인 해주세요.", Toast.LENGTH_LONG);
+            myToast.show();
 
         } else {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
@@ -634,7 +638,10 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
             finish();
         }
     }
-
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "검사 종료를 원하신다면 '종료' 버튼을 눌러 종료시켜주세요.", Toast.LENGTH_SHORT).show();
+    }
     public void alertDisplay() {
 
         AlertDialog.Builder dlg = new AlertDialog.Builder(this);

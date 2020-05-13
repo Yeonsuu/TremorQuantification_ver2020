@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ahnbcilab.tremorquantification.Adapters.AlertDialogHelper;
 import com.ahnbcilab.tremorquantification.Adapters.ItemDecoration;
@@ -158,6 +159,10 @@ public class CRTS_parta_c_Fragment extends Fragment {
             public void onClick(View v) {
                 if (crts_parta_fragment.fragment0() == true) {
                     ((CRTSActivity)getActivity()).frgment1();
+                }
+                else {
+                    Toast myToast = Toast.makeText(getContext(),"모든 문항을 확인 해주세요.", Toast.LENGTH_LONG);
+                    myToast.show();
                 }
             }
         });

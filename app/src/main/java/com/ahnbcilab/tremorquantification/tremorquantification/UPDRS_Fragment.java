@@ -118,7 +118,7 @@ public class UPDRS_Fragment extends Fragment {
                 //int count = 1;
                 GraphView graphView = (GraphView) view.findViewById(R.id.updrs_graph);
                 LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
-                series.appendData(new DataPoint(0, 0), true, 100);
+                series.appendData(new DataPoint(0, 0), true, 108);
                 taskListViewAdapter.clear();
                 for (DataSnapshot mData : dataSnapshot.getChildren()) {
                     Long number = mData.child("UPDRS List").getChildrenCount();
@@ -225,7 +225,7 @@ public class UPDRS_Fragment extends Fragment {
                     updrs_score = String.valueOf(mData.child("UPDRS List").child(key).child("UPDRS_score").getValue());
                     String updrs_date = String.valueOf(mData.child("UPDRS List").child(key).child("timestamp").getValue());
                     updrs_date = updrs_date.substring(2, 10);
-                    series.appendData(new DataPoint(i + 1, Integer.parseInt(updrs_score)), true, 100);
+                    series.appendData(new DataPoint(i + 1, Integer.parseInt(updrs_score)), true, 108);
                     //series.setDrawDataPoints(true);
                     series.setColor(Color.parseColor("#78B5AA"));
                     graphView.removeAllSeries();
@@ -250,7 +250,7 @@ public class UPDRS_Fragment extends Fragment {
                     recentdate.setText("(" + updrs_date + ")");
                     PieChartView pieChartView = (PieChartView) view.findViewById(R.id.updrs_chart);
                     List<SliceValue> pieData = new ArrayList<>();
-                    pieData.add(new SliceValue(100 - Integer.parseInt(updrs_final_score), Color.parseColor("#E5E5E5")));
+                    pieData.add(new SliceValue(108 - Integer.parseInt(updrs_final_score), Color.parseColor("#E5E5E5")));
                     pieData.add(new SliceValue(Integer.parseInt(updrs_final_score), Color.parseColor("#78B5AA")));
                     PieChartData pieChartData = new PieChartData(pieData);
                     pieChartData.setHasCenterCircle(true).setCenterText1(updrs_final_score);
