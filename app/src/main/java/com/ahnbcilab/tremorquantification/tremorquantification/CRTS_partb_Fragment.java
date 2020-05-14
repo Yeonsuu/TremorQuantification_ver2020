@@ -61,6 +61,10 @@ public class CRTS_partb_Fragment extends Fragment {
     boolean bool = true;
 
     String Clinic_ID, PatientName, path;
+    String crts_right_spiral_downurl;
+    String crts_left_spiral_downurl;
+    String writing_downurl;
+    String line_downurl;
     double[] spiral_result, line_result, left_spiral_result;
     @Nullable
     @Override
@@ -80,6 +84,10 @@ public class CRTS_partb_Fragment extends Fragment {
             crts12 = getArguments().getInt("crts12", -1);
             crts13= getArguments().getInt("crts13", -1) ;
             crts14 = getArguments().getInt("crts14", -1);
+            crts_right_spiral_downurl = getArguments().getString("crts_right_spiral_downurl");
+            writing_downurl = getArguments().getString("writing_downurl");
+            crts_left_spiral_downurl = getArguments().getString("crts_left_spiral_downurl");
+            line_downurl = getArguments().getString("line_downurl");
 
         }
 
@@ -244,6 +252,10 @@ public class CRTS_partb_Fragment extends Fragment {
                 intent1.putExtra("crts12", intent_crts12) ;
                 intent1.putExtra("crts13", intent_crts13) ;
                 intent1.putExtra("crts14", intent_crts14) ;
+                intent1.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
+                intent1.putExtra("writing_downurl", writing_downurl);
+                intent1.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
+                intent1.putExtra("line_downurl", line_downurl);
                 Log.v("CRTS_parb_Fragment", "CRTS_Activity_intent " + intent_crts11) ;
                 startActivity(intent1) ;
             }
@@ -265,6 +277,10 @@ public class CRTS_partb_Fragment extends Fragment {
                 intent1.putExtra("crts12", intent_crts12) ;
                 intent1.putExtra("crts13", intent_crts13) ;
                 intent1.putExtra("crts14", intent_crts14) ;
+                intent1.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
+                intent1.putExtra("writing_downurl", writing_downurl);
+                intent1.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
+                intent1.putExtra("line_downurl", line_downurl);
                 startActivity(intent1) ;
             }
         });
@@ -284,6 +300,10 @@ public class CRTS_partb_Fragment extends Fragment {
                 intent1.putExtra("crts12", intent_crts12) ;
                 intent1.putExtra("crts13", intent_crts13) ;
                 intent1.putExtra("crts14", intent_crts14) ;
+                intent1.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
+                intent1.putExtra("writing_downurl", writing_downurl);
+                intent1.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
+                intent1.putExtra("line_downurl", line_downurl);
                 startActivity(intent1) ;
             }
         });
@@ -303,6 +323,10 @@ public class CRTS_partb_Fragment extends Fragment {
                 intent1.putExtra("crts12", intent_crts12) ;
                 intent1.putExtra("crts13", intent_crts13) ;
                 intent1.putExtra("crts14", intent_crts14) ;
+                intent1.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
+                intent1.putExtra("writing_downurl", writing_downurl);
+                intent1.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
+                intent1.putExtra("line_downurl", line_downurl);
                 startActivity(intent1) ;
             }
         });

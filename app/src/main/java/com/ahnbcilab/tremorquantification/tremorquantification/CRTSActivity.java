@@ -104,7 +104,6 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
         int num = 0;
         databasePatientList = firebaseDatabase.getReference("PatientList");
         databaseCRTS = databasePatientList.child(Clinic_ID).child("CRTS List");
-
         databaseCRTS.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -149,7 +148,7 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
             crts_right_spiral_downurl = intent.getStringExtra("crts_right_spiral_downurl");
             crts_left_spiral_downurl = intent.getStringExtra("crts_left_spiral_downurl");
             writing_downurl = intent.getStringExtra("writing_downurl");
-
+            Log.v("5/14 (2)", writing_downurl);
             Log.v("llloooggg crts", "crts11 = " + crts11 + "crts12 = " + crts12 + "crts14 = " + crts14);
             setFrag(1);
 
@@ -581,6 +580,7 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
                 databaseCRTS.child(key).child("Right_Spiral_URL").setValue(crts_right_spiral_downurl);
                 databaseCRTS.child(key).child("Left_Spiral_URL").setValue(crts_left_spiral_downurl);
                 databaseCRTS.child(key).child("Writing_URL").setValue(writing_downurl);
+                Log.v("5/14 (3)", writing_downurl);
                 databaseCRTS.child(key).child("Line_URL").setValue(line_downurl);
 
             }

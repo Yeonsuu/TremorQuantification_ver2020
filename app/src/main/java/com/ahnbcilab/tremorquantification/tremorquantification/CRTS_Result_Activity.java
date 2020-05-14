@@ -496,6 +496,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                     crts_right_spiral_downurl = String.valueOf(mData.child("Right_Spiral_URL").getValue());
                     crts_left_spiral_downurl = String.valueOf(mData.child("Left_Spiral_URL").getValue());
                     line_downurl = String.valueOf(mData.child("Line_URL").getValue());
+                    Log.v("5/14", writing_downurl);
                     //put the image(writing)
                     crtsb_11_image.post(new Runnable() {
                         @Override

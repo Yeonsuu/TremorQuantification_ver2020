@@ -359,6 +359,7 @@ public class CRTS_LeftSpiralResult extends AppCompatActivity {
                         intent.putExtra("line_downurl", line_downurl);
                         intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl);
                         intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl);
+                        intent.putExtra("writing_downurl", writing_downurl);
                         intent.putExtra("spiral_result", spiral_result);
                         startActivity(intent);
                         finish();
