@@ -268,8 +268,6 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
         crtsa.add(c1_1) ;
         c2_1 = crts_parta_fragment.c2_1;
         crtsa.add(c2_1);
-        c3_1 = crts_parta_fragment.c3_1;
-        crtsa.add(c3_1);
         c4_1 = crts_parta_fragment.c4_1;
         crtsa.add(c4_1);
         c5_1 = crts_parta_fragment.c5_1;
@@ -282,8 +280,6 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
         crtsa.add(c8_1);
         c9_1 = crts_parta_fragment.c9_1;
         crtsa.add(c9_1);
-        c10_1 = crts_parta_fragment.c10_1;
-        crtsa.add(c10_1);
 
         c1_2 = crts_parta_fragment.c1_2;
         crtsa.add(c1_2) ;
@@ -306,26 +302,14 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
         c10_2 = crts_parta_fragment.c10_2;
         crtsa.add(c10_2);
 
-        c1_3 = crts_parta_fragment.c1_3;
-        crtsa.add(c1_3);
-        c2_3 = crts_parta_fragment.c2_3;
-        crtsa.add(c2_3);
-        c3_3 = crts_parta_fragment.c3_3;
-        crtsa.add(c3_3);
-        c4_3 = crts_parta_fragment.c4_3;
-        crtsa.add(c4_3);
         c5_3 = crts_parta_fragment.c5_3;
         crtsa.add(c5_3);
         c6_3 = crts_parta_fragment.c6_3;
         crtsa.add(c6_3);
-        c7_3 = crts_parta_fragment.c7_3;
-        crtsa.add(c7_3);
         c8_3 = crts_parta_fragment.c8_3;
         crtsa.add(c8_3);
         c9_3 = crts_parta_fragment.c9_3;
         crtsa.add(c9_3);
-        c10_3 = crts_parta_fragment.c10_3;
-        crtsa.add(c10_3);
 
         Log.v("CRTSActivity", "CRTS :: " + crtsa) ;
         if (path.equals("main")) {
@@ -553,11 +537,11 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
             String timestamp = sdf.format(System.currentTimeMillis());
 
-            CRTS_Data my_crts = new CRTS_Data(c1_1, c1_2, c1_3, c2_1, c2_2, c2_3, c3_1, c3_2, c3_3, c4_1, c4_2, c4_3, c5_1, c5_2, c5_3, c6_1, c6_2, c6_3, c7_1, c7_2, c7_3,
-                    c8_1, c8_2, c8_3, c9_1, c9_2, c9_3, c10_1, c10_2, c10_3, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23);
+            CRTS_Data my_crts = new CRTS_Data(c1_1, c1_2,0, c2_1, c2_2, 0, 0, c3_2, 0, c4_1, c4_2, 0, c5_1, c5_2, c5_3, c6_1, c6_2, c6_3, c7_1, c7_2,0,
+                    c8_1, c8_2, c8_3, c9_1, c9_2, c9_3, 0, c10_2, 0, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23);
 
-            int crts_partA_score = c1_1 + c1_2 + c1_3 + c2_1 + c2_2 + c2_3 + c3_1 + c3_2 + c3_3 + c4_1 + c4_2 + c4_3 + c5_1 + c5_2 + c5_3 + c6_1 + c6_2 + c6_3 + c7_1 + c7_2 + c7_3 +
-                    c8_1 + c8_2 + c8_3 + c9_1 + c9_2 + c9_3 + c10_1 + c10_2 + c10_3;
+            int crts_partA_score = c1_1 + c1_2 +0 + c2_1 + c2_2 + 0 + 0 + c3_2 + 0 + c4_1 + c4_2 + 0 + c5_1 + c5_2 + c5_3 + c6_1 + c6_2 + c6_3 + c7_1 + c7_2 + 0 +
+                    c8_1 + c8_2 + c8_3 + c9_1 + c9_2 + c9_3 + 0 + c10_2 +0;
             int crts_partB_score = c11 + c12 + c13 + c14 + c15;
             int crts_partC_score = c16 + c17 + c18 + c19 + c20 + c21 + c22 + c23;
 

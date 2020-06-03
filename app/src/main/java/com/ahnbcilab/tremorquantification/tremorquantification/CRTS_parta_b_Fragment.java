@@ -547,7 +547,7 @@ public class CRTS_parta_b_Fragment extends Fragment {
         crts10_2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.crts10_1_0){
+                if(checkedId==R.id.crts10_2_0){
                     crts_parta_fragment.c10_2=0 ;
                 }
                 else if(checkedId==R.id.crts10_2_1){

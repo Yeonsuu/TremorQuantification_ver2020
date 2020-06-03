@@ -173,34 +173,26 @@ public class CRTS_parta_Fragment extends Fragment {
         else if(pre==1){
             c1_1 = crtsa.get(0) ;
             c2_1 = crtsa.get(1) ;
-            c3_1 = crtsa.get(2);
-            c4_1 = crtsa.get(3);
-            c5_1 = crtsa.get(4);
-            c6_1 = crtsa.get(5);
-            c7_1 = crtsa.get(6);
-            c8_1 = crtsa.get(7);
-            c9_1 = crtsa.get(8);
-            c10_1 = crtsa.get(9);
-            c1_2 = crtsa.get(10);
-            c2_2 = crtsa.get(11);
-            c3_2 = crtsa.get(12);
-            c4_2 = crtsa.get(13);
-            c5_2 = crtsa.get(14);
-            c6_2 = crtsa.get(15);
-            c7_2 = crtsa.get(16);
-            c8_2 = crtsa.get(17);
-            c9_2 = crtsa.get(18);
-            c10_2 = crtsa.get(19);
-            c1_3 = crtsa.get(20);
-            c2_3 = crtsa.get(21);
-            c3_3 = crtsa.get(22);
-            c4_3 = crtsa.get(23);
-            c5_3 = crtsa.get(24);
-            c6_3 = crtsa.get(25);
-            c7_3 = crtsa.get(26);
-            c8_3 = crtsa.get(27);
-            c9_3 = crtsa.get(28);
-            c10_3 = crtsa.get(29);
+            c4_1 = crtsa.get(2);
+            c5_1 = crtsa.get(3);
+            c6_1 = crtsa.get(4);
+            c7_1 = crtsa.get(5);
+            c8_1 = crtsa.get(6);
+            c9_1 = crtsa.get(7);
+            c1_2 = crtsa.get(8);
+            c2_2 = crtsa.get(9);
+            c3_2 = crtsa.get(10);
+            c4_2 = crtsa.get(11);
+            c5_2 = crtsa.get(12);
+            c6_2 = crtsa.get(13);
+            c7_2 = crtsa.get(14);
+            c8_2 = crtsa.get(15);
+            c9_2 = crtsa.get(16);
+            c10_2 = crtsa.get(17);
+            c5_3 = crtsa.get(18);
+            c6_3 = crtsa.get(19);
+            c8_3 = crtsa.get(20);
+            c9_3 = crtsa.get(21);
         }
 
         Log.v("crts_num", "partA fragment");
@@ -369,39 +361,49 @@ public class CRTS_parta_Fragment extends Fragment {
     }
     public boolean fragment0() {
         bool = true ;
-        if(c1_1==-1 || c1_2==-1 || c1_3==-1){
+        if(c1_1==-1 || c1_2==-1){
+            Log.v("CRTS_parta", "false 발생") ;
             bool = false ;
         }
-        if(c2_1==-1 || c2_2==-1 || c2_3 == -1) {
+        if(c2_1==-1 || c2_2==-1 ) {
+            Log.v("CRTS_parta", "false 발생2") ;
             bool = false ;
         }
-        if(c3_1==-1 || c3_2==-1 || c3_3 == -1) {
+        if(c3_2==-1) {
+            Log.v("CRTS_parta", "false 발생3") ;
             bool = false ;
         }
-        if(c4_1==-1 || c4_2==-1 || c4_3 == -1) {
+        if(c4_1==-1 || c4_2==-1) {
+            Log.v("CRTS_parta", "false 발생4") ;
             bool = false ;
         }
         if(c5_1 == -1 || c5_2==-1 || c5_3 == -1) {
+            Log.v("CRTS_parta", "false 발생5") ;
             bool = false ;
         }
         if(c6_1==-1 || c6_2==-1 || c6_3 == -1) {
+            Log.v("CRTS_parta", "false 발생6") ;
             bool = false ;
         }
-        if(c7_1==-1 || c7_2==-1 || c7_3 == -1) {
+        if(c7_1==-1 || c7_2==-1) {
+            Log.v("CRTS_parta", "false 발생7") ;
             bool = false ;
         }
         if(c8_1==-1 || c8_2==-1 || c8_3 == -1) {
+            Log.v("CRTS_parta", "false 발생8") ;
             bool = false ;
         }
         if(c9_1==-1 || c9_2==-1 || c9_3 == -1) {
+            Log.v("CRTS_parta", "false 발생9") ;
             bool = false ;
         }
-        if(c10_1==-1 || c10_2==-1 || c10_3 == -1) {
+        if(c10_2==-1) {
+            Log.v("CRTS_parta", "false 발생10") ;
             bool = false ;
         }
-        Log.v("CRTS_parta", "CRTS = //" + c1_1 + " " + c1_2+ " " + c1_3+ " " + c2_1+ " " + c2_2+ " " + c2_3+ " " + c3_1+ " " + c3_2+ " " + c3_3+ " "
+        Log.v("CRTS_parta", "CRTS = //" + c1_1 + " " + c1_2+ " " + c1_3+ " " + c2_1+ " " + c2_2+ " " + c2_3+ " "+ c3_2+ " " + c3_3+ " "
                 + c4_1+ " " + c4_2+ " " + c4_3+ " " + c5_1+ " " + c5_2+ " " + c5_3+ " " + c6_1+ " " + c6_2+ " " + c6_3+ " " + c7_1+ " " + c7_2+ " " + c7_3 + " " +
-                c8_1 + " " + c8_2 + " " + c8_3+ " " + c9_1+ " " + c9_2 + " " + c9_3+ " " + c10_1+ " " + c10_2+ " " + c10_3) ;
+                c8_1 + " " + c8_2 + " " + c8_3+ " " + c9_1+ " " + c9_2 + " " + c9_3+ " "  + c10_2+ " " + c10_3) ;
         return bool ;
     }
     public boolean fragment1(){
@@ -435,21 +437,6 @@ public class CRTS_parta_Fragment extends Fragment {
         } else {
             bool = false;
         }
-
-        if (crts_parta_a_fragment.crts3_1_0.isChecked()) {
-            c3_1 = 0;
-        } else if (crts_parta_a_fragment.crts4_1_1.isChecked()) {
-            c3_1 = 1;
-        } else if (crts_parta_a_fragment.crts4_1_2.isChecked()) {
-            c3_1 = 2;
-        } else if (crts_parta_a_fragment.crts4_1_3.isChecked()) {
-            c3_1 = 3;
-        } else if (crts_parta_a_fragment.crts4_1_4.isChecked()) {
-            c3_1 = 4;
-        } else {
-            bool = false;
-        }
-
 
         if (crts_parta_a_fragment.crts4_1_0.isChecked()) {
             c4_1 = 0;
@@ -536,20 +523,6 @@ public class CRTS_parta_Fragment extends Fragment {
             bool = false;
         }
 
-
-        if (crts_parta_a_fragment.crts10_1_0.isChecked()) {
-            c10_1 = 0;
-        } else if (crts_parta_a_fragment.crts10_1_1.isChecked()) {
-            c10_1 = 1;
-        } else if (crts_parta_a_fragment.crts10_1_2.isChecked()) {
-            c10_1 = 2;
-        } else if (crts_parta_a_fragment.crts10_1_3.isChecked()) {
-            c10_1 = 3;
-        } else if (crts_parta_a_fragment.crts10_1_4.isChecked()) {
-            c10_1 = 4;
-        } else {
-            bool = false;
-        }
         return bool ;
 
     }

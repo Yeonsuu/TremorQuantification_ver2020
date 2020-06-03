@@ -46,7 +46,7 @@
             android:layout_height="37dp"
             android:layout_marginStart="34dp"
             android:layout_marginTop="30dp"
-            android:text="UPDRS Task"
+            android:text="UPDRS part III Test"
             android:textColor="#FFFFFF"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"

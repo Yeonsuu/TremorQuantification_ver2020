@@ -279,6 +279,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="9dp"
+                android:enabled="false"
                 android:background="@drawable/radio_button"
                 android:button="@android:color/transparent" />
 
@@ -287,6 +288,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="90dp"
+                android:enabled="false"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
                 android:button="@android:color/transparent" />
@@ -296,6 +298,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
+                android:enabled="false"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
                 android:button="@android:color/transparent" />
@@ -305,6 +308,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
+                android:enabled="false"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
                 android:button="@android:color/transparent" />
@@ -314,6 +318,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
+                android:enabled="false"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
                 android:button="@android:color/transparent" />
@@ -740,7 +745,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="84dp"
             android:layout_marginTop="984dp"
-            android:text="기립성"
+            android:text="기립시"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -762,6 +767,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="140dp"
+                android:enabled="false"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
                 android:button="@android:color/transparent" />
@@ -770,6 +776,7 @@
                 android:id="@+id/crts10_1_1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:enabled="false"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
@@ -779,6 +786,7 @@
                 android:id="@+id/crts10_1_2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:enabled="false"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
@@ -788,6 +796,7 @@
                 android:id="@+id/crts10_1_3"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:enabled="false"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
@@ -797,6 +806,7 @@
                 android:id="@+id/crts10_1_4"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:enabled="false"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"

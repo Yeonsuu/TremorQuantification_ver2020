@@ -229,22 +229,6 @@ public class CRTS_parta_a_Fragment extends Fragment {
                 crts2_1_4.setChecked(true);
             }
 
-            if(crts_parta_fragment.c3_1==0){
-                crts3_1_0.setChecked(true);
-            }
-            else if(crts_parta_fragment.c3_1==1){
-                crts3_1_1.setChecked(true);
-            }
-            else if(crts_parta_fragment.c3_1==2){
-                crts3_1_2.setChecked(true);
-            }
-            else if(crts_parta_fragment.c3_1==3){
-                crts3_1_3.setChecked(true);
-            }
-            else if(crts_parta_fragment.c3_1==4){
-                crts3_1_4.setChecked(true);
-            }
-
             if(crts_parta_fragment.c4_1==0){
                 crts4_1_0.setChecked(true);
             }
@@ -341,21 +325,6 @@ public class CRTS_parta_a_Fragment extends Fragment {
                 crts9_1_4.setChecked(true);
             }
 
-            if(crts_parta_fragment.c10_1==0){
-                crts10_1_0.setChecked(true);
-            }
-            else if(crts_parta_fragment.c10_1==1){
-                crts10_1_1.setChecked(true);
-            }
-            else if(crts_parta_fragment.c10_1==2){
-                crts10_1_2.setChecked(true);
-            }
-            else if(crts_parta_fragment.c10_1==3){
-                crts10_1_3.setChecked(true);
-            }
-            else if(crts_parta_fragment.c10_1==4){
-                crts10_1_4.setChecked(true);
-            }
             ((RadioButton)crts1_1.getChildAt(crts_parta_fragment.c1_1)).setChecked(true);
 //            ((RadioButton)crts2_1.getChildAt(crts_parta_fragment.c2_1)).setChecked(true);
 //            ((RadioButton)crts3_1.getChildAt(crts_parta_fragment.c3_1)).setChecked(true);
@@ -410,27 +379,6 @@ public class CRTS_parta_a_Fragment extends Fragment {
             }
         });
 
-        crts3_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.crts3_1_0){
-                    crts_parta_fragment.c3_1=0 ;
-                }
-                else if(checkedId==R.id.crts3_1_1){
-                    crts_parta_fragment.c3_1 = 1;
-                }
-                else if(checkedId==R.id.crts3_1_2){
-                    crts_parta_fragment.c3_1 = 2;
-                }
-                else if(checkedId==R.id.crts3_1_3){
-                    crts_parta_fragment.c3_1 =3;
-                }
-                else if(checkedId==R.id.crts3_1_4){
-                    crts_parta_fragment.c3_1 =4;
-                }
-
-            }
-        });
 
         crts4_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -560,27 +508,7 @@ public class CRTS_parta_a_Fragment extends Fragment {
 
             }
         });
-        crts10_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.crts10_1_0){
-                    crts_parta_fragment.c10_1=0 ;
-                }
-                else if(checkedId==R.id.crts10_1_1){
-                    crts_parta_fragment.c10_1 = 1;
-                }
-                else if(checkedId==R.id.crts10_1_2){
-                    crts_parta_fragment.c10_1 = 2;
-                }
-                else if(checkedId==R.id.crts10_1_3){
-                    crts_parta_fragment.c10_1 =3;
-                }
-                else if(checkedId==R.id.crts10_1_4){
-                    crts_parta_fragment.c10_1 =4;
-                }
 
-            }
-        });
         return view;
 
     }

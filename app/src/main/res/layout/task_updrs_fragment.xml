@@ -66,11 +66,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="60dp"
-                android:text="UPDRS Task"
+                android:text="UPDRS part III Task"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -79,11 +80,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="155dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="62dp"
                 android:text="를 진행하였습니다. "
                 android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView20"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button

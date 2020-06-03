@@ -139,6 +139,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="140dp"
+                android:enabled="false"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
                 android:button="@android:color/transparent" />
@@ -148,6 +149,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="90dp"
+                android:enabled="false"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
                 android:button="@android:color/transparent" />
@@ -158,6 +160,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
+                android:enabled="false"
                 android:background="@drawable/radio_button"
                 android:button="@android:color/transparent" />
 
@@ -165,6 +168,7 @@
                 android:id="@+id/crts1_3_3"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:enabled="false"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
@@ -174,6 +178,7 @@
                 android:id="@+id/crts1_3_4"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:enabled="false"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
@@ -207,6 +212,7 @@
             <RadioButton
                 android:id="@+id/crts2_3_0"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="9dp"
@@ -216,6 +222,7 @@
             <RadioButton
                 android:id="@+id/crts2_3_1"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="9dp"
@@ -225,6 +232,7 @@
             <RadioButton
                 android:id="@+id/crts2_3_2"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
@@ -234,6 +242,7 @@
             <RadioButton
                 android:id="@+id/crts2_3_3"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
@@ -244,6 +253,7 @@
                 android:id="@+id/crts2_3_4"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:enabled="false"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
@@ -267,6 +277,7 @@
             android:id="@+id/crg3_3"
             android:layout_width="680dp"
             android:layout_height="51dp"
+
             android:layout_marginStart="75dp"
             android:layout_marginTop="513dp"
             android:orientation="horizontal"
@@ -277,6 +288,7 @@
             <RadioButton
                 android:id="@+id/crts3_3_0"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="9dp"
@@ -286,6 +298,7 @@
             <RadioButton
                 android:id="@+id/crts3_3_1"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="9dp"
@@ -296,6 +309,7 @@
                 android:id="@+id/crts3_3_2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:enabled="false"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
@@ -305,6 +319,7 @@
                 android:id="@+id/crts3_3_3"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:enabled="false"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
@@ -314,6 +329,7 @@
                 android:id="@+id/crts3_3_4"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:enabled="false"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/radio_button"
@@ -345,6 +361,7 @@
             <RadioButton
                 android:id="@+id/crts4_3_0"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="9dp"
@@ -354,6 +371,7 @@
             <RadioButton
                 android:id="@+id/crts4_3_1"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="9dp"
@@ -363,6 +381,7 @@
             <RadioButton
                 android:id="@+id/crts4_3_2"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
@@ -372,6 +391,7 @@
             <RadioButton
                 android:id="@+id/crts4_3_3"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
@@ -381,6 +401,7 @@
             <RadioButton
                 android:id="@+id/crts4_3_4"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
                 android:layout_marginTop="9dp"
@@ -553,6 +574,7 @@
             <RadioButton
                 android:id="@+id/crts7_3_0"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="9dp"
@@ -562,6 +584,7 @@
             <RadioButton
                 android:id="@+id/crts7_3_1"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="9dp"
@@ -570,6 +593,7 @@
 
             <RadioButton
                 android:id="@+id/crts7_3_2"
+                android:enabled="false"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
@@ -579,6 +603,7 @@
 
             <RadioButton
                 android:id="@+id/crts7_3_3"
+                android:enabled="false"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
@@ -588,6 +613,7 @@
 
             <RadioButton
                 android:id="@+id/crts7_3_4"
+                android:enabled="false"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
@@ -741,7 +767,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="84dp"
             android:layout_marginTop="977dp"
-            android:text="기립성"
+            android:text="기립시"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -761,6 +787,7 @@
             <RadioButton
                 android:id="@+id/crts10_3_0"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="9dp"
@@ -770,6 +797,7 @@
             <RadioButton
                 android:id="@+id/crts10_3_1"
                 android:layout_width="30dp"
+                android:enabled="false"
                 android:layout_height="30dp"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="9dp"
@@ -778,6 +806,7 @@
 
             <RadioButton
                 android:id="@+id/crts10_3_2"
+                android:enabled="false"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
@@ -787,6 +816,7 @@
 
             <RadioButton
                 android:id="@+id/crts10_3_3"
+                android:enabled="false"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"
@@ -796,6 +826,7 @@
 
             <RadioButton
                 android:id="@+id/crts10_3_4"
+                android:enabled="false"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="89dp"

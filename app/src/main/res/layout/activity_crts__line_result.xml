@@ -212,7 +212,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="113dp"
         android:layout_marginTop="733dp"
-        android:text="1. 미약한 정도로 떨린다."
+        android:text="1. 미약한 정도로 떨리며 간혹 주변 선에 닿기도 한다."
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -221,7 +221,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="113dp"
         android:layout_marginTop="781dp"
-        android:text="2. 읽을 수는 있지만 진전이 어느 정도는 관찰된다."
+        android:text="2. 어느 정도 떨리며 자주 주변 선에 닿는다."
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -230,7 +230,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="113dp"
         android:layout_marginTop="829dp"
-        android:text="3. 거의 읽을 수 없을 정도로 떨린다."
+        android:text="3. 매우 어렵게 그림을 그리고 심하게 실수를 범한다."
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -239,7 +239,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="113dp"
         android:layout_marginTop="877dp"
-        android:text="4. 매우 심한 진전으로 인해 펜을 잡을 수도 없거나 다른 손으로 종이를 받치지 않으면 \n    쓸 수가 없다."
+        android:text="4. 그림 그리기를 끝마칠 수 없다."
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
