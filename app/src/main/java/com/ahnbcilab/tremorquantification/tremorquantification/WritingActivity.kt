@@ -60,6 +60,7 @@ class WritingActivity : AppCompatActivity() {
     private var image_path : String = ""
     var downurl : String = ""
     private var lastTimeBackPressed:Long = 0
+    private var iswrite : Boolean = false
 
     private var currentX: Float = 0.toFloat()
     private var currentY: Float = 0.toFloat()
@@ -126,44 +127,77 @@ class WritingActivity : AppCompatActivity() {
         // 그림 그리고 나서, 다음으로 넘어가는 버튼
         writingfinish.setOnClickListener {
             timer.cancel()
-            //view.saveAsJPG(view, this.filesDir.path + "/spiralTest", "${patientId}_$filename.jpg")
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            Toast.makeText(this, "이미지 저장 중...", Toast.LENGTH_LONG).show()
-            /* ******************************** processing image file *************************************/
-
-            var v1 = window.decorView
-            v1.isDrawingCacheEnabled = true
-            v1.buildDrawingCache()
-            var captureView = v1.drawingCache
-            try {
-                var fos = FileOutputStream("sdcard/Download/")
-                captureView.compress(Bitmap.CompressFormat.JPEG, 100, fos)
-                fos.close()
-                fos.flush()
-            }catch (e : java.io.FileNotFoundException){
-                e.printStackTrace()
+            if(!iswrite)
+            {
+                Toast.makeText(this, "글씨를 작성해주세요", Toast.LENGTH_LONG).show()
             }
-            val baos = ByteArrayOutputStream()
-            captureView.compress(Bitmap.CompressFormat.JPEG, 100, baos)
-            var uri = Uri.fromFile(File("sdcard/Download/"))
-            val data = baos.toByteArray()
-            /* ******************************** save image local *************************************/
-            try{
-                onCap(captureView)
-            } catch (e : java.lang.Exception){
+            else
+            {
+                Toast.makeText(this, "이미지 저장 중...", Toast.LENGTH_LONG).show()
+                /* ******************************** processing image file *************************************/
 
-            }finally {
-                captureView.recycle();
-            }
-            /* ******************************** save image firebase *************************************/
-            //삭제를 위한 path저장
-            firebase_path = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Path")
-            firebase_path.push().setValue(spiral_ref.path)
+                var v1 = window.decorView
+                v1.isDrawingCacheEnabled = true
+                v1.buildDrawingCache()
+                var captureView = v1.drawingCache
+                try {
+                    var fos = FileOutputStream("sdcard/Download/")
+                    captureView.compress(Bitmap.CompressFormat.JPEG, 100, fos)
+                    fos.close()
+                    fos.flush()
+                }catch (e : java.io.FileNotFoundException){
+                    e.printStackTrace()
+                }
+                val baos = ByteArrayOutputStream()
+                captureView.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+                var uri = Uri.fromFile(File("sdcard/Download/"))
+                val data = baos.toByteArray()
+                /* ******************************** save image local *************************************/
+                try{
+                    onCap(captureView)
+                } catch (e : java.lang.Exception){
 
-            var uploadTask = spiral_ref.putBytes(data)
-            uploadTask.addOnFailureListener(){
-                Toast.makeText(this, "image uploading failed", Toast.LENGTH_SHORT).show()
+                }finally {
+                    captureView.recycle();
+                }
+                /* ******************************** save image firebase *************************************/
+                //삭제를 위한 path저장
+                firebase_path = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Path")
+                firebase_path.push().setValue(spiral_ref.path)
+
+                var uploadTask = spiral_ref.putBytes(data)
+                uploadTask.addOnFailureListener(){
+                    Toast.makeText(this, "image uploading failed", Toast.LENGTH_SHORT).show()
+                }
+                uploadTask.addOnSuccessListener() {
+                    val urlTask = it.getStorage().getDownloadUrl()
+                    while (!urlTask.isSuccessful);
+                    val downloadUrl = urlTask.result
+
+                    downurl = downloadUrl.toString()
+
+                    val intent = Intent(this, Spiral::class.java)
+                    intent.putExtra("Clinic_ID", Clinic_ID);
+                    intent.putExtra("PatientName", PatientName);
+                    intent.putExtra("path", "CRTS");
+                    intent.putExtra("path1", "CRTS");
+                    intent.putExtra("right_spiral", "no")
+                    intent.putExtra("spiral_result", doubleArrayOf())
+                    intent.putExtra("writing_downurl", downurl)
+                    intent.putExtra("crts_right_spiral_downurl", String())
+                    intent.putExtra("lorr", true)
+                    intent.putExtra("crts_num", crts_num)
+                    startActivity(intent)
+                    val context = applicationContext
+                    val inflater = layoutInflater
+                    val customToast = inflater.inflate(R.layout.toast_custom, null)
+                    val customtoast = Toast(context)
+                    customtoast.view = customToast
+                    customtoast.setGravity(Gravity.CENTER_HORIZONTAL or Gravity.CENTER_VERTICAL, 0, 0)
+                    customtoast.duration = Toast.LENGTH_LONG
+                    customtoast.show()
+                    finish()
+                }
             }
             backButton_write2.setOnClickListener {
                 Log.v("dddddddddd", "ddddddddddd")
@@ -194,36 +228,7 @@ class WritingActivity : AppCompatActivity() {
                         .setNegativeButton("취소") { dialogInterface, i -> }
                         .show()
             }
-            uploadTask.addOnSuccessListener() {
-                val urlTask = it.getStorage().getDownloadUrl()
-                while (!urlTask.isSuccessful);
-                val downloadUrl = urlTask.result
 
-                downurl = downloadUrl.toString()
-
-                val intent = Intent(this, Spiral::class.java)
-                intent.putExtra("Clinic_ID", Clinic_ID);
-                intent.putExtra("PatientName", PatientName);
-                intent.putExtra("path", "CRTS");
-                intent.putExtra("path1", "CRTS");
-                intent.putExtra("right_spiral", "no")
-                intent.putExtra("spiral_result", doubleArrayOf())
-                intent.putExtra("writing_downurl", downurl)
-                intent.putExtra("crts_right_spiral_downurl", String())
-                intent.putExtra("lorr", true)
-                intent.putExtra("crts_num", crts_num)
-
-                startActivity(intent)
-                val context = applicationContext
-                val inflater = layoutInflater
-                val customToast = inflater.inflate(R.layout.toast_custom, null)
-                val customtoast = Toast(context)
-                customtoast.view = customToast
-                customtoast.setGravity(Gravity.CENTER_HORIZONTAL or Gravity.CENTER_VERTICAL, 0, 0)
-                customtoast.duration = Toast.LENGTH_LONG
-                customtoast.show()
-                finish()
-            }
             var prevData: PathTraceData? = null
 
             if (pathTrace.size > 2) {
@@ -259,6 +264,7 @@ class WritingActivity : AppCompatActivity() {
         private var flag = false
 
         override fun onTouchEvent(event: MotionEvent): Boolean {
+            iswrite = true
             currentX = event.x
             currentY = event.y
 

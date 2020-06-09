@@ -74,6 +74,7 @@ class Spiral : AppCompatActivity() {
     private var image_path : String = ""
     private lateinit var progressDialog : ProgressDialog
     private var lastTimeBackPressed:Long = 0
+    private var isdraw : Boolean = false
 
     private val pathTrace: MutableList<PathTraceData> = mutableListOf()
     private val timer = object : CountDownTimer(Long.MAX_VALUE, 1000 / 60) {
@@ -223,10 +224,6 @@ class Spiral : AppCompatActivity() {
         // 그림 그리고 나서, 다음으로 넘어가는 버튼
         writingfinish.setSafeOnClickListener {
             timer.cancel()
-            loading()
-            //view.saveAsJPG(view, this.filesDir.path + "/spiralTest", "${patientId}_$filename.jpg")
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             var prevData: PathTraceData? = null
             val metaData = "${CurrentUserData.user?.uid},$Clinic_ID,$filename"
             val path = File("${this.filesDir.path}/testData") // raw save to file dir(data/com.bcilab....)
@@ -242,94 +239,102 @@ class Spiral : AppCompatActivity() {
                 Toast.makeText(this, "Error on writing file", Toast.LENGTH_LONG).show()
                 println(e.message)
             }
+            if(!isdraw)
+            {
+                Toast.makeText(this, "나선을 그리고 다음버튼을 눌러주세요", Toast.LENGTH_LONG).show()
+            }
+            else
+            {
+                loading()
+                var v1 = window.decorView
+                v1.isDrawingCacheEnabled = true
+                v1.buildDrawingCache()
+                var captureView = v1.drawingCache
+                try {
+                    var fos = FileOutputStream("sdcard/Download/")
+                    captureView.compress(Bitmap.CompressFormat.JPEG, 100, fos)
+                    fos.close()
+                    fos.flush()
+                }catch (e : FileNotFoundException){
+                    e.printStackTrace()
+                }
+                val baos = ByteArrayOutputStream()
+                captureView.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+                var uri = Uri.fromFile(File("sdcard/Download/"))
+                val data = baos.toByteArray()
+                /* ******************************** save image local *************************************/
+                try{
+                    onCap(captureView)
+                } catch (e : java.lang.Exception){
+
+                }finally {
+                    captureView.recycle();
+                }
+                /* ******************************** save image firebase *************************************/
+                //삭제를 위한 path저장
+                firebase_path = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Path")
+                firebase_path.push().setValue(spiral_ref.path)
+                var uploadTask = spiral_ref.putBytes(data)
+                uploadTask.addOnFailureListener(){
+                    Toast.makeText(this, "image uploading failed", Toast.LENGTH_SHORT).show()
+                }
+                uploadTask.addOnSuccessListener() {
+                    val urlTask = it.getStorage().getDownloadUrl()
+                    while (!urlTask.isSuccessful) ;
+                    val downloadUrl = urlTask.result
+
+                    downurl = downloadUrl.toString()
+
+                    //이미지 경로를 활용하여 데이터 경로를 만든다
+                    val data_path = image_path.replace("Image", "Data").replace("jpg", "csv")
+                    //left hand
+                    if (right_spiral.equals("no")) { //left
+                        val intent = Intent(this, AnalysisActivity::class.java)
+                        intent.putExtra("filename", "${Clinic_ID}_$filename.csv")
+                        intent.putExtra("path1", path1)
+                        intent.putExtra("path", path)
+                        intent.putExtra("Clinic_ID", Clinic_ID)
+                        intent.putExtra("PatientName", PatientName)
+                        intent.putExtra("task", "SpiralTask")
+                        intent.putExtra("spiral_result", spiral_result)
+                        intent.putExtra("left_spiral_downurl", String())
+                        intent.putExtra("crts_right_spiral_downurl", downurl)
+                        intent.putExtra("writing_downurl", writing_downurl)
+                        intent.putExtra("right_spiral", "no")
+                        intent.putExtra("crts_num", crts_num)
+                        intent.putExtra("data_path", data_path)
+                        startActivity(intent)
+                        Toast.makeText(this, "Wait...", Toast.LENGTH_LONG).show()
+                        loadingEnd()
+                        finish()
+                        //right hand
+                    } else {
+                        val intent = Intent(this, AnalysisActivity::class.java)
+                        intent.putExtra("filename", "${Clinic_ID}_$filename.csv")
+                        intent.putExtra("path1", path1)
+                        intent.putExtra("path", path)
+                        intent.putExtra("left", left)
+                        intent.putExtra("Clinic_ID", Clinic_ID)
+                        intent.putExtra("PatientName", PatientName)
+                        intent.putExtra("task", "SpiralTask")
+                        intent.putExtra("right_spiral", "yes")
+                        intent.putExtra("spiral_result", spiral_result)
+                        intent.putExtra("writing_downurl", writing_downurl)
+                        intent.putExtra("right_spiral_downurl", downurl)
+                        intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl)
+                        intent.putExtra("left_spiral_result", left_spiral_result)
+                        intent.putExtra("data_path", data_path)
+                        intent.putExtra("crts_num", crts_num)
+                        startActivity(intent)
+                        Toast.makeText(this, "Wait...", Toast.LENGTH_LONG).show()
+                        loadingEnd()
+                        finish()
+                    }
+
+                }
+            }
             /* ******************************** processing image file *************************************/
 
-            var v1 = window.decorView
-            v1.isDrawingCacheEnabled = true
-            v1.buildDrawingCache()
-            var captureView = v1.drawingCache
-            try {
-                var fos = FileOutputStream("sdcard/Download/")
-                captureView.compress(Bitmap.CompressFormat.JPEG, 100, fos)
-                fos.close()
-                fos.flush()
-            }catch (e : FileNotFoundException){
-                e.printStackTrace()
-            }
-            val baos = ByteArrayOutputStream()
-            captureView.compress(Bitmap.CompressFormat.JPEG, 100, baos)
-            var uri = Uri.fromFile(File("sdcard/Download/"))
-            val data = baos.toByteArray()
-            /* ******************************** save image local *************************************/
-            try{
-                onCap(captureView)
-            } catch (e : java.lang.Exception){
-
-            }finally {
-                captureView.recycle();
-            }
-            /* ******************************** save image firebase *************************************/
-            //삭제를 위한 path저장
-            firebase_path = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Path")
-            firebase_path.push().setValue(spiral_ref.path)
-            var uploadTask = spiral_ref.putBytes(data)
-            uploadTask.addOnFailureListener(){
-                Toast.makeText(this, "image uploading failed", Toast.LENGTH_SHORT).show()
-            }
-            uploadTask.addOnSuccessListener() {
-                val urlTask = it.getStorage().getDownloadUrl()
-                while (!urlTask.isSuccessful) ;
-                val downloadUrl = urlTask.result
-
-                downurl = downloadUrl.toString()
-
-                //이미지 경로를 활용하여 데이터 경로를 만든다
-                val data_path = image_path.replace("Image", "Data").replace("jpg", "csv")
-                //left hand
-                if (right_spiral.equals("no")) { //left
-                    val intent = Intent(this, AnalysisActivity::class.java)
-                    intent.putExtra("filename", "${Clinic_ID}_$filename.csv")
-                    intent.putExtra("path1", path1)
-                    intent.putExtra("path", path)
-                    intent.putExtra("Clinic_ID", Clinic_ID)
-                    intent.putExtra("PatientName", PatientName)
-                    intent.putExtra("task", "SpiralTask")
-                    intent.putExtra("spiral_result", spiral_result)
-                    intent.putExtra("left_spiral_downurl", String())
-                    intent.putExtra("crts_right_spiral_downurl", downurl)
-                    intent.putExtra("writing_downurl", writing_downurl)
-                    intent.putExtra("right_spiral", "no")
-                    intent.putExtra("crts_num", crts_num)
-                    intent.putExtra("data_path", data_path)
-                    startActivity(intent)
-                    Toast.makeText(this, "Wait...", Toast.LENGTH_LONG).show()
-                    loadingEnd()
-                    finish()
-                    //right hand
-                } else {
-                    val intent = Intent(this, AnalysisActivity::class.java)
-                    intent.putExtra("filename", "${Clinic_ID}_$filename.csv")
-                    intent.putExtra("path1", path1)
-                    intent.putExtra("path", path)
-                    intent.putExtra("left", left)
-                    intent.putExtra("Clinic_ID", Clinic_ID)
-                    intent.putExtra("PatientName", PatientName)
-                    intent.putExtra("task", "SpiralTask")
-                    intent.putExtra("right_spiral", "yes")
-                    intent.putExtra("spiral_result", spiral_result)
-                    intent.putExtra("writing_downurl", writing_downurl)
-                    intent.putExtra("right_spiral_downurl", downurl)
-                    intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl)
-                    intent.putExtra("left_spiral_result", left_spiral_result)
-                    intent.putExtra("data_path", data_path)
-                    intent.putExtra("crts_num", crts_num)
-                    startActivity(intent)
-                    Toast.makeText(this, "Wait...", Toast.LENGTH_LONG).show()
-                    loadingEnd()
-                    finish()
-                }
-
-            }
             if (pathTrace.size > 2) {
                 prevData = pathTrace[pathTrace.size - 1]
                 for (i in (pathTrace.size - 2) downTo 0) {
@@ -352,7 +357,7 @@ class Spiral : AppCompatActivity() {
         override fun onTouchEvent(event: MotionEvent): Boolean {
             currentX = event.x
             currentY = event.y
-
+            isdraw = true
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
                     if (!flag) {

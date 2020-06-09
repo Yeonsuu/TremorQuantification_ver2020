@@ -52,10 +52,7 @@ class AnalysisActivity : AppCompatActivity() {
         if (intent.hasExtra("writing_downurl"))
             writing_downurl = intent.getStringExtra("writing_downurl")
         if (intent.hasExtra("data_path"))
-        {
             data_path = intent.getStringExtra("data_path")
-            Log.v("05/05 data_path", data_path)
-        }
 
 
         val dialog = ProgressDialog(this)

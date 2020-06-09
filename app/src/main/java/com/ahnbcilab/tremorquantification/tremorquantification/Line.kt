@@ -70,6 +70,7 @@ class Line : AppCompatActivity() {
     private var lorr: Boolean = false
     private lateinit var progressDialog : ProgressDialog
     private var lastTimeBackPressed:Long = 0
+    private var isdraw : Boolean = false
 
     private val pathTrace: MutableList<PathTraceData> = mutableListOf()
     private val timer = object : CountDownTimer(Long.MAX_VALUE, 1000 / 60) {
@@ -274,97 +275,102 @@ class Line : AppCompatActivity() {
         // 그림 그리고 나서, 다음으로 넘어가는 버튼
         writingfinish2.setSafeOnClickListener {
             timer.cancel()
-            loading()
-            //view.saveAsJPG(view, this.filesDir.path + "/spiralTest", "${patientId}_$filename.jpg")
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            if (lorr) {
-                image_path = "$uid/$Clinic_ID/Line/Right/Image/$count.jpg"
-            } else {
-                image_path = "$uid/$Clinic_ID/Line/Left/Image/$count.jpg"
-            }
-            //정해진 이미지 레퍼런스를 설정한다
-            line_ref = storageRef.child(image_path)
             var prevData: PathTraceData? = null
-            //삭제를 위한 path저장
-            firebase_path = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Path")
-            firebase_path.push().setValue(line_ref.path)
-            /* ******************************** processing image file *************************************/
-            var v1 = window.decorView
-            v1.isDrawingCacheEnabled = true
-            v1.buildDrawingCache()
-            var captureView = v1.drawingCache
-            try {
-                var fos = FileOutputStream("sdcard/Download/")
-                captureView.compress(Bitmap.CompressFormat.JPEG, 100, fos)
-                fos.close()
-                fos.flush()
-            } catch (e: java.io.FileNotFoundException) {
-                e.printStackTrace()
+            if(!isdraw)
+            {
+                Toast.makeText(this, "직선을 그리고 다음버튼을 눌러주세요", Toast.LENGTH_LONG).show()
             }
-            val baos = ByteArrayOutputStream()
-            captureView.compress(Bitmap.CompressFormat.JPEG, 100, baos)
-            var uri = Uri.fromFile(File("sdcard/Download/"))
-            val data = baos.toByteArray()
-            //******************************** save image local ************************************
-            try {
-                onCap(captureView)
-            } catch (e: java.lang.Exception) {
-
-            } finally {
-                captureView.recycle();
-            }
-            //******************************** save image firebase ************************************
-            var uploadTask = line_ref.putBytes(data)
-            uploadTask.addOnFailureListener() {
-                Toast.makeText(this, "image uploading failed", Toast.LENGTH_SHORT).show()
-            }
-            uploadTask.addOnSuccessListener() {
-                val urlTask = it.getStorage().getDownloadUrl()
-                while (!urlTask.isSuccessful);
-                val downloadUrl = urlTask.result
-                val downurl = downloadUrl.toString()
-
-                val metaData = "${CurrentUserData.user?.uid},$Clinic_ID,$filename"
-                val path = File("${this.filesDir.path}/testData") // raw save to file dir(data/com.bcilab....)
-                if (!path.exists()) path.mkdirs()
-                val file = File(path, "${Clinic_ID}_$filename.csv")
-                try {
-                    PrintWriter(file).use { out ->
-                        out.println(metaData)
-                        for (item in pathTrace)
-                            out.println(item.joinToString(","))
-                    }
-                } catch (e: Exception) {
-                    Toast.makeText(this, "Error on writing file", Toast.LENGTH_LONG).show()
-                    println(e.message)
+            else
+            {
+                loading()
+                if (lorr) {
+                    image_path = "$uid/$Clinic_ID/Line/Right/Image/$count.jpg"
+                } else {
+                    image_path = "$uid/$Clinic_ID/Line/Left/Image/$count.jpg"
                 }
-                val data_path = image_path.replace("Image", "Data").replace("jpg", "csv")
-                        val intent = Intent(this, AnalysisActivity::class.java)
-                        intent.putExtra("filename", "${Clinic_ID}_$filename.csv")
-                        intent.putExtra("path1", path1)
-                        intent.putExtra("path", path)
-                        intent.putExtra("Clinic_ID", Clinic_ID)
-                        intent.putExtra("PatientName", PatientName)
-                        intent.putExtra("task", "LineTask")
-                        intent.putExtra("left", left);//left : 0, right : 1
-                        intent.putExtra("right_spiral", "null")
-                        intent.putExtra("spiral_result", spiral_result)
-                        intent.putExtra("left_spiral_result", left_spiral_result)
-                        intent.putExtra("writing_downurl", writing_downurl)
-                        intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl)
-                        intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl)
-                        intent.putExtra("crts_num", crts_num)
-                        intent.putExtra("data_path", data_path)
-                        intent.putExtra("line_downurl", downurl)
-                        startActivity(intent)
-                        Toast.makeText(this, "Wait...", Toast.LENGTH_LONG).show()
-                        loadingEnd()
-                        finish()
+                //정해진 이미지 레퍼런스를 설정한다
+                line_ref = storageRef.child(image_path)
+                //삭제를 위한 path저장
+                firebase_path = firebaseDatabase.getReference("URL List").child(uid).child(Clinic_ID).child("Path")
+                firebase_path.push().setValue(line_ref.path)
+                /* ******************************** processing image file *************************************/
+                var v1 = window.decorView
+                v1.isDrawingCacheEnabled = true
+                v1.buildDrawingCache()
+                var captureView = v1.drawingCache
+                try {
+                    var fos = FileOutputStream("sdcard/Download/")
+                    captureView.compress(Bitmap.CompressFormat.JPEG, 100, fos)
+                    fos.close()
+                    fos.flush()
+                } catch (e: java.io.FileNotFoundException) {
+                    e.printStackTrace()
+                }
+                val baos = ByteArrayOutputStream()
+                captureView.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+                var uri = Uri.fromFile(File("sdcard/Download/"))
+                val data = baos.toByteArray()
+                //******************************** save image local ************************************
+                try {
+                    onCap(captureView)
+                } catch (e: java.lang.Exception) {
+
+                } finally {
+                    captureView.recycle();
+                }
+                //******************************** save image firebase ************************************
+                var uploadTask = line_ref.putBytes(data)
+                uploadTask.addOnFailureListener() {
+                    Toast.makeText(this, "image uploading failed", Toast.LENGTH_SHORT).show()
+                }
+                uploadTask.addOnSuccessListener() {
+                    val urlTask = it.getStorage().getDownloadUrl()
+                    while (!urlTask.isSuccessful);
+                    val downloadUrl = urlTask.result
+                    val downurl = downloadUrl.toString()
+
+                    val metaData = "${CurrentUserData.user?.uid},$Clinic_ID,$filename"
+                    val path = File("${this.filesDir.path}/testData") // raw save to file dir(data/com.bcilab....)
+                    if (!path.exists()) path.mkdirs()
+                    val file = File(path, "${Clinic_ID}_$filename.csv")
+                    try {
+                        PrintWriter(file).use { out ->
+                            out.println(metaData)
+                            for (item in pathTrace)
+                                out.println(item.joinToString(","))
+                        }
+                    } catch (e: Exception) {
+                        Toast.makeText(this, "Error on writing file", Toast.LENGTH_LONG).show()
+                        println(e.message)
+                    }
+                    val data_path = image_path.replace("Image", "Data").replace("jpg", "csv")
+                    val intent = Intent(this, AnalysisActivity::class.java)
+                    intent.putExtra("filename", "${Clinic_ID}_$filename.csv")
+                    intent.putExtra("path1", path1)
+                    intent.putExtra("path", path)
+                    intent.putExtra("Clinic_ID", Clinic_ID)
+                    intent.putExtra("PatientName", PatientName)
+                    intent.putExtra("task", "LineTask")
+                    intent.putExtra("left", left);//left : 0, right : 1
+                    intent.putExtra("right_spiral", "null")
+                    intent.putExtra("spiral_result", spiral_result)
+                    intent.putExtra("left_spiral_result", left_spiral_result)
+                    intent.putExtra("writing_downurl", writing_downurl)
+                    intent.putExtra("crts_left_spiral_downurl", crts_left_spiral_downurl)
+                    intent.putExtra("crts_right_spiral_downurl", crts_right_spiral_downurl)
+                    intent.putExtra("crts_num", crts_num)
+                    intent.putExtra("data_path", data_path)
+                    intent.putExtra("line_downurl", downurl)
+                    startActivity(intent)
+                    Toast.makeText(this, "Wait...", Toast.LENGTH_LONG).show()
+                    loadingEnd()
+                    finish()
 
 
 
+                }
             }
+
             if (pathTrace.size > 2) {
                 prevData = pathTrace[pathTrace.size - 1]
                 for (i in (pathTrace.size - 2) downTo 0) {
@@ -393,6 +399,7 @@ class Line : AppCompatActivity() {
         private var flag = false
 
         override fun onTouchEvent(event: MotionEvent): Boolean {
+            isdraw = true
             currentX = event.x
             currentY = event.y
 
