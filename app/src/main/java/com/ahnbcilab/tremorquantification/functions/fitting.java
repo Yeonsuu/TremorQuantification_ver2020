@@ -60,9 +60,10 @@ public class fitting {
 	private FirebaseStorage storage = FirebaseStorage.getInstance();
 
 	public LineTaskAnalyze lineTaskAnalyze=new LineTaskAnalyze();
+	//갤럭시 탭이 1cm당 가지는 pixel 갯수
 	public final static double DPI =88.18;
 
-
+	//직선 그리기 할 때, base line의 시작점과 끝점
 	public static int startX = 480;
 	public static int startY = 100;   //finalY -> 1748 ,startY -> 100
 	public static double[] distance;
@@ -171,12 +172,12 @@ public class fitting {
 			}
 
 		})
-		.addOnFailureListener(new OnFailureListener() {
-			@Override
-			public void onFailure(@NonNull Exception e) {
+				.addOnFailureListener(new OnFailureListener() {
+					@Override
+					public void onFailure(@NonNull Exception e) {
 
-			}
-		});
+					}
+				});
 
 		double[] re_bpf_x = new double[orgX.length];
 		double[] re_bpf_y = new double[orgY.length];

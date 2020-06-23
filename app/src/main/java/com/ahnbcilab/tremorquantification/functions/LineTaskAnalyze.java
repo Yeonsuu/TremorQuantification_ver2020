@@ -17,8 +17,10 @@ import smile.projection.PCA;
 
 public class LineTaskAnalyze {
     private static fft ft;
+    // sampling rate : 60
     private static final int srate = 60;
-    private static BandPassFilter BPF_line =new BandPassFilter(0.05,0.25,0.001,0.0005608); //원래 0.000605
+    //                                                              3/60(3Hz) ,15/60(15Hz), 다음 값들은 경험적.... 실험으로
+    private static BandPassFilter BPF_line =new BandPassFilter(0.05,0.25,0.001,0.0005608);
     private static BandPassFilter LPF_line =new BandPassFilter(0.0012,0.05,0.00001,0.5605);
     private static BandPassFilter BPF_spiral =new BandPassFilter(0.05,0.25,0.1,0.0005608);
     private static BandPassFilter LPF_spiral =new BandPassFilter(0.0012,0.05,0.00001,0.5605);
@@ -79,11 +81,12 @@ public class LineTaskAnalyze {
 
         data_float=DoubleToFloat(data);
 
-        //SpiralOrLine true일시 스파이럴 테스트
+        //SpiralOrLine :  true일시 스파이럴 테스트 , false 일시 라인 테스트
         if(SpiralOrLine==true){
             BPF_spiral.setExtrapolation(BandPassFilter.Extrapolation.ZERO_SLOPE);
+            //결과가 float라서 float형으로 써줌
             BPF_spiral.apply(data_float, temp_float);
-
+            //firebase는 arraylist를 사용하는데 arraylist에서는 double형 밖에 안들어가는 걸로 기억.
             temp_double = FloatToDouble(temp_float);
 
             for(int i=0;i<temp_double.length;i++){
@@ -99,7 +102,6 @@ public class LineTaskAnalyze {
                 BPF_result[i]= temp_double[i];
             }
         }
-        Log.d("test1","잘돌고있음 BPF" );
         return BPF_result;
     }
 
@@ -147,6 +149,12 @@ public class LineTaskAnalyze {
         double[] re_pca = new double[x.length];
         double x_sum=0.0 ;
 
+//        Csig = Filterdata' * Filterdata; % Covariance
+//                [V,D] = eig(Csig); % eigenvector
+//                W = V(:,end); % weight
+//        new = W'*Filterdata';  % projection'
+        //위 매틀랩 코드를 따라 만든 코드
+
         for(int i=0; i<x.length;i++){
             temp[i][0] = x[i];
             temp[i][1] = y[i];
@@ -189,6 +197,7 @@ public class LineTaskAnalyze {
 
     public double[] MyHilbert(double[] data){
         ComplexArray complexArray = Hilbert.transform(data);
+        //hilbert transform library 사용해서 real part . imagine part 나눠서 사용
         double[] hilbert_real = complexArray.real;
         double[] hilbert_imag = complexArray.imag;
         double[] temp = new double[data.length];
@@ -215,7 +224,7 @@ public class LineTaskAnalyze {
 
     public double myDrawingLength(double[] x){
         double result=0.0;
-
+        // 실제로 그린 길이 만큼 나옴
         for (int i = 10; i < x.length-6; i++) {
             double d = x[i] - x[i-1];
             result += Math.sqrt(d*d);
@@ -229,7 +238,7 @@ public class LineTaskAnalyze {
     public double myEUD(double[] x , double[] y){
         double result=0.0;
 
-
+        //유클리드 거리 측정.
         for (int i = 10; i < x.length-6; i++) {
             double d = x[i] - y[i];
             result += Math.sqrt(d * d);
@@ -340,9 +349,6 @@ public class LineTaskAnalyze {
             index[j] = (float) srate * (float) j / (float) padlen;
             Log.d("test1_fft","fft index  " +j+ " "+ index[j]);
         }
-        //absfft_pca , index 매틀랩으로 plot한번 해보기
-        //analysis에 var , mean구해서 계산하기
-
 
         result_fft = FFT_PeakFind(absfft_pca, index);
 
@@ -355,15 +361,7 @@ public class LineTaskAnalyze {
         double[] temp1 = new double[result.length]; //temp1 : 10~25Hz 사이의 값을 추출해서 저장하는 변수
         double[] temp2 = new double[result.length]; //temp2 : temp1에서 mean + 70*std 값보다 큰 값을 저장하는 변수
 
-        //temp1에 10~25Hz의 사이 값을 저장함
-//        for (int i = 0; i <result.length  ; i ++) {
-//            for(int j = 0; j <result.length  ; j ++) {
-//                if (index[i] >= 10 && index[i] <= 25) {
-//                    temp1[j] = result[i];
-//                    break;
-//                }
-//            }
-//        }
+        // 10~25Hz 사이의 정보만 받기위해
         int a=0;
         for (int i = 0; i <result.length  ; i ++) {
             if (index[i] >= 10 && index[i] <= 25) {
@@ -373,30 +371,13 @@ public class LineTaskAnalyze {
         }
         Log.d("test2","필터링된 주파수 갯수1:  " + a );
 
-        //이중 for문이 두개라서 연산이 오래걸릴까봐 최적화하려다가 포기.
-//        int a=0;
-//        for(int i =0; i<result.length;i++){
-//            a++;
-//            if (index[i] >= 10 && index[i] <= 25) {
-//                for (int j=0;j<result.length - a;j++){
-//                    temp1[j] = index[i];
-//                    break;
-//                }
-//
-//            }
-//        }
+        // 10~25Hz 사이의 정보의 표준편차와 평균을 구함
         mean = Math.mean(temp1);
         std = Math.var(temp1);
 
-
-//        for (int i = 0; i <result.length  ; i ++) {
-//            for(int j = 0; j <result.length  ; j ++) {
-//                if (result[i]>=(mean+70*std)) { //몇 배 할껀지 정하기
-//                    temp2[j] = result[i];
-//                    break;
-//                }
-//            }
-//        }
+        // 10~25Hz의 표준편차와 평균을 구해서  X = mean + std * A 의 식을 만듦
+        // X의 값이 주파수 대역의 데이터가 하나의 peak점만 찾게하기 위한 A의 값을 정하면됨
+        // 실험 해봤을땐 40이 적당했음
         int b=0;
         for (int i = 0; i <result.length  ; i ++) {
             if (result[i]>=(mean+40*std)) { //몇 배 할껀지 정하기
@@ -417,7 +398,7 @@ public class LineTaskAnalyze {
                 break;
             }
         }
-
+        //간혹 가다가 peak점은 찾았는데 떨림이 없는 데이터면 안되니까 3.2Hz이하면 안쳐줌
         if(hz < 3.2){
             hz = -1 ;
         }

@@ -73,6 +73,8 @@ public class main1 {
 
 		//writeToFile("0", ctx);
 
+		//firebase에 데이터 보내는 용인데 firebase 구조를 바꿔서 아마 이거는 안될듯?
+		//테스트 용으로 자기 fireBase 저장소 만들어서 test옹으로 쓰면 될듯
 		try {
 
 			/*firebaseLine.addValueEventListener(new ValueEventListener() {
@@ -172,12 +174,12 @@ public class main1 {
 				break;
 		}
 
-
+		//5가지 결과값 저장용 - 라인 테스트 용
 		Result=new double[5];
 		Result = fg.fitting(x_position, y_position,time_array, n, false, data_path, Clinic_ID);
 
-				for(int i = 0;i<5;i++){
-					Result[i] = Math.round(Result[i]*1000)/1000.0;
+		for(int i = 0;i<5;i++){
+			Result[i] = Math.round(Result[i]*1000)/1000.0;
 			Log.d("test2","result:" +i+" "+ Result[i] );
 		}
 
