@@ -336,6 +336,7 @@ public class fitting {
 				this.baseX[i] = fitting.startX;
 				this.baseY[i] = finalY - (fitting.startY+i);
 			}
+
 			return new baseline(baseX, baseY, t);
 		}
 

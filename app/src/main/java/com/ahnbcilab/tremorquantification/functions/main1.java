@@ -206,6 +206,7 @@ public class main1 {
 	private static String readFromFile(Context context) {
 		String ret = "";
 		try {
+
 			InputStream inputStream = context.openFileInput(Clinic_ID + "LineRow_num.txt");
 			if ( inputStream != null ) {
 				InputStreamReader inputStreamReader = new InputStreamReader(inputStream);

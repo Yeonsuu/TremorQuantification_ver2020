@@ -375,6 +375,7 @@ public class LineTaskAnalyze {
         mean = Math.mean(temp1);
         std = Math.var(temp1);
 
+
         // 10~25Hz의 표준편차와 평균을 구해서  X = mean + std * A 의 식을 만듦
         // X의 값이 주파수 대역의 데이터가 하나의 peak점만 찾게하기 위한 A의 값을 정하면됨
         // 실험 해봤을땐 40이 적당했음
@@ -402,6 +403,7 @@ public class LineTaskAnalyze {
         if(hz < 3.2){
             hz = -1 ;
         }
+
 
         return hz;
     }
