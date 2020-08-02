@@ -236,7 +236,7 @@ public class CRTS_partb_Fragment extends Fragment {
         else{
 
         }
-        crts11_edit.setOnClickListener(new View.OnClickListener() {
+        crts11_edit.setOnClickListener(new View.OnClickListener() {  // 수정하기 클릭
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(v.getContext(), WritingResult.class) ;

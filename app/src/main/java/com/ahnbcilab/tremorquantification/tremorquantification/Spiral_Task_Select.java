@@ -45,6 +45,7 @@ public class Spiral_Task_Select extends AppCompatActivity {
                 Intent intent;
                 if (task.equalsIgnoreCase("line"))
                     intent = new Intent(Spiral_Task_Select.this, Line.class);
+
                 else intent = new Intent(Spiral_Task_Select.this, Spiral.class);
                 intent.putExtra("crts_num", "null");
                 intent.putExtra("right_spiral", "null");
@@ -76,6 +77,7 @@ public class Spiral_Task_Select extends AppCompatActivity {
                 Intent intent;
                 if (task.equalsIgnoreCase("line"))
                     intent = new Intent(Spiral_Task_Select.this, Line.class);
+
                 else intent = new Intent(Spiral_Task_Select.this, Spiral.class);
                 intent.putExtra("crts_num", "null");
                 intent.putExtra("right_spiral", "null");

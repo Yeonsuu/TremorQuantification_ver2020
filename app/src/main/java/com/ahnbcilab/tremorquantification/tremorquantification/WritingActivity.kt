@@ -43,7 +43,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class WritingActivity : AppCompatActivity() {
-
+ // 글쓰기 검사 진행
     var filename: String = ""
     var path1: String = ""
     var Clinic_ID: String = ""
@@ -66,6 +66,7 @@ class WritingActivity : AppCompatActivity() {
     private var currentY: Float = 0.toFloat()
 
     private val pathTrace: MutableList<PathTraceData> = mutableListOf()
+
     private val timer = object : CountDownTimer(Long.MAX_VALUE, 1000 / 60) {
         override fun onTick(millisUntilFinished: Long) {
             pathTrace.add(PathTraceData(currentX, currentY, (Long.MAX_VALUE - millisUntilFinished).toInt()))
@@ -127,8 +128,8 @@ class WritingActivity : AppCompatActivity() {
         // 그림 그리고 나서, 다음으로 넘어가는 버튼
         writingfinish.setOnClickListener {
             timer.cancel()
-            if(!iswrite)
-            {
+            if(!iswrite) // 글씨가 없으면 Toast띄움
+           {
                 Toast.makeText(this, "글씨를 작성해주세요", Toast.LENGTH_LONG).show()
             }
             else
@@ -176,7 +177,7 @@ class WritingActivity : AppCompatActivity() {
 
                     downurl = downloadUrl.toString()
 
-                    val intent = Intent(this, Spiral::class.java)
+                    val intent = Intent(this, Spiral::class.java)  //Spire 테스트로 이동
                     intent.putExtra("Clinic_ID", Clinic_ID);
                     intent.putExtra("PatientName", PatientName);
                     intent.putExtra("path", "CRTS");

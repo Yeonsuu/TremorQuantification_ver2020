@@ -95,7 +95,7 @@ public class CRTS_partb_1_Fragment extends Fragment {
 
         gotowrite.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { // 글쓰기 및 그리기 Task 진행 button 입력시
                 Intent intent = new Intent(view.getContext(), WritingActivity.class);
                 intent.putExtra("ClinicID", Clinic_ID);
                 intent.putExtra("PatientName", PatientName);

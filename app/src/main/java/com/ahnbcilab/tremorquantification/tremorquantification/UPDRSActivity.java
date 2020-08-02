@@ -966,7 +966,7 @@ public class UPDRSActivity extends AppCompatActivity implements View.OnClickList
             bool = true;
 
         } else {
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss"); // 현재 날짜 받아오기
             String timestamp = sdf.format(new Date());
             MotorScale_Data motorScale = new MotorScale_Data(a, b, c, d, e, f, g, h, i1, j, k, l, m, n, n1, o, p, q, r, s, t, u, v, w, x, y, z);
 
@@ -1028,9 +1028,9 @@ public class UPDRSActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    public void alertDisplay(){
+    public void alertDisplay(){ // 이건 종료 or 뒤로가기 눌렀을때 띄워지는 dialog
 
-        AlertDialog.Builder dlg = new AlertDialog.Builder(this);
+        AlertDialog.Builder dlg = new AlertDialog.Builder(this); //dialog = 창띄우기 알림창
         dlg.setTitle("종료")
                 .setMessage("지금 종료하면 데이터를 모두 잃게됩니다. 종료하시겠습니까?")
                 .setPositiveButton("종료", new DialogInterface.OnClickListener() {

@@ -44,7 +44,7 @@ import java.util.Objects;
 
 public class WritingResult extends AppCompatActivity {
 
-    RadioButton crts11_1_0, crts11_1_1, crts11_1_2, crts11_1_3, crts11_1_4;
+    RadioButton crts11_1_0, crts11_1_1, crts11_1_2, crts11_1_3, crts11_1_4; //설문조사 문항
     int crts11, crts12, crts13, crts14;
     boolean bool = true;
     int check;

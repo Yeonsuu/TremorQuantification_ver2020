@@ -64,27 +64,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PersonalPatient extends AppCompatActivity implements View.OnClickListener {
-    TextView fb1, fb2, fb3, fb4, fb5, fb6;
-    TextView edit, person_delete, personal_diseaseType, personal_date;
-    FragmentManager fm;
-    FragmentTransaction tran;
-    UPDRS_Fragment frag1;
-    CRTS_Fragment frag2;
-    SpiralTask_Fragment frag3;
-    LineTask_Fragment frag4;
-    Gear_Fragment frag5;
-    Writing_Fragment frag6;
-    NonTaskFragment frag7 ;
-    public static String Clinic_ID;
-    public static String taskType;
-    String PatientName;
-    String task;
-    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-    DatabaseReference databasePatientList;
-    boolean data_exists;
-    String taskNum ;
-    Button dot;
-    ImageView bt1_under, bt2_under, bt3_under, bt4_under, bt5_under, bt6_under;
+        TextView fb1, fb2, fb3, fb4, fb5, fb6;
+        TextView edit, person_delete, personal_diseaseType, personal_date;
+        FragmentManager fm;
+        FragmentTransaction tran;
+        UPDRS_Fragment frag1;
+        CRTS_Fragment frag2;
+        SpiralTask_Fragment frag3;
+        LineTask_Fragment frag4;
+        Gear_Fragment frag5;
+        Writing_Fragment frag6;
+        NonTaskFragment frag7 ;
+        public static String Clinic_ID;
+        public static String taskType;
+        String PatientName;
+        String task;
+        private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference databasePatientList;
+        boolean data_exists;
+        String taskNum ;
+        Button dot;
+        ImageView bt1_under, bt2_under, bt3_under, bt4_under, bt5_under, bt6_under;
 
 
     @Override
@@ -105,27 +105,27 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
         c.setText(Clinic_ID);
         TextView p = (TextView) findViewById(R.id.patientClinicName);
         p.setText(PatientName);
-
+        // ID랑 이름 표출
         fb1 = (TextView) findViewById(R.id.bt1);
         fb2 = (TextView) findViewById(R.id.bt2);
         fb3 = (TextView) findViewById(R.id.bt3);
         fb4 = (TextView) findViewById(R.id.bt4);
         fb5 = (TextView) findViewById(R.id.bt5);
         fb6 = (TextView) findViewById(R.id.bt6);
-
+        // 각 상단 버튼 선언
         bt1_under = (ImageView) findViewById(R.id.bt1_under);
         bt2_under = (ImageView) findViewById(R.id.bt2_under);
         bt3_under = (ImageView) findViewById(R.id.bt3_under);
         bt4_under = (ImageView) findViewById(R.id.bt4_under);
         bt5_under = (ImageView) findViewById(R.id.bt5_under);
         bt6_under = (ImageView) findViewById(R.id.bt6_under);
-
+        // 버튼 밑에 들어가는 이미지선
         personal_diseaseType = (TextView) findViewById(R.id.diseasetype);
         personal_date = (TextView) findViewById(R.id.date);
 
         dot.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // ... 메뉴 눌렀을때
                 PopupMenu popupMenu = new PopupMenu(PersonalPatient.this, dot);
                 popupMenu.getMenuInflater().inflate(R.menu.menu_edit, popupMenu.getMenu());
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -185,7 +185,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot mData : dataSnapshot.getChildren()) {
                     String disease = String.valueOf(mData.child("DiseaseType").getValue());
-                    if (disease.equals("P")) {
+                    if (disease.equals("P")) { // 데이터 받아와서 파킨슨과 본태성 진전 구분을 위한 표시
                         personal_diseaseType.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.round_p));
                     } else if (disease.equals("ET")) {
                         personal_diseaseType.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.round_e));
@@ -216,6 +216,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
         fb4.setOnClickListener(this);
         fb5.setOnClickListener(this);
         fb6.setOnClickListener(this);
+
         frag1 = new UPDRS_Fragment(); //프래그먼트 객채셍성
         frag2 = new CRTS_Fragment(); //프래그먼트 객채셍성
         frag3 = new SpiralTask_Fragment(); //프래그먼트 객채셍성
@@ -293,7 +294,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.bt1:
+            case R.id.bt1:  // 선택한 메뉴에 맞게 밑줄 레이아웃 표출되게
                 bt1_under.setVisibility(View.VISIBLE);
                 bt2_under.setVisibility(View.INVISIBLE);
                 bt3_under.setVisibility(View.INVISIBLE);

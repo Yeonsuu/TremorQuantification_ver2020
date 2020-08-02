@@ -103,7 +103,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_crts_result);
 
         Intent intent = getIntent();
-
+        //Intent로 firebase에서 받아온 data 전달받음
         Clinic_ID = intent.getExtras().getString("ClinicID");
         PatientName = intent.getExtras().getString("PatientName");
         timestamp = intent.getExtras().getString("timestamp");
@@ -122,21 +122,24 @@ public class CRTS_Result_Activity extends AppCompatActivity {
 
         TextView c_t = (TextView) findViewById(R.id.clinic_ID);
         c_t.setText(Clinic_ID);
-
+        // ID 받아온거 바로 TextView에 표출
         TextView p_t = (TextView) findViewById(R.id.patientName);
         p_t.setText(PatientName);
-
+        // Name 받아온거 바로 TextView에 표출
         String timestamp1 = timestamp.substring(2,4) + "." + timestamp.substring(5,7) + "." + timestamp.substring(8,10);
 
         TextView t_t = (TextView) findViewById(R.id.today_date);
         t_t.setText(timestamp1);
+
         TextView home = (TextView) findViewById(R.id.gotohome);
+        //뒤로가기 버튼 '<'
         Button share = (Button) findViewById(R.id.result_share);
 
         crtsb_11_detail_button = (Button) findViewById(R.id.crtsb_11_detail_button) ;
         crtsb_12_detail_button = (Button) findViewById(R.id.crtsb_12_detail_button) ;
         crtsb_13_detail_button = (Button) findViewById(R.id.crtsb_13_detail_button) ;
         crtsb_14_detail_button = (Button) findViewById(R.id.crtsb_14_detail_button) ;
+        // detail버튼, 누르면 점수 짝 놔오는 스크롤 창 버튼
 
         final ConstraintLayout crtsa_result = (ConstraintLayout) findViewById(R.id.crtsa_result) ;
         final ImageButton crtsa_result_button = (ImageButton) findViewById(R.id. crtsa_result_button) ;
@@ -173,7 +176,7 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                 intent.putExtra("task", "CRTS");
                 startActivity(intent);
             }
-        });
+        });   // 해당환자 페이지로 즉 뒤로가기 버튼 누를시에
 
 
         if(crtsa_result_bool ==true) {

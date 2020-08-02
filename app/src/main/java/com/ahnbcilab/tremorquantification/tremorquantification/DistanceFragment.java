@@ -60,7 +60,7 @@ public class DistanceFragment extends Fragment {
 
         database_patient = firebaseDatabase.getReference("PatientList");
         database_spiral = database_patient.child(Clinic_ID).child(type);
-        database_spiral.addValueEventListener(new ValueEventListener() {
+        database_spiral.addValueEventListener(new ValueEventListener() { // Data 받아오기
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
@@ -86,7 +86,7 @@ public class DistanceFragment extends Fragment {
 
         database_patient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) { // 그래프 받아오기
                 //int count = 1;
                 GraphView graphView = (GraphView) view.findViewById(R.id.distance_graph);
                 LineGraphSeries<DataPoint> series = new LineGraphSeries<>();

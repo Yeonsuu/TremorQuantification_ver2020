@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\qotng\\Desktop\\GPG\\android_project\\real_final\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
+            "outputFile": "C:\\Users\\yoonhyunmin\\StudioProjects\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\qotng\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\dc1801aa7e4bf49c88b9dadf62587796\\res\\values-az\\values-az.xml",
+                    "source": "C:\\Users\\yoonhyunmin\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e8b22a143bb94f9c3652bf964e6f261e\\res\\values-az\\values-az.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,24 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\qotng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\541a726f617c2a6c87e4e8b9e55dd94b\\res\\values-az\\values-az.xml",
+                    "source": "C:\\Users\\yoonhyunmin\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.1.0.aar\\75897e61b00cc3bfbd377fdc834f4765\\res\\values-az\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,213,312,424,512,619,733,814,893,978,1085,1192,1292,1401,1505,1615,1773,1875",
-                        "endColumns": "107,98,111,87,106,113,80,78,84,106,106,99,108,103,109,157,101,82",
-                        "endOffsets": "208,307,419,507,614,728,809,888,973,1080,1187,1287,1396,1500,1610,1768,1870,1953"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "220",
+                        "endOffsets": "467"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,37",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,213,312,424,512,619,733,814,893,978,1085,1192,1292,1401,1505,1615,1773,4610",
-                        "endColumns": "107,98,111,87,106,113,80,78,84,106,106,99,108,103,109,157,101,82",
-                        "endOffsets": "208,307,419,507,614,728,809,888,973,1080,1187,1287,1396,1500,1610,1768,1870,4688"
+                        "startLines": "27",
+                        "startColumns": "4",
+                        "startOffsets": "3045",
+                        "endColumns": "220",
+                        "endOffsets": "3261"
                     }
                 },
                 {
-                    "source": "C:\\Users\\qotng\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\3de711e0b017606c2e166cf408a17d26\\res\\values-az\\values.xml",
+                    "source": "C:\\Users\\yoonhyunmin\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\96a8a65165430f879e811f04126eeac3\\res\\values-az\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,20 +55,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\qotng\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.1.0.aar\\0ed5a418c3dfb8f607d6ef9dcea37995\\res\\values-az\\values.xml",
+                    "source": "C:\\Users\\yoonhyunmin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6cdc8db0807e0627afdf169f1c4a7c85\\res\\values-az\\values-az.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "220",
-                        "endOffsets": "467"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,213,312,424,512,619,733,814,893,978,1085,1192,1292,1401,1505,1615,1773,1875",
+                        "endColumns": "107,98,111,87,106,113,80,78,84,106,106,99,108,103,109,157,101,82",
+                        "endOffsets": "208,307,419,507,614,728,809,888,973,1080,1187,1287,1396,1500,1610,1768,1870,1953"
                     },
                     "to": {
-                        "startLines": "27",
-                        "startColumns": "4",
-                        "startOffsets": "3045",
-                        "endColumns": "220",
-                        "endOffsets": "3261"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,37",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,213,312,424,512,619,733,814,893,978,1085,1192,1292,1401,1505,1615,1773,4610",
+                        "endColumns": "107,98,111,87,106,113,80,78,84,106,106,99,108,103,109,157,101,82",
+                        "endOffsets": "208,307,419,507,614,728,809,888,973,1080,1187,1287,1396,1500,1610,1768,1870,4688"
                     }
                 }
             ]

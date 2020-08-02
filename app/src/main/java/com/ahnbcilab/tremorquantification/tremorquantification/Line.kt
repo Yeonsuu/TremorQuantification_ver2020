@@ -155,7 +155,7 @@ class Line : AppCompatActivity() {
             })
             lorr = true
             left = 0;
-        }
+        } //오른손 왼손 검사
         line_left_button.setOnClickListener {
             line_right_button.setBackground(ContextCompat.getDrawable(applicationContext, R.drawable.right_nonselect_button))
             line_left_button.setBackground(ContextCompat.getDrawable(applicationContext, R.drawable.left_select_button))
@@ -227,7 +227,7 @@ class Line : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
+        // 그냥 뒤로가기랑 그리다가 뒤로가기의 차이
         backButton_line.setOnClickListener {
             val dlg = AlertDialog.Builder(this@Line)
             dlg.setTitle("종료")

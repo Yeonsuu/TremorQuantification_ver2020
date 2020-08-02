@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/TremorQuantification_ver2-App-master.iml" filepath="$PROJECT_DIR$/TremorQuantification_ver2-App-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/real_final.iml" filepath="$PROJECT_DIR$/real_final.iml" />
     </modules>
   </component>
 </project>

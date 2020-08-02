@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\qotng\\Desktop\\GPG\\android_project\\real_final\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "C:\\Users\\yoonhyunmin\\StudioProjects\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\qotng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\541a726f617c2a6c87e4e8b9e55dd94b\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\yoonhyunmin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6cdc8db0807e0627afdf169f1c4a7c85\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\qotng\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\611e47c4d837c9ebf06f15d928616429\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\yoonhyunmin\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\22d5ab11a3cb3e9565aa56b1a0bb3c65\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

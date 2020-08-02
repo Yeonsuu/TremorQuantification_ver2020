@@ -100,7 +100,7 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
         PatientName = intent.getExtras().getString("PatientName");
         path = intent.getExtras().getString("path");
         crts_num = intent.getExtras().getString("crts_num");
-        left = intent.getExtras().getInt("left");
+        left = intent.getExtras().getInt("left"); //ID, 이름, path 등 받아오기
         int num = 0;
         databasePatientList = firebaseDatabase.getReference("PatientList");
         databaseCRTS = databasePatientList.child(Clinic_ID).child("CRTS List");
@@ -108,11 +108,11 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 taskno = Integer.parseInt(String.valueOf(dataSnapshot.getChildrenCount()));
-                // TODO: show the count in the UI
-                if (taskno < 10) {
-                    scrts_count = "0" + taskno;
-                } else {
-                    scrts_count = Integer.toString(taskno);
+                    // TODO: show the count in the UI
+                    if (taskno < 10) {
+                        scrts_count = "0" + taskno;
+                    } else {
+                        scrts_count = Integer.toString(taskno);
                 }
             }
 
@@ -189,7 +189,7 @@ public class CRTSActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.crts_quit_button:
-                alertDisplay();
+                alertDisplay(); //뒤로가기 버튼 누를시에 alterdialog
                 break;
         }
     }

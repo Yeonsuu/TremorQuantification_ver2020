@@ -1,4 +1,4 @@
-#Wed Jun 10 01:52:31 KST 2020
+#Thu Jul 23 22:58:53 KST 2020
 path.1=classes.dex
 path.0=classes.dex
 renamed.7=classes8.dex
@@ -9,14 +9,14 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.7=C\:\\Users\\YunPC\\Desktop\\2020.6.10\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.6=C\:\\Users\\YunPC\\Desktop\\2020.6.10\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.5=C\:\\Users\\YunPC\\Desktop\\2020.6.10\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.4=C\:\\Users\\YunPC\\Desktop\\2020.6.10\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.3=C\:\\Users\\YunPC\\Desktop\\2020.6.10\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.2=C\:\\Users\\YunPC\\Desktop\\2020.6.10\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.1=C\:\\Users\\YunPC\\Desktop\\2020.6.10\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
-base.0=C\:\\Users\\YunPC\\Desktop\\2020.6.10\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+base.7=C\:\\Users\\yoonhyunmin\\StudioProjects\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.6=C\:\\Users\\yoonhyunmin\\StudioProjects\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.5=C\:\\Users\\yoonhyunmin\\StudioProjects\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.4=C\:\\Users\\yoonhyunmin\\StudioProjects\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.3=C\:\\Users\\yoonhyunmin\\StudioProjects\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.2=C\:\\Users\\yoonhyunmin\\StudioProjects\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.1=C\:\\Users\\yoonhyunmin\\StudioProjects\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+base.0=C\:\\Users\\yoonhyunmin\\StudioProjects\\TremorQuantification_ver2-App-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 path.7=classes6.dex
 path.6=classes5.dex
 path.5=classes4.dex

@@ -96,9 +96,9 @@ public class CRTS_Fragment extends Fragment {
 
         database_patient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) { // 데베 불러와서 그래프 표출
                 //int count = 1;
-                GraphView graphView = (GraphView) view.findViewById(R.id.crts_graph);
+                GraphView graphView = (GraphView) view.findViewById(R.id.crts_graph); // 그래프 표출하는 것
                 LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
                 series.appendData(new DataPoint(0, 0), true, 172);
                 taskListViewAdapter.clear();
@@ -112,17 +112,18 @@ public class CRTS_Fragment extends Fragment {
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+            public void onCancelled(@NonNull DatabaseError databaseError) { // 이건 같이 자동으로 만들어지는거
 
             }
         });
 
-        Button add_crts = (Button) view.findViewById(R.id.crts_add);
+
+        Button add_crts = (Button) view.findViewById(R.id.crts_add);  // 새로운 검사 진행하기
 
         add_crts.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {// 새로운 검사 진행하기 눌렀을때 이동.
                 Intent intent = new Intent(view.getContext(), CRTSActivity.class);
                 intent.putExtra("Clinic_ID", Clinic_ID);
                 intent.putExtra("PatientName", PatientName);
@@ -131,13 +132,14 @@ public class CRTS_Fragment extends Fragment {
                 startActivity(intent);
             }
         });
+
         recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(view.getContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
-            public void onItemClick(View view1, int position) {
+            public void onItemClick(View view1, int position) { // 이전 특정 시간에 수행했던 검사 결과를 볼 수 있도록 화면으로 이동
                 TextView taskDate = view1.findViewById(R.id.taskDate);
                 TextView taskTime = view1.findViewById(R.id.taskTime);
                 TextView taskscore = view1.findViewById(R.id.taskscore);
-                Intent intent = new Intent(getActivity(), CRTS_Result_Activity.class);
+                Intent intent = new Intent(getActivity(), CRTS_Result_Activity.class); //이전 결과 검사내역 조회
                 intent.putExtra("ClinicID", Clinic_ID);
                 intent.putExtra("PatientName", PatientName);
                 intent.putExtra("taskscore", taskscore.getText());

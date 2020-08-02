@@ -61,7 +61,7 @@ public class UPDRS_Result_Activity extends AppCompatActivity {
         database_patient = firebaseDatabase.getReference("PatientList");
         database_updrs = database_patient.child(Clinic_ID).child("UPDRS List");
 
-        u1score = (TextView) findViewById(R.id.u1score);
+        u1score = (TextView) findViewById(R.id.u1score); // 각 문항별 점수. 말하기, 얼굴표정 등
         u2score = (TextView) findViewById(R.id.u2score);
         u3score = (TextView) findViewById(R.id.u3score);
         u4score = (TextView) findViewById(R.id.u4score);
@@ -214,7 +214,7 @@ public class UPDRS_Result_Activity extends AppCompatActivity {
                 intent.putExtra("task", "UPDRS");
                 startActivity(intent);
             }
-        });
+        }); // 해당환자 페이지로 돌아가기 즉, 뒤로가기 누를시
 
         database_patient.orderByChild("ClinicID").equalTo(Clinic_ID).addValueEventListener(new ValueEventListener() {
             @Override

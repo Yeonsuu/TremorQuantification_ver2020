@@ -79,7 +79,7 @@ class AnalysisActivity : AppCompatActivity() {
             startActivity(intent1)
             finish()
         }
-        else if(task.equals("SpiralTask")&&path1.equals("CRTS")&&right_spiral.equals("no")){//crts 오른쪽 나선 끝난 기점
+        else if(task.equals("SpiralTask") && path1.equals("CRTS") && right_spiral.equals("no")){//crts 오른쪽 나선 끝난 기점
             spiral_result = main.main("${this.filesDir.path}/testData/$filename", applicationContext, Clinic_ID, data_path)
             dialog.dismiss()
             val intent1 = Intent(this, Spiral::class.java)
@@ -131,7 +131,7 @@ class AnalysisActivity : AppCompatActivity() {
 
         }
         //여기까지 나선! 그 다음 직선
-        else if(task.equals("LineTask")&&path1.equals("CRTS")){
+        else if(task.equals("LineTask")&&path1.equals("CRTS")){  //직선그리기
             var result1 = main1.main1("${this.filesDir.path}/testData/$filename", applicationContext, Clinic_ID, data_path)
             dialog.dismiss()
             val intent1 = Intent(this, WritingResult::class.java)

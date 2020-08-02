@@ -253,7 +253,7 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
 
                     } else {
                     }
-                    uid_list.add(r_uid);
+                    uid_list.add(r_uid); //데베에서 불러와서 ArrayList에 저장
                 }
             }
 
@@ -291,7 +291,7 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 int list_count = (int) dataSnapshot.getChildrenCount();
-                item_count.setText("Total " + list_count);
+                item_count.setText("Total " + list_count);  // Total점수 나타내기? 예시에는 1000으로 되있는데 이게뭐지?
             }
 
             @Override
@@ -334,7 +334,7 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
 
         bottom_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //하단 취소버튼
                 if (deleteMode == true) {
                     delete_exit();
                 }
@@ -345,7 +345,7 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
 
         bottom_delete.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // 하단 삭제버튼
                 if (selected_patientList.size() > 0) {
                     AlertDialog.Builder alertDialog = new AlertDialog.Builder(PatientListActivity.this);
                     alertDialog.setTitle("");
@@ -382,7 +382,7 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
         //타입에 따라 정렬
         typeView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {   //Status ↓ 표시 클릭
                 final ArrayList<PatientItem> filteredList = new ArrayList<>();
                 Context wrapper = new ContextThemeWrapper(PatientListActivity.this, R.style.YOURSTYLE);
                 PopupMenu popupMenu = new PopupMenu(wrapper, typeView);
@@ -702,7 +702,7 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
         //계정 버튼
         userAccount.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(final View v) {
+            public void onClick(final View v) {   // 계정 버튼 누르면 나오는 메뉴
                 PopupMenu popupMenu = new PopupMenu(PatientListActivity.this, userAccount);
                 popupMenu.getMenuInflater().inflate(R.menu.menu_account, popupMenu.getMenu());
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {

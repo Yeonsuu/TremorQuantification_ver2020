@@ -114,9 +114,9 @@ public class UPDRS_Fragment extends Fragment {
         taskListViewAdapter.clear();
         database_patient.orderByChild("ClinicID").equalTo(Clinic_ID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) { // 데베에서 데이터 가져옴
                 //int count = 1;
-                GraphView graphView = (GraphView) view.findViewById(R.id.updrs_graph);
+                GraphView graphView = (GraphView) view.findViewById(R.id.updrs_graph); //series: 그래프의 한 라인
                 LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
                 series.appendData(new DataPoint(0, 0), true, 108);
                 taskListViewAdapter.clear();
@@ -141,7 +141,7 @@ public class UPDRS_Fragment extends Fragment {
         updrs_task.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {  // 새로운 검사 진행하기 클릭시 Intent로 UPDRSActivity 로 넘어감
                 Intent intent = new Intent(view.getContext(), UPDRSActivity.class);
                 intent.putExtra("Clinic_ID", Clinic_ID);
                 intent.putExtra("PatientName", PatientName);
@@ -156,10 +156,11 @@ public class UPDRS_Fragment extends Fragment {
                 TextView taskDate = view1.findViewById(R.id.taskDate);
                 TextView taskTime = view1.findViewById(R.id.taskTime);
                 TextView taskscore = view1.findViewById(R.id.taskscore);
+                // 클릭하면 intent받아서 넘어가게 --> URDRS_Result_Activity로
                 Intent intent = new Intent(getActivity(), UPDRS_Result_Activity.class);
                 intent.putExtra("ClinicID", Clinic_ID);
                 intent.putExtra("PatientName", PatientName);
-                intent.putExtra("taskscore", taskscore.getText());
+                intent.putExtra("taskscore", taskscore.getText()); // ID, 이름, 점수 넘김
                 String time = taskDate.getText().toString() + " " + taskTime.getText().toString();
                 Log.v("UPDRS_Fragment", "UPDRS : timestamp " + time);
                 intent.putExtra("timestamp", time);
@@ -214,12 +215,12 @@ public class UPDRS_Fragment extends Fragment {
         return ret;
     }
 
-
+// 받아온 데이터들을저장한 후에 그래프 형식으로 표출하는듯?
     private void list(final int i, final DataSnapshot mData, final GraphView graphView, final LineGraphSeries<DataPoint> series, final String updrs_num) {
         Query query = database_patient.child(Clinic_ID).child("UPDRS List").orderByChild("UPDRS_count").equalTo(i);
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {  // 데베 데이터 불러오기
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                     String key = dataSnapshot1.getKey();
                     updrs_score = String.valueOf(mData.child("UPDRS List").child(key).child("UPDRS_score").getValue());
@@ -259,6 +260,7 @@ public class UPDRS_Fragment extends Fragment {
                     pieChartView.setPieChartData(pieChartData);
                 }
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
