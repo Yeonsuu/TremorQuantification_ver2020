@@ -131,9 +131,10 @@ public class CRTS_Result_Activity extends AppCompatActivity {
         TextView t_t = (TextView) findViewById(R.id.today_date);
         t_t.setText(timestamp1);
 
-        TextView home = (TextView) findViewById(R.id.gotohome);
+        Button home = (Button) findViewById(R.id.gotohome);
+        TextView home2 = (TextView) findViewById(R.id.gotohome2);
         //뒤로가기 버튼 '<'
-        Button share = (Button) findViewById(R.id.result_share);
+
 
         crtsb_11_detail_button = (Button) findViewById(R.id.crtsb_11_detail_button) ;
         crtsb_12_detail_button = (Button) findViewById(R.id.crtsb_12_detail_button) ;
@@ -177,6 +178,16 @@ public class CRTS_Result_Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });   // 해당환자 페이지로 즉 뒤로가기 버튼 누를시에
+        home2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PersonalPatient.class);
+                intent.putExtra("ClinicID", Clinic_ID);
+                intent.putExtra("PatientName", PatientName);
+                intent.putExtra("task", "CRTS");
+                startActivity(intent);
+            }
+        });
 
 
         if(crtsa_result_bool ==true) {

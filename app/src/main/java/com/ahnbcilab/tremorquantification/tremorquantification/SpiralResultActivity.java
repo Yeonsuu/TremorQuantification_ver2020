@@ -712,7 +712,21 @@ public class SpiralResultActivity extends AppCompatActivity {
             }
         });
         TextView Fbtn = (TextView) findViewById(R.id.gotohome);
+        TextView Fbtn2 = (TextView) findViewById(R.id.gotohome2);
         Fbtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(SpiralResultActivity.this,
+                        PersonalPatient.class);
+                myIntent.putExtra("ClinicID", Clinic_ID);
+                myIntent.putExtra("PatientName", PatientName);
+                myIntent.putExtra("task", "SPIRAL TASK");
+                startActivity(myIntent);
+                finish();
+            }
+        });
+        Fbtn2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
 
                 // Start NewActivity.class

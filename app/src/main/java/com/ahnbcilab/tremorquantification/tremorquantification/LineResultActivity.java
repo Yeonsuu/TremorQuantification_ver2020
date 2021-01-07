@@ -680,8 +680,21 @@ public class LineResultActivity extends AppCompatActivity {
                 finish() ;
             }
         });
-        TextView Fbtn = (TextView) findViewById(R.id.gotohome);
+        Button Fbtn = (Button) findViewById(R.id.gotohome);
+        TextView Fbtn2 = (TextView) findViewById(R.id.gotohome2);
         Fbtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                Intent myIntent = new Intent(LineResultActivity.this,
+                        PersonalPatient.class);
+                myIntent.putExtra("ClinicID", Clinic_ID);
+                myIntent.putExtra("PatientName", PatientName);
+                myIntent.putExtra("task", "LINE TASK");
+                startActivity(myIntent);
+                finish();
+            }
+
+        });
+        Fbtn2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 Intent myIntent = new Intent(LineResultActivity.this,
                         PersonalPatient.class);

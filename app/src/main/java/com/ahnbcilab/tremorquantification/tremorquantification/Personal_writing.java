@@ -129,6 +129,17 @@ public class Personal_writing extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        TextView backButton2 = (TextView) findViewById(R.id.gotohome2);
+        backButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PersonalPatient.class);
+                intent.putExtra("ClinicID", Clinic_ID);
+                intent.putExtra("PatientName", PatientName);
+                intent.putExtra("task", "WRITING TASK");
+                startActivity(intent);
+            }
+        });
 
 
     }

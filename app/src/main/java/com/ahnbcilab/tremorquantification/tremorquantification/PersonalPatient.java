@@ -64,7 +64,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PersonalPatient extends AppCompatActivity implements View.OnClickListener {
-        TextView fb1, fb2, fb3, fb4, fb5, fb6;
+        TextView fb1, fb2, fb3, fb4, fb6;
         TextView edit, person_delete, personal_diseaseType, personal_date;
         FragmentManager fm;
         FragmentTransaction tran;
@@ -72,7 +72,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
         CRTS_Fragment frag2;
         SpiralTask_Fragment frag3;
         LineTask_Fragment frag4;
-        Gear_Fragment frag5;
+
         Writing_Fragment frag6;
         NonTaskFragment frag7 ;
         public static String Clinic_ID;
@@ -84,7 +84,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
         boolean data_exists;
         String taskNum ;
         Button dot;
-        ImageView bt1_under, bt2_under, bt3_under, bt4_under, bt5_under, bt6_under;
+        ImageView bt1_under, bt2_under, bt3_under, bt4_under, bt6_under;
 
 
     @Override
@@ -110,14 +110,14 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
         fb2 = (TextView) findViewById(R.id.bt2);
         fb3 = (TextView) findViewById(R.id.bt3);
         fb4 = (TextView) findViewById(R.id.bt4);
-        fb5 = (TextView) findViewById(R.id.bt5);
+
         fb6 = (TextView) findViewById(R.id.bt6);
         // 각 상단 버튼 선언
         bt1_under = (ImageView) findViewById(R.id.bt1_under);
         bt2_under = (ImageView) findViewById(R.id.bt2_under);
         bt3_under = (ImageView) findViewById(R.id.bt3_under);
         bt4_under = (ImageView) findViewById(R.id.bt4_under);
-        bt5_under = (ImageView) findViewById(R.id.bt5_under);
+
         bt6_under = (ImageView) findViewById(R.id.bt6_under);
         // 버튼 밑에 들어가는 이미지선
         personal_diseaseType = (TextView) findViewById(R.id.diseasetype);
@@ -214,14 +214,14 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
         fb2.setOnClickListener(this);
         fb3.setOnClickListener(this);
         fb4.setOnClickListener(this);
-        fb5.setOnClickListener(this);
+
         fb6.setOnClickListener(this);
 
         frag1 = new UPDRS_Fragment(); //프래그먼트 객채셍성
         frag2 = new CRTS_Fragment(); //프래그먼트 객채셍성
         frag3 = new SpiralTask_Fragment(); //프래그먼트 객채셍성
         frag4 = new LineTask_Fragment();
-        frag5 = new Gear_Fragment();
+
         frag6 = new Writing_Fragment();
         frag7 = new NonTaskFragment();
         setFrag(0);
@@ -233,7 +233,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
             bt2_under.setVisibility(View.VISIBLE);
             bt3_under.setVisibility(View.INVISIBLE);
             bt4_under.setVisibility(View.INVISIBLE);
-            bt5_under.setVisibility(View.INVISIBLE);
+
             bt6_under.setVisibility(View.INVISIBLE);
             setFrag(1);
         } else if (task.equals("SPIRAL TASK")) {
@@ -241,7 +241,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
             bt2_under.setVisibility(View.INVISIBLE);
             bt3_under.setVisibility(View.VISIBLE);
             bt4_under.setVisibility(View.INVISIBLE);
-            bt5_under.setVisibility(View.INVISIBLE);
+
             bt6_under.setVisibility(View.INVISIBLE);
             setFrag(2);
         } else if (task.equals("GEAR")) {
@@ -249,7 +249,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
             bt2_under.setVisibility(View.INVISIBLE);
             bt3_under.setVisibility(View.INVISIBLE);
             bt4_under.setVisibility(View.INVISIBLE);
-            bt5_under.setVisibility(View.VISIBLE);
+
             bt6_under.setVisibility(View.INVISIBLE);
             setFrag(4);
         } else if (task.equals("LINE TASK")) {
@@ -257,7 +257,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
             bt2_under.setVisibility(View.INVISIBLE);
             bt3_under.setVisibility(View.INVISIBLE);
             bt4_under.setVisibility(View.VISIBLE);
-            bt5_under.setVisibility(View.INVISIBLE);
+
             bt6_under.setVisibility(View.INVISIBLE);
             setFrag(3);
         } else if (task.equals("UPDRS")) {
@@ -265,7 +265,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
             bt2_under.setVisibility(View.INVISIBLE);
             bt3_under.setVisibility(View.INVISIBLE);
             bt4_under.setVisibility(View.INVISIBLE);
-            bt5_under.setVisibility(View.INVISIBLE);
+
             bt6_under.setVisibility(View.INVISIBLE);
             setFrag(0);
         } else {
@@ -273,7 +273,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
             bt2_under.setVisibility(View.INVISIBLE);
             bt3_under.setVisibility(View.INVISIBLE);
             bt4_under.setVisibility(View.INVISIBLE);
-            bt5_under.setVisibility(View.INVISIBLE);
+
             bt6_under.setVisibility(View.VISIBLE);
             setFrag(5);
         }
@@ -299,7 +299,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                 bt2_under.setVisibility(View.INVISIBLE);
                 bt3_under.setVisibility(View.INVISIBLE);
                 bt4_under.setVisibility(View.INVISIBLE);
-                bt5_under.setVisibility(View.INVISIBLE);
+
                 bt6_under.setVisibility(View.INVISIBLE);
                 setFrag(0);
                 break;
@@ -308,7 +308,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                 bt2_under.setVisibility(View.VISIBLE);
                 bt3_under.setVisibility(View.INVISIBLE);
                 bt4_under.setVisibility(View.INVISIBLE);
-                bt5_under.setVisibility(View.INVISIBLE);
+
                 bt6_under.setVisibility(View.INVISIBLE);
                 setFrag(1);
                 break;
@@ -317,7 +317,7 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                 bt2_under.setVisibility(View.INVISIBLE);
                 bt3_under.setVisibility(View.VISIBLE);
                 bt4_under.setVisibility(View.INVISIBLE);
-                bt5_under.setVisibility(View.INVISIBLE);
+
                 bt6_under.setVisibility(View.INVISIBLE);
                 setFrag(2);
                 break;
@@ -327,27 +327,19 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                 bt2_under.setVisibility(View.INVISIBLE);
                 bt3_under.setVisibility(View.INVISIBLE);
                 bt4_under.setVisibility(View.VISIBLE);
-                bt5_under.setVisibility(View.INVISIBLE);
+
                 bt6_under.setVisibility(View.INVISIBLE);
                 setFrag(3);
                 break;
 
-            case R.id.bt5:
-                bt1_under.setVisibility(View.INVISIBLE);
-                bt2_under.setVisibility(View.INVISIBLE);
-                bt3_under.setVisibility(View.INVISIBLE);
-                bt4_under.setVisibility(View.INVISIBLE);
-                bt5_under.setVisibility(View.VISIBLE);
-                bt6_under.setVisibility(View.INVISIBLE);
-                setFrag(4);
-                break;
+
 
             case R.id.bt6:
                 bt1_under.setVisibility(View.INVISIBLE);
                 bt2_under.setVisibility(View.INVISIBLE);
                 bt3_under.setVisibility(View.INVISIBLE);
                 bt4_under.setVisibility(View.INVISIBLE);
-                bt5_under.setVisibility(View.INVISIBLE);
+
                 bt6_under.setVisibility(View.VISIBLE);
                 setFrag(5);
                 break;
@@ -511,11 +503,11 @@ public class PersonalPatient extends AppCompatActivity implements View.OnClickLi
                     }
                 });
                 break;
-            case 4:
+           /* case 4:
                 tran.replace(R.id.main_frame, frag5);  //replace의 매개변수는 (프래그먼트를 담을 영역 id, 프래그먼트 객체) 입니다.
                 tran.commit();
                 taskType = "Gear";
-                break;
+                break;*/
             case 5:
                 databasePatientList.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override

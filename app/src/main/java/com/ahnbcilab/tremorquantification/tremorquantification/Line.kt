@@ -45,6 +45,8 @@ import java.security.AccessController.getContext
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.Semaphore
+import android.text.TextPaint
+import android.util.AttributeSet
 
 class Line : AppCompatActivity() {
 
@@ -535,5 +537,30 @@ class Line : AppCompatActivity() {
         Toast.makeText(this, "이전 화면으로 돌아가고 싶으시다면 ' < ' 버튼을 눌러주세요.", Toast.LENGTH_SHORT).show();
 
     }
+
+   /* inner class VerticalTextView(context:Context, attrs:AttributeSet):android.support.v7.widget.AppCompatTextView(context, attrs) {
+        protected override fun onMeasure(widthMeasureSpec:Int, heightMeasureSpec:Int) {
+            super.onMeasure(heightMeasureSpec, widthMeasureSpec)
+            setMeasuredDimension(getMeasuredHeight(), getMeasuredWidth())
+        }
+        // 텍스트뷰 가로 입력
+        protected override fun onDraw(canvas:Canvas) {
+            // Custom View를 생성할때 원하는 폰트 , 색상 , 크기 설정
+            val textPaint = getPaint()
+            textPaint.setColor(getCurrentTextColor())
+            textPaint.drawableState = getDrawableState()
+            // View를 그리위한 객체 Canvas
+            canvas.save()
+            canvas.translate(0F, getHeight().toFloat())
+            canvas.rotate((-90).toFloat()) // 90도로 회전
+            canvas.translate(getCompoundPaddingLeft().toFloat(), getExtendedPaddingTop().toFloat())
+            getLayout().draw(canvas)
+            canvas.restore() // Canvas 상태를 복원합니다.
+        }
+    }*/
+
+
+
+
 
 }

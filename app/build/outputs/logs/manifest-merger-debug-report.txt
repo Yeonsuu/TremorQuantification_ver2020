@@ -1,666 +1,666 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:2:1-54:12
-MERGED from [com.android.support:design:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\22d5ab11a3cb3e9565aa56b1a0bb3c65\AndroidManifest.xml:17:1-22:12
-MERGED from [com.thoughtbot:expandablerecyclerview:1.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\expandablerecyclerview-1.3.aar\cf3059c05da6265dcac51fc531135b54\AndroidManifest.xml:2:1-12:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\6cdc8db0807e0627afdf169f1c4a7c85\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\7ff5b8f2020c7955c5f69cd548c0ab2a\AndroidManifest.xml:2:1-11:12
-MERGED from [com.firebaseui:firebase-ui-storage:4.3.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-ui-storage-4.3.1.aar\54596aa5bd11df58e08938f14014cce7\AndroidManifest.xml:2:1-11:12
-MERGED from [com.jjoe64:graphview:4.2.2] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\graphview-4.2.2.aar\8c1601eb98ca46a236081bbda029c884\AndroidManifest.xml:2:1-14:12
-MERGED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:17:1-42:12
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:17:1-39:12
-MERGED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:2:1-23:12
-MERGED from [com.google.firebase:firebase-database:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-database-16.0.6.aar\a21bf44311ce494342054b6bbbedc631\AndroidManifest.xml:15:1-27:12
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\fca9c6711fc92333c051dbc2cdcbe2ac\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-interop-16.0.1.aar\1e17010d9f6cb759cd19dc05673afb7b\AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-16.0.0.aar\8841ace2eaff2a12568cd1db4ae6d0af\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-16.0.0.aar\46a8d37203e6f8acbce965544149e510\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.firebase:firebase-core:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.6.aar\a5ef828a35a9b2a63ed4f5cc69814b0a\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:17:1-34:12
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:17:1-55:12
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.0.4.aar\024a2695d8bb55261435b4c7a85f7aec\AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:17:1-59:12
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\8908d1e0994c79260560a4b1fc7c7988\AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-storage-16.0.5.aar\8b9dd8f069b5a0708fac88ead2cbd5bb\AndroidManifest.xml:15:1-26:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\96a8a65165430f879e811f04126eeac3\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.firebase:firebase-common:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.4.aar\ab4bc2e5032ca717df6792f0d921a920\AndroidManifest.xml:2:1-17:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\371b54871de9041e99edb8199f2b0543\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.5.aar\1c252b68db6c2981cb695ee23c46b290\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\769422e3754840949dc54d533aff693c\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\a7cf44b9845560c2def4bfcd7875e7c4\AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\a8a67488eb2481a377ab3d76fdf2ac84\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\75897e61b00cc3bfbd377fdc834f4765\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\876a0c6b11b3b44964cacc23cba28c09\AndroidManifest.xml:17:1-22:12
-MERGED from [me.relex:circleindicator:1.2.2] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\circleindicator-1.2.2.aar\dfbde1dc645ab6972a4d8fb50f89e1ad\AndroidManifest.xml:2:1-12:12
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\f774916a1e425958089b35323e97525b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\expandablerecyclerview-1.0.3.aar\52a23a7efbb0558fd324152b6b00d95e\AndroidManifest.xml:2:1-16:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\9e8f9028ad60057752c64308b7083c29\AndroidManifest.xml:17:1-22:12
-MERGED from [com.tom_roush:pdfbox-android:1.8.10.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\pdfbox-android-1.8.10.1.aar\a877bca1f981407a462ceb3118a76550\AndroidManifest.xml:2:1-13:12
-MERGED from [com.github.lecho:hellocharts-library:1.5.8] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\hellocharts-library-1.5.8.aar\d6ba4be126cadedf63e927c550fd2e1b\AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\442d9cb9439b205598ea4677c7410ddd\AndroidManifest.xml:2:1-12:12
-MERGED from [com.android.support:transition:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\73c3ab10cdd4c35bd05e5f80d99123e6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\9bdc94f6c140cae09a5d9791cc5e04a0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\4483638d2e84aa9ac204f7bfae63f86b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.9.0.aar\88b7d5e0710db58d723807c50d215249\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\1ab8ff5d10d8e844eacaa99f20b53d2c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\5b5880b096896428f38b5d9f531cef08\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\781ad25d6b396f5df2e4d7b697dbf4e8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\e39db8126aaa86167fa79295ce1fc5cd\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\b7b29042cf7cf3f054d23ca1a115eab2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\957eead2cc5522e73be3859835ec8666\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\082d9e151e0e252da6b3a2f521c8dc57\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\09735612c62b305a846e9dabf373f0a1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\ce699539e912cade444e4cd423c8093f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\b9e3716e6ea5d4121770b98fa328fb35\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\586c82a4574bb1bb9435c32b7ce67ba2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\ab4d3918b1964dfcfe6671fc27eb9c27\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\e8b22a143bb94f9c3652bf964e6f261e\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\b89c2d4e0890b53db7a5d1924c92b579\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\3f2d5b0d63137c4edaa7ee080a6a3d75\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\ed57b1c25ce25492f94e4230616678bb\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\c89d93a567b919c94746480705883401\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\79ffb6cb8f76f2b08f15f277e5d97457\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\d207101743151c9957ac08f955d95111\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\351fac54a2822eafef327070759e71e5\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\2a7fcdfecec5205a3ac61a470247f140\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\cb02b5b5ed14d80af9e67718587ea25b\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\b37c0b77f216cfbf38176f0b74118005\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\c03f401393ccbc77b323774d43ec6e07\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-database-collection-16.0.1.aar\08dcc7a241ded264553dabf5c93ac0e4\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\protolite-well-known-types-16.0.1.aar\aea8afc50ee0b05b92e86cda7d9a7b51\AndroidManifest.xml:2:1-11:12
-MERGED from [io.grpc:grpc-android:1.16.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\grpc-android-1.16.1.aar\0ba302f3c61252b4ac4ffc8d6a0c9d42\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:2:1-54:12
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:2:1-54:12
+MERGED from [com.android.support:design:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/bc5596aacc552a2ac59d91410b97f542/AndroidManifest.xml:17:1-22:12
+MERGED from [com.thoughtbot:expandablerecyclerview:1.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/expandablerecyclerview-1.3.aar/92b7b74b84a0ba8ea249f8e960c3daba/AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/44167aed9c2d6f3f9304efa5ae51d827/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/fc979e7112794e7ea12ae8621899796a/AndroidManifest.xml:2:1-11:12
+MERGED from [com.firebaseui:firebase-ui-storage:4.3.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-ui-storage-4.3.1.aar/14eb1e46cec82f77b5e7648c25d65fd0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.jjoe64:graphview:4.2.2] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/graphview-4.2.2.aar/eeb67f8d5da42125e3f53185cb944cb1/AndroidManifest.xml:2:1-14:12
+MERGED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:17:1-39:12
+MERGED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:2:1-23:12
+MERGED from [com.google.firebase:firebase-database:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.6.aar/de721ce449dff5ed56376312d643490f/AndroidManifest.xml:15:1-27:12
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/cc3cdbaa231a98a6086768341d22169c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/0fe41cb7f4a312c4fbd1f852726592bc/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-16.0.0.aar/14018041d5f8c786e2ef5186a49fe046/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-16.0.0.aar/8c0a6bf4e54b3095b40fbb2e98ee351c/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-core:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.6.aar/6bcdc4ba5b25936351a1baddf08f229c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:17:1-34:12
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.0.4.aar/f4b6df317d9a03736fbad5cb5849c741/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:17:1-59:12
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/f8ddca760c85d898c122b77d550761e7/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-storage:16.0.5] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.5.aar/cb8cf0db38297401f2e89d3fd8211b89/AndroidManifest.xml:15:1-26:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/2521b61bb2b140652f3961696d571720/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-common:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/fe4d5e08a6ec56b843a7380898e2be7f/AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/def8ba984941ee48f537596687ac8d48/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.5.aar/0b538613fdc13b66d46ef82672f9123d/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/161b37b1ae21868d5c74b59cc54a9ccb/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/ff96621996c8e431921500ab14fc8b40/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/89323d9aa883191147759825ae67f880/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/a180124fa5c4971d51c6646041850040/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/832cdbaa998f704c6f7e1ca32045d0fc/AndroidManifest.xml:17:1-22:12
+MERGED from [me.relex:circleindicator:1.2.2] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/circleindicator-1.2.2.aar/2e42c02831f4f0fe5fa67b2d24e39e8b/AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/4a526a42b435291e0ff1339828f78f26/AndroidManifest.xml:17:1-22:12
+MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/expandablerecyclerview-1.0.3.aar/65a3f745e661a898fe726fa8622654d7/AndroidManifest.xml:2:1-16:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/f3ca5eede313aab0e0c5ef2eb64058a7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.tom_roush:pdfbox-android:1.8.10.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/pdfbox-android-1.8.10.1.aar/ec135c5c4ce0628330093f2a4203dcb7/AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.lecho:hellocharts-library:1.5.8] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/hellocharts-library-1.5.8.aar/cfa471b98921dcbf9693887f80c96881/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/dd67628f1397b9f8b4b5d4672e973619/AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:transition:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/b3a2318c9d58f8e79dcbcc3df0d01f33/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/5c0b7267766087707ae7c7d737207d8d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/bf173cebe10d645d7f0c61790cef3a37/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/b97db1c4a0b42ccf46f9a43fc1d86c92/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/a8d4aa1319733694a7c2d0fefe689401/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/3b6c904b9d2465d25c96a8549cc5cb86/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/ded4d8e2e45969d508e5cb77f9882dbd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/b3c80a85c30639b1e210e1a4931777d6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/aba8b918a60d3a6b450de5f4514ad1cb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/4bb7205569eddd182a49e53d3e5909fe/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/a0cccce2099a304dc883550b2c2e5811/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/42656ed41f568c9ef0f056caadf94968/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/77c811f929a93af8c0e61917ef48ee9e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/f0a14e27c95e076ed27fb42303d450f8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/6b534554e3a39c38ca647fe2a4270905/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/5d76905e7fb9448d626dcc03ece7ac29/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/dbe3989f2107427e670a20b4a435395c/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a672d751838374fa7ae3fd4723179bfd/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/485ad12cfa484663d8368b3f4c3ed1b7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/b31d45bcfff510ce2a6ec250a454140b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/ea430eb35adcb0e5ab11383ba60800bd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/4fc82995adf4a3dec968e17290301415/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/70b44e2f3a9741ccdb4be3de8c4dfc79/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/eec6ee28abce1d7d280d2e4a1ef812ec/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/2c4f2f21071f9c7a1c766ce74d3e0c03/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/c9a3981ba9067489194d2363b858cf20/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/3507f9443a7c624cb0297316bd8a8da8/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/b3d319e6a87d8680c62ad78a6d568614/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-database-collection:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-16.0.1.aar/869dddd48187e0dffafe9f1a0d245e56/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/protolite-well-known-types-16.0.1.aar/2ac7fe4544ec9dc1e41505b3dbede1d7/AndroidManifest.xml:2:1-11:12
+MERGED from [io.grpc:grpc-android:1.16.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/467192c8e7795ef6e7112409d0d2a93a/AndroidManifest.xml:2:1-13:12
+INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:2:1-54:12
 	package
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:4:5-70
-		INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:4:5-70
+		INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:2:1-54:12
-		INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:2:1-54:12
+		INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:2:1-54:12
-		INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:2:1-54:12
+		INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:6:5-76
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:6:5-76
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:6:22-73
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:6:22-73
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:7:5-67
-MERGED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:13:5-67
-MERGED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:13:5-67
-MERGED from [com.google.firebase:firebase-database:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-database-16.0.6.aar\a21bf44311ce494342054b6bbbedc631\AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-database:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-database-16.0.6.aar\a21bf44311ce494342054b6bbbedc631\AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-storage-16.0.5.aar\8b9dd8f069b5a0708fac88ead2cbd5bb\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-storage-16.0.5.aar\8b9dd8f069b5a0708fac88ead2cbd5bb\AndroidManifest.xml:24:5-67
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:7:5-67
+MERGED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:13:5-67
+MERGED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:13:5-67
+MERGED from [com.google.firebase:firebase-database:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.6.aar/de721ce449dff5ed56376312d643490f/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-database:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.6.aar/de721ce449dff5ed56376312d643490f/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-storage:16.0.5] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.5.aar/cb8cf0db38297401f2e89d3fd8211b89/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-storage:16.0.5] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.5.aar/cb8cf0db38297401f2e89d3fd8211b89/AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:7:22-64
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:7:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:8:5-81
-MERGED from [com.tom_roush:pdfbox-android:1.8.10.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\pdfbox-android-1.8.10.1.aar\a877bca1f981407a462ceb3118a76550\AndroidManifest.xml:11:5-81
-MERGED from [com.tom_roush:pdfbox-android:1.8.10.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\pdfbox-android-1.8.10.1.aar\a877bca1f981407a462ceb3118a76550\AndroidManifest.xml:11:5-81
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:8:5-81
+MERGED from [com.tom_roush:pdfbox-android:1.8.10.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/pdfbox-android-1.8.10.1.aar/ec135c5c4ce0628330093f2a4203dcb7/AndroidManifest.xml:11:5-81
+MERGED from [com.tom_roush:pdfbox-android:1.8.10.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/pdfbox-android-1.8.10.1.aar/ec135c5c4ce0628330093f2a4203dcb7/AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:8:22-78
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:9:5-78
-MERGED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:12:5-79
-MERGED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:12:5-79
-MERGED from [com.google.firebase:firebase-database:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-database-16.0.6.aar\a21bf44311ce494342054b6bbbedc631\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-database:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-database-16.0.6.aar\a21bf44311ce494342054b6bbbedc631\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-storage-16.0.5.aar\8b9dd8f069b5a0708fac88ead2cbd5bb\AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-storage-16.0.5.aar\8b9dd8f069b5a0708fac88ead2cbd5bb\AndroidManifest.xml:23:5-79
-MERGED from [io.grpc:grpc-android:1.16.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\grpc-android-1.16.1.aar\0ba302f3c61252b4ac4ffc8d6a0c9d42\AndroidManifest.xml:11:5-79
-MERGED from [io.grpc:grpc-android:1.16.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\grpc-android-1.16.1.aar\0ba302f3c61252b4ac4ffc8d6a0c9d42\AndroidManifest.xml:11:5-79
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:9:5-78
+MERGED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:12:5-79
+MERGED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:12:5-79
+MERGED from [com.google.firebase:firebase-database:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.6.aar/de721ce449dff5ed56376312d643490f/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-database:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.6.aar/de721ce449dff5ed56376312d643490f/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-storage:16.0.5] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.5.aar/cb8cf0db38297401f2e89d3fd8211b89/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-storage:16.0.5] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.5.aar/cb8cf0db38297401f2e89d3fd8211b89/AndroidManifest.xml:23:5-79
+MERGED from [io.grpc:grpc-android:1.16.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/467192c8e7795ef6e7112409d0d2a93a/AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.16.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/467192c8e7795ef6e7112409d0d2a93a/AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:9:22-76
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:9:22-76
 uses-permission#android.permission.CHANGE_NETWORK_STATE
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:10:5-78
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:10:5-78
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:10:22-76
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:10:22-76
 application
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:12:5-52:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\7ff5b8f2020c7955c5f69cd548c0ab2a\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\7ff5b8f2020c7955c5f69cd548c0ab2a\AndroidManifest.xml:9:5-20
-MERGED from [com.jjoe64:graphview:4.2.2] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\graphview-4.2.2.aar\8c1601eb98ca46a236081bbda029c884\AndroidManifest.xml:11:5-12:19
-MERGED from [com.jjoe64:graphview:4.2.2] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\graphview-4.2.2.aar\8c1601eb98ca46a236081bbda029c884\AndroidManifest.xml:11:5-12:19
-MERGED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:23:5-40:19
-MERGED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:23:5-40:19
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:22:5-37:19
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:22:5-37:19
-MERGED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:15:5-21:19
-MERGED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:15:5-21:19
-MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-interop-16.0.1.aar\1e17010d9f6cb759cd19dc05673afb7b\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-interop-16.0.1.aar\1e17010d9f6cb759cd19dc05673afb7b\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-core:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.6.aar\a5ef828a35a9b2a63ed4f5cc69814b0a\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-core:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.6.aar\a5ef828a35a9b2a63ed4f5cc69814b0a\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:26:5-32:19
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:26:5-32:19
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.0.4.aar\024a2695d8bb55261435b4c7a85f7aec\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.0.4.aar\024a2695d8bb55261435b4c7a85f7aec\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:28:5-57:19
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:28:5-57:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\8908d1e0994c79260560a4b1fc7c7988\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\8908d1e0994c79260560a4b1fc7c7988\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\96a8a65165430f879e811f04126eeac3\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\96a8a65165430f879e811f04126eeac3\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.firebase:firebase-common:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.4.aar\ab4bc2e5032ca717df6792f0d921a920\AndroidManifest.xml:9:5-15:19
-MERGED from [com.google.firebase:firebase-common:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.4.aar\ab4bc2e5032ca717df6792f0d921a920\AndroidManifest.xml:9:5-15:19
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\371b54871de9041e99edb8199f2b0543\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\371b54871de9041e99edb8199f2b0543\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.5.aar\1c252b68db6c2981cb695ee23c46b290\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.5.aar\1c252b68db6c2981cb695ee23c46b290\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\769422e3754840949dc54d533aff693c\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\769422e3754840949dc54d533aff693c\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\a7cf44b9845560c2def4bfcd7875e7c4\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\a7cf44b9845560c2def4bfcd7875e7c4\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\a8a67488eb2481a377ab3d76fdf2ac84\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\a8a67488eb2481a377ab3d76fdf2ac84\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\75897e61b00cc3bfbd377fdc834f4765\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\75897e61b00cc3bfbd377fdc834f4765\AndroidManifest.xml:22:5-26:19
-MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\expandablerecyclerview-1.0.3.aar\52a23a7efbb0558fd324152b6b00d95e\AndroidManifest.xml:11:5-14:19
-MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\expandablerecyclerview-1.0.3.aar\52a23a7efbb0558fd324152b6b00d95e\AndroidManifest.xml:11:5-14:19
-MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\442d9cb9439b205598ea4677c7410ddd\AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\442d9cb9439b205598ea4677c7410ddd\AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.9.0.aar\88b7d5e0710db58d723807c50d215249\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.9.0.aar\88b7d5e0710db58d723807c50d215249\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\e8b22a143bb94f9c3652bf964e6f261e\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\e8b22a143bb94f9c3652bf964e6f261e\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\b89c2d4e0890b53db7a5d1924c92b579\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\b89c2d4e0890b53db7a5d1924c92b579\AndroidManifest.xml:22:5-23:19
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:12:5-52:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/fc979e7112794e7ea12ae8621899796a/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/fc979e7112794e7ea12ae8621899796a/AndroidManifest.xml:9:5-20
+MERGED from [com.jjoe64:graphview:4.2.2] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/graphview-4.2.2.aar/eeb67f8d5da42125e3f53185cb944cb1/AndroidManifest.xml:11:5-12:19
+MERGED from [com.jjoe64:graphview:4.2.2] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/graphview-4.2.2.aar/eeb67f8d5da42125e3f53185cb944cb1/AndroidManifest.xml:11:5-12:19
+MERGED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:15:5-21:19
+MERGED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:15:5-21:19
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/0fe41cb7f4a312c4fbd1f852726592bc/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/0fe41cb7f4a312c4fbd1f852726592bc/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-core:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.6.aar/6bcdc4ba5b25936351a1baddf08f229c/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-core:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.6.aar/6bcdc4ba5b25936351a1baddf08f229c/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:26:5-32:19
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:26:5-32:19
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.0.4.aar/f4b6df317d9a03736fbad5cb5849c741/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.0.4.aar/f4b6df317d9a03736fbad5cb5849c741/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/f8ddca760c85d898c122b77d550761e7/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/f8ddca760c85d898c122b77d550761e7/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/2521b61bb2b140652f3961696d571720/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/2521b61bb2b140652f3961696d571720/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-common:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/fe4d5e08a6ec56b843a7380898e2be7f/AndroidManifest.xml:9:5-15:19
+MERGED from [com.google.firebase:firebase-common:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/fe4d5e08a6ec56b843a7380898e2be7f/AndroidManifest.xml:9:5-15:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/def8ba984941ee48f537596687ac8d48/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/def8ba984941ee48f537596687ac8d48/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.5.aar/0b538613fdc13b66d46ef82672f9123d/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.5.aar/0b538613fdc13b66d46ef82672f9123d/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/161b37b1ae21868d5c74b59cc54a9ccb/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/161b37b1ae21868d5c74b59cc54a9ccb/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/ff96621996c8e431921500ab14fc8b40/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/ff96621996c8e431921500ab14fc8b40/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/89323d9aa883191147759825ae67f880/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/89323d9aa883191147759825ae67f880/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/a180124fa5c4971d51c6646041850040/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/a180124fa5c4971d51c6646041850040/AndroidManifest.xml:22:5-26:19
+MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/expandablerecyclerview-1.0.3.aar/65a3f745e661a898fe726fa8622654d7/AndroidManifest.xml:11:5-14:19
+MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/expandablerecyclerview-1.0.3.aar/65a3f745e661a898fe726fa8622654d7/AndroidManifest.xml:11:5-14:19
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/dd67628f1397b9f8b4b5d4672e973619/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/dd67628f1397b9f8b4b5d4672e973619/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/b97db1c4a0b42ccf46f9a43fc1d86c92/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/b97db1c4a0b42ccf46f9a43fc1d86c92/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/dbe3989f2107427e670a20b4a435395c/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/dbe3989f2107427e670a20b4a435395c/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a672d751838374fa7ae3fd4723179bfd/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a672d751838374fa7ae3fd4723179bfd/AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\e8b22a143bb94f9c3652bf964e6f261e\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/dbe3989f2107427e670a20b4a435395c/AndroidManifest.xml:22:18-91
 	android:label
-		ADDED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\expandablerecyclerview-1.0.3.aar\52a23a7efbb0558fd324152b6b00d95e\AndroidManifest.xml:13:9-41
+		ADDED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/expandablerecyclerview-1.0.3.aar/65a3f745e661a898fe726fa8622654d7/AndroidManifest.xml:13:9-41
 	android:supportsRtl
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:17:9-35
 	android:debuggable
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:14:9-34
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:14:9-34
 	android:roundIcon
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:16:9-54
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:16:9-54
 	android:icon
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:15:9-43
 	android:allowBackup
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:18:9-40
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:18:9-40
 activity#com.ahnbcilab.tremorquantification.tremorquantification.LoginActivity
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:19:9-25:20
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:19:9-25:20
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:19:19-48
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:19:19-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:20:13-24:29
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:21:17-69
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:23:17-77
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:23:27-74
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:23:27-74
 activity#com.ahnbcilab.tremorquantification.tremorquantification.LineResultActivity
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:26:9-56
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:26:9-56
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:26:19-53
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:26:19-53
 activity#com.ahnbcilab.tremorquantification.tremorquantification.AnalysisActivity
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:27:9-54
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:27:9-54
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:27:19-51
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:27:19-51
 activity#com.ahnbcilab.tremorquantification.tremorquantification.SpiralResultActivity
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:28:9-58
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:28:9-58
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:28:19-55
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:28:19-55
 activity#com.ahnbcilab.tremorquantification.tremorquantification.PersonalPatient
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:29:9-53
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:29:9-53
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:29:19-50
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:29:19-50
 activity#com.ahnbcilab.tremorquantification.tremorquantification.PatientListActivity
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:30:9-32:59
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:30:9-32:59
 	android:windowSoftInputMode
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:32:13-56
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:32:13-56
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:31:13-48
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:31:13-48
 activity#com.ahnbcilab.tremorquantification.tremorquantification.UPDRSActivity
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:33:9-51
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:33:9-51
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:33:19-48
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:33:19-48
 activity#com.ahnbcilab.tremorquantification.tremorquantification.CRTSActivity
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:34:9-50
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:34:9-50
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:34:19-47
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:34:19-47
 activity#com.ahnbcilab.tremorquantification.tremorquantification.WritingActivity
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:35:9-53
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:35:9-53
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:35:19-50
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:35:19-50
 activity#com.ahnbcilab.tremorquantification.tremorquantification.Spiral
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:36:9-44
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:36:9-44
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:36:19-41
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:36:19-41
 activity#com.ahnbcilab.tremorquantification.tremorquantification.CRTS_Result_Activity
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:37:9-58
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:37:9-58
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:37:19-55
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:37:19-55
 activity#com.ahnbcilab.tremorquantification.tremorquantification.CRTS_detailResult
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:38:9-55
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:38:9-55
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:38:19-52
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:38:19-52
 activity#com.ahnbcilab.tremorquantification.tremorquantification.Line
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:39:9-42
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:39:9-42
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:39:19-39
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:39:19-39
 activity#com.ahnbcilab.tremorquantification.tremorquantification.UPDRS_Result_Activity
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:40:9-59
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:40:9-59
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:40:19-56
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:40:19-56
 activity#com.ahnbcilab.tremorquantification.tremorquantification.UPDRS_detailResult
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:41:9-56
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:41:9-56
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:41:19-53
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:41:19-53
 activity#com.ahnbcilab.tremorquantification.tremorquantification.Personal_UPDRS
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:42:9-52
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:42:9-52
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:42:19-49
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:42:19-49
 activity#com.ahnbcilab.tremorquantification.tremorquantification.Personal_spiral
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:43:9-53
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:43:9-53
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:43:19-50
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:43:19-50
 activity#com.ahnbcilab.tremorquantification.tremorquantification.Personal_line
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:44:9-51
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:44:9-51
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:44:19-48
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:44:19-48
 activity#com.ahnbcilab.tremorquantification.tremorquantification.Personal_writing
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:45:9-54
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:45:9-54
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:45:19-51
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:45:19-51
 activity#com.ahnbcilab.tremorquantification.tremorquantification.CRTS_SpiralResult
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:46:9-55
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:46:9-55
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:46:19-52
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:46:19-52
 activity#com.ahnbcilab.tremorquantification.tremorquantification.WritingResult
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:47:9-51
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:47:9-51
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:47:19-48
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:47:19-48
 activity#com.ahnbcilab.tremorquantification.tremorquantification.CRTS_LineResult
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:48:9-53
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:48:9-53
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:48:19-50
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:48:19-50
 activity#com.ahnbcilab.tremorquantification.tremorquantification.Personal_CRTS
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:49:9-51
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:49:9-51
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:49:19-48
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:49:19-48
 activity#com.ahnbcilab.tremorquantification.tremorquantification.Spiral_Task_Select
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:50:9-56
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:50:9-56
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:50:19-53
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:50:19-53
 activity#com.ahnbcilab.tremorquantification.tremorquantification.CRTS_LeftSpiralResult
-ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:51:9-58
+ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:51:9-58
 	android:name
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml:51:19-56
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml:51:19-56
 uses-sdk
-INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:design:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\22d5ab11a3cb3e9565aa56b1a0bb3c65\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\22d5ab11a3cb3e9565aa56b1a0bb3c65\AndroidManifest.xml:20:5-44
-MERGED from [com.thoughtbot:expandablerecyclerview:1.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\expandablerecyclerview-1.3.aar\cf3059c05da6265dcac51fc531135b54\AndroidManifest.xml:8:5-10:41
-MERGED from [com.thoughtbot:expandablerecyclerview:1.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\expandablerecyclerview-1.3.aar\cf3059c05da6265dcac51fc531135b54\AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\6cdc8db0807e0627afdf169f1c4a7c85\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\6cdc8db0807e0627afdf169f1c4a7c85\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\7ff5b8f2020c7955c5f69cd548c0ab2a\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\7ff5b8f2020c7955c5f69cd548c0ab2a\AndroidManifest.xml:5:5-7:41
-MERGED from [com.firebaseui:firebase-ui-storage:4.3.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-ui-storage-4.3.1.aar\54596aa5bd11df58e08938f14014cce7\AndroidManifest.xml:7:5-9:41
-MERGED from [com.firebaseui:firebase-ui-storage:4.3.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-ui-storage-4.3.1.aar\54596aa5bd11df58e08938f14014cce7\AndroidManifest.xml:7:5-9:41
-MERGED from [com.jjoe64:graphview:4.2.2] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\graphview-4.2.2.aar\8c1601eb98ca46a236081bbda029c884\AndroidManifest.xml:7:5-9:41
-MERGED from [com.jjoe64:graphview:4.2.2] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\graphview-4.2.2.aar\8c1601eb98ca46a236081bbda029c884\AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:21:5-44
-MERGED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:21:5-44
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-database:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-database-16.0.6.aar\a21bf44311ce494342054b6bbbedc631\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-database:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-database-16.0.6.aar\a21bf44311ce494342054b6bbbedc631\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\fca9c6711fc92333c051dbc2cdcbe2ac\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\fca9c6711fc92333c051dbc2cdcbe2ac\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-interop-16.0.1.aar\1e17010d9f6cb759cd19dc05673afb7b\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-interop-16.0.1.aar\1e17010d9f6cb759cd19dc05673afb7b\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-16.0.0.aar\8841ace2eaff2a12568cd1db4ae6d0af\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-16.0.0.aar\8841ace2eaff2a12568cd1db4ae6d0af\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-16.0.0.aar\46a8d37203e6f8acbce965544149e510\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-16.0.0.aar\46a8d37203e6f8acbce965544149e510\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-core:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.6.aar\a5ef828a35a9b2a63ed4f5cc69814b0a\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-core:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.6.aar\a5ef828a35a9b2a63ed4f5cc69814b0a\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.0.4.aar\024a2695d8bb55261435b4c7a85f7aec\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.0.4.aar\024a2695d8bb55261435b4c7a85f7aec\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\8908d1e0994c79260560a4b1fc7c7988\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\8908d1e0994c79260560a4b1fc7c7988\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-storage-16.0.5.aar\8b9dd8f069b5a0708fac88ead2cbd5bb\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-storage-16.0.5.aar\8b9dd8f069b5a0708fac88ead2cbd5bb\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\96a8a65165430f879e811f04126eeac3\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\96a8a65165430f879e811f04126eeac3\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-common:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.4.aar\ab4bc2e5032ca717df6792f0d921a920\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-common:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.4.aar\ab4bc2e5032ca717df6792f0d921a920\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\371b54871de9041e99edb8199f2b0543\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\371b54871de9041e99edb8199f2b0543\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.5.aar\1c252b68db6c2981cb695ee23c46b290\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.5.aar\1c252b68db6c2981cb695ee23c46b290\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\769422e3754840949dc54d533aff693c\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\769422e3754840949dc54d533aff693c\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\a7cf44b9845560c2def4bfcd7875e7c4\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-17.0.1.aar\a7cf44b9845560c2def4bfcd7875e7c4\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\a8a67488eb2481a377ab3d76fdf2ac84\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-16.0.0.aar\a8a67488eb2481a377ab3d76fdf2ac84\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\75897e61b00cc3bfbd377fdc834f4765\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\75897e61b00cc3bfbd377fdc834f4765\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\876a0c6b11b3b44964cacc23cba28c09\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\876a0c6b11b3b44964cacc23cba28c09\AndroidManifest.xml:20:5-44
-MERGED from [me.relex:circleindicator:1.2.2] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\circleindicator-1.2.2.aar\dfbde1dc645ab6972a4d8fb50f89e1ad\AndroidManifest.xml:8:5-10:41
-MERGED from [me.relex:circleindicator:1.2.2] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\circleindicator-1.2.2.aar\dfbde1dc645ab6972a4d8fb50f89e1ad\AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\f774916a1e425958089b35323e97525b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\f774916a1e425958089b35323e97525b\AndroidManifest.xml:20:5-44
-MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\expandablerecyclerview-1.0.3.aar\52a23a7efbb0558fd324152b6b00d95e\AndroidManifest.xml:7:5-9:41
-MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\expandablerecyclerview-1.0.3.aar\52a23a7efbb0558fd324152b6b00d95e\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\9e8f9028ad60057752c64308b7083c29\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\9e8f9028ad60057752c64308b7083c29\AndroidManifest.xml:20:5-44
-MERGED from [com.tom_roush:pdfbox-android:1.8.10.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\pdfbox-android-1.8.10.1.aar\a877bca1f981407a462ceb3118a76550\AndroidManifest.xml:7:5-9:41
-MERGED from [com.tom_roush:pdfbox-android:1.8.10.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\pdfbox-android-1.8.10.1.aar\a877bca1f981407a462ceb3118a76550\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.lecho:hellocharts-library:1.5.8] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\hellocharts-library-1.5.8.aar\d6ba4be126cadedf63e927c550fd2e1b\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.lecho:hellocharts-library:1.5.8] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\hellocharts-library-1.5.8.aar\d6ba4be126cadedf63e927c550fd2e1b\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\442d9cb9439b205598ea4677c7410ddd\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\442d9cb9439b205598ea4677c7410ddd\AndroidManifest.xml:6:5-8:41
-MERGED from [com.android.support:transition:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\73c3ab10cdd4c35bd05e5f80d99123e6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\73c3ab10cdd4c35bd05e5f80d99123e6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\9bdc94f6c140cae09a5d9791cc5e04a0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\9bdc94f6c140cae09a5d9791cc5e04a0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\4483638d2e84aa9ac204f7bfae63f86b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\4483638d2e84aa9ac204f7bfae63f86b\AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.9.0.aar\88b7d5e0710db58d723807c50d215249\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.9.0.aar\88b7d5e0710db58d723807c50d215249\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\1ab8ff5d10d8e844eacaa99f20b53d2c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\1ab8ff5d10d8e844eacaa99f20b53d2c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\5b5880b096896428f38b5d9f531cef08\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\5b5880b096896428f38b5d9f531cef08\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\781ad25d6b396f5df2e4d7b697dbf4e8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\781ad25d6b396f5df2e4d7b697dbf4e8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\e39db8126aaa86167fa79295ce1fc5cd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\e39db8126aaa86167fa79295ce1fc5cd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\b7b29042cf7cf3f054d23ca1a115eab2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\b7b29042cf7cf3f054d23ca1a115eab2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\957eead2cc5522e73be3859835ec8666\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\957eead2cc5522e73be3859835ec8666\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\082d9e151e0e252da6b3a2f521c8dc57\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\082d9e151e0e252da6b3a2f521c8dc57\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\09735612c62b305a846e9dabf373f0a1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\09735612c62b305a846e9dabf373f0a1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\ce699539e912cade444e4cd423c8093f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\ce699539e912cade444e4cd423c8093f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\b9e3716e6ea5d4121770b98fa328fb35\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\b9e3716e6ea5d4121770b98fa328fb35\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\586c82a4574bb1bb9435c32b7ce67ba2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\586c82a4574bb1bb9435c32b7ce67ba2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\ab4d3918b1964dfcfe6671fc27eb9c27\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\ab4d3918b1964dfcfe6671fc27eb9c27\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\e8b22a143bb94f9c3652bf964e6f261e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\e8b22a143bb94f9c3652bf964e6f261e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\b89c2d4e0890b53db7a5d1924c92b579\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\b89c2d4e0890b53db7a5d1924c92b579\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\3f2d5b0d63137c4edaa7ee080a6a3d75\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\3f2d5b0d63137c4edaa7ee080a6a3d75\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\ed57b1c25ce25492f94e4230616678bb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\ed57b1c25ce25492f94e4230616678bb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\c89d93a567b919c94746480705883401\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\c89d93a567b919c94746480705883401\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\79ffb6cb8f76f2b08f15f277e5d97457\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\79ffb6cb8f76f2b08f15f277e5d97457\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\d207101743151c9957ac08f955d95111\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\d207101743151c9957ac08f955d95111\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\351fac54a2822eafef327070759e71e5\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\351fac54a2822eafef327070759e71e5\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\2a7fcdfecec5205a3ac61a470247f140\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\2a7fcdfecec5205a3ac61a470247f140\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\cb02b5b5ed14d80af9e67718587ea25b\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\cb02b5b5ed14d80af9e67718587ea25b\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\b37c0b77f216cfbf38176f0b74118005\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\b37c0b77f216cfbf38176f0b74118005\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\c03f401393ccbc77b323774d43ec6e07\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\c03f401393ccbc77b323774d43ec6e07\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-database-collection-16.0.1.aar\08dcc7a241ded264553dabf5c93ac0e4\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-database-collection-16.0.1.aar\08dcc7a241ded264553dabf5c93ac0e4\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\protolite-well-known-types-16.0.1.aar\aea8afc50ee0b05b92e86cda7d9a7b51\AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\protolite-well-known-types-16.0.1.aar\aea8afc50ee0b05b92e86cda7d9a7b51\AndroidManifest.xml:7:5-9:41
-MERGED from [io.grpc:grpc-android:1.16.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\grpc-android-1.16.1.aar\0ba302f3c61252b4ac4ffc8d6a0c9d42\AndroidManifest.xml:7:5-9:41
-MERGED from [io.grpc:grpc-android:1.16.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\grpc-android-1.16.1.aar\0ba302f3c61252b4ac4ffc8d6a0c9d42\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
+INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
+INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/bc5596aacc552a2ac59d91410b97f542/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/bc5596aacc552a2ac59d91410b97f542/AndroidManifest.xml:20:5-44
+MERGED from [com.thoughtbot:expandablerecyclerview:1.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/expandablerecyclerview-1.3.aar/92b7b74b84a0ba8ea249f8e960c3daba/AndroidManifest.xml:8:5-10:41
+MERGED from [com.thoughtbot:expandablerecyclerview:1.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/expandablerecyclerview-1.3.aar/92b7b74b84a0ba8ea249f8e960c3daba/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/44167aed9c2d6f3f9304efa5ae51d827/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/44167aed9c2d6f3f9304efa5ae51d827/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/fc979e7112794e7ea12ae8621899796a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/fc979e7112794e7ea12ae8621899796a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.firebaseui:firebase-ui-storage:4.3.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-ui-storage-4.3.1.aar/14eb1e46cec82f77b5e7648c25d65fd0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-storage:4.3.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-ui-storage-4.3.1.aar/14eb1e46cec82f77b5e7648c25d65fd0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.jjoe64:graphview:4.2.2] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/graphview-4.2.2.aar/eeb67f8d5da42125e3f53185cb944cb1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.jjoe64:graphview:4.2.2] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/graphview-4.2.2.aar/eeb67f8d5da42125e3f53185cb944cb1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-database:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.6.aar/de721ce449dff5ed56376312d643490f/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-database:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.6.aar/de721ce449dff5ed56376312d643490f/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/cc3cdbaa231a98a6086768341d22169c/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/cc3cdbaa231a98a6086768341d22169c/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/0fe41cb7f4a312c4fbd1f852726592bc/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/0fe41cb7f4a312c4fbd1f852726592bc/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-16.0.0.aar/14018041d5f8c786e2ef5186a49fe046/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-16.0.0.aar/14018041d5f8c786e2ef5186a49fe046/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-16.0.0.aar/8c0a6bf4e54b3095b40fbb2e98ee351c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-16.0.0.aar/8c0a6bf4e54b3095b40fbb2e98ee351c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.6.aar/6bcdc4ba5b25936351a1baddf08f229c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.6.aar/6bcdc4ba5b25936351a1baddf08f229c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.0.4.aar/f4b6df317d9a03736fbad5cb5849c741/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.0.4.aar/f4b6df317d9a03736fbad5cb5849c741/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/f8ddca760c85d898c122b77d550761e7/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.1.aar/f8ddca760c85d898c122b77d550761e7/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage:16.0.5] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.5.aar/cb8cf0db38297401f2e89d3fd8211b89/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-storage:16.0.5] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.5.aar/cb8cf0db38297401f2e89d3fd8211b89/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/2521b61bb2b140652f3961696d571720/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/2521b61bb2b140652f3961696d571720/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/fe4d5e08a6ec56b843a7380898e2be7f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-common:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/fe4d5e08a6ec56b843a7380898e2be7f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/def8ba984941ee48f537596687ac8d48/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/def8ba984941ee48f537596687ac8d48/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.5.aar/0b538613fdc13b66d46ef82672f9123d/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.5.aar/0b538613fdc13b66d46ef82672f9123d/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/161b37b1ae21868d5c74b59cc54a9ccb/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-stats-16.0.1.aar/161b37b1ae21868d5c74b59cc54a9ccb/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/ff96621996c8e431921500ab14fc8b40/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-17.0.1.aar/ff96621996c8e431921500ab14fc8b40/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/89323d9aa883191147759825ae67f880/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/89323d9aa883191147759825ae67f880/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/a180124fa5c4971d51c6646041850040/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/a180124fa5c4971d51c6646041850040/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/832cdbaa998f704c6f7e1ca32045d0fc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/832cdbaa998f704c6f7e1ca32045d0fc/AndroidManifest.xml:20:5-44
+MERGED from [me.relex:circleindicator:1.2.2] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/circleindicator-1.2.2.aar/2e42c02831f4f0fe5fa67b2d24e39e8b/AndroidManifest.xml:8:5-10:41
+MERGED from [me.relex:circleindicator:1.2.2] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/circleindicator-1.2.2.aar/2e42c02831f4f0fe5fa67b2d24e39e8b/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/4a526a42b435291e0ff1339828f78f26/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/4a526a42b435291e0ff1339828f78f26/AndroidManifest.xml:20:5-44
+MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/expandablerecyclerview-1.0.3.aar/65a3f745e661a898fe726fa8622654d7/AndroidManifest.xml:7:5-9:41
+MERGED from [com.bignerdranch.android:expandablerecyclerview:1.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/expandablerecyclerview-1.0.3.aar/65a3f745e661a898fe726fa8622654d7/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/f3ca5eede313aab0e0c5ef2eb64058a7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/f3ca5eede313aab0e0c5ef2eb64058a7/AndroidManifest.xml:20:5-44
+MERGED from [com.tom_roush:pdfbox-android:1.8.10.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/pdfbox-android-1.8.10.1.aar/ec135c5c4ce0628330093f2a4203dcb7/AndroidManifest.xml:7:5-9:41
+MERGED from [com.tom_roush:pdfbox-android:1.8.10.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/pdfbox-android-1.8.10.1.aar/ec135c5c4ce0628330093f2a4203dcb7/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.lecho:hellocharts-library:1.5.8] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/hellocharts-library-1.5.8.aar/cfa471b98921dcbf9693887f80c96881/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.lecho:hellocharts-library:1.5.8] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/hellocharts-library-1.5.8.aar/cfa471b98921dcbf9693887f80c96881/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/dd67628f1397b9f8b4b5d4672e973619/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/dd67628f1397b9f8b4b5d4672e973619/AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:transition:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/b3a2318c9d58f8e79dcbcc3df0d01f33/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/b3a2318c9d58f8e79dcbcc3df0d01f33/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/5c0b7267766087707ae7c7d737207d8d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/5c0b7267766087707ae7c7d737207d8d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/bf173cebe10d645d7f0c61790cef3a37/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/bf173cebe10d645d7f0c61790cef3a37/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/b97db1c4a0b42ccf46f9a43fc1d86c92/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/b97db1c4a0b42ccf46f9a43fc1d86c92/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/a8d4aa1319733694a7c2d0fefe689401/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/a8d4aa1319733694a7c2d0fefe689401/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/3b6c904b9d2465d25c96a8549cc5cb86/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/3b6c904b9d2465d25c96a8549cc5cb86/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/ded4d8e2e45969d508e5cb77f9882dbd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/ded4d8e2e45969d508e5cb77f9882dbd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/b3c80a85c30639b1e210e1a4931777d6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/b3c80a85c30639b1e210e1a4931777d6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/aba8b918a60d3a6b450de5f4514ad1cb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/aba8b918a60d3a6b450de5f4514ad1cb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/4bb7205569eddd182a49e53d3e5909fe/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/4bb7205569eddd182a49e53d3e5909fe/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/a0cccce2099a304dc883550b2c2e5811/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/a0cccce2099a304dc883550b2c2e5811/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/42656ed41f568c9ef0f056caadf94968/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/42656ed41f568c9ef0f056caadf94968/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/77c811f929a93af8c0e61917ef48ee9e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/77c811f929a93af8c0e61917ef48ee9e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/f0a14e27c95e076ed27fb42303d450f8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/f0a14e27c95e076ed27fb42303d450f8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/6b534554e3a39c38ca647fe2a4270905/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/6b534554e3a39c38ca647fe2a4270905/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/5d76905e7fb9448d626dcc03ece7ac29/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/5d76905e7fb9448d626dcc03ece7ac29/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/dbe3989f2107427e670a20b4a435395c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/dbe3989f2107427e670a20b4a435395c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a672d751838374fa7ae3fd4723179bfd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a672d751838374fa7ae3fd4723179bfd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/485ad12cfa484663d8368b3f4c3ed1b7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/485ad12cfa484663d8368b3f4c3ed1b7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/b31d45bcfff510ce2a6ec250a454140b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/b31d45bcfff510ce2a6ec250a454140b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/ea430eb35adcb0e5ab11383ba60800bd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/ea430eb35adcb0e5ab11383ba60800bd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/4fc82995adf4a3dec968e17290301415/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/4fc82995adf4a3dec968e17290301415/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/70b44e2f3a9741ccdb4be3de8c4dfc79/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/70b44e2f3a9741ccdb4be3de8c4dfc79/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/eec6ee28abce1d7d280d2e4a1ef812ec/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/eec6ee28abce1d7d280d2e4a1ef812ec/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/2c4f2f21071f9c7a1c766ce74d3e0c03/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/2c4f2f21071f9c7a1c766ce74d3e0c03/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/c9a3981ba9067489194d2363b858cf20/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/c9a3981ba9067489194d2363b858cf20/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/3507f9443a7c624cb0297316bd8a8da8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/3507f9443a7c624cb0297316bd8a8da8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/b3d319e6a87d8680c62ad78a6d568614/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/b3d319e6a87d8680c62ad78a6d568614/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-collection:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-16.0.1.aar/869dddd48187e0dffafe9f1a0d245e56/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-16.0.1.aar/869dddd48187e0dffafe9f1a0d245e56/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/protolite-well-known-types-16.0.1.aar/2ac7fe4544ec9dc1e41505b3dbede1d7/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/protolite-well-known-types-16.0.1.aar/2ac7fe4544ec9dc1e41505b3dbede1d7/AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.16.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/467192c8e7795ef6e7112409d0d2a93a/AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.16.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/467192c8e7795ef6e7112409d0d2a93a/AndroidManifest.xml:7:5-9:41
+INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
+INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\yoonhyunmin\StudioProjects\TremorQuantification_ver2-App-master\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yeonsu/AndroidStudioProjects/TremorQuantification/app/src/main/AndroidManifest.xml
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
-ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:24:9-31:50
+ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:24:9-31:50
 	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:26:13-46
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:26:13-46
 	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:28:13-44
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:28:13-44
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:27:13-36
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:27:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:29:13-102
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:29:13-102
 	android:theme
-		ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:30:13-72
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:30:13-72
 	tools:replace
-		ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:31:13-47
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:31:13-47
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:25:13-85
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:25:13-85
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:33:9-39:19
-MERGED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:16:9-20:19
-MERGED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:16:9-20:19
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:27:9-31:19
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:27:9-31:19
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:29:9-35:19
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:29:9-35:19
+ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:16:9-20:19
+MERGED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:16:9-20:19
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:27:9-31:19
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:27:9-31:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:29:9-35:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:35:13-37
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:35:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:34:13-84
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:34:13-84
 meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
-ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:36:13-38:85
+ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:36:13-38:85
 	android:value
-		ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:38:17-82
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:38:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-auth-16.1.0.aar\7687999b0698a915582972de5ccf7a3f\AndroidManifest.xml:37:17-109
+		ADDED from [com.google.firebase:firebase-auth:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/7748fe805334bbdb37749c49d2e113ad/AndroidManifest.xml:37:17-109
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:23:9-27:75
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:25:13-46
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:25:13-46
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:26:13-37
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:26:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:27:13-72
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:27:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:24:13-93
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:24:13-93
 service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:33:9-36:110
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:33:9-36:110
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:35:13-36
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:35:13-36
 	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:36:13-107
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:36:13-107
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\d24bdad11532e31b6815ed656c7ec583\AndroidManifest.xml:34:13-89
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/5610059e4762c4764874e76982c8b0d2/AndroidManifest.xml:34:13-89
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
-ADDED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:17:13-19:85
+ADDED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:17:13-19:85
 	android:value
-		ADDED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:19:17-82
+		ADDED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:19:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-firestore:18.0.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-firestore-18.0.0.aar\460e759dfddbec35298c17ee23450a16\AndroidManifest.xml:18:17-111
+		ADDED from [com.google.firebase:firebase-firestore:18.0.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.0.0.aar/ee53b1521523f79cd307b0cf853068af/AndroidManifest.xml:18:17-111
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:24:5-68
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:24:5-68
 	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:24:22-65
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:24:22-65
 meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:28:13-30:85
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:28:13-30:85
 	android:value
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:30:17-82
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:30:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.4.aar\78a54922d162a46ff0d00373991a5aa5\AndroidManifest.xml:29:17-139
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.4.aar/e95fd3bda8f4a61e644acb9c9b7bdf89/AndroidManifest.xml:29:17-139
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:26:5-110
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:26:5-110
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:26:5-110
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:26:5-110
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:26:5-110
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:26:5-110
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:26:22-107
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:26:22-107
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:29:9-33:20
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:29:9-33:20
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:31:13-35
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:31:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:32:13-37
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:30:13-85
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:30:13-85
 receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:34:9-42:20
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:29:9-37:20
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.2.4.aar\1824fa274e53904982f427914c05a708\AndroidManifest.xml:29:9-37:20
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:34:9-42:20
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.4.aar/675d77e6795bdc70eeaf32d213ab48fb/AndroidManifest.xml:29:9-37:20
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:36:13-35
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:36:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:37:13-36
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:37:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:38:13-69
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:38:13-69
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:35:13-100
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:35:13-100
 intent-filter#action:name:com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:39:13-41:29
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:39:13-41:29
 action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:40:17-79
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:40:17-79
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:40:25-76
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:40:25-76
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:44:9-47:40
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:44:9-47:40
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:46:13-35
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:46:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:47:13-37
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:45:13-84
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:45:13-84
 service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:48:9-52:72
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:48:9-52:72
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:50:13-35
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:50:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:51:13-37
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:51:13-37
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:52:13-69
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:52:13-69
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.6.aar\4408e89b2e8383a38866c09d10eb629c\AndroidManifest.xml:49:13-87
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.6.aar/fe481eb5f411cfc2890e238963962c5a/AndroidManifest.xml:49:13-87
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:26:5-82
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:26:5-82
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:26:22-79
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:26:22-79
 meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
-ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:32:13-34:85
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:32:13-34:85
 	android:value
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:34:17-82
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:34:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:33:17-96
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:33:17-96
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:37:9-44:20
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:37:9-44:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:39:13-36
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:39:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:40:13-73
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:40:13-73
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:38:13-78
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:38:13-78
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:41:13-43:29
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:41:13-43:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:42:17-81
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:42:17-81
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:42:25-78
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:42:25-78
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:50:9-56:19
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:50:9-56:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:52:13-36
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:52:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:51:13-77
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:51:13-77
 intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:53:13-55:29
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:53:13-55:29
 	android:priority
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:53:28-51
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:53:28-51
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:54:17-80
+ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:54:17-80
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.0.3.aar\86c6379ade68c11d7edf2febcdca18de\AndroidManifest.xml:54:25-77
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/8d73a8ceca1bd3555872b6e220202f40/AndroidManifest.xml:54:25-77
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\96a8a65165430f879e811f04126eeac3\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/2521b61bb2b140652f3961696d571720/AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\96a8a65165430f879e811f04126eeac3\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/2521b61bb2b140652f3961696d571720/AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\96a8a65165430f879e811f04126eeac3\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/2521b61bb2b140652f3961696d571720/AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\96a8a65165430f879e811f04126eeac3\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/2521b61bb2b140652f3961696d571720/AndroidManifest.xml:24:13-79
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.4.aar\ab4bc2e5032ca717df6792f0d921a920\AndroidManifest.xml:10:9-14:39
+ADDED from [com.google.firebase:firebase-common:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/fe4d5e08a6ec56b843a7380898e2be7f/AndroidManifest.xml:10:9-14:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.4.aar\ab4bc2e5032ca717df6792f0d921a920\AndroidManifest.xml:12:13-72
+		ADDED from [com.google.firebase:firebase-common:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/fe4d5e08a6ec56b843a7380898e2be7f/AndroidManifest.xml:12:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.4.aar\ab4bc2e5032ca717df6792f0d921a920\AndroidManifest.xml:13:13-37
+		ADDED from [com.google.firebase:firebase-common:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/fe4d5e08a6ec56b843a7380898e2be7f/AndroidManifest.xml:13:13-37
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.4.aar\ab4bc2e5032ca717df6792f0d921a920\AndroidManifest.xml:14:13-36
+		ADDED from [com.google.firebase:firebase-common:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/fe4d5e08a6ec56b843a7380898e2be7f/AndroidManifest.xml:14:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:16.0.4] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.4.aar\ab4bc2e5032ca717df6792f0d921a920\AndroidManifest.xml:11:13-77
+		ADDED from [com.google.firebase:firebase-common:16.0.4] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/fe4d5e08a6ec56b843a7380898e2be7f/AndroidManifest.xml:11:13-77
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\75897e61b00cc3bfbd377fdc834f4765\AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/a180124fa5c4971d51c6646041850040/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\75897e61b00cc3bfbd377fdc834f4765\AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/a180124fa5c4971d51c6646041850040/AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\yoonhyunmin\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\75897e61b00cc3bfbd377fdc834f4765\AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:16.1.0] /Users/yeonsu/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/a180124fa5c4971d51c6646041850040/AndroidManifest.xml:24:13-58

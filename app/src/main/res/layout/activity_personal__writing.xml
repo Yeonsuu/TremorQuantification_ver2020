@@ -55,26 +55,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/result_share"
-            android:layout_width="30dp"
-            android:layout_height="26dp"
-            android:layout_marginStart="601dp"
-            android:layout_marginTop="166dp"
-            android:background="@drawable/out"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="642dp"
-            android:layout_marginTop="166dp"
-            android:text="결과 내보내기"
-            android:textColor="#545454"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
 
         <Button
@@ -88,6 +69,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/gotohome2"
             android:layout_width="150dp"
             android:layout_height="30dp"
             android:layout_marginStart="58dp"

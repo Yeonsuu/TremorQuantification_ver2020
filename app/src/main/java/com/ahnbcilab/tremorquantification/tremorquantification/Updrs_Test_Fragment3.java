@@ -1,6 +1,7 @@
 package com.ahnbcilab.tremorquantification.tremorquantification;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -53,6 +54,36 @@ public class Updrs_Test_Fragment3 extends Fragment {
     RadioButton CBpart3_27_2;
     RadioButton CBpart3_27_3;
     RadioButton CBpart3_27_4;
+
+    TextView TBpart3_23_0;
+    TextView TBpart3_23_1;
+    TextView TBpart3_23_2;
+    TextView TBpart3_23_3;
+    TextView TBpart3_23_4;
+
+    TextView TBpart3_24_0;
+    TextView TBpart3_24_1;
+    TextView TBpart3_24_2;
+    TextView TBpart3_24_3;
+    TextView TBpart3_24_4;
+
+    TextView TBpart3_25_0;
+    TextView TBpart3_25_1;
+    TextView TBpart3_25_2;
+    TextView TBpart3_25_3;
+    TextView TBpart3_25_4;
+
+    TextView TBpart3_26_0;
+    TextView TBpart3_26_1;
+    TextView TBpart3_26_2;
+    TextView TBpart3_26_3;
+    TextView TBpart3_26_4;
+
+    TextView TBpart3_27_0;
+    TextView TBpart3_27_1;
+    TextView TBpart3_27_2;
+    TextView TBpart3_27_3;
+    TextView TBpart3_27_4;
 
     @Nullable
     @Override
@@ -122,6 +153,162 @@ public class Updrs_Test_Fragment3 extends Fragment {
         CBpart3_27_2 = (RadioButton) view.findViewById(R.id.CBpart3_27_2) ;
         CBpart3_27_3 = (RadioButton) view.findViewById(R.id.CBpart3_27_3) ;
         CBpart3_27_4 = (RadioButton) view.findViewById(R.id.CBpart3_27_4) ;
+        /////////
+        TBpart3_23_0 = (TextView) view.findViewById(R.id.TBpart3_23_0);
+        TBpart3_23_1 = (TextView) view.findViewById(R.id.TBpart3_23_1) ;
+        TBpart3_23_2 = (TextView) view.findViewById(R.id.TBpart3_23_2) ;
+        TBpart3_23_3 = (TextView) view.findViewById(R.id.TBpart3_23_3) ;
+        TBpart3_23_4 = (TextView) view.findViewById(R.id.TBpart3_23_4) ;
+
+        TBpart3_24_0 = (TextView) view.findViewById(R.id.TBpart3_24_0);
+        TBpart3_24_1 = (TextView) view.findViewById(R.id.TBpart3_24_1) ;
+        TBpart3_24_2 = (TextView) view.findViewById(R.id.TBpart3_24_2) ;
+        TBpart3_24_3 = (TextView) view.findViewById(R.id.TBpart3_24_3) ;
+        TBpart3_24_4 = (TextView) view.findViewById(R.id.TBpart3_24_4) ;
+
+        TBpart3_25_0 = (TextView) view.findViewById(R.id.TBpart3_25_0);
+        TBpart3_25_1 = (TextView) view.findViewById(R.id.TBpart3_25_1) ;
+        TBpart3_25_2 = (TextView) view.findViewById(R.id.TBpart3_25_2) ;
+        TBpart3_25_3 = (TextView) view.findViewById(R.id.TBpart3_25_3) ;
+        TBpart3_25_4 = (TextView) view.findViewById(R.id.TBpart3_25_4) ;
+
+        TBpart3_26_0 = (TextView) view.findViewById(R.id.TBpart3_26_0);
+        TBpart3_26_1 = (TextView) view.findViewById(R.id.TBpart3_26_1) ;
+        TBpart3_26_2 = (TextView) view.findViewById(R.id.TBpart3_26_2) ;
+        TBpart3_26_3 = (TextView) view.findViewById(R.id.TBpart3_26_3) ;
+        TBpart3_26_4 = (TextView) view.findViewById(R.id.TBpart3_26_4) ;
+
+        TBpart3_27_0 = (TextView) view.findViewById(R.id.TBpart3_27_0);
+        TBpart3_27_1 = (TextView) view.findViewById(R.id.TBpart3_27_1) ;
+        TBpart3_27_2 = (TextView) view.findViewById(R.id.TBpart3_27_2) ;
+        TBpart3_27_3 = (TextView) view.findViewById(R.id.TBpart3_27_3) ;
+        TBpart3_27_4 = (TextView) view.findViewById(R.id.TBpart3_27_4) ;
+
+        TBpart3_23_0.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_23_0.toggle();
+            }
+        });
+        TBpart3_23_1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_23_1.toggle();
+            }
+        });
+        TBpart3_23_2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_23_2.toggle();
+            }
+        });
+        TBpart3_23_3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_23_3.toggle();
+            }
+        });
+        TBpart3_23_4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_23_4.toggle();
+            }
+        });
+        TBpart3_24_0.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_24_0.toggle();
+            }
+        });
+        TBpart3_24_1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_24_1.toggle();
+            }
+        });
+        TBpart3_24_2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_24_2.toggle();
+            }
+        });
+        TBpart3_24_3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_24_3.toggle();
+            }
+        });
+        TBpart3_24_4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_24_4.toggle();
+            }
+        });
+        TBpart3_25_0.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_25_0.toggle();
+            }
+        });
+        TBpart3_25_1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_25_1.toggle();
+            }
+        });
+        TBpart3_25_2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_25_2.toggle();
+            }
+        });
+        TBpart3_25_3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_25_3.toggle();
+            }
+        });
+        TBpart3_25_4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_25_4.toggle();
+            }
+        });
+        TBpart3_26_0.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_26_0.toggle();
+            }
+        });
+        TBpart3_26_1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_26_1.toggle();
+            }
+        });
+        TBpart3_26_2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_26_2.toggle();
+            }
+        });
+        TBpart3_26_3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_26_3.toggle();
+            }
+        });
+        TBpart3_26_4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_26_4.toggle();
+            }
+        });
+        TBpart3_27_0.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_27_0.toggle();
+            }
+        });
+        TBpart3_27_1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_27_1.toggle();
+            }
+        });
+        TBpart3_27_2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_27_2.toggle();
+            }
+        });
+        TBpart3_27_3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_27_3.toggle();
+            }
+        });
+        TBpart3_27_4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_27_4.toggle();
+            }
+        });
 
         return view ;
 

@@ -103,8 +103,28 @@ public class UPDRS_Result_Activity extends AppCompatActivity {
         t_t.setText(timestamp1);
 
         TextView home = (TextView) findViewById(R.id.gotohome);
+        TextView home2 = (TextView) findViewById(R.id.gotohome2);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PersonalPatient.class);
+                intent.putExtra("ClinicID", Clinic_ID);
+                intent.putExtra("PatientName", PatientName);
+                intent.putExtra("task", "UPDRS");
+                startActivity(intent);
+            }
+        }); // 해당환자 페이지로 돌아가기 즉, 뒤로가기 누를시
+        home2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PersonalPatient.class);
+                intent.putExtra("ClinicID", Clinic_ID);
+                intent.putExtra("PatientName", PatientName);
+                intent.putExtra("task", "UPDRS");
+                startActivity(intent);
+            }
+        }); // 해당환자 페이지로 돌아가기 즉, 뒤로가기 누를시
 
-        Button share = (Button) findViewById(R.id.result_share);
         ConstraintLayout button = (ConstraintLayout) findViewById(R.id.button) ;
         final ConstraintLayout result = (ConstraintLayout) findViewById(R.id.result)  ;
         result.setVisibility(result_bool?View.VISIBLE:View.GONE);
@@ -205,16 +225,7 @@ public class UPDRS_Result_Activity extends AppCompatActivity {
 //            }
 //        });
 
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PersonalPatient.class);
-                intent.putExtra("ClinicID", Clinic_ID);
-                intent.putExtra("PatientName", PatientName);
-                intent.putExtra("task", "UPDRS");
-                startActivity(intent);
-            }
-        }); // 해당환자 페이지로 돌아가기 즉, 뒤로가기 누를시
+
 
         database_patient.orderByChild("ClinicID").equalTo(Clinic_ID).addValueEventListener(new ValueEventListener() {
             @Override

@@ -28,6 +28,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 import java.util.Objects;
 
 public class Personal_spiral extends AppCompatActivity {
@@ -113,6 +115,17 @@ public class Personal_spiral extends AppCompatActivity {
 
         Button backButton = (Button) findViewById(R.id.gotohome);
         backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PersonalPatient.class);
+                intent.putExtra("ClinicID", Clinic_ID);
+                intent.putExtra("PatientName", PatientName);
+                intent.putExtra("task", "SPIRAL TASK");
+                startActivity(intent);
+            }
+        });
+        TextView backButton2 = (TextView) findViewById(R.id.gotohome2);
+        backButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), PersonalPatient.class);

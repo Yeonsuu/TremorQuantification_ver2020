@@ -39,14 +39,28 @@
             app:layout_constraintStart_toStartOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
+
     <ImageView
         android:id="@+id/test_title_line"
         android:layout_width="30dp"
         android:layout_height="150dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/crtsb_14_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/test_title_line_det"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/crtsb_14_text_detail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -56,7 +70,7 @@
         android:id="@+id/line_left_button"
         android:layout_width="43.51dp"
         android:layout_height="120dp"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="25dp"
         android:layout_marginBottom="478dp"
         android:background="@drawable/left_select_button"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,7 +80,7 @@
         android:id="@+id/line_right_button"
         android:layout_width="43.51dp"
         android:layout_height="120dp"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="478dp"
         android:background="@drawable/right_nonselect_button"
         app:layout_constraintStart_toEndOf="@+id/test_title_line"

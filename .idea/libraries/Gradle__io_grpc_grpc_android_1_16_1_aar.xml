@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: io.grpc:grpc-android:1.16.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/0ba302f3c61252b4ac4ffc8d6a0c9d42/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/0ba302f3c61252b4ac4ffc8d6a0c9d42/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/467192c8e7795ef6e7112409d0d2a93a/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/467192c8e7795ef6e7112409d0d2a93a/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/467192c8e7795ef6e7112409d0d2a93a/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

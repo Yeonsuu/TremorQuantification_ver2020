@@ -27,6 +27,18 @@ public class Updrs_Test_Fragment1 extends Fragment {
 
     TextView updrs_1_title, updrs_2_title, updrs_3_title, updrs_4_title, updrs_5_title, updrs_6_title, updrs_7_title, updrs_8_title, updrs_9_title;
 
+    TextView TBpart3_1_0;
+    TextView TBpart3_1_1;
+    TextView TBpart3_1_2;
+    TextView TBpart3_1_3;
+    TextView TBpart3_1_4;
+
+    TextView TBpart3_2_0;
+    TextView TBpart3_2_1;
+    TextView TBpart3_2_2;
+    TextView TBpart3_2_3;
+    TextView TBpart3_2_4;
+
     RadioButton CBpart3_1_0 ;
     RadioButton CBpart3_1_1 ;
     RadioButton CBpart3_1_2 ;
@@ -180,6 +192,70 @@ public class Updrs_Test_Fragment1 extends Fragment {
         CBpart3_9_3 = (RadioButton) view.findViewById(R.id.CBpart3_9_3) ;
         CBpart3_9_4 = (RadioButton) view.findViewById(R.id.CBpart3_9_4) ;
 
+        TBpart3_1_0 = (TextView) view.findViewById(R.id.TBpart3_1_0);
+        TBpart3_1_1 = (TextView) view.findViewById(R.id.TBpart3_1_1) ;
+        TBpart3_1_2 = (TextView) view.findViewById(R.id.TBpart3_1_2) ;
+        TBpart3_1_3 = (TextView) view.findViewById(R.id.TBpart3_1_3) ;
+        TBpart3_1_4 = (TextView) view.findViewById(R.id.TBpart3_1_4) ;
+
+        TBpart3_2_0 = (TextView) view.findViewById(R.id.TBpart3_2_0);
+        TBpart3_2_1 = (TextView) view.findViewById(R.id.TBpart3_2_1) ;
+        TBpart3_2_2 = (TextView) view.findViewById(R.id.TBpart3_2_2) ;
+        TBpart3_2_3 = (TextView) view.findViewById(R.id.TBpart3_2_3) ;
+        TBpart3_2_4 = (TextView) view.findViewById(R.id.TBpart3_2_4) ;
+
+
+        TBpart3_1_0.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_1_0.toggle();
+            }
+        });
+        TBpart3_1_1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_1_1.toggle();
+            }
+        });
+        TBpart3_1_2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_1_2.toggle();
+            }
+        });
+        TBpart3_1_3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_1_3.toggle();
+            }
+        });
+        TBpart3_1_4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_1_4.toggle();
+            }
+        });
+
+        TBpart3_2_0.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_2_0.toggle();
+            }
+        });
+        TBpart3_2_1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_2_1.toggle();
+            }
+        });
+        TBpart3_2_2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_2_2.toggle();
+            }
+        });
+        TBpart3_2_3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_2_3.toggle();
+            }
+        });
+        TBpart3_2_4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                CBpart3_2_4.toggle();
+            }
+        });
         return view ;
 
     }
