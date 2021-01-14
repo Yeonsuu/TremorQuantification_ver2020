@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ahnbcilab.tremorquantification.Adapters.AlertDialogHelper;
 import com.ahnbcilab.tremorquantification.Adapters.ItemDecoration;
@@ -70,8 +71,9 @@ public class CRTS_parta_a_Fragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         // 초기 화면
+        Toast.makeText(getContext(), "옆으로 스와이프해서 넘겨주세요.", Toast.LENGTH_LONG).show();
+
         if(getArguments() != null){
             Clinic_ID = getArguments().getString("Clinic_ID");
             PatientName = getArguments().getString("PatientName");
@@ -515,4 +517,3 @@ public class CRTS_parta_a_Fragment extends Fragment {
 
 
 }
-

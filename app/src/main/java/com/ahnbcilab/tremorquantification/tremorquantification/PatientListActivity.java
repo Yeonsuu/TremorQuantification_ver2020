@@ -98,7 +98,7 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
     public static final int TYPE_WIFI = 1;
     public static final int TYPE_MOBILE = 2;
     public static final int TYPE_NOT_CONNECTED = 3;
-
+    public  String typestatus ;
     private FirebaseAuth mAuth;
     String name, email, uid, r_uid;
     DatabaseReference databaseDoctor;
@@ -138,6 +138,7 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
 
     ArrayList<Patient> data = new ArrayList<>();
     ArrayList<PatientItem> patientList = new ArrayList<>();
+    ArrayList<PatientItem> patientList_status = new ArrayList<>();
     ArrayList<PatientItem> selected_patientList = new ArrayList<>();
 
     @Override
@@ -202,11 +203,9 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
                         int status = getConnectivityStatus(getApplicationContext());
                         if(status == TYPE_MOBILE) {
                             timer.cancel();
-
                         }else if (status == TYPE_WIFI) {
                             timer.cancel();
                         }else {
-
                             final AlertDialog.Builder alertDialog = new AlertDialog.Builder(PatientListActivity.this);
                             alertDialog.setTitle("Wi-Fi가 꺼져 있습니다.");
                             alertDialog.setMessage("wifi 설정 창으로 이동하시겠습니까?");
@@ -225,7 +224,6 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
                                     dialog.cancel();
                                     timer.cancel();
                                 }
-
                             });
                             mHandler.postDelayed(new Runnable() {
                                 @Override
@@ -234,11 +232,8 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
                                     dialog.show();
                                 }
                             },0);
-
-
                         }
                     }
-
                 };
                 timer.schedule(TT, 0, 10000); //Timer 실행.
             }
@@ -379,11 +374,17 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
                 }
             }
         });
+
         //타입에 따라 정렬
         typeView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {   //Status ↓ 표시 클릭
                 final ArrayList<PatientItem> filteredList = new ArrayList<>();
+                for (int i = 0; i < patientList_status.size(); i++) {
+                    patientList_status.remove(patientList.get(i));
+
+                }
+
                 Context wrapper = new ContextThemeWrapper(PatientListActivity.this, R.style.YOURSTYLE);
                 PopupMenu popupMenu = new PopupMenu(wrapper, typeView);
                 popupMenu.getMenuInflater().inflate(R.menu.menu_type, popupMenu.getMenu());
@@ -392,9 +393,13 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.item_all:
+                                typestatus = "all";
                                 for (int i = 0; i < patientList.size(); i++) {
                                     filteredList.add(patientList.get(i));
+                                    patientList_status.add(patientList.get(i));
+                                    Log.v("@@@결과:",typestatus);
                                 }
+
                                 recyclerView.setLayoutManager(new LinearLayoutManager(PatientListActivity.this));
                                 recyclerViewAdapter = new RecyclerViewAdapter(PatientListActivity.this, filteredList, selected_patientList);
                                 recyclerView.setAdapter(recyclerViewAdapter);
@@ -402,9 +407,13 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
                                 return true;
 
                             case R.id.item_et:
+                                typestatus = "et";
                                 for (int i = 0; i < patientList.size(); i++) {
-                                    if (patientList.get(i).getPatientType() == "ET")
+                                    if (patientList.get(i).getPatientType() == "ET"){
                                         filteredList.add(patientList.get(i));
+                                        patientList_status.add(patientList.get(i));}
+                                    Log.v("@@@결과:",typestatus);
+
                                 }
                                 recyclerView.setLayoutManager(new LinearLayoutManager(PatientListActivity.this));
                                 recyclerViewAdapter = new RecyclerViewAdapter(PatientListActivity.this, filteredList, selected_patientList);
@@ -413,9 +422,13 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
                                 return true;
 
                             case R.id.item_p:
+                                typestatus = "p";
                                 for (int i = 0; i < patientList.size(); i++) {
-                                    if (patientList.get(i).getPatientType() == "P")
+                                    if (patientList.get(i).getPatientType() == "P"){
                                         filteredList.add(patientList.get(i));
+                                        patientList_status.add(patientList.get(i));}
+                                    Log.v("@@@결과:",typestatus);
+
                                 }
                                 recyclerView.setLayoutManager(new LinearLayoutManager(PatientListActivity.this));
                                 recyclerViewAdapter = new RecyclerViewAdapter(PatientListActivity.this, filteredList, selected_patientList);
@@ -424,9 +437,13 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
                                 return true;
 
                             case R.id.item_no:
+                                typestatus = "no";
                                 for (int i = 0; i < patientList.size(); i++) {
-                                    if (patientList.get(i).getPatientType() == null)
+                                    if (patientList.get(i).getPatientType() == null){
                                         filteredList.add(patientList.get(i));
+                                        patientList_status.add(patientList.get(i));}
+                                    Log.v("@@@결과:",typestatus);
+
                                 }
                                 recyclerView.setLayoutManager(new LinearLayoutManager(PatientListActivity.this));
                                 recyclerViewAdapter = new RecyclerViewAdapter(PatientListActivity.this, filteredList, selected_patientList);
@@ -448,6 +465,7 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
                 final ArrayList<PatientItem> filteredList = new ArrayList<>();
                 PopupMenu popupMenu = new PopupMenu(PatientListActivity.this, clinicIDView);
                 popupMenu.getMenuInflater().inflate(R.menu.menu_clinicid, popupMenu.getMenu());
+
 
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
@@ -804,7 +822,10 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
         searchPatient = (EditText) findViewById(R.id.searchPatient);
 
 //검색 기능
+
+
         searchPatient.addTextChangedListener(new TextWatcher() {
+
             public void afterTextChanged(Editable s) {
             }
 
@@ -814,17 +835,48 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
             public void onTextChanged(CharSequence query, int start, int before, int count) {
                 query = query.toString().toLowerCase();
                 final ArrayList<PatientItem> filteredList = new ArrayList<>();
-                for (int i = 0; i < patientList.size(); i++) {
-                    final String text = patientList.get(i).getClinicID();
-                    final String text2 = patientList.get(i).getPatientName();
+                final ArrayList<PatientItem> additional = new ArrayList<>();
+
+                if(typestatus == "all"){
+                    for (int i = 0; i < patientList.size(); i++) {
+                        additional.add(patientList.get(i));
+                    }
+                }else if(typestatus == "p") {
+                    for (int i = 0; i < patientList.size(); i++) {
+                        if (patientList.get(i).getPatientType() == "P") {
+                            additional.add(patientList.get(i));
+                        }
+                    }
+                }else if(typestatus == "et"){
+                    for (int i = 0; i < patientList.size(); i++) {
+                        if (patientList.get(i).getPatientType() == "ET") {
+                            additional.add(patientList.get(i));
+                        }
+                    }
+                }else  if(typestatus == "no") {
+                    for (int i = 0; i < patientList.size(); i++) {
+                        if (patientList.get(i).getPatientType() == null) {
+                            additional.add(patientList.get(i));
+                        }
+                    }
+                }else{
+                    for (int i = 0; i < patientList.size(); i++) {
+                        additional.add(patientList.get(i));
+                    }
+                }
+                for (int i = 0; i < additional.size(); i++) {
+                    final String text = additional.get(i).getClinicID();
+                    final String text2 = additional.get(i).getPatientName();
                     if (text.contains(query) || text2.contains(query)) {
-                        filteredList.add(patientList.get(i));
+                        filteredList.add(additional.get(i));
                     }
                 }
                 recyclerView.setLayoutManager(new LinearLayoutManager(PatientListActivity.this));
                 recyclerViewAdapter = new RecyclerViewAdapter(PatientListActivity.this, filteredList, selected_patientList);
                 recyclerView.setAdapter(recyclerViewAdapter);
                 recyclerViewAdapter.notifyDataSetChanged();  // data set changed
+
+
             }
         });
 
@@ -1189,7 +1241,7 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
 
             }
         });
-}
+    }
 
     private void removeURL(String Clinicid){
         //스토리지를 다 삭제해야 url을 삭제할 수 있다.
@@ -1198,11 +1250,11 @@ public class PatientListActivity extends AppCompatActivity implements Observer, 
         deleteurlref.removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
-                }
+            }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                 }
+            }
         });
     }
 

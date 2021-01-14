@@ -195,10 +195,11 @@
         android:gravity="center_horizontal"
         android:text="Line Task"
         android:textSize="20dp"
+
         app:layout_constraintEnd_toStartOf="@+id/bt6"
-        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toEndOf="@+id/bt3"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/bt6"

@@ -166,7 +166,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="10dp"
                 android:text="결과 추이"
                 android:textSize="18sp"
@@ -176,12 +176,35 @@
 
             <com.jjoe64.graphview.GraphView
                 android:id="@+id/crts_graph"
-                android:layout_width="470dp"
-                android:layout_height="176dp"
+                android:layout_width="444dp"
+                android:layout_height="175dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="60dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="30dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="436dp"
+                android:layout_marginBottom="20dp"
+
+                android:text="횟수"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="40dp"
+                android:text="점수"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </android.support.constraint.ConstraintLayout>
