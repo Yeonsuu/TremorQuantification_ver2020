@@ -685,7 +685,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="113dp"
             android:layout_marginTop="1565dp"
-            android:text="1. 미약한 정도로 떨리며 간혹 주변 선에 닿기도 한다."
+            android:text="1. 진전이 없는 정상인 보다는 더 조심스럽게 물을 붓지만 물을 흘리지는 않는다."
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -695,7 +695,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="113dp"
             android:layout_marginTop="1617dp"
-            android:text="2. 어느 정도 떨리며 자주 주변 선에 닿는다."
+            android:text="2. 약간 물을 흘린다(전체의 10% 미만 정도)"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -705,7 +705,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="113dp"
             android:layout_marginTop="1669dp"
-            android:text="3. 매우 어렵게 그림을 그리고 심하게 실수를 범한다."
+            android:text="3. 많이 물을 흘린다.(전체의 10 ~ 50% 정도)"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -715,7 +715,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="113dp"
             android:layout_marginTop="1721dp"
-            android:text="4. 그림 그리기를 끝마칠 수 없다."
+            android:text="4. 물을 거의 다 흘려서 전혀 수행할 수 없다."
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

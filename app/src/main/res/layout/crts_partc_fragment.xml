@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:layout_marginTop="83dp"
-            android:text="환자에게 예제문장을 쓰게 한다. (주로 쓰는 손만 검사한다.)"
+            android:text="환자에게 예제문장을 말하게 한다."
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -505,7 +505,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="113dp"
             android:layout_marginTop="1297dp"
-            android:text="3. 두손으로 받치지 않으면 모든 일을 혼자서 할 수 없다. (립스틱 바를 수 없거나 전기면도기로도 면도를 못하는 경우)"
+            android:text="3. 두손으로 받치지 않으면 모든 일을 혼자서 할 수 없다.\n (립스틱 바를 수 없거나 전기면도기로도 면도를 못하는 경우)"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -1049,7 +1049,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="@drawable/next_button"
+                android:background="@drawable/complete_button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/page_text"
